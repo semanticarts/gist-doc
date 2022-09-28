@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title id="title">gist docs </title>
+  <script>
+    const gistVersion = "11.0.0";
+    const imageNames = [
+      "agreement.png",
+      "category.png",
+      "collection.png",
+      "contact.png",
+      "content.png",
+      "date_and_time.png",
+      "event.png",
+      "human_behaviour.png",
+      "id.png",
+      "IoT.png",
+      "magnitude.png",
+      "organization.png",
+      "physical_world.png",
+      "place.png",
+      "project.png",
+      "specification.png",
+      "system.png",
+      "unit.png",
+    ];
+  </script>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to view this page.</noscript>
+  <h1 id="bodyTitle">gist-docs for gist Version </h1>
+  <p>Source: <a href="https://github.com/semanticarts/gist-doc">gist-docs git repository</a></p>
+  <h2>Ontology Browser</h2>
+  <p>
+    <a href="widoco-documentation/index-en.html">Widoco ontology documentation page</a>
+  </p>
+  <h2>eBook</h2>
+  <p>
+    <a id="ebook-epub" href="eBook/">epub format</a> or
+    <a id="ebook-mobi" href="ebook/">epub format</a>
+  </p>
+  <h2>Visualizations</h2>
+  <div id="imageList"></div>
+  <hr>
+  <div id="imageDiv"></div>
+  <script>
+    document.title += gistVersion;
+    document.getElementById("bodyTitle").innerHTML += gistVersion;
+    document.getElementById("ebook-epub").href = `eBook/gist_${gistVersion}_constellations.epub`;
+    document.getElementById("ebook-mobi").href = `eBook/gist_${gistVersion}_constellations.mobi`;
+
+    function replaceImage(image) {
+      document.getElementById("imageDiv").innerHTML =
+        `<img width="100%" src="${image}" alt="${image}">`;
+    }
+    imageNames.forEach((image) => {
+      var el = document.createElement('li');
+      el.innerHTML = `<a title="${image}" href="#" onclick="replaceImage('${image}')">${image}</a>`;
+      document.getElementById("imageList").appendChild(el);
+    });
+  </script>
+</body>
+</html>
