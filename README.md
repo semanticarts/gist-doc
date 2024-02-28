@@ -3,7 +3,7 @@ gist-doc
 
 This repository contains documentation of the [Semantic Arts gist minimalist upper ontology](https://github.com/semanticarts/gist/tree/master) in three formats: narrative, graphical, and Widoco-style.
 
-Current version of gist: 11.0
+Current version of gist: 12.1.0
 
 Contents
 -----
