@@ -1,0 +1,97 @@
+@prefix ex: <http://example.com/examples/> .
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:_Race_1
+	a ex:Race ;
+	ex:hasResults ex:_OrderedCollection_John1_Jane2 ;
+	ex:hasResults ex:_OrderedCollection_John_precedes_Jane ;
+	.
+
+ex:_Race_2
+	a ex:Race ;
+	ex:hasResults ex:_OrderedCollection_John2_Jane1 ;
+	ex:hasResults ex:_OrderedCollection_Jane_precedes_John ;
+	.
+
+ex:_OrderedCollection_John1_Jane2 
+	a gist:OrderedCollection ;
+	gist:hasMember ex:_OrderedMember_John_1 ;
+	gist:hasMember ex:_OrderedMember_Jane_2 ;
+	.
+
+ex:_OrderedCollection_John2_Jane1 
+	a gist:OrderedCollection ;
+	gist:hasMember ex:_OrderedMember_John_2 ;
+	gist:hasMember ex:_OrderedMember_Jane_1 ;
+	.
+
+ex:_OrderedMember_John_1
+	a gist:OrderedMember ;
+	gist:providesOrderFor ex:_Person_John ;
+	gist:sequence "1"^^xsd:integer ;
+	.
+
+ex:_OrderedMember_Jane_2
+	a gist:OrderedMember ;
+	gist:providesOrderFor ex:_Person_Jane ;
+	gist:sequence "2"^^xsd:integer ;
+	.
+
+ex:_OrderedMember_John_2
+	a gist:OrderedMember ;
+	gist:providesOrderFor ex:_Person_John ;
+	gist:sequence "2"^^xsd:integer ;
+	.
+
+ex:_OrderedMember_Jane_1
+	a gist:OrderedMember ;
+	gist:providesOrderFor ex:_Person_Jane ;
+	gist:sequence "1"^^xsd:integer ;
+	.
+
+
+ex:_OrderedCollection_John_precedes_Jane 
+	a gist:OrderedCollection ;
+	gist:hasFirstMember ex:_OrderedMember_John_johnPrecedesJane ;
+	gist:hasMember ex:_OrderedMember_Jane_johnPrecedesJane ;
+	.
+
+ex:_OrderedMember_John_johnPrecedesJane
+	a gist:OrderedMember ;
+	gist:providesOrderFor ex:_Person_John ;
+	gist:precedesDirectly ex:_OrderedMember_Jane_johnPrecedesJane ;
+	.
+
+ex:_OrderedMember_Jane_johnPrecedesJane
+	a gist:OrderedMember ;
+	gist:providesOrderFor ex:_Person_Jane ;
+	.
+
+ex:_OrderedCollection_Jane_precedes_John 
+	a gist:OrderedCollection ;
+	gist:hasFirstMember ex:_OrderedMember_Jane_janePrecedesJohn ;
+	gist:hasMember ex:_OrderedMember_John_janePrecedesJohn ;
+	.
+
+ex:_OrderedMember_Jane_janePrecedesJohn
+	a gist:OrderedMember ;
+	gist:providesOrderFor ex:_Person_Jane ;
+	gist:precedesDirectly ex:_OrderedMember_John_janePrecedesJohn ;
+	.
+
+ex:_OrderedMember_John_janePrecedesJohn
+	a gist:OrderedMember ;
+	gist:providesOrderFor ex:_Person_John ;
+	.
+
+ex:_Person_John 
+	a gist:Person .
+
+ex:_Person_Jane 
+	a gist:Person .

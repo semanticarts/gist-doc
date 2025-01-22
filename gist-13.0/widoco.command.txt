@@ -1,0 +1,1 @@
+java -jar {path}\widoco-1.4.25-jar-with-dependencies_JDK-11.jar  -ontFile {path}\ontology\gistCore13.0.0.rdf -outFolder {path}\widoco-documentation -confFile {path}\widoco_config.txt  -oops -webVowl -licensius -excludeIntroduction
