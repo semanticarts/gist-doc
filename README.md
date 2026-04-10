@@ -1,23 +1,18 @@
-gist-doc
-=====
+# gist-doc
 
-This repository contains documentation of the [Semantic Arts gist minimalist upper ontology](https://github.com/semanticarts/gist/tree/master) in ebook and Widoco styles.
+Documentation of the [Semantic Arts gist minimalist upper ontology](https://github.com/semanticarts/gist/tree/master).
 
-Current version of gist: 14.0.0
+## Contents
 
-Contents
------
+- [**Zest of gist (eBook)**](gist-14.0/eBook/Zest-of-gist_14.0.0.epub)
+  - The eBook is organized around the idea of 'constellations' of classes and predicates that deal with related concepts.
+  - Includes visualizations built using the [Turtle Editor Viewer](http://semantechs.co.uk/turtle-editor-viewer/)
+  - Provided in epub and mobi formats
+- [**WIDOCO-Style Documentation**](gist-14.0/widoco-documentation/index-en.html)
+  - HTML documentation build using [WIDOCO](https://github.com/dgarijo/Widoco)
 
-* **gist Constellations (eBook)**
-  
-  The organization of the eBook is based around the idea of 'constellations' of classes and predicates that deal with related concepts.  
-  
-* **[Widoco](https://github.com/dgarijo/Widoco) documentation**
+## More Information
 
-More Information
------
-
-* [Download gist](https://www.semanticarts.com/gist/) ontology
-* [Clone the gist repository](https://github.com/semanticarts/gist.git)
-* [Semantic Arts](https://www.semanticarts.com/) - about the company.
-
+- [Download gist](https://www.semanticarts.com/gist/)
+- [Clone the gist repository](https://github.com/semanticarts/gist/tree/master)
+- [Semantic Arts](https://www.semanticarts.com/)
