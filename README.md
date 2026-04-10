@@ -1,6 +1,6 @@
 # gist-doc
 
-Documentation of the [Semantic Arts gist minimalist upper ontology](https://github.com/semanticarts/gist/tree/master).
+Documentation of the [Semantic Arts gist minimalist upper ontology](https://github.com/semanticarts/gist/tree/main).
 
 ## Contents
 
@@ -14,5 +14,5 @@ Documentation of the [Semantic Arts gist minimalist upper ontology](https://gith
 ## More Information
 
 - [Download gist](https://www.semanticarts.com/gist/)
-- [Clone the gist repository](https://github.com/semanticarts/gist/tree/master)
+- [Clone the gist repository](https://github.com/semanticarts/gist/tree/main)
 - [Semantic Arts](https://www.semanticarts.com/)
