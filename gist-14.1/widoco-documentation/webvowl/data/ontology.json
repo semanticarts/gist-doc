@@ -183,7 +183,7 @@
     "id" : "94",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "66",
+    "id" : "69",
     "type" : "rdfs:Literal"
   }, {
     "id" : "95",
@@ -282,19 +282,19 @@
     "id" : "133",
     "type" : "owl:unionOf"
   }, {
-    "id" : "138",
+    "id" : "137",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "143",
+    "id" : "146",
     "type" : "owl:Class"
   }, {
     "id" : "110",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "160",
+    "id" : "159",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "164",
+    "id" : "163",
     "type" : "owl:Class"
   }, {
     "id" : "92",
@@ -303,7 +303,7 @@
     "id" : "166",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "171",
+    "id" : "172",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "179",
@@ -324,7 +324,7 @@
     "id" : "190",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "156",
+    "id" : "142",
     "type" : "owl:Class"
   }, {
     "id" : "194",
@@ -414,7 +414,7 @@
     "id" : "176",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "197",
+    "id" : "196",
     "type" : "owl:unionOf"
   }, {
     "id" : "284",
@@ -423,7 +423,7 @@
     "id" : "225",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "162",
+    "id" : "161",
     "type" : "owl:unionOf"
   }, {
     "id" : "238",
@@ -432,7 +432,7 @@
     "id" : "193",
     "type" : "owl:unionOf"
   }, {
-    "id" : "159",
+    "id" : "158",
     "type" : "owl:Class"
   }, {
     "id" : "52",
@@ -441,13 +441,13 @@
     "id" : "124",
     "type" : "owl:unionOf"
   }, {
-    "id" : "174",
+    "id" : "171",
     "type" : "owl:Class"
   }, {
-    "id" : "147",
+    "id" : "150",
     "type" : "owl:Class"
   }, {
-    "id" : "136",
+    "id" : "165",
     "type" : "owl:Class"
   }, {
     "id" : "298",
@@ -564,7 +564,7 @@
     "id" : "61",
     "type" : "owl:Class"
   }, {
-    "id" : "139",
+    "id" : "138",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "370",
@@ -996,22 +996,22 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Physical substances, such as ingredients in a cake batter, do not meet the independent existence criterion, so are not components.",
-        "type" : "label"
-      }, {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
         "value" : "A component may be designed or intended as part of a whole without actually being so; e.g., a car steering wheel that is not installed in any car.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Many things are in a trivial sense a part of a larger thing, but are not considered components because they are not inherently part of that larger thing. For example, while a book may be part of a library (a collection of books), it is not inherently so, and thus is not a component. A playing card, on the other hand, could be considered a component in (member of) a deck of cards. This may be use case-dependent; e.g., car parts might be modeled as components in an automobile manufacturing context but not in a retail auto parts store.",
+        "value" : "Physical substances, such as ingredients in a cake batter, do not meet the independent existence criterion, so are not components.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "This is an abstract class that is not directly instantiated. Users will define subclasses that are meaningful to their domain of interest.",
+        "type" : "label"
+      }, {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Many things are in a trivial sense a part of a larger thing, but are not considered components because they are not inherently part of that larger thing. For example, while a book may be part of a library (a collection of books), it is not inherently so, and thus is not a component. A playing card, on the other hand, could be considered a component in (member of) a deck of cards. This may be use case-dependent; e.g., car parts might be modeled as components in an automobile manufacturing context but not in a retail auto parts store.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
@@ -1115,26 +1115,26 @@
         "value" : "An undifferentiated amount of physical material which, when subdivided, results in each part being indistinguishable in nature from the whole and from every other part.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Negative example: the concept of gold.",
+        "value" : "This concept generally corresponds to mass nouns in English. By contrast, instances of gist:PhysicalIdentifiableItem, such as a computer, book, or car, are count nouns. Physical identifiable items are made up of physical substances; e.g., a cake is made up of butter, flour, and sugar; a ring is made of gold. If you divide a physical substance such as an amount of water into parts, you have different amounts of water otherwise indistinguishable from one another; if you divide a physical identifiable item such as a computer into parts, each part will be distinguishable from the original whole.",
         "type" : "label"
       }, {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "An amount of water, penicillin, sand, or gold.",
-        "type" : "label"
-      } ],
-      "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "An instance of this class has weight and takes up space. We mean the physical gold in a ring, not the concept of gold that shows up in the periodic table. The latter would be an instance of gist:KnowledgeConcept.",
         "type" : "label"
-      }, {
-        "identifier" : "scopeNote",
+      } ],
+      "example" : [ {
+        "identifier" : "example",
         "language" : "undefined",
-        "value" : "This concept generally corresponds to mass nouns in English. By contrast, instances of gist:PhysicalIdentifiableItem, such as a computer, book, or car, are count nouns. Physical identifiable items are made up of physical substances; e.g., a cake is made up of butter, flour, and sugar; a ring is made of gold. If you divide a physical substance such as an amount of water into parts, you have different amounts of water otherwise indistinguishable from one another; if you divide a physical identifiable item such as a computer into parts, each part will be distinguishable from the original whole.",
+        "value" : "An amount of water, penicillin, sand, or gold.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Negative example: the concept of gold.",
         "type" : "label"
       } ]
     },
@@ -1412,16 +1412,16 @@
         "value" : "A collection of units of measure that can all be used to measure the same aspects.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Typically there is one unit group per aspect. An example of an aspect with two unit groups is vehicle efficiency, which can be measured by miles per gallon (distance per volume) or by liters per 100 kilometers (volume per distance). These two units of measure need to be in different unit groups because they have different values of exponents. When adding a unit of measure to a unit group, make sure it has the same exponents as the other members of the unit group.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "The units of measure bit, byte, kilobit, kilobyte, etc. are all in the same unit group because they can all be used to measure an amount of data.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Typically there is one unit group per aspect. An example of an aspect with two unit groups is vehicle efficiency, which can be measured by miles per gallon (distance per volume) or by liters per 100 kilometers (volume per distance). These two units of measure need to be in different unit groups because they have different values of exponents. When adding a unit of measure to a unit group, make sure it has the same exponents as the other members of the unit group.",
         "type" : "label"
       } ]
     },
@@ -1447,7 +1447,7 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "66",
+    "id" : "69",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -1740,12 +1740,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "A house, school, store, factory, chicken coop.",
+        "value" : "Negative examples: houseboats (not built on land), caves (not man-made), food trucks and RVs (not permanently situated).",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "Negative examples: houseboats (not built on land), caves (not man-made), food trucks and RVs (not permanently situated).",
+        "value" : "A house, school, store, factory, chicken coop.",
         "type" : "label"
       } ],
       "scopeNote" : [ {
@@ -1758,7 +1758,7 @@
     "label" : {
       "IRI-based" : "Building"
     },
-    "attributes" : [ "deprecated", "external" ],
+    "attributes" : [ "external", "deprecated" ],
     "id" : "117",
     "superClasses" : [ "118" ]
   }, {
@@ -1873,16 +1873,16 @@
         "value" : "A mutually understood arrangement in which two or more parties make commitments to one another.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "While an agreement has two or more parties, and contains commitments which bind those parties, it will not always be necessary to instantiate each individual commitment.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "A gym membership is an agreement in which the member commits to paying the gym a certain price and the gym commits to allowing access to their facilities.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "While an agreement has two or more parties, and contains commitments which bind those parties, it will not always be necessary to instantiate each individual commitment.",
         "type" : "label"
       } ]
     },
@@ -1948,9 +1948,9 @@
     "label" : {
       "IRI-based" : "RenderedContent"
     },
-    "intersection" : [ "139" ],
+    "intersection" : [ "138" ],
     "attributes" : [ "intersection", "external" ],
-    "id" : "138"
+    "id" : "137"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Template",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -1991,7 +1991,7 @@
       "IRI-based" : "Template"
     },
     "attributes" : [ "external" ],
-    "id" : "143"
+    "id" : "146"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Task",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -2035,7 +2035,7 @@
     "label" : {
       "IRI-based" : "Task"
     },
-    "intersection" : [ "159" ],
+    "intersection" : [ "158" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "110"
   }, {
@@ -2079,7 +2079,7 @@
     },
     "intersection" : [ "57" ],
     "attributes" : [ "intersection", "external" ],
-    "id" : "160"
+    "id" : "159"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Transaction",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -2114,8 +2114,8 @@
       "IRI-based" : "Transaction"
     },
     "attributes" : [ "external" ],
-    "id" : "164",
-    "superClasses" : [ "159" ]
+    "id" : "163",
+    "superClasses" : [ "158" ]
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Collection",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -2224,6 +2224,17 @@
         "value" : "A promise made by a single party to one or more parties to do or not do something or act in a particular way.",
         "type" : "label"
       } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Upon selling a treasury bill, the U.S. government makes a commitment to pay the purchaser a stated amount of money at a stated time.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "When signing an NDA, the signatory commits to keeping specified information confidential.",
+        "type" : "label"
+      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
@@ -2239,17 +2250,6 @@
         "language" : "undefined",
         "value" : "The manner in which a commitment is binding may vary. In a business context, we are typically interested in commitments that are legally binding.",
         "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "When signing an NDA, the signatory commits to keeping specified information confidential.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "Upon selling a treasury bill, the U.S. government makes a commitment to pay the purchaser a stated amount of money at a stated time.",
-        "type" : "label"
       } ]
     },
     "label" : {
@@ -2257,7 +2257,7 @@
     },
     "intersection" : [ "129" ],
     "attributes" : [ "intersection", "external" ],
-    "id" : "171"
+    "id" : "172"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/ContingentEvent",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -2291,7 +2291,7 @@
     "label" : {
       "IRI-based" : "ContingentEvent"
     },
-    "intersection" : [ "159" ],
+    "intersection" : [ "158" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "179"
   }, {
@@ -2359,16 +2359,16 @@
         "value" : "A relationship existing for a period of time.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "A temporal relation must have a minimum of two participants. For example, both the employer and the employee are participants in a temporal relation representing a period of employment. Note that 'participant' does not imply agency; a non-sentient being can participate in a temporal relation. For example, both a person and a house could be participants in a hypothetical relation 'lives at.'",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "The relationship between a person and their employer; the relationship between a person or business and an address.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "A temporal relation must have a minimum of two participants. For example, both the employer and the employee are participants in a temporal relation representing a period of employment. Note that 'participant' does not imply agency; a non-sentient being can participate in a temporal relation. For example, both a person and a house could be participants in a hypothetical relation 'lives at.'",
         "type" : "label"
       } ]
     },
@@ -2518,8 +2518,8 @@
     "label" : {
       "IRI-based" : "Language"
     },
-    "attributes" : [ "deprecated", "external" ],
-    "id" : "156"
+    "attributes" : [ "external", "deprecated" ],
+    "id" : "142"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Permission",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -2590,9 +2590,9 @@
       "IRI-based" : "Landmark"
     },
     "subClasses" : [ "117" ],
-    "attributes" : [ "deprecated", "external" ],
+    "attributes" : [ "external", "deprecated" ],
     "id" : "118",
-    "superClasses" : [ "147" ]
+    "superClasses" : [ "150" ]
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/BundledCatalogItem",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -2880,18 +2880,7 @@
         "value" : "Something which is made up of various parts or elements that are independently identifiable.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "A library (collection of books); a network of pipes and valves; a computer network of routers and computers.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Some composites, like systems, networks, and ordered collections, have internal organization, while others, such as unordered collections, typically do not.",
-        "type" : "label"
-      }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "This class is not disjoint with gist:Component, because a composite can itself be a component of a larger composite.",
@@ -2899,7 +2888,18 @@
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
+        "value" : "Some composites, like systems, networks, and ordered collections, have internal organization, while others, such as unordered collections, typically do not.",
+        "type" : "label"
+      }, {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
         "value" : "This is an abstract class that will not be directly instantiated.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "A library (collection of books); a network of pipes and valves; a computer network of routers and computers.",
         "type" : "label"
       } ]
     },
@@ -2960,16 +2960,16 @@
         "value" : "The set of characteristics and constraints on their values that specify what it means to be a particular type of thing, such as a material, product, service or event. A specification is sufficiently precise to allow evaluating conformance to the specification.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Although a characterization of how to do something is often called a specification, the intended meaning here is limited to specifying what something is. The focus is on the what, not the how. Use gist:TaskTemplate for specifying the how, such as a plan or process specification. Use gist:conformsTo to assert that something conforms to a specification. To represent a definition of a particular type of thing that is not sufficiently precise to be a gist:Specification, consider using gist:KnowledgeConcept.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "The specification of the iPhone 14; hypothetical events covered by a homeowner's insurance policy; a drug quality specification - a set of acceptance criteria for quality characteristics that must be controlled to ensure a drug is fit for its intended use.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Although a characterization of how to do something is often called a specification, the intended meaning here is limited to specifying what something is. The focus is on the what, not the how. Use gist:TaskTemplate for specifying the how, such as a plan or process specification. Use gist:conformsTo to assert that something conforms to a specification. To represent a definition of a particular type of thing that is not sufficiently precise to be a gist:Specification, consider using gist:KnowledgeConcept.",
         "type" : "label"
       } ]
     },
@@ -3040,7 +3040,7 @@
     "instances" : 0,
     "union" : [ "119", "96" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "197"
+    "id" : "196"
   }, {
     "instances" : 0,
     "union" : [ "119", "96" ],
@@ -3073,14 +3073,14 @@
     "label" : {
       "IRI-based" : "HistoricalEvent"
     },
-    "intersection" : [ "159" ],
+    "intersection" : [ "158" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "225"
   }, {
     "instances" : 0,
     "union" : [ "119", "58", "96" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "162"
+    "id" : "161"
   }, {
     "instances" : 0,
     "union" : [ "119", "96" ],
@@ -3123,21 +3123,21 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "An event occurs during a time interval, which is distinct from the event.",
+        "value" : "An event does not necessarily have either planned or actual start or end datetimes. For example, a conference can be in the planning phase without any dates selected, but is nevertheless an (unscheduled) event. The subclasses of gist:Event state particular restrictions on planned and actual start and end dates.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "An event does not necessarily have either planned or actual start or end datetimes. For example, a conference can be in the planning phase without any dates selected, but is nevertheless an (unscheduled) event. The subclasses of gist:Event state particular restrictions on planned and actual start and end dates.",
+        "value" : "An event occurs during a time interval, which is distinct from the event.",
         "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "Event"
     },
-    "subClasses" : [ "164", "286" ],
+    "subClasses" : [ "163", "286" ],
     "attributes" : [ "external" ],
-    "id" : "159"
+    "id" : "158"
   }, {
     "instances" : 0,
     "union" : [ "119", "96" ],
@@ -3171,6 +3171,12 @@
         "value" : "A span of time with a known start time, end time, and duration. As long as two of the three are known, the third can be inferred.",
         "type" : "label"
       } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "7pm to 9pm on Jan 1, 2001; fiscal year 2023 (according to some particular definition of fiscal year); the week starting at midnight of January 12, 2023 and lasting exactly 168 hours.",
+        "type" : "label"
+      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
@@ -3181,19 +3187,13 @@
         "language" : "undefined",
         "value" : "This is distinct from a duration, which describes how long a time interval lasts (e.g., one hour; 3 days; 22 minutes).",
         "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "7pm to 9pm on Jan 1, 2001; fiscal year 2023 (according to some particular definition of fiscal year); the week starting at midnight of January 12, 2023 and lasting exactly 168 hours.",
-        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "TimeInterval"
     },
     "attributes" : [ "external" ],
-    "id" : "174"
+    "id" : "171"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -3217,16 +3217,16 @@
         "value" : "A discrete physical object which, if subdivided, will result in parts that are distinguishable in nature from the whole and in general also from the other parts.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "A laptop, a physical book, a car, a building, a landmark (such as a tree stump with an etched marking to denote a campsite).",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "This concept generally corresponds to count nouns in English. By contrast, physical substances, such as an amount of water, flour, or sand, are mass nouns. Physical identifiable items are made up of physical substances; e.g., a cake is made up of butter, flour, and sugar; a statue is made of bronze. If you divide a physical substance such as an amount of water into parts, you have two amounts of water otherwise indistinguishable from one another; if you divide a physical identifiable item such as a computer into parts, each part is different from the whole.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "A laptop, a physical book, a car, a building, a landmark (such as a tree stump with an etched marking to denote a campsite).",
         "type" : "label"
       } ]
     },
@@ -3235,7 +3235,7 @@
     },
     "subClasses" : [ "118" ],
     "attributes" : [ "external" ],
-    "id" : "147"
+    "id" : "150"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Magnitude",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -3265,16 +3265,16 @@
         "value" : "https://w3id.org/semanticarts/ns/ontology/gist/hasAccuracy",
         "type" : "iri"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "A model of car could have a wheelbase of 113.2 inches. In this example, the aspect is wheelbase, the unit of measure is inch, and the numeric value is 113.2.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "An accuracy can be assigned to a magnitude using the property has accuracy.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "A model of car could have a wheelbase of 113.2 inches. In this example, the aspect is wheelbase, the unit of measure is inch, and the numeric value is 113.2.",
         "type" : "label"
       } ]
     },
@@ -3283,7 +3283,7 @@
     },
     "subClasses" : [ "297" ],
     "attributes" : [ "external" ],
-    "id" : "136"
+    "id" : "165"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Medium",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -3443,12 +3443,12 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "For some assignments, such as the assignment of a person to a task, it may seem equally correct in ordinary speech to say it is an assignment of a task to a person. Since gist:isAssignmentTo and gist:isAssignmentOf have no formal domains or ranges, the choice of which predicate to use for which is left as an implementation decision. Consistency is a key consideration.",
+        "value" : "Based on the Open World Assumption, the assigner may not be asserted or known.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Based on the Open World Assumption, the assigner may not be asserted or known.",
+        "value" : "For some assignments, such as the assignment of a person to a task, it may seem equally correct in ordinary speech to say it is an assignment of a task to a person. Since gist:isAssignmentTo and gist:isAssignmentOf have no formal domains or ranges, the choice of which predicate to use for which is left as an implementation decision. Consistency is a key consideration.",
         "type" : "label"
       } ]
     },
@@ -3569,7 +3569,7 @@
     "label" : {
       "IRI-based" : "ContingentObligation"
     },
-    "intersection" : [ "171" ],
+    "intersection" : [ "172" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "167"
   }, {
@@ -3725,32 +3725,6 @@
         "IRI-based" : "_Aspect_probability"
       }
     }, {
-      "iri" : "https://w3id.org/semanticarts/ns/data/gist/_Aspect_area",
-      "baseIri" : "https://w3id.org/semanticarts/ns/data/gist",
-      "annotations" : {
-        "editorialNote" : [ {
-          "identifier" : "editorialNote",
-          "language" : "undefined",
-          "value" : "This instance has been duplicated from reference data so it can be used in property restrictions.",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "undefined",
-          "value" : "area",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "undefined",
-          "value" : "The aspect area.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "_Aspect_area"
-      }
-    }, {
       "iri" : "https://w3id.org/semanticarts/ns/data/gist/_Aspect_financial_balance",
       "baseIri" : "https://w3id.org/semanticarts/ns/data/gist",
       "annotations" : {
@@ -3775,6 +3749,32 @@
       },
       "labels" : {
         "IRI-based" : "_Aspect_financial_balance"
+      }
+    }, {
+      "iri" : "https://w3id.org/semanticarts/ns/data/gist/_Aspect_area",
+      "baseIri" : "https://w3id.org/semanticarts/ns/data/gist",
+      "annotations" : {
+        "editorialNote" : [ {
+          "identifier" : "editorialNote",
+          "language" : "undefined",
+          "value" : "This instance has been duplicated from reference data so it can be used in property restrictions.",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "area",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "undefined",
+          "value" : "The aspect area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "_Aspect_area"
       }
     }, {
       "iri" : "https://w3id.org/semanticarts/ns/data/gist/_Aspect_mass",
@@ -4021,19 +4021,19 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "A meeting, a car accident.",
+        "value" : "Negative examples: Excludes events that have no meaningful location, such as financial events or project milestones.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "Negative examples: Excludes events that have no meaningful location, such as financial events or project milestones.",
+        "value" : "A meeting, a car accident.",
         "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "PhysicalEvent"
     },
-    "intersection" : [ "159" ],
+    "intersection" : [ "158" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "321"
   }, {
@@ -4071,7 +4071,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "286",
-    "superClasses" : [ "159" ]
+    "superClasses" : [ "158" ]
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Requirement",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -4303,7 +4303,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "297",
-    "superClasses" : [ "136" ]
+    "superClasses" : [ "165" ]
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -4327,21 +4327,21 @@
         "value" : "An independent organization exercising political and/or regulatory authority over a political unit, people, geographical region, etc., as well as performing certain functions for this unit or body.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Includes administrative, regulatory, and enforcement organizations created or sanctioned by country or sub-country governments.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "The State of Washington Office of Financial Management; the Food and Drug Administration; the Scottish Parliament.",
+        "value" : "Negative example: A corporation, which is owned and therefore not independent.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "Negative example: A corporation, which is owned and therefore not independent.",
+        "value" : "The State of Washington Office of Financial Management; the Food and Drug Administration; the Scottish Parliament.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Includes administrative, regulatory, and enforcement organizations created or sanctioned by country or sub-country governments.",
         "type" : "label"
       } ]
     },
@@ -4456,7 +4456,7 @@
     "label" : {
       "IRI-based" : "ScheduledEvent"
     },
-    "intersection" : [ "159" ],
+    "intersection" : [ "158" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "109"
   }, {
@@ -4576,7 +4576,7 @@
     "label" : {
       "IRI-based" : "TaskTemplate"
     },
-    "intersection" : [ "143" ],
+    "intersection" : [ "146" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "341"
   }, {
@@ -4784,12 +4784,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "Negative examples: fictional life forms such as unicorns or Mickey Mouse.",
+        "value" : "A cat, a mushroom, a tree.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "A cat, a mushroom, a tree.",
+        "value" : "Negative examples: fictional life forms such as unicorns or Mickey Mouse.",
         "type" : "label"
       } ],
       "scopeNote" : [ {
@@ -4802,7 +4802,7 @@
     "label" : {
       "IRI-based" : "LivingThing"
     },
-    "intersection" : [ "147" ],
+    "intersection" : [ "150" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "41"
   }, {
@@ -4864,16 +4864,16 @@
         "value" : "Content encoded in a specific format, but existing as data independent of any particular physical medium.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "A document in PDF format; an image in JPEG format.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "Each instance of formatted content is a distinct formatting of some Content. Thus, a PDF-formatted version and an HTML-formatted version of the same content are separate instances of formatted content.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "A document in PDF format; an image in JPEG format.",
         "type" : "label"
       } ]
     },
@@ -4882,7 +4882,7 @@
     },
     "intersection" : [ "46" ],
     "attributes" : [ "intersection", "external" ],
-    "id" : "139"
+    "id" : "138"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Equipment",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -4916,7 +4916,7 @@
     "label" : {
       "IRI-based" : "Equipment"
     },
-    "intersection" : [ "147" ],
+    "intersection" : [ "150" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "370"
   }, {
@@ -4952,7 +4952,7 @@
     "label" : {
       "IRI-based" : "ContemporaryEvent"
     },
-    "intersection" : [ "159" ],
+    "intersection" : [ "158" ],
     "attributes" : [ "intersection", "external" ],
     "id" : "381"
   }, {
@@ -5026,23 +5026,23 @@
         "value" : "Superclass for all types of metadata.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "Relational concepts, such as tables and columns; tool inputs, such as queries and R2RML maps.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "The definition of this class needs additional work.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Relational concepts, such as tables and columns; tool inputs, such as queries and R2RML maps.",
         "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "SchemaMetaData"
     },
-    "attributes" : [ "deprecated", "external" ],
+    "attributes" : [ "external", "deprecated" ],
     "id" : "243"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/Content",
@@ -5070,12 +5070,12 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Categories are not content until they are written down.",
+        "value" : "This class includes both abstract content and its expression, but it must have at least one expression in order to be content. For example, the idea a writer has for a book is not content until it is expressed in some form, but a single content object may have multiple expressions - e.g., the particular print and audio editions.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "This class includes both abstract content and its expression, but it must have at least one expression in order to be content. For example, the idea a writer has for a book is not content until it is expressed in some form, but a single content object may have multiple expressions - e.g., the particular print and audio editions.",
+        "value" : "Categories are not content until they are written down.",
         "type" : "label"
       } ],
       "example" : [ {
@@ -5150,16 +5150,16 @@
         "value" : "A member of an ordered collection serving as a proxy for a real world item, which can appear in different orders in different collections. The ordered member appears in exactly one ordered collection.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "A person may rank 12th in the Boston Marathon but 29th in the New York City Marathon.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "An ordered member points to the real world item via the providesOrderFor property. Ordering information is represented either as a number in a sequence, or by preceding or following another ordered member.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "A person may rank 12th in the Boston Marathon but 29th in the New York City Marathon.",
         "type" : "label"
       } ]
     },
@@ -5210,11 +5210,11 @@
     "id" : "53",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "65",
-    "type" : "owl:datatypeProperty"
-  }, {
     "id" : "44",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "70",
     "type" : "owl:objectProperty"
@@ -5246,16 +5246,19 @@
     "id" : "135",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "137",
+    "id" : "136",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "140",
+    "id" : "139",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "141",
+    "id" : "140",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "142",
+    "id" : "141",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "143",
     "type" : "owl:disjointWith"
   }, {
     "id" : "144",
@@ -5264,13 +5267,10 @@
     "id" : "145",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "146",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "148",
+    "id" : "147",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "150",
+    "id" : "149",
     "type" : "owl:disjointWith"
   }, {
     "id" : "151",
@@ -5288,16 +5288,16 @@
     "id" : "155",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "157",
+    "id" : "156",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "161",
+    "id" : "160",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "163",
+    "id" : "162",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "165",
+    "id" : "164",
     "type" : "owl:disjointWith"
   }, {
     "id" : "168",
@@ -5309,10 +5309,10 @@
     "id" : "170",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "172",
+    "id" : "173",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "173",
+    "id" : "174",
     "type" : "owl:disjointWith"
   }, {
     "id" : "175",
@@ -5343,10 +5343,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "195",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "196",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "197",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "198",
     "type" : "owl:disjointWith"
@@ -5429,7 +5429,7 @@
     "id" : "236",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "68",
+    "id" : "66",
     "type" : "owl:objectProperty"
   }, {
     "id" : "239",
@@ -5573,7 +5573,7 @@
     "id" : "315",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "158",
+    "id" : "157",
     "type" : "owl:objectProperty"
   }, {
     "id" : "316",
@@ -5714,7 +5714,7 @@
     "id" : "367",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "67",
+    "id" : "65",
     "type" : "owl:objectProperty"
   }, {
     "id" : "369",
@@ -5759,7 +5759,7 @@
     "id" : "384",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "69",
+    "id" : "67",
     "type" : "owl:objectProperty"
   }, {
     "id" : "385",
@@ -5853,7 +5853,7 @@
       "IRI-based" : "isMadeUpOf"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "0"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/precedes",
@@ -5900,7 +5900,7 @@
     },
     "domain" : "14",
     "subproperty" : [ "15" ],
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "transitive", "object", "external" ],
     "id" : "13"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasBroader",
@@ -5937,7 +5937,7 @@
     },
     "domain" : "14",
     "subproperty" : [ "17", "18" ],
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "transitive", "object", "external" ],
     "id" : "16"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly",
@@ -5965,7 +5965,7 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Typically this predicate would be used asymmetrically and irreflexively, but the ontology does not formalize this.",
+        "value" : "It is safest to use this property only when the directness has a semantic correspondence with the world. Only break a direct link by inserting an intermediate item when that change corresponds to a change in the world.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
@@ -5975,7 +5975,7 @@
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "It is safest to use this property only when the directness has a semantic correspondence with the world. Only break a direct link by inserting an intermediate item when that change corresponds to a change in the world.",
+        "value" : "Typically this predicate would be used asymmetrically and irreflexively, but the ontology does not formalize this.",
         "type" : "label"
       } ]
     },
@@ -5984,7 +5984,7 @@
     },
     "superproperty" : [ "13" ],
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "15"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfKelvin",
@@ -6020,7 +6020,7 @@
       "IRI-based" : "exponentOfKelvin"
     },
     "domain" : "26",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "25"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf",
@@ -6048,12 +6048,12 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Because the part has independent existence, there is no cascading delete.",
+        "value" : "It is safest to use this property when semantic directness is inherent in the relationship, rather than simply expressing a chosen granularity. For example, a spark plug is a direct part of an engine block; there cannot be any intermediate parts. Otherwise, there is a risk of making an isDirectPartOf assertion and then later inserting an intermediate part; this will result in making an asserted triple false even though there was no change in the world. When in doubt, use the transitive version gist:isPartOf.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "It is safest to use this property when semantic directness is inherent in the relationship, rather than simply expressing a chosen granularity. For example, a spark plug is a direct part of an engine block; there cannot be any intermediate parts. Otherwise, there is a risk of making an isDirectPartOf assertion and then later inserting an intermediate part; this will result in making an asserted triple false even though there was no change in the world. When in doubt, use the transitive version gist:isPartOf.",
+        "value" : "Because the part has independent existence, there is no cascading delete.",
         "type" : "label"
       } ]
     },
@@ -6062,7 +6062,7 @@
     },
     "superproperty" : [ "31" ],
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "30"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isAssignmentOf",
@@ -6090,29 +6090,29 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Person",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
         "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Equipment",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Organization",
+        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Person",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty",
         "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
+      }, {
+        "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Assignment",
+        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Organization",
         "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Assignment of a person to a project.",
+        "type" : "label"
       } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
@@ -6125,18 +6125,18 @@
         "value" : "People, organizations, monetary amounts, equipment can all be assigned.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "Assignment of a person to a project.",
-        "type" : "label"
+        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Assignment",
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "isAssignmentOf"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "39"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasBiologicalParent",
@@ -6166,7 +6166,7 @@
       "IRI-based" : "hasBiologicalParent"
     },
     "domain" : "41",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "40"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy",
@@ -6203,7 +6203,7 @@
     },
     "cardinality" : "1",
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "42"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasRecipient",
@@ -6228,16 +6228,16 @@
         "value" : "Relates something to the participant that receives or is intended to receive it.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "An offer is made to a recipient; an obligation has a recipient to whom another person is obligated; a gift is bestowed upon a recipient.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "This property is used in abstract contexts such as agreements, obligations, contracts, etc., whereas gist:goesToAgent is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another. However, there are contexts in which either may be appropriate, such as the giving of a gift.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "An offer is made to a recipient; an obligation has a recipient to whom another person is obligated; a gift is bestowed upon a recipient.",
         "type" : "label"
       } ]
     },
@@ -6246,7 +6246,7 @@
     },
     "superproperty" : [ "44" ],
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "43"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualEndDateTime",
@@ -6282,7 +6282,7 @@
       "IRI-based" : "actualEndDateTime"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "48"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasParty",
@@ -6307,16 +6307,16 @@
         "value" : "Relates an event, agreement, or obligation to a participating person or organization.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Subproperties may be defined to describe specific parties, such as hasLender and hasBorrower for a loan.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "Loan agreements have lender and borrower parties.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Subproperties may be defined to describe specific parties, such as hasLender and hasBorrower for a loan.",
         "type" : "label"
       } ]
     },
@@ -6325,7 +6325,7 @@
     },
     "superproperty" : [ "44" ],
     "domain" : "51",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "50"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isUnderJurisdictionOf",
@@ -6361,50 +6361,8 @@
       "IRI-based" : "isUnderJurisdictionOf"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "53"
-  }, {
-    "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt",
-    "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
-    "range" : "66",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ontology/gistCore14.1.0",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "undefined",
-        "value" : "is recorded at",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "The date that something was posted (which is not necessarily the date it occurred). It must be after the date of occurrence, but could be before or after the planned date.",
-        "type" : "label"
-      } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Precision may vary according to context.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "The date and time a customer payment or stock purchase was posted.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isRecordedAt"
-    },
-    "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "65"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasParticipant",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -6431,12 +6389,12 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "This will most often be used as an abstract property. Use subproperties that indicate the nature of the participation (e.g. hasBorrower, hasVenue).",
+        "value" : "The thing with participants will often be an agreement, event or obligation. Participation does not imply agency.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "The thing with participants will often be an agreement, event or obligation. Participation does not imply agency.",
+        "value" : "This will most often be used as an abstract property. Use subproperties that indicate the nature of the participation (e.g. hasBorrower, hasVenue).",
         "type" : "label"
       } ],
       "example" : [ {
@@ -6451,9 +6409,51 @@
     },
     "minCardinality" : "2",
     "domain" : "14",
-    "subproperty" : [ "50", "67", "68", "69", "43" ],
-    "attributes" : [ "external", "object" ],
+    "subproperty" : [ "50", "65", "66", "67", "43" ],
+    "attributes" : [ "object", "external" ],
     "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt",
+    "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
+    "range" : "69",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/semanticarts/ontology/gistCore14.1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "undefined",
+        "value" : "is recorded at",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "The date that something was posted (which is not necessarily the date it occurred). It must be after the date of occurrence, but could be before or after the planned date.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "The date and time a customer payment or stock purchase was posted.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Precision may vary according to context.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isRecordedAt"
+    },
+    "domain" : "14",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "68"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasNavigationalParent",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -6489,7 +6489,7 @@
     },
     "domain" : "14",
     "subproperty" : [ "71" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "70"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isAffectedBy",
@@ -6519,7 +6519,7 @@
       "IRI-based" : "isAffectedBy"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "77"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasUnitGroup",
@@ -6555,7 +6555,7 @@
       "IRI-based" : "hasUnitGroup"
     },
     "domain" : "79",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "78"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/conversionFactor",
@@ -6603,7 +6603,7 @@
       "IRI-based" : "conversionFactor"
     },
     "domain" : "5",
-    "attributes" : [ "datatype", "functional", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "90"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/idText",
@@ -6637,11 +6637,6 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Often, there will be just one identifying text string. More would be appropriate if the individual had different identifiers, such as employee number and social security number. A good way to model that would be to have functional subproperties of idText, such as departmentNumber.",
-        "type" : "label"
-      }, {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
         "value" : "A common use case would be for preexisting internal company identifiers.",
         "type" : "label"
       }, {
@@ -6649,13 +6644,18 @@
         "language" : "undefined",
         "value" : "This property is an alternative to using the property gist:isIdentifiedBy in conjunction with instances of the class gist:ID.",
         "type" : "label"
+      }, {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Often, there will be just one identifying text string. More would be appropriate if the individual had different identifiers, such as employee number and social security number. A good way to model that would be to have functional subproperties of idText, such as departmentNumber.",
+        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "idText"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "99"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/goesToPlace",
@@ -6691,7 +6691,7 @@
       "IRI-based" : "goesToPlace"
     },
     "domain" : "74",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "123"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime",
@@ -6727,7 +6727,7 @@
       "IRI-based" : "actualStartDateTime"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "127"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isAssignmentTo",
@@ -6769,7 +6769,7 @@
       "IRI-based" : "isAssignmentTo"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "130"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfMole",
@@ -6805,12 +6805,12 @@
       "IRI-based" : "exponentOfMole"
     },
     "domain" : "28",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "134"
   }, {
-    "range" : "136",
+    "range" : "129",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "135"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasSubtrahend",
@@ -6835,16 +6835,16 @@
         "value" : "Relates an aspect to another aspect that is a subtracted component of it.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Commonly used with financial metrics.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "In the equation 'profit = revenue - expenses', revenue is an addend and expenses is a subtrahend.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Commonly used with financial metrics.",
         "type" : "label"
       } ]
     },
@@ -6852,13 +6852,13 @@
       "IRI-based" : "hasSubtrahend"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
-    "id" : "137"
+    "attributes" : [ "object", "external" ],
+    "id" : "136"
   }, {
-    "range" : "129",
+    "range" : "119",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "140"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "139"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasDivisor",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -6882,16 +6882,16 @@
         "value" : "Relates a unit of measure to another unit of measure that is a divisor, or relates an aspect to another aspect that is a divisor.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "Miles per hour has miles as a multiplier and hour as a divisor; speed has distance as a multiplier and duration as a divisor.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "Provides a supplemental method of decomposing a unit of measure or an aspect into component factors. Enables dimensional analysis such as miles per hour x hours = miles.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Miles per hour has miles as a multiplier and hour as a divisor; speed has distance as a multiplier and duration as a divisor.",
         "type" : "label"
       } ]
     },
@@ -6899,28 +6899,28 @@
       "IRI-based" : "hasDivisor"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "140"
+  }, {
+    "range" : "142",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "141"
   }, {
-    "range" : "143",
+    "range" : "2",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "142"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "143"
   }, {
     "range" : "5",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "144"
   }, {
-    "range" : "119",
+    "range" : "146",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "145"
-  }, {
-    "range" : "147",
-    "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "146"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/linksTo",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -6960,24 +6960,24 @@
     "label" : {
       "IRI-based" : "linksTo"
     },
-    "superproperty" : [ "149" ],
+    "superproperty" : [ "148" ],
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
-    "id" : "148"
+    "attributes" : [ "object", "external" ],
+    "id" : "147"
   }, {
-    "range" : "58",
+    "range" : "150",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "150"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "149"
   }, {
-    "range" : "5",
+    "range" : "150",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "151"
   }, {
-    "range" : "147",
+    "range" : "129",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "152"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isRenderedOn",
@@ -7013,21 +7013,21 @@
       "IRI-based" : "isRenderedOn"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "153"
   }, {
     "range" : "2",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "154"
   }, {
-    "range" : "156",
+    "range" : "142",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "155"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/prevents",
-    "equivalent" : [ "158" ],
+    "equivalent" : [ "157" ],
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
     "range" : "23",
     "annotations" : {
@@ -7072,12 +7072,12 @@
       "IRI-based" : "prevents"
     },
     "domain" : "129",
-    "attributes" : [ "deprecated", "external", "object" ],
-    "id" : "157"
+    "attributes" : [ "object", "external", "deprecated" ],
+    "id" : "156"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
-    "range" : "162",
+    "range" : "161",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -7100,24 +7100,24 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Category",
+        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/ID",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/ID",
+        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Category",
         "type" : "iri"
-      } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "The allocator may be a person, organization, or automated process.",
-        "type" : "label"
       } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "A U.S. Social Security number is allocated by the U.S. Social Security Administration; the media type https://www.iana.org/assignments/media-types/text/csv is allocated by the Internet Assigned Numbers Authority (IANA).",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "The allocator may be a person, organization, or automated process.",
         "type" : "label"
       } ]
     },
@@ -7125,43 +7125,43 @@
       "IRI-based" : "isAllocatedBy"
     },
     "domain" : "101",
-    "attributes" : [ "external", "object" ],
-    "id" : "161"
+    "attributes" : [ "object", "external" ],
+    "id" : "160"
   }, {
-    "range" : "129",
+    "range" : "5",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "163"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "162"
+  }, {
+    "range" : "165",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "164"
   }, {
     "range" : "58",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "165"
-  }, {
-    "range" : "136",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "168"
   }, {
-    "range" : "156",
-    "domain" : "159",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "5",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "169"
   }, {
-    "range" : "5",
-    "domain" : "159",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "171",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "170"
   }, {
     "range" : "119",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "172"
-  }, {
-    "range" : "174",
-    "domain" : "159",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "173"
+  }, {
+    "range" : "142",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "174"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualEndMicrosecond",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -7185,16 +7185,16 @@
         "value" : "The actual time that something ended, expressed as a system time used for timestamps.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "A system time will be as precise as the system can supply, typically at least milliseconds, sometimes microseconds. The convention for timestamps, such as recording a transaction, is to specify just the end point; the start time is rarely needed.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "'2021-06-01T08:03:27.12324-6:00'^^xsd:dateTime",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "A system time will be as precise as the system can supply, typically at least milliseconds, sometimes microseconds. The convention for timestamps, such as recording a transaction, is to specify just the end point; the start time is rarely needed.",
         "type" : "label"
       } ]
     },
@@ -7202,7 +7202,7 @@
       "IRI-based" : "actualEndMicrosecond"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "175"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasDirectBroader",
@@ -7239,37 +7239,37 @@
     },
     "superproperty" : [ "16" ],
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "18"
   }, {
     "range" : "178",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "177"
   }, {
-    "range" : "136",
-    "domain" : "159",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "165",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "180"
   }, {
     "range" : "182",
     "domain" : "106",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "181"
   }, {
-    "range" : "119",
-    "domain" : "156",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "150",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "183"
   }, {
-    "range" : "5",
-    "domain" : "136",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "150",
+    "domain" : "165",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "184"
   }, {
-    "range" : "2",
-    "domain" : "136",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "5",
+    "domain" : "165",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "185"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/comesFromPlace",
@@ -7305,8 +7305,49 @@
       "IRI-based" : "comesFromPlace"
     },
     "domain" : "89",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "192"
+  }, {
+    "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/owns",
+    "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
+    "range" : "91",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/semanticarts/ontology/gistCore14.1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "undefined",
+        "value" : "owns",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Relates a party to something that it possesses and controls.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "The ultimate form of ownership is the right to destroy.",
+        "type" : "label"
+      }, {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "There is a long list of potential range classes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "owns"
+    },
+    "domain" : "196",
+    "attributes" : [ "object", "external" ],
+    "id" : "195"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfCandela",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -7341,53 +7382,12 @@
       "IRI-based" : "exponentOfCandela"
     },
     "domain" : "33",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "195"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "197"
   }, {
-    "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/owns",
-    "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
-    "range" : "91",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ontology/gistCore14.1.0",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "undefined",
-        "value" : "owns",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Relates a party to something that it possesses and controls.",
-        "type" : "label"
-      } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "There is a long list of potential range classes.",
-        "type" : "label"
-      }, {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "The ultimate form of ownership is the right to destroy.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "owns"
-    },
-    "domain" : "197",
-    "attributes" : [ "external", "object" ],
-    "id" : "196"
-  }, {
-    "range" : "147",
-    "domain" : "156",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "165",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "198"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfNumber",
@@ -7412,16 +7412,16 @@
         "value" : "The exponent of number in a product of powers of base units.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "In the equation '1 beat per minute = 0.016667 x number per second'\n\n\t\tthe conversion factor for beat per minute is 0.016667\n\t\tthe exponent of number is 1\n\t\tthe exponent of second is -1\n\t\tall other exponents are zero\n\n\t\tEvery member of a unit group containing beat per minute must be a multiple of number per second.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "Use when the unit of measure involves a count or other number.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "In the equation '1 beat per minute = 0.016667 x number per second'\n\n\t\tthe conversion factor for beat per minute is 0.016667\n\t\tthe exponent of number is 1\n\t\tthe exponent of second is -1\n\t\tall other exponents are zero\n\n\t\tEvery member of a unit group containing beat per minute must be a multiple of number per second.",
         "type" : "label"
       } ]
     },
@@ -7429,32 +7429,32 @@
       "IRI-based" : "exponentOfNumber"
     },
     "domain" : "3",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "199"
   }, {
-    "range" : "5",
-    "domain" : "156",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "119",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "200"
   }, {
-    "range" : "136",
-    "domain" : "156",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "5",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "201"
   }, {
     "range" : "2",
-    "domain" : "156",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "202"
+  }, {
+    "range" : "150",
+    "domain" : "129",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "203"
   }, {
     "range" : "5",
     "domain" : "129",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "203"
-  }, {
-    "range" : "136",
-    "domain" : "129",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "204"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/longitude",
@@ -7484,32 +7484,32 @@
       "IRI-based" : "longitude"
     },
     "domain" : "19",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "205"
   }, {
     "range" : "119",
     "domain" : "129",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "206"
   }, {
-    "range" : "147",
+    "range" : "165",
     "domain" : "129",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "207"
   }, {
     "range" : "2",
     "domain" : "129",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "208"
   }, {
-    "range" : "119",
+    "range" : "5",
     "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "209"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasAccuracy",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
-    "range" : "136",
+    "range" : "165",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -7535,10 +7535,10 @@
         "value" : "https://en.wikipedia.org/wiki/Accuracy_and_precision",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
+      "example" : [ {
+        "identifier" : "example",
         "language" : "undefined",
-        "value" : "gist uses the ISO-5725 definition of accuracy, which is a combination of trueness (a measure of systemic error) and precision (a measure of random error). The accuracy of a measurement method describes how close its measurements are to actual values. Similarly, the accuracy of an individual measurement is its likely closeness to the actual value. When we say a temperature measurement is accurate to within a tenth of a degree, it means with a certain probability such as 95%.\n\nNote that the unit of measure of the accuracy has to be compatible with the unit of measure of the original magnitude (e.g. something measured in meters could have an accuracy in terms of millimeters or any other unit that measures distance).",
+        "value" : "Temperature accurate to tenth of a degree C; length accurate to the nearest centimeter.",
         "type" : "label"
       } ],
       "domainIncludes" : [ {
@@ -7547,10 +7547,10 @@
         "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Magnitude",
         "type" : "iri"
       } ],
-      "example" : [ {
-        "identifier" : "example",
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Temperature accurate to tenth of a degree C; length accurate to the nearest centimeter.",
+        "value" : "gist uses the ISO-5725 definition of accuracy, which is a combination of trueness (a measure of systemic error) and precision (a measure of random error). The accuracy of a measurement method describes how close its measurements are to actual values. Similarly, the accuracy of an individual measurement is its likely closeness to the actual value. When we say a temperature measurement is accurate to within a tenth of a degree, it means with a certain probability such as 95%.\n\nNote that the unit of measure of the accuracy has to be compatible with the unit of measure of the original magnitude (e.g. something measured in meters could have an accuracy in terms of millimeters or any other unit that measures distance).",
         "type" : "label"
       } ]
     },
@@ -7558,37 +7558,37 @@
       "IRI-based" : "hasAccuracy"
     },
     "domain" : "95",
-    "attributes" : [ "functional", "external", "object" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "216"
   }, {
-    "range" : "5",
+    "range" : "165",
     "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "217"
   }, {
-    "range" : "136",
+    "range" : "2",
     "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "218"
   }, {
-    "range" : "2",
+    "range" : "119",
     "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "220"
   }, {
-    "range" : "147",
+    "range" : "150",
     "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "221"
   }, {
-    "range" : "156",
+    "range" : "58",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "222"
   }, {
-    "range" : "2",
+    "range" : "165",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "223"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime",
@@ -7624,12 +7624,12 @@
       "IRI-based" : "actualStartDateTime"
     },
     "domain" : "225",
-    "attributes" : [ "datatype", "external", "someValues" ],
+    "attributes" : [ "external", "datatype", "someValues" ],
     "id" : "224"
   }, {
     "range" : "227",
     "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "226"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf",
@@ -7671,7 +7671,7 @@
     },
     "domain" : "4",
     "subproperty" : [ "229" ],
-    "attributes" : [ "external", "object", "someValues" ],
+    "attributes" : [ "object", "external", "someValues" ],
     "id" : "228"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualStartMicrosecond",
@@ -7713,12 +7713,12 @@
       "IRI-based" : "actualStartMicrosecond"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "230"
   }, {
     "range" : "5",
-    "domain" : "143",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "232"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isTriggeredBy",
@@ -7743,16 +7743,16 @@
         "value" : "Relates a contingency, such as an event or obligation, to the event that gives rise to it.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "Fire insurance is contingent on a particular building burning down; the death benefit payout on a life insurance policy is contingent on the death of the insured person.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "For obligations, this property describes what must happen to trigger the contingent obligation. Other uses include controls, processes, etc.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Fire insurance is contingent on a particular building burning down; the death benefit payout on a life insurance policy is contingent on the death of the insured person.",
         "type" : "label"
       } ]
     },
@@ -7760,12 +7760,12 @@
       "IRI-based" : "isTriggeredBy"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "233"
   }, {
     "range" : "5",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "235"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isConnectedTo",
@@ -7795,7 +7795,7 @@
       "IRI-based" : "isConnectedTo"
     },
     "domain" : "14",
-    "attributes" : [ "external", "symmetric", "object" ],
+    "attributes" : [ "symmetric", "object", "external" ],
     "id" : "236"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/goesToAgent",
@@ -7843,8 +7843,8 @@
     },
     "superproperty" : [ "44" ],
     "domain" : "83",
-    "attributes" : [ "external", "object" ],
-    "id" : "68"
+    "attributes" : [ "object", "external" ],
+    "id" : "66"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isAbout",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -7873,7 +7873,7 @@
       "IRI-based" : "isAbout"
     },
     "domain" : "47",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "239"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/containedText",
@@ -7901,17 +7901,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Content",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "https://w3id.org/semanticarts/ns/ontology/gist/ContentExpression",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Text",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Content",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -7936,12 +7936,12 @@
       "IRI-based" : "containedText"
     },
     "domain" : "241",
-    "attributes" : [ "datatype", "external", "someValues" ],
+    "attributes" : [ "external", "datatype", "someValues" ],
     "id" : "240"
   }, {
     "range" : "5",
     "domain" : "243",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "242"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isMadeUpOf",
@@ -7976,33 +7976,33 @@
     "label" : {
       "IRI-based" : "isMadeUpOf"
     },
-    "domain" : "147",
-    "attributes" : [ "external", "object", "someValues" ],
+    "domain" : "150",
+    "attributes" : [ "object", "external", "someValues" ],
     "id" : "244"
   }, {
-    "range" : "243",
-    "domain" : "147",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "5",
+    "domain" : "150",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "245"
   }, {
     "range" : "5",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "246"
   }, {
-    "range" : "5",
-    "domain" : "147",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "243",
+    "domain" : "150",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "247"
+  }, {
+    "range" : "5",
+    "domain" : "119",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "248"
   }, {
     "range" : "243",
     "domain" : "119",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "248"
-  }, {
-    "range" : "2",
-    "domain" : "119",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "249"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasBiologicalParent",
@@ -8032,12 +8032,12 @@
       "IRI-based" : "hasBiologicalParent"
     },
     "domain" : "96",
-    "attributes" : [ "allValues", "external", "object" ],
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "250"
   }, {
-    "range" : "5",
+    "range" : "2",
     "domain" : "119",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "251"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasUnitOfMeasure",
@@ -8072,8 +8072,8 @@
     "label" : {
       "IRI-based" : "hasUnitOfMeasure"
     },
-    "domain" : "136",
-    "attributes" : [ "external", "object" ],
+    "domain" : "165",
+    "attributes" : [ "object", "external" ],
     "id" : "252"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/offersToProvide",
@@ -8104,16 +8104,16 @@
         "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Offer",
         "type" : "iri"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "An offer to provide a specific product in exchange for an amount of money or to pay a certain price for a home that is for sale.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "This will most often be a good or service, but could be an amount of money, e.g., for currency exchange.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "An offer to provide a specific product in exchange for an amount of money or to pay a certain price for a home that is for sale.",
         "type" : "label"
       } ]
     },
@@ -8121,7 +8121,7 @@
       "IRI-based" : "offersToProvide"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "253"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasGoal",
@@ -8157,7 +8157,7 @@
       "IRI-based" : "hasGoal"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "254"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf",
@@ -8199,7 +8199,7 @@
     },
     "domain" : "61",
     "subproperty" : [ "229" ],
-    "attributes" : [ "external", "object", "someValues" ],
+    "attributes" : [ "object", "external", "someValues" ],
     "id" : "255"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/links",
@@ -8241,8 +8241,8 @@
       "IRI-based" : "links"
     },
     "domain" : "189",
-    "subproperty" : [ "257", "148" ],
-    "attributes" : [ "allValues", "external", "object" ],
+    "subproperty" : [ "257", "147" ],
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "256"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfKilogram",
@@ -8278,22 +8278,22 @@
       "IRI-based" : "exponentOfKilogram"
     },
     "domain" : "35",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "258"
   }, {
-    "range" : "147",
+    "range" : "150",
     "domain" : "119",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "259"
   }, {
-    "range" : "147",
-    "domain" : "136",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "119",
+    "domain" : "165",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "260"
   }, {
-    "range" : "119",
-    "domain" : "136",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "2",
+    "domain" : "165",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "261"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/name",
@@ -8323,7 +8323,7 @@
       "IRI-based" : "name"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "263"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/uniqueText",
@@ -8348,18 +8348,7 @@
         "value" : "The unique string value of some content object, to be used when there is no possibility of having more than one value.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "The unique string for a vehicle identification number.",
-        "type" : "label"
-      } ],
       "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Tag",
-        "type" : "iri"
-      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "https://w3id.org/semanticarts/ns/ontology/gist/ID",
@@ -8374,6 +8363,17 @@
         "language" : "undefined",
         "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Text",
         "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Tag",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "The unique string for a vehicle identification number.",
+        "type" : "label"
       } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
@@ -8386,7 +8386,7 @@
       "IRI-based" : "uniqueText"
     },
     "domain" : "265",
-    "attributes" : [ "datatype", "functional", "external", "someValues" ],
+    "attributes" : [ "external", "datatype", "someValues", "functional" ],
     "id" : "264"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/conversionOffset",
@@ -8416,7 +8416,7 @@
       "IRI-based" : "conversionOffset"
     },
     "domain" : "5",
-    "attributes" : [ "datatype", "functional", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "267"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/refersTo",
@@ -8446,7 +8446,7 @@
       "IRI-based" : "refersTo"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "268"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/atDateTime",
@@ -8482,7 +8482,7 @@
       "IRI-based" : "atDateTime"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "270"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasUniqueNavigationalParent",
@@ -8513,7 +8513,7 @@
     },
     "superproperty" : [ "70" ],
     "domain" : "14",
-    "attributes" : [ "functional", "external", "object" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "71"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime",
@@ -8554,7 +8554,7 @@
       "IRI-based" : "plannedStartDateTime"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "278"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/latitude",
@@ -8584,7 +8584,7 @@
       "IRI-based" : "latitude"
     },
     "domain" : "19",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "281"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/plannedStartMinute",
@@ -8609,16 +8609,16 @@
         "value" : "The date and time that something is or was planned to start, with precision of one minute.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Used for things like meetings and time card entries, where the hour and minute are important. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the seconds and microseconds to avoid spurious precision.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "'2021-06-01T08:32:00-06:00'^^xsd:dateTime",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Used for things like meetings and time card entries, where the hour and minute are important. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the seconds and microseconds to avoid spurious precision.",
         "type" : "label"
       } ]
     },
@@ -8626,7 +8626,7 @@
       "IRI-based" : "plannedStartMinute"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "285"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/allows",
@@ -8662,7 +8662,7 @@
       "IRI-based" : "allows"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "287"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/offersToReceive",
@@ -8687,12 +8687,6 @@
         "value" : "Relates an offer to the thing expected in return for the offered item.",
         "type" : "label"
       } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Offer",
-        "type" : "iri"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
@@ -8704,13 +8698,19 @@
         "language" : "undefined",
         "value" : "A vendor makes an offer to receive a particular amount of money in exchange for the offered product; an offer to receive a home in exchange for an amount of money.",
         "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/Offer",
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "offersToReceive"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "288"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfRadian",
@@ -8746,7 +8746,7 @@
       "IRI-based" : "exponentOfRadian"
     },
     "domain" : "9",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "289"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasAspect",
@@ -8776,7 +8776,7 @@
       "IRI-based" : "hasAspect"
     },
     "domain" : "105",
-    "attributes" : [ "functional", "external", "object" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "290"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/deathDate",
@@ -8818,7 +8818,7 @@
       "IRI-based" : "deathDate"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "291"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDate",
@@ -8860,8 +8860,55 @@
       "IRI-based" : "actualStartDate"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "292"
+  }, {
+    "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/plannedEndYear",
+    "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
+    "range" : "112",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/semanticarts/ontology/gistCore14.1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "undefined",
+        "value" : "planned end year",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "The date that something is or was planned to end, with precision of one year.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Used for anything with a planned end date where precision of one year is sufficient. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "The automobile manufacturer announced that it will stop producing gas-powered vehicles in 2035.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "'2021-01-01T00:00:00-06:00'^^xsd:dateTime",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "plannedEndYear"
+    },
+    "domain" : "14",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "293"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfBit",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -8896,54 +8943,7 @@
       "IRI-based" : "exponentOfBit"
     },
     "domain" : "45",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "293"
-  }, {
-    "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/plannedEndYear",
-    "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
-    "range" : "112",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ontology/gistCore14.1.0",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "undefined",
-        "value" : "planned end year",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "The date that something is or was planned to end, with precision of one year.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "The automobile manufacturer announced that it will stop producing gas-powered vehicles in 2035.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "'2021-01-01T00:00:00-06:00'^^xsd:dateTime",
-        "type" : "label"
-      } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Used for anything with a planned end date where precision of one year is sufficient. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "plannedEndYear"
-    },
-    "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "294"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/symbol",
@@ -8968,24 +8968,24 @@
         "value" : "A symbol for something using only ASCII characters.",
         "type" : "label"
       } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure",
-        "type" : "iri"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "The ASCII symbol for square meter is m^2.",
         "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure",
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "symbol"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "295"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/description",
@@ -9032,7 +9032,7 @@
       "IRI-based" : "description"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "296"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasIncumbent",
@@ -9068,7 +9068,7 @@
       "IRI-based" : "hasIncumbent"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "299"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/linksFrom",
@@ -9109,9 +9109,9 @@
     "label" : {
       "IRI-based" : "linksFrom"
     },
-    "superproperty" : [ "149" ],
+    "superproperty" : [ "148" ],
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "257"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/conformsTo",
@@ -9153,7 +9153,7 @@
       "IRI-based" : "conformsTo"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "301"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/endDateTime",
@@ -9195,7 +9195,7 @@
     },
     "cardinality" : "1",
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "305"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/plannedStartYear",
@@ -9223,12 +9223,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "The automobile manufacturer announced that its full line-up will include only electric cars starting in 2035.",
+        "value" : "'2021-01-01T00:00:00-06:00'^^xsd:dateTime",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "'2021-01-01T00:00:00-06:00'^^xsd:dateTime",
+        "value" : "The automobile manufacturer announced that its full line-up will include only electric cars starting in 2035.",
         "type" : "label"
       } ],
       "scopeNote" : [ {
@@ -9242,7 +9242,7 @@
       "IRI-based" : "plannedStartYear"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "308"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn",
@@ -9272,7 +9272,7 @@
       "IRI-based" : "isGeoContainedIn"
     },
     "domain" : "20",
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "transitive", "object", "external" ],
     "id" : "309"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSecond",
@@ -9308,7 +9308,7 @@
       "IRI-based" : "exponentOfSecond"
     },
     "domain" : "11",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "314"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/numericValue",
@@ -9338,11 +9338,11 @@
       "IRI-based" : "numericValue"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "315"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/prohibits",
-    "equivalent" : [ "157" ],
+    "equivalent" : [ "156" ],
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
     "range" : "23",
     "annotations" : {
@@ -9367,12 +9367,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "A city ordinance prohibits jaywalking.",
+        "value" : "Private property laws prohibit someone from entering private land marked with a 'No Trespassing' sign.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "Private property laws prohibit someone from entering private land marked with a 'No Trespassing' sign.",
+        "value" : "A city ordinance prohibits jaywalking.",
         "type" : "label"
       } ],
       "scopeNote" : [ {
@@ -9386,8 +9386,8 @@
       "IRI-based" : "prohibits"
     },
     "domain" : "129",
-    "attributes" : [ "external", "object" ],
-    "id" : "158"
+    "attributes" : [ "object", "external" ],
+    "id" : "157"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfOther",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -9428,7 +9428,7 @@
       "IRI-based" : "exponentOfOther"
     },
     "domain" : "7",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "316"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isBasedOn",
@@ -9464,7 +9464,7 @@
       "IRI-based" : "isBasedOn"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "317"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isPartOf",
@@ -9492,12 +9492,12 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "Because the part has independent existence, there is no cascading delete.",
+        "value" : "The transitive version of gist:isDirectPartOf.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "The transitive version of gist:isDirectPartOf.",
+        "value" : "Because the part has independent existence, there is no cascading delete.",
         "type" : "label"
       } ]
     },
@@ -9506,7 +9506,7 @@
     },
     "domain" : "14",
     "subproperty" : [ "30" ],
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "transitive", "object", "external" ],
     "id" : "31"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfMeter",
@@ -9542,7 +9542,7 @@
       "IRI-based" : "exponentOfMeter"
     },
     "domain" : "37",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "320"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/contributesTo",
@@ -9572,7 +9572,7 @@
       "IRI-based" : "contributesTo"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "323"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDate",
@@ -9614,7 +9614,7 @@
       "IRI-based" : "plannedStartDate"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "324"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isProducedBy",
@@ -9642,6 +9642,11 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
+        "value" : "A measurement is produced by a sensor.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
         "value" : "A deliverable is produces by a task.",
         "type" : "label"
       }, {
@@ -9649,18 +9654,13 @@
         "language" : "undefined",
         "value" : "A painting is produced by a person.",
         "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "A measurement is produced by a sensor.",
-        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "isProducedBy"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "325"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isIdentifiedBy",
@@ -9696,7 +9696,7 @@
       "IRI-based" : "isIdentifiedBy"
     },
     "domain" : "73",
-    "attributes" : [ "external", "inverse functional", "object" ],
+    "attributes" : [ "object", "external", "inverse functional" ],
     "id" : "326"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfAmpere",
@@ -9732,7 +9732,7 @@
       "IRI-based" : "exponentOfAmpere"
     },
     "domain" : "302",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "327"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/plannedEndDate",
@@ -9757,16 +9757,16 @@
         "value" : "The date that something is or was planned to end, with precision of one day.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "'2021-06-01T00:00:00-06:00'^^xsd:dateTime",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "Used for anything with a planned end date, such as when a lease will expire, when an offer is no longer available, etc. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "'2021-06-01T00:00:00-06:00'^^xsd:dateTime",
         "type" : "label"
       } ]
     },
@@ -9774,7 +9774,7 @@
       "IRI-based" : "plannedEndDate"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "329"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/encryptedText",
@@ -9804,7 +9804,7 @@
       "IRI-based" : "encryptedText"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "330"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isRecognizedBy",
@@ -9840,7 +9840,7 @@
       "IRI-based" : "isRecognizedBy"
     },
     "domain" : "75",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "331"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualEndMinute",
@@ -9882,7 +9882,7 @@
       "IRI-based" : "actualEndMinute"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "332"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isExpressedIn",
@@ -9924,22 +9924,22 @@
       "IRI-based" : "isExpressedIn"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "333"
   }, {
     "range" : "129",
     "domain" : "188",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "334"
   }, {
     "range" : "129",
     "domain" : "211",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "335"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
-    "range" : "136",
+    "range" : "165",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -9970,12 +9970,12 @@
       "IRI-based" : "hasMagnitude"
     },
     "domain" : "95",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "336"
   }, {
     "range" : "47",
     "domain" : "46",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "337"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isFirstMemberOf",
@@ -10012,72 +10012,72 @@
     },
     "superproperty" : [ "339" ],
     "domain" : "338",
-    "attributes" : [ "functional", "external", "object" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "229"
   }, {
     "range" : "47",
     "domain" : "107",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "340"
   }, {
     "range" : "129",
     "domain" : "318",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "342"
   }, {
     "range" : "24",
     "domain" : "111",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "343"
   }, {
     "range" : "24",
     "domain" : "265",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "344"
   }, {
     "range" : "24",
     "domain" : "307",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "345"
   }, {
     "range" : "24",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "346"
   }, {
     "range" : "24",
     "domain" : "241",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "347"
   }, {
     "range" : "24",
     "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "348"
   }, {
     "range" : "24",
     "domain" : "300",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "349"
   }, {
     "range" : "24",
     "domain" : "312",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "350"
   }, {
     "range" : "24",
     "domain" : "313",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "351"
   }, {
     "range" : "24",
     "domain" : "311",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "352"
   }, {
     "range" : "24",
     "domain" : "298",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "353"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualEndYear",
@@ -10124,7 +10124,7 @@
       "IRI-based" : "actualEndYear"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "354"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/plannedEndMinute",
@@ -10166,47 +10166,47 @@
       "IRI-based" : "plannedEndMinute"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "355"
   }, {
     "range" : "211",
     "domain" : "277",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "356"
   }, {
-    "range" : "159",
-    "domain" : "164",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "158",
+    "domain" : "163",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "357"
   }, {
-    "range" : "159",
+    "range" : "158",
     "domain" : "286",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "358"
   }, {
-    "range" : "147",
+    "range" : "150",
     "domain" : "118",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "359"
   }, {
-    "range" : "136",
+    "range" : "165",
     "domain" : "297",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "360"
   }, {
     "range" : "20",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "361"
   }, {
     "range" : "24",
     "domain" : "186",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "362"
   }, {
     "range" : "24",
     "domain" : "310",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "363"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/providesOrderFor",
@@ -10236,22 +10236,22 @@
       "IRI-based" : "providesOrderFor"
     },
     "domain" : "338",
-    "attributes" : [ "functional", "external", "object" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "364"
   }, {
     "range" : "57",
     "domain" : "92",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "365"
   }, {
     "range" : "211",
     "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "366"
   }, {
     "range" : "211",
     "domain" : "276",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "367"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasGiver",
@@ -10276,16 +10276,16 @@
         "value" : "Relates something to the participant that provides it.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "An offer is made by a giver; an obligation has a giver who is obligated to another person; a gift is presented by the giver.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "This property is often used in abstract contexts such as agreements, obligations, contracts, etc., whereas gist:comesFromAgent is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another. However, there are contexts in which either may be appropriate, such as the giving of a gift.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "An offer is made by a giver; an obligation has a giver who is obligated to another person; a gift is presented by the giver.",
         "type" : "label"
       } ]
     },
@@ -10294,8 +10294,8 @@
     },
     "superproperty" : [ "44" ],
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
-    "id" : "67"
+    "attributes" : [ "object", "external" ],
+    "id" : "65"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasAddend",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -10336,42 +10336,42 @@
       "IRI-based" : "hasAddend"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "369"
   }, {
     "range" : "58",
     "domain" : "59",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "371"
   }, {
     "range" : "60",
     "domain" : "61",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "372"
   }, {
     "range" : "119",
     "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "373"
   }, {
     "range" : "92",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "374"
   }, {
     "range" : "118",
     "domain" : "117",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "375"
   }, {
     "range" : "107",
     "domain" : "182",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "376"
   }, {
     "range" : "107",
     "domain" : "106",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "377"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/plannedEndDateTime",
@@ -10399,12 +10399,12 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "This property, unlike gist:actualEndDateTime, does not have a subproperty for microsecond precision, because planned times typically are not expressed at that level of granularity. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual.",
+        "value" : "This is an abstraction over the various precisions of planned end time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "This is an abstraction over the various precisions of planned end time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes.",
+        "value" : "This property, unlike gist:actualEndDateTime, does not have a subproperty for microsecond precision, because planned times typically are not expressed at that level of granularity. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual.",
         "type" : "label"
       } ]
     },
@@ -10412,7 +10412,7 @@
       "IRI-based" : "plannedEndDateTime"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "378"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfUSDollar",
@@ -10454,7 +10454,7 @@
       "IRI-based" : "exponentOfUSDollar"
     },
     "domain" : "133",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "379"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/birthDate",
@@ -10479,16 +10479,16 @@
         "value" : "The date some living thing was or will be born, with precision of one day.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "'2021-06-01T00:00:00-06:00'^^xsd:dateTime",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "This is a subproperty of gist:startDateTime rather than gist:actualStartDate because some living things have yet to be born. This property refers to a calendar date and is assumed to precision of one day (time zone offset is allowed). It is recommended to zero out the hours through microseconds to avoid spurious precision. Implementations requiring a birthdate to the minute can define a subproperty.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "'2021-06-01T00:00:00-06:00'^^xsd:dateTime",
         "type" : "label"
       } ]
     },
@@ -10496,7 +10496,7 @@
       "IRI-based" : "birthDate"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "380"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualStartMinute",
@@ -10538,7 +10538,7 @@
       "IRI-based" : "actualStartMinute"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "382"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasAddress",
@@ -10574,7 +10574,7 @@
       "IRI-based" : "hasAddress"
     },
     "domain" : "86",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "383"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasPhysicalLocation",
@@ -10610,7 +10610,7 @@
       "IRI-based" : "hasPhysicalLocation"
     },
     "domain" : "87",
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "transitive", "object", "external" ],
     "id" : "384"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/comesFromAgent",
@@ -10638,12 +10638,12 @@
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "This is not the inverse of gist:goesToAgent, as both properties have the message or shipment as the subject.",
+        "value" : "This property is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another, whereas gist:hasGiver is typically used in more abstract contexts such as agreements, obligations, contracts, etc. However, there are contexts in which either may be appropriate, such as the giving of a gift.",
         "type" : "label"
       }, {
         "identifier" : "scopeNote",
         "language" : "undefined",
-        "value" : "This property is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another, whereas gist:hasGiver is typically used in more abstract contexts such as agreements, obligations, contracts, etc. However, there are contexts in which either may be appropriate, such as the giving of a gift.",
+        "value" : "This is not the inverse of gist:goesToAgent, as both properties have the message or shipment as the subject.",
         "type" : "label"
       } ],
       "example" : [ {
@@ -10658,8 +10658,8 @@
     },
     "superproperty" : [ "44" ],
     "domain" : "88",
-    "attributes" : [ "external", "object" ],
-    "id" : "69"
+    "attributes" : [ "object", "external" ],
+    "id" : "67"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSteradian",
     "baseIri" : "https://w3id.org/semanticarts/ns/ontology/gist",
@@ -10683,16 +10683,16 @@
         "value" : "The exponent of steradian in a product of powers of base units.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "In the equation '1 watt per square meter steradian = 1 x kilogram per secondCubed steradian'\n\n\t\tthe conversion factor for watt per square meter steradian is 1\n\t\tthe exponent of kilogram is 1\n\t\tthe exponent of second is -3\n\t\tthe exponent of steradian is -1\n\t\tall other exponents are zero\n\n\t\tEvery member of a unit group containing watt per square meter steradian must a multiple of kilogram per secondCubed steradian.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "Steradian is a measure of solid angle.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "In the equation '1 watt per square meter steradian = 1 x kilogram per secondCubed steradian'\n\n\t\tthe conversion factor for watt per square meter steradian is 1\n\t\tthe exponent of kilogram is 1\n\t\tthe exponent of second is -3\n\t\tthe exponent of steradian is -1\n\t\tall other exponents are zero\n\n\t\tEvery member of a unit group containing watt per square meter steradian must a multiple of kilogram per secondCubed steradian.",
         "type" : "label"
       } ]
     },
@@ -10700,7 +10700,7 @@
       "IRI-based" : "exponentOfSteradian"
     },
     "domain" : "131",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "385"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/occursIn",
@@ -10730,7 +10730,7 @@
       "IRI-based" : "occursIn"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "386"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/sequence",
@@ -10766,7 +10766,7 @@
       "IRI-based" : "sequence"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "387"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/requires",
@@ -10791,16 +10791,16 @@
         "value" : "The subject needs the object or makes it necessary, mandatory, or compulsory.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "This predicate is defined generally enough to encompass a few different meanings of the English word 'requires':\n\n\t\t1. To need something or to make something necessary.\n\t\t2. To order or demand something, or to order someone to do something, especially because of a rule or law.\n\t\t3. To make it officially necessary for someone to do something.\n\n\tImplementations requiring a more specific meaning should define subproperties.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
         "value" : "Humans require air; solar power requires sunshine.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "This predicate is defined generally enough to encompass a few different meanings of the English word 'requires':\n\n\t\t1. To need something or to make something necessary.\n\t\t2. To order or demand something, or to order someone to do something, especially because of a rule or law.\n\t\t3. To make it officially necessary for someone to do something.\n\n\tImplementations requiring a more specific meaning should define subproperties.",
         "type" : "label"
       } ]
     },
@@ -10808,7 +10808,7 @@
       "IRI-based" : "requires"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "388"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualEndDate",
@@ -10850,42 +10850,42 @@
       "IRI-based" : "actualEndDate"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "389"
   }, {
     "range" : "2",
     "domain" : "60",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "390"
-  }, {
-    "range" : "80",
-    "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "391"
   }, {
     "range" : "119",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "391"
+  }, {
+    "range" : "150",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "392"
   }, {
     "range" : "19",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "393"
   }, {
-    "range" : "5",
+    "range" : "80",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "394"
-  }, {
-    "range" : "147",
-    "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "395"
   }, {
     "range" : "2",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "395"
+  }, {
+    "range" : "5",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "396"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy",
@@ -10921,17 +10921,17 @@
       "IRI-based" : "isCategorizedBy"
     },
     "domain" : "46",
-    "attributes" : [ "external", "object", "someValues" ],
+    "attributes" : [ "object", "external", "someValues" ],
     "id" : "397"
   }, {
-    "range" : "159",
+    "range" : "158",
     "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "398"
   }, {
-    "range" : "159",
+    "range" : "158",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "399"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasUniqueBroader",
@@ -10962,7 +10962,7 @@
     },
     "superproperty" : [ "16" ],
     "domain" : "14",
-    "attributes" : [ "functional", "external", "object" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "17"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/startDateTime",
@@ -11004,7 +11004,7 @@
     },
     "cardinality" : "1",
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "400"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/actualStartYear",
@@ -11029,21 +11029,21 @@
         "value" : "The actual date that something started, with precision of one year.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "undefined",
-        "value" : "Used for things where the precision of a year is sufficient. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "The tenure of the current chairman of the board began in 2021.",
+        "value" : "'2021-01-01T00:00:00-06:00'^^xsd:dateTime",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "undefined",
-        "value" : "'2021-01-01T00:00:00-06:00'^^xsd:dateTime",
+        "value" : "The tenure of the current chairman of the board began in 2021.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "Used for things where the precision of a year is sufficient. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included.",
         "type" : "label"
       } ]
     },
@@ -11051,7 +11051,7 @@
       "IRI-based" : "actualStartYear"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "401"
   }, {
     "iri" : "https://w3id.org/semanticarts/ns/ontology/gist/hasMultiplier",
@@ -11076,16 +11076,16 @@
         "value" : "Relates a unit of measure to another unit of measure that is a factor, or relates an aspect to another aspect that is a factor.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "Miles per hour has miles as a multiplier and hours as a divisor; speed has distance as a multiplier and duration as a divisor.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "undefined",
         "value" : "Provides a supplemental method of decomposing a unit of measure or aspect into component factors. Enables dimensional analysis such as miles per hour x hours = miles.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Miles per hour has miles as a multiplier and hours as a divisor; speed has distance as a multiplier and duration as a divisor.",
         "type" : "label"
       } ]
     },
@@ -11093,7 +11093,7 @@
       "IRI-based" : "hasMultiplier"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "402"
   } ]
 }

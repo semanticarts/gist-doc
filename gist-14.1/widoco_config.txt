@@ -5,11 +5,11 @@ ontologyNamespaceURI=https://w3id.org/semanticarts/ontology/gistCore
 ontologyName=gist
 thisVersionURI=https://w3id.org/semanticarts/ontology/gistCore14.1.0
 latestVersionURI=https://w3id.org/semanticarts/ontology/gistCore14.1.0
-# previousVersionURI intentionally points to thisVersionURI to suppress WIDOCO's
-# auto-changelog, which drops axioms involving nested class expressions
-# (ObjectIntersectionOf, ObjectSomeValuesFrom, etc.) and produces a misleading diff.
-# Release history is maintained in skos:historyNote inside the RDF.
-previousVersionURI=https://w3id.org/semanticarts/ontology/gistCore14.1.0
+# previousVersionURI intentionally left blank to suppress WIDOCO's auto-changelog,
+# which drops axioms involving nested class expressions (ObjectIntersectionOf,
+# ObjectSomeValuesFrom, etc.) and produces a misleading diff. Release history is
+# maintained in skos:historyNote inside the RDF.
+previousVersionURI=
 dateOfRelease=April 2026
 dateIssued=April 2026
 dateCreated=April 2026
