@@ -36,7 +36,7 @@ then open http://127.0.0.1:8000/index-en.html.
 
 To add `gist-<new-version>/`, copy the most recent version's directory and update:
 
-- `widoco_config.txt` — bump `thisVersionURI`, `latestVersionURI`, `previousVersionURI`, `ontologyRevisionNumber`, all `date*` fields, `citeAs`, and `description`
-- `widoco.command.txt` — point `-ontFile` at the new RDF in `../ontologies/`
+- `widoco_config.txt` — bump `thisVersionURI`, `latestVersionURI`, `ontologyRevisionNumber`, all `date*` fields, `citeAs`, and `description`. Leave `previousVersionURI` blank to suppress WIDOCO's auto-changelog (see the comment inline in any existing config for the rationale).
+- `widoco.command.txt` — point `-ontURI` at the new version's canonical w3id.org URL (e.g. `https://w3id.org/semanticarts/ontology/gistCore<version>`).
 
-Drop the new RDF into `ontologies/` at the repo root.
+The build requires the ontology to already be published at that URL. If you need to build docs against an unpublished draft, temporarily swap `-ontURI <url>` for `-ontFile <path-to-local-rdf>`.
