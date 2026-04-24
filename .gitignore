@@ -1,2 +1,4 @@
 *-Schema.ttl
 *.ppt*
+tools/*.jar
+.claude/settings.local.json
