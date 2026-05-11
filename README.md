@@ -2,7 +2,7 @@
 
 Documentation of the [Semantic Arts gist minimalist upper ontology](https://github.com/semanticarts/gist/tree/main).
 
-## Contents
+## Latest Documentation
 
 - [**WIDOCO-Style Documentation**](gist-14.1/widoco-documentation/index-en.html) — gist 14.1.0
   - HTML documentation built using [WIDOCO](https://github.com/dgarijo/Widoco)
@@ -17,3 +17,20 @@ Documentation of the [Semantic Arts gist minimalist upper ontology](https://gith
 - [Download gist](https://www.semanticarts.com/gist/)
 - [Clone the gist repository](https://github.com/semanticarts/gist/tree/main)
 - [Semantic Arts](https://www.semanticarts.com/)
+
+## Previous Versions
+
+### gist 14.0.0
+
+- [**WIDOCO-Style Documentation**](gist-14.0/widoco-documentation/index-en.html) — gist 14.0.0
+- [**Zest of gist (eBook)**](gist-14.0/eBook/Zest-of-gist_14.0.0.epub) — gist 14.0.0
+
+### gist 13.0.0
+
+- [**WIDOCO-Style Documentation**](gist-13.0/widoco-documentation/index-en.html) — gist 13.0.0
+- [**Zest of gist (eBook)**](gist-13.0/eBook/Zest-of-gist_13.0.0.epub) — gist 13.0.0
+
+### gist 11.0.0
+
+- [**WIDOCO-Style Documentation**](gist-11.0/widoco-documentation/index-en.html) — gist 11.0.0
+- [**Zest of gist (eBook)**](gist-11.0/eBook/Zest-of-gist_11.0.0.epub) — gist 11.0.0
