@@ -33,7 +33,7 @@ Documentation of the [Semantic Arts gist minimalist upper ontology](https://gith
 ### gist 11.0.0
 
 - [**WIDOCO-Style Documentation**](gist-11.0/widoco-documentation/index-en.html) — gist 11.0.0
-- [**Zest of gist (eBook)**](gist-11.0/eBook/Zest-of-gist_11.0.0.epub) — gist 11.0.0
+- [**Zest of gist (eBook)**](gist-11.0/eBook/gist_11.0.0_constellations.epub) — gist 11.0.0
 
 ### gist Terms History
 
