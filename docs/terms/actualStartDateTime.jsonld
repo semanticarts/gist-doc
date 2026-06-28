@@ -1,0 +1,176 @@
+[
+  {
+    "@id": "_:b237fff6b13338f35",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:b33dc8af5bc73013b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualEndDateTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:b8de6b40856c98e2e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:beb3d19eead884c1e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Event"
+          },
+          {
+            "@id": "_:b237fff6b13338f35"
+          },
+          {
+            "@id": "_:b33dc8af5bc73013b"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ContemporaryEvent",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:beb3d19eead884c1e"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/HistoricalEvent",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:b8de6b40856c98e2e"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDate",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: The actual date and time that something started, with no implied precision."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: This is an abstraction over the various precisions of actual start time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "actual start date time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/startDateTime"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The actual date and time that something started, with no implied precision."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "actual start date time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "This is an abstraction over the various precisions of actual start time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartMicrosecond",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartMinute",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartYear",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime"
+      }
+    ]
+  }
+]

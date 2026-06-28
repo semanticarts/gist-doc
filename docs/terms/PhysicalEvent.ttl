@@ -1,0 +1,23 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:PhysicalEvent a owl:Class ;
+    rdfs:label "Physical Event"^^xsd:string ;
+    rdfs:comment "DEFINITION: An event that can be said to have occurred at some place in space."^^xsd:string,
+        "EXAMPLE: A meeting, a car accident."^^xsd:string,
+        "EXAMPLE: Negative examples: Excludes events that have no meaningful location, such as financial events or project milestones."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Event ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:occursIn ;
+                        owl:someValuesFrom gist:GeoLocation ] ) ] ;
+    skos:definition "An event that can be said to have occurred at some place in space."^^xsd:string ;
+    skos:example "A meeting, a car accident."^^xsd:string,
+        "Negative examples: Excludes events that have no meaningful location, such as financial events or project milestones."^^xsd:string ;
+    skos:prefLabel "Physical Event"^^xsd:string .
+

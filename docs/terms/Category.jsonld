@@ -1,0 +1,311 @@
+[
+  {
+    "@id": "_:b05fcb54653fbafc3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:bb1bcb0bffa2220c9"
+      }
+    ]
+  },
+  {
+    "@id": "_:b29e54af47b7dbcee",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b4831f81f9bb4ce2e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:b29e54af47b7dbcee"
+      }
+    ]
+  },
+  {
+    "@id": "_:b79dc7b85023cdd06",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Collection"
+          },
+          {
+            "@id": "_:b05fcb54653fbafc3"
+          },
+          {
+            "@id": "_:b89041ae1f87719f9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b89041ae1f87719f9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:ba648df02e87029bc"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "_:ba648df02e87029bc",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:bb1bcb0bffa2220c9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/AddressUsageType",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Behavior",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: A concept or label used to categorize other instances without specifying any formal semantics."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: Tags used in folksonomies; formal definitions from other systems."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: Often a type can be modeled either as an owl:Class or as a gist:Category. Use the latter if you don't care much about the formal structure of the different types, or if there is a whole hierarchy of types that are going to be managed by a group separate from the ontology developers. The formal structure may be defined elsewhere and linked to, if necessary."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Category"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:b4831f81f9bb4ce2e"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Event"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "A concept or label used to categorize other instances without specifying any formal semantics."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Tags used in folksonomies; formal definitions from other systems."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Category"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Often a type can be modeled either as an owl:Class or as a gist:Category. Use the latter if you don't care much about the formal structure of the different types, or if there is a whole hierarchy of types that are going to be managed by a group separate from the ontology developers. The formal structure may be defined elsewhere and linked to, if necessary."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ControlledVocabulary",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b79dc7b85023cdd06"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/DegreeOfCommitment",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Discipline",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ElectronicAddressType",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/EquipmentType",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GeneralMediaType",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/MediaType",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Medium",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/PhysicalActionType",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/PhysicalAddressType",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ProductCategory",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Tag",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy",
+    "https://w3id.org/semanticarts/ns/ontology/gist/domainIncludes": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy",
+    "https://w3id.org/semanticarts/ns/ontology/gist/rangeIncludes": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  }
+]

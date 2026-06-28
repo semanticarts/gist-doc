@@ -1,0 +1,27 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:CountryGeoRegion rdfs:subClassOf gist:GovernedGeoRegion ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernedGeoRegion [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:CountryGovernment ] ) ] .
+
+gist:GovernedGeoRegion a owl:Class ;
+    rdfs:label "Governed Geographic Region"^^xsd:string ;
+    rdfs:comment "DEFINITION: A geographic region governed by at least one government organization."^^xsd:string,
+        "NOTE: Geographic regions do not need not be physically contiguous in order to constitute a governed geographic region; e.g., Alaska and Hawaii are part of the region governed by the United States."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:GeoRegion ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GeoRegion [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:GovernmentOrganization ] ) ] ;
+    skos:definition "A geographic region governed by at least one government organization."^^xsd:string ;
+    skos:prefLabel "Governed Geographic Region"^^xsd:string ;
+    skos:scopeNote "Geographic regions do not need not be physically contiguous in order to constitute a governed geographic region; e.g., Alaska and Hawaii are part of the region governed by the United States."^^xsd:string .
+

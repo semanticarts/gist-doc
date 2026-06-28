@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/requires">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The subject needs the object or makes it necessary, mandatory, or compulsory.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Humans require air; solar power requires sunshine.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This predicate is defined generally enough to encompass a few different meanings of the English word 'requires':&#13;
+&#13;
+		1. To need something or to make something necessary.&#13;
+		2. To order or demand something, or to order someone to do something, especially because of a rule or law.&#13;
+		3. To make it officially necessary for someone to do something.&#13;
+&#13;
+	Implementations requiring a more specific meaning should define subproperties.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subject needs the object or makes it necessary, mandatory, or compulsory.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humans require air; solar power requires sunshine.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This predicate is defined generally enough to encompass a few different meanings of the English word 'requires':&#13;
+&#13;
+		1. To need something or to make something necessary.&#13;
+		2. To order or demand something, or to order someone to do something, especially because of a rule or law.&#13;
+		3. To make it officially necessary for someone to do something.&#13;
+&#13;
+	Implementations requiring a more specific meaning should define subproperties.</skos:scopeNote>
+  </rdf:Description>
+</rdf:RDF>

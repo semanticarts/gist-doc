@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Determination">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An event whose purpose is to establish a specific result, value, or outcome, usually by research, measuring, evaluating, or calculating.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Measuring the sulfur content of crude oil; evaluating a loan application for approval; estimating the price of gas for the next three months; determining whether and by how much an interest rate should change; classifying a purchase into a budget category.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Determination</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An event whose purpose is to establish a specific result, value, or outcome, usually by research, measuring, evaluating, or calculating.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measuring the sulfur content of crude oil; evaluating a loan application for approval; estimating the price of gas for the next three months; determining whether and by how much an interest rate should change; classifying a purchase into a budget category.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Determination</skos:prefLabel>
+  </rdf:Description>
+</rdf:RDF>

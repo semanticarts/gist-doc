@@ -1,0 +1,55 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Content owl:disjointWith gist:GeoRegion .
+
+gist:GovernedGeoRegion rdfs:subClassOf gist:GeoRegion ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GeoRegion [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:GovernmentOrganization ] ) ] .
+
+gist:Landmark rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:hasPhysicalLocation ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( gist:GeoRegion gist:GeoVolume ) ] ] .
+
+gist:SubCountryGovernment owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernmentOrganization [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:CountryGovernment ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isGovernedBy ] ;
+                        owl:someValuesFrom gist:GeoRegion ] ) ] .
+
+gist:GeoRegion a owl:Class ;
+    rdfs:label "Geographic Region"^^xsd:string ;
+    rdfs:comment "DEFINITION: A bounded region (or set of regions) on the surface of the Earth."^^xsd:string,
+        "EXAMPLE: The bounded shape that defines the region occupied by Crater Lake; the bounded area known as the contiguous USA."^^xsd:string,
+        "NOTE: A geographic region could be non-contiguous; e.g., the region governed by the US federal government is the contiguous area of the lower 48 states plus Alaska, Hawaii, and overseas territories. Child classes in lower ontologies can make this distinction."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( gist:GeoLocation [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_area ;
+                                owl:onProperty gist:hasAspect ] ] ) ],
+        gist:GeoLocation ;
+    owl:disjointWith gist:IntellectualProperty,
+        gist:Intention,
+        gist:Language,
+        gist:Magnitude,
+        gist:Organization,
+        gist:PhysicalIdentifiableItem,
+        gist:PhysicalSubstance,
+        gist:Template,
+        gist:UnitOfMeasure ;
+    skos:definition "A bounded region (or set of regions) on the surface of the Earth."^^xsd:string ;
+    skos:example "The bounded shape that defines the region occupied by Crater Lake; the bounded area known as the contiguous USA."^^xsd:string ;
+    skos:prefLabel "Geographic Region"^^xsd:string ;
+    skos:scopeNote "A geographic region could be non-contiguous; e.g., the region governed by the US federal government is the contiguous area of the lower 48 states plus Alaska, Hawaii, and overseas territories. Child classes in lower ontologies can make this distinction."^^xsd:string .
+

@@ -1,0 +1,57 @@
+[
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/hasMultiplier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: Relates a unit of measure to another unit of measure that is a factor, or relates an aspect to another aspect that is a factor."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: Miles per hour has miles as a multiplier and hours as a divisor; speed has distance as a multiplier and duration as a divisor."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: Provides a supplemental method of decomposing a unit of measure or aspect into component factors. Enables dimensional analysis such as miles per hour x hours = miles."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "has multiplier"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Relates a unit of measure to another unit of measure that is a factor, or relates an aspect to another aspect that is a factor."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Miles per hour has miles as a multiplier and hours as a divisor; speed has distance as a multiplier and duration as a divisor."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "has multiplier"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Provides a supplemental method of decomposing a unit of measure or aspect into component factors. Enables dimensional analysis such as miles per hour x hours = miles."
+      }
+    ]
+  }
+]

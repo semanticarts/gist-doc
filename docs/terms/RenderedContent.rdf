@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/RenderedContent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Content expressed via some physical medium.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Words printed on paper; audio played on speakers; an image displayed on a monitor; an original painting.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Renderings of the same file on two different monitors are separate instances of rendered content.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rendered Content</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/FormattedContent" />
+    <owl:equivalentClass rdf:nodeID="b2b4069aa958b43b2" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content expressed via some physical medium.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Words printed on paper; audio played on speakers; an image displayed on a monitor; an original painting.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rendered Content</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renderings of the same file on two different monitors are separate instances of rendered content.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b03e9f6311d6e7be5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isRenderedOn" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Medium" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1b4540f5ed5ab1d0">
+    <rdf:first rdf:nodeID="b03e9f6311d6e7be5" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2b4069aa958b43b2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b30a1c6d200c15284" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b30a1c6d200c15284">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/FormattedContent" />
+    <rdf:rest rdf:nodeID="b1b4540f5ed5ab1d0" />
+  </rdf:Description>
+</rdf:RDF>

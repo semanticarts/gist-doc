@@ -1,0 +1,102 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Content owl:disjointWith gist:UnitOfMeasure .
+
+gist:Event owl:disjointWith gist:UnitOfMeasure .
+
+gist:GeoPoint owl:disjointWith gist:UnitOfMeasure .
+
+gist:GeoRegion owl:disjointWith gist:UnitOfMeasure .
+
+gist:IntellectualProperty owl:disjointWith gist:UnitOfMeasure .
+
+gist:Intention owl:disjointWith gist:UnitOfMeasure .
+
+gist:Language owl:disjointWith gist:UnitOfMeasure .
+
+gist:Magnitude owl:disjointWith gist:UnitOfMeasure ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty gist:hasAspect ;
+                        owl:someValuesFrom gist:Aspect ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasUnitOfMeasure ;
+                        owl:someValuesFrom gist:UnitOfMeasure ] [ a owl:Restriction ;
+                        owl:onProperty gist:numericValue ;
+                        owl:someValuesFrom rdfs:Literal ] ) ] .
+
+gist:Organization owl:disjointWith gist:UnitOfMeasure .
+
+gist:PhysicalIdentifiableItem owl:disjointWith gist:UnitOfMeasure .
+
+gist:PhysicalSubstance owl:disjointWith gist:UnitOfMeasure .
+
+gist:SchemaMetaData owl:disjointWith gist:UnitOfMeasure .
+
+gist:Template owl:disjointWith gist:UnitOfMeasure .
+
+gist:conversionFactor rdfs:domain gist:UnitOfMeasure .
+
+gist:conversionOffset rdfs:domain gist:UnitOfMeasure .
+
+gist:exponentOfAmpere rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfBit rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfCandela rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfKelvin rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfKilogram rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfMeter rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfMole rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfNumber rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfOther rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfRadian rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfSecond rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfSteradian rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:exponentOfUSDollar rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] .
+
+gist:symbol gist:domainIncludes gist:UnitOfMeasure .
+
+gist:hasUnitOfMeasure rdfs:range gist:UnitOfMeasure .
+
+gist:UnitGroup rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+            owl:someValuesFrom gist:UnitOfMeasure ] ;
+    owl:disjointWith gist:UnitOfMeasure .
+
+gist:UnitOfMeasure a owl:Class ;
+    rdfs:label "Unit of Measure"^^xsd:string ;
+    rdfs:comment "DEFINITION: A standard amount used to measure or specify things."^^xsd:string,
+        "EXAMPLE: An acre is a unit for measuring area."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "A standard amount used to measure or specify things."^^xsd:string ;
+    skos:example "An acre is a unit for measuring area."^^xsd:string ;
+    skos:prefLabel "Unit of Measure"^^xsd:string .
+

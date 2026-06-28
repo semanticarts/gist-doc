@@ -1,0 +1,32 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:isIdentifiedBy rdfs:range gist:ID .
+
+gist:isAllocatedBy gist:domainIncludes gist:ID .
+
+gist:uniqueText gist:domainIncludes gist:ID .
+
+gist:ID a owl:Class ;
+    rdfs:label "ID"^^xsd:string ;
+    rdfs:comment "DEFINITION: Content that is used to uniquely identify something or someone."^^xsd:string,
+        "EXAMPLE: SSN for a person; serial number for a product; employee ID for a person."^^xsd:string,
+        "NOTE: Used in conjunction with gist:isIdentifiedBy."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Content ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Content [ a owl:Restriction ;
+                        owl:onProperty gist:isAllocatedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:uniqueText ;
+                        owl:someValuesFrom xsd:string ] ) ] ;
+    skos:definition "Content that is used to uniquely identify something or someone."^^xsd:string ;
+    skos:example "SSN for a person; serial number for a product; employee ID for a person."^^xsd:string ;
+    skos:prefLabel "ID"^^xsd:string ;
+    skos:scopeNote "Used in conjunction with gist:isIdentifiedBy."^^xsd:string .
+

@@ -1,0 +1,21 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ServiceSpecification owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:CatalogItem [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isBasedOn ] ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:isBasedOn a owl:ObjectProperty ;
+    rdfs:label "is based on"^^xsd:string ;
+    rdfs:comment "DEFINITION: The object is a foundation for, a starting point for, gave rise to, or justifies the subject."^^xsd:string,
+        "EXAMPLE: A document is based on a document template; a metric computing the average income of a population is based on the metric for individual income."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "The object is a foundation for, a starting point for, gave rise to, or justifies the subject."^^xsd:string ;
+    skos:example "A document is based on a document template; a metric computing the average income of a population is based on the metric for individual income."^^xsd:string ;
+    skos:prefLabel "is based on"^^xsd:string .
+

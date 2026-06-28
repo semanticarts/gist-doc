@@ -1,0 +1,43 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ControlledVocabulary rdfs:subClassOf gist:Collection ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Collection [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+                        owl:someValuesFrom gist:Category ] ) ] .
+
+gist:OrderedCollection rdfs:subClassOf gist:Collection ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Collection [ a owl:Class ;
+                        owl:unionOf ( [ a owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gist:isFirstMemberOf ] ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:cardinality "0"^^xsd:nonNegativeInteger ;
+                                    owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) ] [ a owl:Restriction ;
+                        owl:allValuesFrom gist:OrderedMember ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) ] .
+
+gist:UnitGroup rdfs:subClassOf gist:Collection .
+
+gist:isMemberOf gist:rangeIncludes gist:Collection .
+
+gist:Collection a owl:Class ;
+    rdfs:label "Collection"^^xsd:string ;
+    rdfs:comment "DEFINITION: A grouping of things."^^xsd:string,
+        "EXAMPLE: A jury is a group of people; a financial ledger is a collection of transaction entries; a route is an (ordered) collection of segments."^^xsd:string,
+        "NOTE: Individuals are placed in the collection using the gist:isMemberOf property. Collections typically are created because the members are functionally connected in some way. This definition allows a collection to have zero members."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Composite ;
+    skos:definition "A grouping of things."^^xsd:string ;
+    skos:example "A jury is a group of people; a financial ledger is a collection of transaction entries; a route is an (ordered) collection of segments."^^xsd:string ;
+    skos:prefLabel "Collection"^^xsd:string ;
+    skos:scopeNote "Individuals are placed in the collection using the gist:isMemberOf property. Collections typically are created because the members are functionally connected in some way. This definition allows a collection to have zero members."^^xsd:string .
+

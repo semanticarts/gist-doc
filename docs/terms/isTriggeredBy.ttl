@@ -1,0 +1,36 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ContingentEvent owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_probability ;
+                                owl:onProperty gist:hasAspect ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isTriggeredBy ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:ContingentObligation owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Commitment [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isTriggeredBy ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:isTriggeredBy a owl:ObjectProperty ;
+    rdfs:label "is triggered by"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a contingency, such as an event or obligation, to the event that gives rise to it."^^xsd:string,
+        "EXAMPLE: Fire insurance is contingent on a particular building burning down; the death benefit payout on a life insurance policy is contingent on the death of the insured person."^^xsd:string,
+        "NOTE: For obligations, this property describes what must happen to trigger the contingent obligation. Other uses include controls, processes, etc."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates a contingency, such as an event or obligation, to the event that gives rise to it."^^xsd:string ;
+    skos:example "Fire insurance is contingent on a particular building burning down; the death benefit payout on a life insurance policy is contingent on the death of the insured person."^^xsd:string ;
+    skos:prefLabel "is triggered by"^^xsd:string ;
+    skos:scopeNote "For obligations, this property describes what must happen to trigger the contingent obligation. Other uses include controls, processes, etc."^^xsd:string .
+

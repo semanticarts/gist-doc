@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/actualStartYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The actual date that something started, with precision of one year.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: '2021-01-01T00:00:00-06:00'^^xsd:dateTime</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: The tenure of the current chairman of the board began in 2021.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Used for things where the precision of a year is sufficient. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actual start year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The actual date that something started, with precision of one year.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'2021-01-01T00:00:00-06:00'^^xsd:dateTime</skos:example>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The tenure of the current chairman of the board began in 2021.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actual start year</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Used for things where the precision of a year is sufficient. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included.</skos:scopeNote>
+  </rdf:Description>
+</rdf:RDF>

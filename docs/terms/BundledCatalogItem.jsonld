@@ -1,0 +1,99 @@
+[
+  {
+    "@id": "_:b2307675a39884a8a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem"
+          },
+          {
+            "@id": "_:b7ab198e9bda55cfc"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b7ab198e9bda55cfc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:bcc3521570b336cf9"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem"
+      }
+    ]
+  },
+  {
+    "@id": "_:bcc3521570b336cf9",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/BundledCatalogItem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: Any combination of descriptions of things offered together."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: A kit containing several parts offered together; a product plus a warranty."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Bundled Catalog Item"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b2307675a39884a8a"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Any combination of descriptions of things offered together."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "A kit containing several parts offered together; a product plus a warranty."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Bundled Catalog Item"
+      }
+    ]
+  }
+]

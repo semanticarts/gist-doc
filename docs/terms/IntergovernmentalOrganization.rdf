@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntergovernmentalOrganization" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/IntergovernmentalOrganization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An organization whose members are government organizations. This can comprise regional, municipal, state/province, or national level entities.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: The United Nations, the European Union, the Metropolitan Transit Authority.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intergovernmental Organization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <owl:equivalentClass rdf:nodeID="bad46c8ef3dbd4ba1" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organization whose members are government organizations. This can comprise regional, municipal, state/province, or national level entities.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The United Nations, the European Union, the Metropolitan Transit Authority.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intergovernmental Organization</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5b281a42a0cfcab3">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bc68a0ce6f30ba056" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bad46c8ef3dbd4ba1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b5b281a42a0cfcab3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc68a0ce6f30ba056">
+    <rdf:first rdf:nodeID="be33fa7b5df5b2c70" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc9c08cb3533dd075">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be33fa7b5df5b2c70">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    <owl:onClass rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization" />
+    <owl:onProperty rdf:nodeID="bc9c08cb3533dd075" />
+  </rdf:Description>
+</rdf:RDF>

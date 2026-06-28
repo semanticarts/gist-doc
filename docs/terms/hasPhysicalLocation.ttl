@@ -1,0 +1,23 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Landmark rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:hasPhysicalLocation ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( gist:GeoRegion gist:GeoVolume ) ] ] .
+
+gist:hasPhysicalLocation a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has physical location"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to its physical location."^^xsd:string,
+        "NOTE: This property does not distinguish between things whose locations are stable and those whose locations change over time; e.g., a fire hydrant vs. a car."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range gist:GeoLocation ;
+    skos:definition "Relates something to its physical location."^^xsd:string ;
+    skos:prefLabel "has physical location"^^xsd:string ;
+    skos:scopeNote "This property does not distinguish between things whose locations are stable and those whose locations change over time; e.g., a fire hydrant vs. a car."^^xsd:string .
+

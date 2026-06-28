@@ -1,0 +1,60 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Assignment owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:TemporalRelation [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:isAssignmentOf ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:isAssignmentTo ;
+                        owl:someValuesFrom owl:Thing ] ) ] .
+
+gist:Offer owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContingentObligation [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:offersToProvide ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:offersToReceive ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:plannedEndDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] [ a owl:Restriction ;
+                        owl:onProperty gist:plannedStartDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] ) ] .
+
+gist:Commitment owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Class ;
+                        owl:unionOf ( gist:Requirement gist:Restriction ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isCategorizedBy ;
+                        owl:someValuesFrom gist:DegreeOfCommitment ] ) ] .
+
+gist:ContingentObligation owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Commitment [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isTriggeredBy ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:hasGiver a owl:ObjectProperty ;
+    rdfs:label "has giver"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to the participant that provides it."^^xsd:string,
+        "EXAMPLE: An offer is made by a giver; an obligation has a giver who is obligated to another person; a gift is presented by the giver."^^xsd:string,
+        "NOTE: This property is often used in abstract contexts such as agreements, obligations, contracts, etc., whereas gist:comesFromAgent is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another. However, there are contexts in which either may be appropriate, such as the giving of a gift."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subPropertyOf gist:hasParticipant ;
+    owl:propertyDisjointWith gist:hasRecipient ;
+    skos:definition "Relates something to the participant that provides it."^^xsd:string ;
+    skos:example "An offer is made by a giver; an obligation has a giver who is obligated to another person; a gift is presented by the giver."^^xsd:string ;
+    skos:prefLabel "has giver"^^xsd:string ;
+    skos:scopeNote "This property is often used in abstract contexts such as agreements, obligations, contracts, etc., whereas gist:comesFromAgent is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another. However, there are contexts in which either may be appropriate, such as the giving of a gift."^^xsd:string .
+

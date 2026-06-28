@@ -1,0 +1,14 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ContractTerm a owl:Class ;
+    rdfs:label "Contract Term"^^xsd:string ;
+    rdfs:comment "DEFINITION: A specification of some aspect of a contract."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Specification ;
+    skos:definition "A specification of some aspect of a contract."^^xsd:string ;
+    skos:prefLabel "Contract Term"^^xsd:string .
+

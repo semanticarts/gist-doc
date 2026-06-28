@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalAddress">
+    <owl:equivalentClass rdf:nodeID="b5a799c69d0a98952" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/refersTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates something to another resource that it points to, indicates, or references.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">refers to</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates something to another resource that it points to, indicates, or references.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">refers to</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3fc1de1e70b9fdfe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/refersTo" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5a799c69d0a98952">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bde91e2e58983c460" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc15abbd58a76cc5a">
+    <rdf:first rdf:nodeID="b3fc1de1e70b9fdfe" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bde91e2e58983c460">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address" />
+    <rdf:rest rdf:nodeID="bc15abbd58a76cc5a" />
+  </rdf:Description>
+</rdf:RDF>

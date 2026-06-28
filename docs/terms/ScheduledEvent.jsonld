@@ -1,0 +1,122 @@
+[
+  {
+    "@id": "_:b4c92b55a69ad15f5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Event"
+          },
+          {
+            "@id": "_:b976b3842ce635d94"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b976b3842ce635d94",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:bac7eccbf1b8bfba3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ScheduledEvent"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Task"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ScheduledEvent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: An event with a planned start datetime."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: If the event already started, but has not yet ended, it is a contemporary event with an actual start datetime. If the event is over, it is a historical event having an actual end datetime. The event always retains its planned start datetime, and thus continues to be a scheduled event."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Scheduled Event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Event"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b4c92b55a69ad15f5"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "An event with a planned start datetime."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Scheduled Event"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "If the event already started, but has not yet ended, it is a contemporary event with an actual start datetime. If the event is over, it is a historical event having an actual end datetime. The event always retains its planned start datetime, and thus continues to be a scheduled event."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ScheduledTask",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ScheduledEvent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:bac7eccbf1b8bfba3"
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:RenderedContent owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:FormattedContent [ a owl:Restriction ;
+                        owl:onProperty gist:isRenderedOn ;
+                        owl:someValuesFrom gist:Medium ] ) ] .
+
+gist:Medium a owl:Class ;
+    rdfs:label "Medium"^^xsd:string ;
+    rdfs:comment "DEFINITION: A physical material on which a work can be rendered, represented, or implemented."^^xsd:string,
+        "EXAMPLE: Paper, clay, a computer monitor."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Category ;
+    skos:definition "A physical material on which a work can be rendered, represented, or implemented."^^xsd:string ;
+    skos:example "Paper, clay, a computer monitor."^^xsd:string ;
+    skos:prefLabel "Medium"^^xsd:string .
+

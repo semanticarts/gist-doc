@@ -1,0 +1,16 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Function a owl:Class ;
+    rdfs:label "Function"^^xsd:string ;
+    rdfs:comment "DEFINITION: The activity that a human-made item is intended to perform."^^xsd:string,
+        "EXAMPLE: Transmit electricity, provide ballast, control ambient temperature."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Intention ;
+    skos:definition "The activity that a human-made item is intended to perform."^^xsd:string ;
+    skos:example "Transmit electricity, provide ballast, control ambient temperature."^^xsd:string ;
+    skos:prefLabel "Function"^^xsd:string .
+

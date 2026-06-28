@@ -1,0 +1,51 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Agreement owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:hasParty ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:Commitment ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ] ) ] .
+
+gist:ContingentObligation rdfs:subClassOf gist:Commitment ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Commitment [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isTriggeredBy ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:Commitment a owl:Class ;
+    rdfs:label "Commitment"^^xsd:string ;
+    rdfs:comment "DEFINITION: A promise made by a single party to one or more parties to do or not do something or act in a particular way."^^xsd:string,
+        "EXAMPLE: Upon selling a treasury bill, the U.S. government makes a commitment to pay the purchaser a stated amount of money at a stated time."^^xsd:string,
+        "EXAMPLE: When signing an NDA, the signatory commits to keeping specified information confidential."^^xsd:string,
+        "NOTE: A commitment is unilateral in that it is binding on only one party. This contrasts with gist:Agreement, which consists of commitments that bind two or more parties."^^xsd:string,
+        "NOTE: A single commitment may be made to multiple parties at once; it is a single commitment rather than multiple commitments if the same action would fulfill the obligation to all the parties simultaneously. For example, a performer makes a single commitment to hold a performance to all ticket purchasers; by holding the performance, the commitment to all parties is fulfilled in a single action."^^xsd:string,
+        "NOTE: The manner in which a commitment is binding may vary. In a business context, we are typically interested in commitments that are legally binding."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Intention ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Class ;
+                        owl:unionOf ( gist:Requirement gist:Restriction ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isCategorizedBy ;
+                        owl:someValuesFrom gist:DegreeOfCommitment ] ) ] ;
+    skos:definition "A promise made by a single party to one or more parties to do or not do something or act in a particular way."^^xsd:string ;
+    skos:example "Upon selling a treasury bill, the U.S. government makes a commitment to pay the purchaser a stated amount of money at a stated time."^^xsd:string,
+        "When signing an NDA, the signatory commits to keeping specified information confidential."^^xsd:string ;
+    skos:prefLabel "Commitment"^^xsd:string ;
+    skos:scopeNote "A commitment is unilateral in that it is binding on only one party. This contrasts with gist:Agreement, which consists of commitments that bind two or more parties."^^xsd:string,
+        "A single commitment may be made to multiple parties at once; it is a single commitment rather than multiple commitments if the same action would fulfill the obligation to all the parties simultaneously. For example, a performer makes a single commitment to hold a performance to all ticket purchasers; by holding the performance, the commitment to all parties is fulfilled in a single action."^^xsd:string,
+        "The manner in which a commitment is binding may vary. In a business context, we are typically interested in commitments that are legally binding."^^xsd:string .
+

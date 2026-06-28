@@ -1,0 +1,50 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:FormattedContent rdfs:subClassOf gist:ContentExpression ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:isExpressedIn ;
+                        owl:someValuesFrom gist:MediaType ] ) ] .
+
+gist:Message rdfs:subClassOf gist:ContentExpression ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:comesFromAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:goesToAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] ) ] .
+
+gist:Text rdfs:subClassOf gist:ContentExpression ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:isExpressedIn ;
+                        owl:someValuesFrom gist:Language ] [ a owl:Restriction ;
+                        owl:onProperty gist:containedText ;
+                        owl:someValuesFrom xsd:string ] ) ] .
+
+gist:containedText gist:domainIncludes gist:ContentExpression .
+
+gist:ContentExpression a owl:Class ;
+    rdfs:label "Content Expression"^^xsd:string ;
+    rdfs:comment "DEFINITION: Content reduced to text, audio, etc."^^xsd:string,
+        "EXAMPLE: A specific print or audio edition of 'The Adventures of Huckleberry Finn,' such as the one identified by ISBN-13 978-1953649805."^^xsd:string,
+        "NOTE: If it contains text (written or spoken), it will be expressed in a language."^^xsd:string,
+        "NOTE: While the content expression is less abstract than a 'Work,' it is more abstract than the specific physical items that render the expression. For example, any physical or electronic book with ISBN-13 978-1953649805 is associated with the same content expression."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:isCategorizedBy ;
+            owl:someValuesFrom gist:GeneralMediaType ],
+        gist:Content ;
+    skos:definition "Content reduced to text, audio, etc."^^xsd:string ;
+    skos:example "A specific print or audio edition of 'The Adventures of Huckleberry Finn,' such as the one identified by ISBN-13 978-1953649805."^^xsd:string ;
+    skos:prefLabel "Content Expression"^^xsd:string ;
+    skos:scopeNote "If it contains text (written or spoken), it will be expressed in a language."^^xsd:string,
+        "While the content expression is less abstract than a 'Work,' it is more abstract than the specific physical items that render the expression. For example, any physical or electronic book with ISBN-13 978-1953649805 is associated with the same content expression."^^xsd:string .
+

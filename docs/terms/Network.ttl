@@ -1,0 +1,33 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:NetworkLink owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Component [ a owl:Restriction ;
+                        owl:onProperty gist:isMemberOf ;
+                        owl:someValuesFrom gist:Network ] [ a owl:Restriction ;
+                        owl:onProperty gist:links ;
+                        owl:someValuesFrom gist:NetworkNode ] ) ] .
+
+gist:Network a owl:Class ;
+    rdfs:label "Network"^^xsd:string ;
+    rdfs:comment "DEFINITION: A composite consisting of nodes connected by links."^^xsd:string,
+        "EXAMPLE: A physical network could include connected computers or routers, whereas a social network would consist of related person or organization members (or their proxies, such as accounts)."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Composite ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Composite [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:NetworkLink gist:NetworkNode ) ] ] ) ] ;
+    skos:definition "A composite consisting of nodes connected by links."^^xsd:string ;
+    skos:example "A physical network could include connected computers or routers, whereas a social network would consist of related person or organization members (or their proxies, such as accounts)."^^xsd:string ;
+    skos:prefLabel "Network"^^xsd:string .
+
+gist:NetworkNode rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:isMemberOf ;
+            owl:someValuesFrom gist:Network ] .
+

@@ -1,0 +1,87 @@
+[
+  {
+    "@id": "_:b7402b11aa3ef1f75",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/containedText"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Tag",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: A term in a folksonomy used to categorize things. Tags can be made up on the fly by users."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: Whether to use gist:containedText or gist:uniqueText on tags is an implementation decision. Since the latter is a subproperty of the former, the restriction remains valid either way."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Tag"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:b7402b11aa3ef1f75"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "A term in a folksonomy used to categorize things. Tags can be made up on the fly by users."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Tag"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Whether to use gist:containedText or gist:uniqueText on tags is an implementation decision. Since the latter is a subproperty of the former, the restriction remains valid either way."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/containedText",
+    "https://w3id.org/semanticarts/ns/ontology/gist/domainIncludes": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Tag"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/uniqueText",
+    "https://w3id.org/semanticarts/ns/ontology/gist/domainIncludes": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Tag"
+      }
+    ]
+  }
+]

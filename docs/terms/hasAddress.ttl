@@ -1,0 +1,16 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:hasAddress a owl:ObjectProperty ;
+    rdfs:label "has address"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to its physical or electronic address."^^xsd:string,
+        "EXAMPLE: A brick-and-mortar store has a street address; a person can be contacted electronically via an email address."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range gist:Address ;
+    skos:definition "Relates something to its physical or electronic address."^^xsd:string ;
+    skos:example "A brick-and-mortar store has a street address; a person can be contacted electronically via an email address."^^xsd:string ;
+    skos:prefLabel "has address"^^xsd:string .
+

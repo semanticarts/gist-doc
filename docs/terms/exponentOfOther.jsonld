@@ -1,0 +1,85 @@
+[
+  {
+    "@id": "_:b482663fdc6d31753",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfOther",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: Indicates whether a unit of measure can be expressed in terms of the standard exponents (as shown in the examples)."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: Decibel, pH, and octave are units of measure that are logarithmic. Their unit groups have exponent of other = 1."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: Set the value to 0 if the units of measure in the unit group can be expressed using the standard set of exponents (as in the examples).\r\n\r\n\t\tOtherwise set the value to 1, which typically means the units of measure in the group use a logarithmic scale."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b482663fdc6d31753"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "exponent of other"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Indicates whether a unit of measure can be expressed in terms of the standard exponents (as shown in the examples)."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Decibel, pH, and octave are units of measure that are logarithmic. Their unit groups have exponent of other = 1."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "exponent of other"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Set the value to 0 if the units of measure in the unit group can be expressed using the standard set of exponents (as in the examples).\r\n\r\n\t\tOtherwise set the value to 1, which typically means the units of measure in the group use a logarithmic scale."
+      }
+    ]
+  }
+]

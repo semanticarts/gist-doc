@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Commitment">
+    <owl:equivalentClass rdf:nodeID="b108a966cc0049561" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/DegreeOfCommitment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The difficulty of reversing a commitment.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A car rental typically has a lower degree of commitment than an airfare reservation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degree Of Commitment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The difficulty of reversing a commitment.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A car rental typically has a lower degree of commitment than an airfare reservation.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degree Of Commitment</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b02eaba9045378278">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b70671d83ceda9a17" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b108a966cc0049561">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bed193e11769d915d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b290dbeebb7b2c26a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b71171f609f591b68" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b33918bf70b902fc3">
+    <rdf:first rdf:nodeID="b75c5d23185ff6309" />
+    <rdf:rest rdf:nodeID="b74258a3d9b578f17" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3488f9485f3ff871">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Restriction" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4f1bc98bb55fba78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/DegreeOfCommitment" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b70671d83ceda9a17">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bf5126f45dd3e3220" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b71171f609f591b68">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Requirement" />
+    <rdf:rest rdf:nodeID="b3488f9485f3ff871" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b74258a3d9b578f17">
+    <rdf:first rdf:nodeID="b4f1bc98bb55fba78" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b75c5d23185ff6309">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGiver" />
+    <owl:someValuesFrom rdf:nodeID="b02eaba9045378278" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc638b7f9b28d7a51">
+    <rdf:first rdf:nodeID="b290dbeebb7b2c26a" />
+    <rdf:rest rdf:nodeID="b33918bf70b902fc3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bed193e11769d915d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="bc638b7f9b28d7a51" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf5126f45dd3e3220">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

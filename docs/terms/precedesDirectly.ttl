@@ -1,0 +1,37 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:OrderedMember owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Component [ a owl:Class ;
+                        owl:unionOf ( [ a owl:Restriction ;
+                                    owl:onProperty gist:precedesDirectly ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gist:precedesDirectly ] ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:onProperty gist:sequence ;
+                                    owl:someValuesFrom xsd:integer ] ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:providesOrderFor ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:allValuesFrom gist:OrderedCollection ;
+                        owl:onProperty gist:isMemberOf ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:isMemberOf ] ) ] .
+
+gist:precedesDirectly a owl:ObjectProperty ;
+    rdfs:label "precedes directly"^^xsd:string ;
+    rdfs:comment "DEFINITION: A generic ordering relation indicating that the subject comes immediately before the object."^^xsd:string,
+        "NOTE: If two items in an ordered collection share the same position, they both directly precede the following element."^^xsd:string,
+        "NOTE: It is safest to use this property only when the directness has a semantic correspondence with the world. Only break a direct link by inserting an intermediate item when that change corresponds to a change in the world."^^xsd:string,
+        "NOTE: Typically this predicate would be used asymmetrically and irreflexively, but the ontology does not formalize this."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subPropertyOf gist:precedes ;
+    skos:definition "A generic ordering relation indicating that the subject comes immediately before the object."^^xsd:string ;
+    skos:prefLabel "precedes directly"^^xsd:string ;
+    skos:scopeNote "If two items in an ordered collection share the same position, they both directly precede the following element."^^xsd:string,
+        "It is safest to use this property only when the directness has a semantic correspondence with the world. Only break a direct link by inserting an intermediate item when that change corresponds to a change in the world."^^xsd:string,
+        "Typically this predicate would be used asymmetrically and irreflexively, but the ontology does not formalize this."^^xsd:string .
+

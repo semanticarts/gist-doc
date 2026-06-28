@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/idText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A text string that identifies an individual.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: The id text for a car is '4Y1SL65848Z411439'; the id text for the HR department of some company is H31415.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: A common use case would be for preexisting internal company identifiers.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Often, there will be just one identifying text string. More would be appropriate if the individual had different identifiers, such as employee number and social security number. A good way to model that would be to have functional subproperties of idText, such as departmentNumber.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This property is an alternative to using the property gist:isIdentifiedBy in conjunction with instances of the class gist:ID.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id text</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A text string that identifies an individual.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The id text for a car is '4Y1SL65848Z411439'; the id text for the HR department of some company is H31415.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id text</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A common use case would be for preexisting internal company identifiers.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Often, there will be just one identifying text string. More would be appropriate if the individual had different identifiers, such as employee number and social security number. A good way to model that would be to have functional subproperties of idText, such as departmentNumber.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property is an alternative to using the property gist:isIdentifiedBy in conjunction with instances of the class gist:ID.</skos:scopeNote>
+  </rdf:Description>
+</rdf:RDF>

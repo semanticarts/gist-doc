@@ -1,0 +1,23 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Building rdfs:subClassOf gist:Landmark .
+
+gist:Landmark a owl:Class ;
+    rdfs:label "Landmark"^^xsd:string ;
+    rdfs:comment "DEFINITION: Something permanently attached to the Earth."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:hasPhysicalLocation ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( gist:GeoRegion gist:GeoVolume ) ] ],
+        gist:PhysicalIdentifiableItem ;
+    owl:deprecated true ;
+    skos:definition "Something permanently attached to the Earth."^^xsd:string ;
+    skos:editorialNote "See guidance on removing the term in the next major release at https://github.com/semanticarts/gist/issues/947#issuecomment-1679566885."^^xsd:string ;
+    skos:prefLabel "Landmark"^^xsd:string .
+

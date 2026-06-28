@@ -1,0 +1,18 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:EventSpecification a owl:Class ;
+    rdfs:label "Event Specification"^^xsd:string ;
+    rdfs:comment "DEFINITION: A characterization of an event that might happen."^^xsd:string,
+        "EXAMPLE: An insurance company defines the characteristics of a weather event that must be satisfied for it to qualify as a hail storm covered in its homeowner's policy; a bank defines the point at which a borrower defaults on a loan."^^xsd:string,
+        "NOTE: This concept is useful for risk assessment and insurance policies."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Specification ;
+    skos:definition "A characterization of an event that might happen."^^xsd:string ;
+    skos:example "An insurance company defines the characteristics of a weather event that must be satisfied for it to qualify as a hail storm covered in its homeowner's policy; a bank defines the point at which a borrower defaults on a loan."^^xsd:string ;
+    skos:prefLabel "Event Specification"^^xsd:string ;
+    skos:scopeNote "This concept is useful for risk assessment and insurance policies."^^xsd:string .
+

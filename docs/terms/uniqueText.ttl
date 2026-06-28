@@ -1,0 +1,36 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ID owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Content [ a owl:Restriction ;
+                        owl:onProperty gist:isAllocatedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:uniqueText ;
+                        owl:someValuesFrom xsd:string ] ) ] .
+
+gist:MediaType rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:uniqueText ;
+            owl:someValuesFrom xsd:string ] .
+
+gist:uniqueText a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "unique text"^^xsd:string ;
+    rdfs:comment "DEFINITION: The unique string value of some content object, to be used when there is no possibility of having more than one value."^^xsd:string,
+        "EXAMPLE: The unique string for a vehicle identification number."^^xsd:string,
+        "NOTE: Note that the uniqueness only goes in one direction: a product catalog number might also be an employee ID."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subPropertyOf gist:containedText ;
+    skos:definition "The unique string value of some content object, to be used when there is no possibility of having more than one value."^^xsd:string ;
+    skos:example "The unique string for a vehicle identification number."^^xsd:string ;
+    skos:prefLabel "unique text"^^xsd:string ;
+    skos:scopeNote "Note that the uniqueness only goes in one direction: a product catalog number might also be an employee ID."^^xsd:string ;
+    gist:domainIncludes gist:ID,
+        gist:MediaType,
+        gist:Tag,
+        gist:Text .
+

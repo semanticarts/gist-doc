@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Specification" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ContractTerm">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Specification" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/EventSpecification">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Specification" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Specification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The set of characteristics and constraints on their values that specify what it means to be a particular type of thing, such as a material, product, service or event. A specification is sufficiently precise to allow evaluating conformance to the specification.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: The specification of the iPhone 14; hypothetical events covered by a homeowner's insurance policy; a drug quality specification - a set of acceptance criteria for quality characteristics that must be controlled to ensure a drug is fit for its intended use.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Although a characterization of how to do something is often called a specification, the intended meaning here is limited to specifying what something is. The focus is on the what, not the how. Use gist:TaskTemplate for specifying the how, such as a plan or process specification. Use gist:conformsTo to assert that something conforms to a specification. To represent a definition of a particular type of thing that is not sufficiently precise to be a gist:Specification, consider using gist:KnowledgeConcept.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The set of characteristics and constraints on their values that specify what it means to be a particular type of thing, such as a material, product, service or event. A specification is sufficiently precise to allow evaluating conformance to the specification.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The specification of the iPhone 14; hypothetical events covered by a homeowner's insurance policy; a drug quality specification - a set of acceptance criteria for quality characteristics that must be controlled to ensure a drug is fit for its intended use.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Although a characterization of how to do something is often called a specification, the intended meaning here is limited to specifying what something is. The focus is on the what, not the how. Use gist:TaskTemplate for specifying the how, such as a plan or process specification. Use gist:conformsTo to assert that something conforms to a specification. To represent a definition of a particular type of thing that is not sufficiently precise to be a gist:Specification, consider using gist:KnowledgeConcept.</skos:scopeNote>
+  </rdf:Description>
+</rdf:RDF>

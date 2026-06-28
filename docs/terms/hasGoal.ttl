@@ -1,0 +1,26 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Task owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:hasGoal ;
+                        owl:someValuesFrom gist:Intention ] ) ] .
+
+gist:TaskTemplate owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Template [ a owl:Restriction ;
+                        owl:onProperty gist:hasGoal ;
+                        owl:someValuesFrom gist:Intention ] ) ] .
+
+gist:hasGoal a owl:ObjectProperty ;
+    rdfs:label "has goal"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to the end towards which it directs effort."^^xsd:string,
+        "EXAMPLE: The sales division of a company has the goal of acquiring new customers and contracts."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates something to the end towards which it directs effort."^^xsd:string ;
+    skos:example "The sales division of a company has the goal of acquiring new customers and contracts."^^xsd:string ;
+    skos:prefLabel "has goal"^^xsd:string .
+

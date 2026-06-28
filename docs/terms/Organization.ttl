@@ -1,0 +1,139 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Agreement owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:hasParty ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:Commitment ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ] ) ] .
+
+gist:ControlledVocabulary owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Collection [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+                        owl:someValuesFrom gist:Category ] ) ] .
+
+gist:GeoPoint owl:disjointWith gist:Organization .
+
+gist:GeoRegion owl:disjointWith gist:Organization .
+
+gist:ID owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Content [ a owl:Restriction ;
+                        owl:onProperty gist:isAllocatedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:uniqueText ;
+                        owl:someValuesFrom xsd:string ] ) ] .
+
+gist:IntergovernmentalOrganization rdfs:subClassOf gist:Organization ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Organization [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:GovernmentOrganization ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) ] .
+
+gist:Language owl:disjointWith gist:Organization .
+
+gist:Magnitude owl:disjointWith gist:Organization .
+
+gist:Message owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:comesFromAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:goesToAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] ) ] .
+
+gist:Offer owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContingentObligation [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:offersToProvide ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:offersToReceive ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:plannedEndDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] [ a owl:Restriction ;
+                        owl:onProperty gist:plannedStartDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] ) ] .
+
+gist:isAssignmentOf gist:rangeIncludes gist:Organization .
+
+gist:isRecognizedBy rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:owns rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:Category rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:isAllocatedBy ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] .
+
+gist:Content owl:disjointWith gist:Organization .
+
+gist:ContingentObligation owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Commitment [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isTriggeredBy ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:GovernmentOrganization rdfs:subClassOf gist:Organization .
+
+gist:comesFromAgent rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:goesToAgent rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:hasParty rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:Commitment owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Class ;
+                        owl:unionOf ( gist:Requirement gist:Restriction ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isCategorizedBy ;
+                        owl:someValuesFrom gist:DegreeOfCommitment ] ) ] .
+
+gist:Intention owl:disjointWith gist:Organization .
+
+gist:isAllocatedBy rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] .
+
+gist:isMemberOf gist:rangeIncludes gist:Organization .
+
+gist:IntellectualProperty owl:disjointWith gist:Organization .
+
+gist:Organization a owl:Class ;
+    rdfs:label "Organization"^^xsd:string ;
+    rdfs:comment "DEFINITION: A structured entity formed to achieve specific goals, typically involving members with defined roles."^^xsd:string,
+        "EXAMPLE: Legal entities like companies; non-legal entities like clubs, committees, or departments."^^xsd:string,
+        "NOTE: Not all organizations have members, e.g. shell companies."^^xsd:string,
+        "NOTE: While typically the members of organizations are people, in some cases they are other organizations; e.g., the members of the United Nations are country governments."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:disjointWith gist:PhysicalIdentifiableItem,
+        gist:PhysicalSubstance,
+        gist:SchemaMetaData,
+        gist:UnitOfMeasure ;
+    skos:definition "A structured entity formed to achieve specific goals, typically involving members with defined roles."^^xsd:string ;
+    skos:example "Legal entities like companies; non-legal entities like clubs, committees, or departments."^^xsd:string ;
+    skos:prefLabel "Organization"^^xsd:string ;
+    skos:scopeNote "Not all organizations have members, e.g. shell companies."^^xsd:string,
+        "While typically the members of organizations are people, in some cases they are other organizations; e.g., the members of the United Nations are country governments."^^xsd:string .
+

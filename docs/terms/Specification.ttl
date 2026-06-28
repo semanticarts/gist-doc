@@ -1,0 +1,24 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:CatalogItem rdfs:subClassOf gist:Specification .
+
+gist:ContractTerm rdfs:subClassOf gist:Specification .
+
+gist:EventSpecification rdfs:subClassOf gist:Specification .
+
+gist:Specification a owl:Class ;
+    rdfs:label "Specification"^^xsd:string ;
+    rdfs:comment "DEFINITION: The set of characteristics and constraints on their values that specify what it means to be a particular type of thing, such as a material, product, service or event. A specification is sufficiently precise to allow evaluating conformance to the specification."^^xsd:string,
+        "EXAMPLE: The specification of the iPhone 14; hypothetical events covered by a homeowner's insurance policy; a drug quality specification - a set of acceptance criteria for quality characteristics that must be controlled to ensure a drug is fit for its intended use."^^xsd:string,
+        "NOTE: Although a characterization of how to do something is often called a specification, the intended meaning here is limited to specifying what something is. The focus is on the what, not the how. Use gist:TaskTemplate for specifying the how, such as a plan or process specification. Use gist:conformsTo to assert that something conforms to a specification. To represent a definition of a particular type of thing that is not sufficiently precise to be a gist:Specification, consider using gist:KnowledgeConcept."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Intention ;
+    skos:definition "The set of characteristics and constraints on their values that specify what it means to be a particular type of thing, such as a material, product, service or event. A specification is sufficiently precise to allow evaluating conformance to the specification."^^xsd:string ;
+    skos:example "The specification of the iPhone 14; hypothetical events covered by a homeowner's insurance policy; a drug quality specification - a set of acceptance criteria for quality characteristics that must be controlled to ensure a drug is fit for its intended use."^^xsd:string ;
+    skos:prefLabel "Specification"^^xsd:string ;
+    skos:scopeNote "Although a characterization of how to do something is often called a specification, the intended meaning here is limited to specifying what something is. The focus is on the what, not the how. Use gist:TaskTemplate for specifying the how, such as a plan or process specification. Use gist:conformsTo to assert that something conforms to a specification. To represent a definition of a particular type of thing that is not sufficiently precise to be a gist:Specification, consider using gist:KnowledgeConcept."^^xsd:string .
+

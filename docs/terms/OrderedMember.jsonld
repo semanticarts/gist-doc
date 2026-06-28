@@ -1,0 +1,364 @@
+[
+  {
+    "@id": "_:b0ee1dfc1060dc5f3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:b12eb1c9508503ec4"
+      }
+    ]
+  },
+  {
+    "@id": "_:b12eb1c9508503ec4",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:b21a280538899cdab",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:bee27628b211b8481"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember"
+      }
+    ]
+  },
+  {
+    "@id": "_:b326531ee090233e0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:b43490954f237428b"
+          },
+          {
+            "@id": "_:b21a280538899cdab"
+          },
+          {
+            "@id": "_:b9708e6d4c760f115"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b43490954f237428b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember"
+      }
+    ]
+  },
+  {
+    "@id": "_:b471417ba735bdb90",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:b4e36de3b7133758d",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:b5efd9d0a06aefdc6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:b4e36de3b7133758d"
+      }
+    ]
+  },
+  {
+    "@id": "_:b65670e9134603c79",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:b6cb15c50905a4558",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:bbcc995f63c17c239"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember"
+      }
+    ]
+  },
+  {
+    "@id": "_:b9708e6d4c760f115",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/sequence"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ]
+  },
+  {
+    "@id": "_:bab33998947813e77",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:b6cb15c50905a4558"
+          },
+          {
+            "@id": "_:b0ee1dfc1060dc5f3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bbcc995f63c17c239",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isFirstMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:bbfa4b622a9d889bf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Component"
+          },
+          {
+            "@id": "_:b326531ee090233e0"
+          },
+          {
+            "@id": "_:bc297dc93cb807fd4"
+          },
+          {
+            "@id": "_:b65670e9134603c79"
+          },
+          {
+            "@id": "_:b471417ba735bdb90"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bc297dc93cb807fd4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/providesOrderFor"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "_:bdfbca4925c6b2dba",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Collection"
+          },
+          {
+            "@id": "_:bab33998947813e77"
+          },
+          {
+            "@id": "_:b5efd9d0a06aefdc6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bee27628b211b8481",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:bdfbca4925c6b2dba"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: A member of an ordered collection serving as a proxy for a real world item, which can appear in different orders in different collections. The ordered member appears in exactly one ordered collection."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: A person may rank 12th in the Boston Marathon but 29th in the New York City Marathon."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: An ordered member points to the real world item via the providesOrderFor property. Ordering information is represented either as a number in a sequence, or by preceding or following another ordered member."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Ordered Member"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Component"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:bbfa4b622a9d889bf"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "A member of an ordered collection serving as a proxy for a real world item, which can appear in different orders in different collections. The ordered member appears in exactly one ordered collection."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "A person may rank 12th in the Boston Marathon but 29th in the New York City Marathon."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Ordered Member"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "An ordered member points to the real world item via the providesOrderFor property. Ordering information is represented either as a number in a sequence, or by preceding or following another ordered member."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isFirstMemberOf",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/providesOrderFor",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/sequence",
+    "https://w3id.org/semanticarts/ns/ontology/gist/domainIncludes": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember"
+      }
+    ]
+  }
+]

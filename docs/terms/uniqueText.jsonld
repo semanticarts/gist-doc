@@ -1,0 +1,183 @@
+[
+  {
+    "@id": "_:b2c565a0344dcf56b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/uniqueText"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:b3c92e0ab6b9094af",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b9571cc21488e45ee",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:b3c92e0ab6b9094af"
+      }
+    ]
+  },
+  {
+    "@id": "_:b98fe62a123b8bf77",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/uniqueText"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:be402bad8d5db9cb1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Content"
+          },
+          {
+            "@id": "_:b9571cc21488e45ee"
+          },
+          {
+            "@id": "_:b98fe62a123b8bf77"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ID",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:be402bad8d5db9cb1"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/MediaType",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:b2c565a0344dcf56b"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/uniqueText",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: The unique string value of some content object, to be used when there is no possibility of having more than one value."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: The unique string for a vehicle identification number."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: Note that the uniqueness only goes in one direction: a product catalog number might also be an employee ID."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "unique text"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/containedText"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The unique string value of some content object, to be used when there is no possibility of having more than one value."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The unique string for a vehicle identification number."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "unique text"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Note that the uniqueness only goes in one direction: a product catalog number might also be an employee ID."
+      }
+    ],
+    "https://w3id.org/semanticarts/ns/ontology/gist/domainIncludes": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ID"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/MediaType"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Tag"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Text"
+      }
+    ]
+  }
+]

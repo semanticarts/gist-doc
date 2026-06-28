@@ -1,0 +1,270 @@
+[
+  {
+    "@id": "_:b29e54af47b7dbcee",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b3c92e0ab6b9094af",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b4831f81f9bb4ce2e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:b29e54af47b7dbcee"
+      }
+    ]
+  },
+  {
+    "@id": "_:b9571cc21488e45ee",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:b3c92e0ab6b9094af"
+      }
+    ]
+  },
+  {
+    "@id": "_:b98fe62a123b8bf77",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/uniqueText"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:ba8a6cca558e91197",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:be402bad8d5db9cb1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Content"
+          },
+          {
+            "@id": "_:b9571cc21488e45ee"
+          },
+          {
+            "@id": "_:b98fe62a123b8bf77"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:b4831f81f9bb4ce2e"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ID",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:be402bad8d5db9cb1"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: An intangible work, invention, or concept, independent of its being expressed in text, audio, video, image, or live performance. IP can also be tacit knowledge, know-how, or skill."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: The Old Man and The Sea; the Page Rank algorithm; the brand Coca Cola."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: For literature this could be called the 'Work,' except that 'work' is a highly overloaded term (expenditure of energy, resource consumption, art). Often the first expression precedes our recognition of the IP, but subsequent expressions are known to be derivatives of the IP, even if they are expression-to-expression translations (or copies)."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: This concept includes works that are out of copyright or were never formally registered; the defining feature is not that it is legally protected but that it is an intangible creation of the human mind."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Intellectual Property"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Magnitude"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "An intangible work, invention, or concept, independent of its being expressed in text, audio, video, image, or live performance. IP can also be tacit knowledge, know-how, or skill."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The Old Man and The Sea; the Page Rank algorithm; the brand Coca Cola."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Intellectual Property"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "For literature this could be called the 'Work,' except that 'work' is a highly overloaded term (expenditure of energy, resource consumption, art). Often the first expression precedes our recognition of the IP, but subsequent expressions are known to be derivatives of the IP, even if they are expression-to-expression translations (or copies)."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "This concept includes works that are out of copyright or were never formally registered; the defining feature is not that it is legally protected but that it is an intangible creation of the human mind."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/KnowledgeConcept",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy",
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:ba8a6cca558e91197"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isAssignmentOf",
+    "https://w3id.org/semanticarts/ns/ontology/gist/rangeIncludes": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty"
+      }
+    ]
+  }
+]

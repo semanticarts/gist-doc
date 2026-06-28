@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Restriction">
+    <owl:equivalentClass rdf:nodeID="bf5b3c6cb2948af63" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/prevents">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates an intention to behavior that it prohibits.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A city ordinance prohibits jaywalking.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prevents</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Behavior" />
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/prohibits" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an intention to behavior that it prohibits.</skos:definition>
+    <skos:editorialNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See guidance on removing this term in the next major release at https://github.com/semanticarts/gist/issues/1380#issuecomment-3617257248</skos:editorialNote>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A city ordinance prohibits jaywalking.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prevents</skos:prefLabel>
+    <gist:isSupersededBy rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/prohibits" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b50e59bddfb066fa0">
+    <rdf:first rdf:nodeID="bd663212b7f866c52" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7e64218060f4dc39">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="b50e59bddfb066fa0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd663212b7f866c52">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/prevents" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Behavior" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf5b3c6cb2948af63">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b7e64218060f4dc39" />
+  </rdf:Description>
+</rdf:RDF>

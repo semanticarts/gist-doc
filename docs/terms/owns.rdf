@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/owns">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates a party to something that it possesses and controls.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: The ultimate form of ownership is the right to destroy.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: There is a long list of potential range classes.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b7b292f100a7847f4" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owns</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a party to something that it possesses and controls.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owns</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ultimate form of ownership is the right to destroy.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There is a long list of potential range classes.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b60083746247d0e78">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b73877665f7f9ed04">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b60083746247d0e78" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7b292f100a7847f4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b73877665f7f9ed04" />
+  </rdf:Description>
+</rdf:RDF>

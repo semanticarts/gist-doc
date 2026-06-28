@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Message">
+    <owl:equivalentClass rdf:nodeID="b3c0cb7484d3ce8fc" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/comesFromAgent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates something to the originating agent.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A package is shipped by a person; a purchase order is emailed to a vendor by an organization.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This is not the inverse of gist:goesToAgent, as both properties have the message or shipment as the subject.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This property is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another, whereas gist:hasGiver is typically used in more abstract contexts such as agreements, obligations, contracts, etc. However, there are contexts in which either may be appropriate, such as the giving of a gift.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">comes from agent</rdfs:label>
+    <rdfs:range rdf:nodeID="b361f2efdaf78f493" />
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasParticipant" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates something to the originating agent.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A package is shipped by a person; a purchase order is emailed to a vendor by an organization.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">comes from agent</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is not the inverse of gist:goesToAgent, as both properties have the message or shipment as the subject.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another, whereas gist:hasGiver is typically used in more abstract contexts such as agreements, obligations, contracts, etc. However, there are contexts in which either may be appropriate, such as the giving of a gift.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05a38c4d4e5bfbfb">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContentExpression" />
+    <rdf:rest rdf:nodeID="b6c0563e763b2451d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05f6469187a2ddff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b37e5c10c83c0c81e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b361f2efdaf78f493">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b42dcc17b385581bc" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b37e5c10c83c0c81e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b5ccb593b7442c27f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3c0cb7484d3ce8fc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b05a38c4d4e5bfbfb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b42dcc17b385581bc">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="ba5289177a00cc875" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5ccb593b7442c27f">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b603782b90e8e59da">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b9b28421baa413bbf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6373d05251060201">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/goesToAgent" />
+    <owl:someValuesFrom rdf:nodeID="ba898f6b69a04bf2a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6c0563e763b2451d">
+    <rdf:first rdf:nodeID="bf68813be13cfa7a3" />
+    <rdf:rest rdf:nodeID="b9d8f515abebb8aae" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9b28421baa413bbf">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9d8f515abebb8aae">
+    <rdf:first rdf:nodeID="b6373d05251060201" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba5289177a00cc875">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba898f6b69a04bf2a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b603782b90e8e59da" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf68813be13cfa7a3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/comesFromAgent" />
+    <owl:someValuesFrom rdf:nodeID="b05f6469187a2ddff" />
+  </rdf:Description>
+</rdf:RDF>

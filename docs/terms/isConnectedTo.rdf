@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isConnectedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A non-owning, non-causal, non-subordinate (i.e., peer-to-peer) relationship.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is connected to</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A non-owning, non-causal, non-subordinate (i.e., peer-to-peer) relationship.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is connected to</skos:prefLabel>
+  </rdf:Description>
+</rdf:RDF>

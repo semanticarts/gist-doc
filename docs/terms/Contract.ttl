@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Contract a owl:Class ;
+    rdfs:label "Contract"^^xsd:string ;
+    rdfs:comment "DEFINITION: An agreement which can be enforced by law."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Agreement ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Agreement [ a owl:Restriction ;
+                        owl:onProperty gist:isUnderJurisdictionOf ;
+                        owl:someValuesFrom gist:GovernmentOrganization ] ) ] ;
+    skos:definition "An agreement which can be enforced by law."^^xsd:string ;
+    skos:prefLabel "Contract"^^xsd:string .
+

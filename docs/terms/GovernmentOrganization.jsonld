@@ -1,0 +1,377 @@
+[
+  {
+    "@id": "_:b0fc7f7eec47048af",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:b269e9da9531ca0e6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:bce861ebca3a30b4f"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion"
+      }
+    ]
+  },
+  {
+    "@id": "_:b300fe1a7b9bd7cbc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+          },
+          {
+            "@id": "_:b5e86dc3ec2f4ef7a"
+          },
+          {
+            "@id": "_:b32ec6c5c2a689588"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b32ec6c5c2a689588",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:ba62aeb6a3de270f2"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion"
+      }
+    ]
+  },
+  {
+    "@id": "_:b5e86dc3ec2f4ef7a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment"
+      }
+    ]
+  },
+  {
+    "@id": "_:b5fa7d0f646b24b48",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+          },
+          {
+            "@id": "_:b269e9da9531ca0e6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b846eff38e5dba8f5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion"
+          },
+          {
+            "@id": "_:bc4cfe618feb1515c"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:ba62aeb6a3de270f2",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:bad46c8ef3dbd4ba1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+          },
+          {
+            "@id": "_:be33fa7b5df5b2c70"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bc4cfe618feb1515c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "_:bc9c08cb3533dd075",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:bce861ebca3a30b4f",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:be33fa7b5df5b2c70",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "2"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:bc9c08cb3533dd075"
+      }
+    ]
+  },
+  {
+    "@id": "_:bf2d5ddd5dc13a38b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Agreement"
+          },
+          {
+            "@id": "_:bfcdbf76e5436294b"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bfcdbf76e5436294b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isUnderJurisdictionOf"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Contract",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:bf2d5ddd5dc13a38b"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:b0fc7f7eec47048af"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b5fa7d0f646b24b48"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b846eff38e5dba8f5"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: An independent organization exercising political and/or regulatory authority over a political unit, people, geographical region, etc., as well as performing certain functions for this unit or body."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: Negative example: A corporation, which is owned and therefore not independent."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: The State of Washington Office of Financial Management; the Food and Drug Administration; the Scottish Parliament."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: Includes administrative, regulatory, and enforcement organizations created or sanctioned by country or sub-country governments."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Government Organization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntergovernmentalOrganization"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "An independent organization exercising political and/or regulatory authority over a political unit, people, geographical region, etc., as well as performing certain functions for this unit or body."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Negative example: A corporation, which is owned and therefore not independent."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The State of Washington Office of Financial Management; the Food and Drug Administration; the Scottish Parliament."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Government Organization"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Includes administrative, regulatory, and enforcement organizations created or sanctioned by country or sub-country governments."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntergovernmentalOrganization",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:bad46c8ef3dbd4ba1"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/SubCountryGovernment",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b300fe1a7b9bd7cbc"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isUnderJurisdictionOf",
+    "https://w3id.org/semanticarts/ns/ontology/gist/rangeIncludes": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+      }
+    ]
+  }
+]

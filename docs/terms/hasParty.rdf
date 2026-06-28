@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Agreement">
+    <owl:equivalentClass rdf:nodeID="bc87a3bb4e2743695" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasParty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates an event, agreement, or obligation to a participating person or organization.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Loan agreements have lender and borrower parties.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Subproperties may be defined to describe specific parties, such as hasLender and hasBorrower for a loan.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has party</rdfs:label>
+    <rdfs:range rdf:nodeID="b6a42d942f3ebaa83" />
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasParticipant" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an event, agreement, or obligation to a participating person or organization.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loan agreements have lender and borrower parties.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has party</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subproperties may be defined to describe specific parties, such as hasLender and hasBorrower for a loan.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1413d528cf117d20">
+    <rdf:first rdf:nodeID="be3b4ec7734717147" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2edf861e30d30f00">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="bad122ca9246ac3de" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b38b12625c9bb2c0b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasParty" />
+    <owl:someValuesFrom rdf:nodeID="b4c2cb0e848064f79" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3e26d577abb318c3">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b438d1908ce7e113e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b438d1908ce7e113e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b471e1b91860aab62">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4c2cb0e848064f79">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bf60e5bee837132ca" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6a42d942f3ebaa83">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b3e26d577abb318c3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bad122ca9246ac3de">
+    <rdf:first rdf:nodeID="b38b12625c9bb2c0b" />
+    <rdf:rest rdf:nodeID="b1413d528cf117d20" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbf1eef84bc643eba">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc87a3bb4e2743695">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b2edf861e30d30f00" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be3b4ec7734717147">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    <owl:onClass rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Commitment" />
+    <owl:onProperty rdf:nodeID="bbf1eef84bc643eba" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf60e5bee837132ca">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b471e1b91860aab62" />
+  </rdf:Description>
+</rdf:RDF>

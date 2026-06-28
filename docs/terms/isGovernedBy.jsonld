@@ -1,0 +1,419 @@
+[
+  {
+    "@id": "_:b05fcb54653fbafc3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:bb1bcb0bffa2220c9"
+      }
+    ]
+  },
+  {
+    "@id": "_:b190a539afbdb9dd6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:b1ba4f1ede7f54f6b",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:b2317ba1819c251cc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion"
+          },
+          {
+            "@id": "_:bb2820711de4dbe94"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b2455b81a45d8d233",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxQualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:b269e9da9531ca0e6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:bce861ebca3a30b4f"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion"
+      }
+    ]
+  },
+  {
+    "@id": "_:b300fe1a7b9bd7cbc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+          },
+          {
+            "@id": "_:b5e86dc3ec2f4ef7a"
+          },
+          {
+            "@id": "_:b32ec6c5c2a689588"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b32ec6c5c2a689588",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:ba62aeb6a3de270f2"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion"
+      }
+    ]
+  },
+  {
+    "@id": "_:b5e86dc3ec2f4ef7a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment"
+      }
+    ]
+  },
+  {
+    "@id": "_:b5fa7d0f646b24b48",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+          },
+          {
+            "@id": "_:b269e9da9531ca0e6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b79dc7b85023cdd06",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Collection"
+          },
+          {
+            "@id": "_:b05fcb54653fbafc3"
+          },
+          {
+            "@id": "_:b89041ae1f87719f9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b846eff38e5dba8f5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion"
+          },
+          {
+            "@id": "_:bc4cfe618feb1515c"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b89041ae1f87719f9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:ba648df02e87029bc"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Category"
+      }
+    ]
+  },
+  {
+    "@id": "_:ba62aeb6a3de270f2",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:ba648df02e87029bc",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:bb1bcb0bffa2220c9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bb2820711de4dbe94",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment"
+      }
+    ]
+  },
+  {
+    "@id": "_:bbff8ffb23ee84e33",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:b1ba4f1ede7f54f6b"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:bc4cfe618feb1515c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization"
+      }
+    ]
+  },
+  {
+    "@id": "_:bce861ebca3a30b4f",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/ControlledVocabulary",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b79dc7b85023cdd06"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:b190a539afbdb9dd6"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b2317ba1819c251cc"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:b2455b81a45d8d233"
+      },
+      {
+        "@id": "_:bbff8ffb23ee84e33"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b5fa7d0f646b24b48"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b846eff38e5dba8f5"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/SubCountryGovernment",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b300fe1a7b9bd7cbc"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: Relates an entity to another entity that controls, directs, determines or has a guiding influence or authority over it."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: A country geographic region is governed by a country government; the installation and use of software is governed by a license."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "is governed by"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Relates an entity to another entity that controls, directs, determines or has a guiding influence or authority over it."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "A country geographic region is governed by a country government; the installation and use of software is governed by a license."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "is governed by"
+      }
+    ]
+  }
+]

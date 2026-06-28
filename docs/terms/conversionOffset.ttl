@@ -1,0 +1,32 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:conversionFactor rdfs:seeAlso gist:conversionOffset .
+
+gist:conversionOffset a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "conversion offset"^^xsd:string ;
+    rdfs:comment """DEFINITION: \r
+		A value used along with a conversion factor to relate a unit to its corresponding unit in the International System of Units. In the equation below, the conversion offset is 459.669607 and the conversion factor is 5/9.\r
+\r
+		y degrees Fahrenheit = (y + 459.669607) x 5/9 degrees Kelvin\r
+\r
+		To convert from Fahrenheit to Kelvin, first add the offset and then multiply by the conversion factor.\r
+\r
+		To convert from Kelvin to Fahrenheit, reverse the steps: first divide by the conversion factor and then subtract the offset."""^^xsd:string ;
+    rdfs:domain gist:UnitOfMeasure ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:decimal ;
+    skos:definition """\r
+		A value used along with a conversion factor to relate a unit to its corresponding unit in the International System of Units. In the equation below, the conversion offset is 459.669607 and the conversion factor is 5/9.\r
+\r
+		y degrees Fahrenheit = (y + 459.669607) x 5/9 degrees Kelvin\r
+\r
+		To convert from Fahrenheit to Kelvin, first add the offset and then multiply by the conversion factor.\r
+\r
+		To convert from Kelvin to Fahrenheit, reverse the steps: first divide by the conversion factor and then subtract the offset."""^^xsd:string ;
+    skos:prefLabel "conversion offset"^^xsd:string .
+

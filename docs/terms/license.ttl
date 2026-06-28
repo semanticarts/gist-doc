@@ -1,0 +1,17 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:license a owl:AnnotationProperty ;
+    rdfs:label "license"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to its conditions of use."^^xsd:string,
+        "EXAMPLE: The gist ontology is licensed under the CC By 4.0 license."^^xsd:string,
+        "NOTE: Could refer to a license object by URI or name or could consist of the license text itself."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates something to its conditions of use."^^xsd:string ;
+    skos:example "The gist ontology is licensed under the CC By 4.0 license."^^xsd:string ;
+    skos:prefLabel "license"^^xsd:string ;
+    skos:scopeNote "Could refer to a license object by URI or name or could consist of the license text itself."^^xsd:string .
+

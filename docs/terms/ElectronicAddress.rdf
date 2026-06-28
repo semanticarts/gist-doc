@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ElectronicAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALT: Virtual Address</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An address referring to a locatable virtual place that does not physically exist but is made by software or electronics to appear to do so.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A file system path, website URL, IP address, email address, mobile or landline telephone number.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronic Address</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalAddress" />
+    <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virtual Address</skos:altLabel>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An address referring to a locatable virtual place that does not physically exist but is made by software or electronics to appear to do so.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A file system path, website URL, IP address, email address, mobile or landline telephone number.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronic Address</skos:prefLabel>
+  </rdf:Description>
+</rdf:RDF>

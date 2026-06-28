@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/data/gist/_Aspect_altitude">
+    <rdf:type rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/data/gist/_Aspect_area">
+    <rdf:type rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/data/gist/_Aspect_duration">
+    <rdf:type rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/data/gist/_Aspect_financial_balance">
+    <rdf:type rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/data/gist/_Aspect_mass">
+    <rdf:type rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/data/gist/_Aspect_monetary_value">
+    <rdf:type rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/data/gist/_Aspect_probability">
+    <rdf:type rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/data/gist/_Aspect_volume">
+    <rdf:type rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Aspect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A measurable characteristic.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Length, weight, cost, cycle time, defect rate, wheelbase, billing rate.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Depending on implementation, every aspect should be related to a unit group either directly or through a broader aspect. For example, angle of incidence could be related to the broader concept of angle, which in turn is related to a unit group, or it could be related directly to the unit group without the hierarchical relationship.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Rule of thumb: use the least specific aspect that serves the intended purpose, increasing specificity only when required (e.g., to distinguish between two magnitudes attached to the same object).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspect</rdfs:label>
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurable characteristic.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Length, weight, cost, cycle time, defect rate, wheelbase, billing rate.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspect</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Depending on implementation, every aspect should be related to a unit group either directly or through a broader aspect. For example, angle of incidence could be related to the broader concept of angle, which in turn is related to a unit group, or it could be related directly to the unit group without the hierarchical relationship.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rule of thumb: use the least specific aspect that serves the intended purpose, increasing specificity only when required (e.g., to distinguish between two magnitudes attached to the same object).</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Magnitude">
+    <owl:equivalentClass rdf:nodeID="b4ccebf50d2cc4f58" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect">
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasUnitGroup">
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2bf38256d45916e7">
+    <rdf:first rdf:nodeID="b3fbca0dac4ac4030" />
+    <rdf:rest rdf:nodeID="b3a507616f0ef6ee6" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3a507616f0ef6ee6">
+    <rdf:first rdf:nodeID="bc661874a01d7ae0f" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3fbca0dac4ac4030">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasUnitOfMeasure" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4ccebf50d2cc4f58">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b63655a82a0d0a327" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b63655a82a0d0a327">
+    <rdf:first rdf:nodeID="b7fe784175fde9fc9" />
+    <rdf:rest rdf:nodeID="b2bf38256d45916e7" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7fe784175fde9fc9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc661874a01d7ae0f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/numericValue" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+</rdf:RDF>

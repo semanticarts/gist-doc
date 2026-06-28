@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSecond">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The exponent of second in a product of powers of base units.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: In the equation '1 watt-hour = 3600 x kilogram meterSquared per secondSquared'&#13;
+&#13;
+		the conversion factor for watt-hour is 3600&#13;
+		the exponent of kilogram is 1&#13;
+		the exponent of meter is 2&#13;
+		the exponent of second is -2&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing watt-hour must be a multiple of kilogram meterSquared per secondSquared.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="bad8f248f4d203942" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of second</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The exponent of second in a product of powers of base units.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the equation '1 watt-hour = 3600 x kilogram meterSquared per secondSquared'&#13;
+&#13;
+		the conversion factor for watt-hour is 3600&#13;
+		the exponent of kilogram is 1&#13;
+		the exponent of meter is 2&#13;
+		the exponent of second is -2&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing watt-hour must be a multiple of kilogram meterSquared per secondSquared.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of second</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5366e160f35d54b4">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="bde3bf022bfa362ff" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bad8f248f4d203942">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b5366e160f35d54b4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bde3bf022bfa362ff">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

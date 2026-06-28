@@ -1,0 +1,58 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Contract owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Agreement [ a owl:Restriction ;
+                        owl:onProperty gist:isUnderJurisdictionOf ;
+                        owl:someValuesFrom gist:GovernmentOrganization ] ) ] .
+
+gist:GovernedGeoRegion owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GeoRegion [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:GovernmentOrganization ] ) ] .
+
+gist:SubCountryGovernment rdfs:subClassOf gist:GovernmentOrganization ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernmentOrganization [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:CountryGovernment ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isGovernedBy ] ;
+                        owl:someValuesFrom gist:GeoRegion ] ) ] .
+
+gist:CountryGovernment rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onClass gist:GovernmentOrganization ;
+            owl:onProperty gist:isGovernedBy ],
+        gist:GovernmentOrganization ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernmentOrganization [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isGovernedBy ] ;
+                        owl:someValuesFrom gist:CountryGeoRegion ] ) ] .
+
+gist:IntergovernmentalOrganization owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Organization [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:GovernmentOrganization ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) ] .
+
+gist:isUnderJurisdictionOf gist:rangeIncludes gist:GovernmentOrganization .
+
+gist:GovernmentOrganization a owl:Class ;
+    rdfs:label "Government Organization"^^xsd:string ;
+    rdfs:comment "DEFINITION: An independent organization exercising political and/or regulatory authority over a political unit, people, geographical region, etc., as well as performing certain functions for this unit or body."^^xsd:string,
+        "EXAMPLE: Negative example: A corporation, which is owned and therefore not independent."^^xsd:string,
+        "EXAMPLE: The State of Washington Office of Financial Management; the Food and Drug Administration; the Scottish Parliament."^^xsd:string,
+        "NOTE: Includes administrative, regulatory, and enforcement organizations created or sanctioned by country or sub-country governments."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Organization ;
+    owl:disjointWith gist:IntergovernmentalOrganization ;
+    skos:definition "An independent organization exercising political and/or regulatory authority over a political unit, people, geographical region, etc., as well as performing certain functions for this unit or body."^^xsd:string ;
+    skos:example "Negative example: A corporation, which is owned and therefore not independent."^^xsd:string,
+        "The State of Washington Office of Financial Management; the Food and Drug Administration; the Scottish Parliament."^^xsd:string ;
+    skos:prefLabel "Government Organization"^^xsd:string ;
+    skos:scopeNote "Includes administrative, regulatory, and enforcement organizations created or sanctioned by country or sub-country governments."^^xsd:string .
+

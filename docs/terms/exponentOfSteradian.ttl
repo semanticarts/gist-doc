@@ -1,0 +1,37 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:exponentOfSteradian a owl:DatatypeProperty ;
+    rdfs:label "exponent of steradian"^^xsd:string ;
+    rdfs:comment "DEFINITION: The exponent of steradian in a product of powers of base units."^^xsd:string,
+        """EXAMPLE: In the equation '1 watt per square meter steradian = 1 x kilogram per secondCubed steradian'\r
+\r
+		the conversion factor for watt per square meter steradian is 1\r
+		the exponent of kilogram is 1\r
+		the exponent of second is -3\r
+		the exponent of steradian is -1\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing watt per square meter steradian must a multiple of kilogram per secondCubed steradian."""^^xsd:string,
+        "NOTE: Steradian is a measure of solid angle."^^xsd:string ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:decimal ;
+    skos:definition "The exponent of steradian in a product of powers of base units."^^xsd:string ;
+    skos:example """In the equation '1 watt per square meter steradian = 1 x kilogram per secondCubed steradian'\r
+\r
+		the conversion factor for watt per square meter steradian is 1\r
+		the exponent of kilogram is 1\r
+		the exponent of second is -3\r
+		the exponent of steradian is -1\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing watt per square meter steradian must a multiple of kilogram per secondCubed steradian."""^^xsd:string ;
+    skos:prefLabel "exponent of steradian"^^xsd:string ;
+    skos:scopeNote "Steradian is a measure of solid angle."^^xsd:string .
+

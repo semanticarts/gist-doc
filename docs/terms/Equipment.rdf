@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Equipment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Human-made, tangible property other than land or buildings used to perform a task or activity.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A machine, a router, a car, a baseball bat.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <owl:equivalentClass rdf:nodeID="bf7f29bf9af92e654" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human-made, tangible property other than land or buildings used to perform a task or activity.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A machine, a router, a car, a baseball bat.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isAssignmentOf">
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Equipment" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9b867fd078c253fe">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <rdf:rest rdf:nodeID="bd9adf1e6ab8173e3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd9adf1e6ab8173e3">
+    <rdf:first rdf:nodeID="bff480e71fcb1187f" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf7f29bf9af92e654">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b9b867fd078c253fe" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bff480e71fcb1187f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/EquipmentType" />
+  </rdf:Description>
+</rdf:RDF>

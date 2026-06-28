@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Assignment">
+    <owl:equivalentClass rdf:nodeID="b24ffea1d4221e5d2" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isAssignmentOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates an assignment to the resource it assigns.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Assignment of a person to a project.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: People, organizations, monetary amounts, equipment can all be assigned.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: While typically this predicate will be used with assignment subjects, there may be other use cases, and therefore a domain is not specified.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is assignment of</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an assignment to the resource it assigns.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assignment of a person to a project.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is assignment of</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People, organizations, monetary amounts, equipment can all be assigned.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While typically this predicate will be used with assignment subjects, there may be other use cases, and therefore a domain is not specified.</skos:scopeNote>
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Assignment" />
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Equipment" />
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b04c1c9fb07914a1e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/TemporalRelation" />
+    <rdf:rest rdf:nodeID="bd848673565722146" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b169765729667b6bc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isAssignmentTo" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b24ffea1d4221e5d2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b04c1c9fb07914a1e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2c89d01d46135bc8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isAssignmentOf" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b47634aa596cc622b">
+    <rdf:first rdf:nodeID="b169765729667b6bc" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b95e12be4b9782782">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGiver" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd848673565722146">
+    <rdf:first rdf:nodeID="b95e12be4b9782782" />
+    <rdf:rest rdf:nodeID="bff0da447f00f0f95" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bff0da447f00f0f95">
+    <rdf:first rdf:nodeID="b2c89d01d46135bc8" />
+    <rdf:rest rdf:nodeID="b47634aa596cc622b" />
+  </rdf:Description>
+</rdf:RDF>

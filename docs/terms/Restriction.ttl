@@ -1,0 +1,30 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Commitment owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Class ;
+                        owl:unionOf ( gist:Requirement gist:Restriction ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isCategorizedBy ;
+                        owl:someValuesFrom gist:DegreeOfCommitment ] ) ] .
+
+gist:Restriction a owl:Class ;
+    rdfs:label "Restriction"^^xsd:string ;
+    rdfs:comment "DEFINITION: A description of things one is prevented from doing."^^xsd:string,
+        "EXAMPLE: In the US, tax laws restrict the amount of money a person can put in retirement accounts over the course of a year."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Intention ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:prevents ;
+                        owl:someValuesFrom gist:Behavior ] ) ] ;
+    skos:definition "A description of things one is prevented from doing."^^xsd:string ;
+    skos:example "In the US, tax laws restrict the amount of money a person can put in retirement accounts over the course of a year."^^xsd:string ;
+    skos:prefLabel "Restriction"^^xsd:string .
+

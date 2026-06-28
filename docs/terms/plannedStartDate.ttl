@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:plannedStartDate a owl:DatatypeProperty ;
+    rdfs:label "planned start date"^^xsd:string ;
+    rdfs:comment "DEFINITION: The date that something is or was planned to start, with precision of one day."^^xsd:string,
+        "EXAMPLE: '2021-06-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string,
+        "NOTE: Used for anything with a planned start date, such as when a lease will start, when a configuration becomes available, etc. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf gist:plannedStartDateTime ;
+    skos:definition "The date that something is or was planned to start, with precision of one day."^^xsd:string ;
+    skos:example "'2021-06-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string ;
+    skos:prefLabel "planned start date"^^xsd:string ;
+    skos:scopeNote "Used for anything with a planned start date, such as when a lease will start, when a configuration becomes available, etc. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision."^^xsd:string .
+

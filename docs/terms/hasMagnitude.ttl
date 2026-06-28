@@ -1,0 +1,90 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Account owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Agreement [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_financial_balance ;
+                                owl:onProperty gist:hasAspect ] ] ) ] .
+
+gist:ContingentEvent owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_probability ;
+                                owl:onProperty gist:hasAspect ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isTriggeredBy ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:GeoRegion rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( gist:GeoLocation [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_area ;
+                                owl:onProperty gist:hasAspect ] ] ) ] .
+
+gist:GeoVolume owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GeoLocation [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_volume ;
+                                owl:onProperty gist:hasAspect ] ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isGeoContainedIn ] ;
+                        owl:someValuesFrom gist:GeoPoint ] ) ] .
+
+gist:PhysicalIdentifiableItem rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:hasMagnitude ;
+            owl:someValuesFrom [ a owl:Restriction ;
+                    owl:hasValue gistd:_Aspect_volume ;
+                    owl:onProperty gist:hasAspect ] ],
+        [ a owl:Restriction ;
+            owl:onProperty gist:hasMagnitude ;
+            owl:someValuesFrom [ a owl:Restriction ;
+                    owl:hasValue gistd:_Aspect_mass ;
+                    owl:onProperty gist:hasAspect ] ] .
+
+gist:PhysicalSubstance rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:hasMagnitude ;
+            owl:someValuesFrom [ a owl:Restriction ;
+                    owl:hasValue gistd:_Aspect_mass ;
+                    owl:onProperty gist:hasAspect ] ],
+        [ a owl:Restriction ;
+            owl:onProperty gist:hasMagnitude ;
+            owl:someValuesFrom [ a owl:Restriction ;
+                    owl:hasValue gistd:_Aspect_volume ;
+                    owl:onProperty gist:hasAspect ] ] .
+
+gist:TimeInterval rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass [ a owl:Restriction ;
+                    owl:hasValue gistd:_Aspect_duration ;
+                    owl:onProperty gist:hasAspect ] ;
+            owl:onProperty gist:hasMagnitude ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+gist:GeoPoint owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_altitude ;
+                                owl:onProperty gist:hasAspect ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:latitude ;
+                        owl:someValuesFrom xsd:double ] [ a owl:Restriction ;
+                        owl:onProperty gist:longitude ;
+                        owl:someValuesFrom xsd:double ] ) ] .
+
+gist:hasMagnitude a owl:ObjectProperty ;
+    rdfs:label "has magnitude"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a thing to a magnitude."^^xsd:string,
+        "EXAMPLE: A car or model of car has magnitudes for length, width, weight, average miles per gallon, etc."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range gist:Magnitude ;
+    skos:definition "Relates a thing to a magnitude."^^xsd:string ;
+    skos:example "A car or model of car has magnitudes for length, width, weight, average miles per gallon, etc."^^xsd:string ;
+    skos:prefLabel "has magnitude"^^xsd:string .
+

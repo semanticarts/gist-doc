@@ -1,0 +1,20 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:owns a owl:ObjectProperty ;
+    rdfs:label "owns"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a party to something that it possesses and controls."^^xsd:string,
+        "NOTE: The ultimate form of ownership is the right to destroy."^^xsd:string,
+        "NOTE: There is a long list of potential range classes."^^xsd:string ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates a party to something that it possesses and controls."^^xsd:string ;
+    skos:prefLabel "owns"^^xsd:string ;
+    skos:scopeNote "The ultimate form of ownership is the right to destroy."^^xsd:string,
+        "There is a long list of potential range classes."^^xsd:string .
+

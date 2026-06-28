@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Category">
+    <rdfs:subClassOf rdf:nodeID="b4831f81f9bb4ce2e" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ID">
+    <owl:equivalentClass rdf:nodeID="be402bad8d5db9cb1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates something to whomever or whatever assigns or distributes it.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A U.S. Social Security number is allocated by the U.S. Social Security Administration; the media type https://www.iana.org/assignments/media-types/text/csv is allocated by the Internet Assigned Numbers Authority (IANA).</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: The allocator may be a person, organization, or automated process.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is allocated by</rdfs:label>
+    <rdfs:range rdf:nodeID="ba8a6cca558e91197" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates something to whomever or whatever assigns or distributes it.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A U.S. Social Security number is allocated by the U.S. Social Security Administration; the media type https://www.iana.org/assignments/media-types/text/csv is allocated by the Internet Assigned Numbers Authority (IANA).</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is allocated by</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The allocator may be a person, organization, or automated process.</skos:scopeNote>
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ID" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b154191024a11bfa6">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <rdf:rest rdf:nodeID="b1d42d855a2f9f706" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1d42d855a2f9f706">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bbb275e152d087393" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b29e54af47b7dbcee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b68874948f765e17b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3c92e0ab6b9094af">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b154191024a11bfa6" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4831f81f9bb4ce2e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy" />
+    <owl:someValuesFrom rdf:nodeID="b29e54af47b7dbcee" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4eea3c4fb8ba40d2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Content" />
+    <rdf:rest rdf:nodeID="b63f56e3ce7cfd639" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b63f56e3ce7cfd639">
+    <rdf:first rdf:nodeID="b9571cc21488e45ee" />
+    <rdf:rest rdf:nodeID="baba434ac7595a240" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b68874948f765e17b">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <rdf:rest rdf:nodeID="b8804099b267bb411" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b74ed59d2cf21998a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <rdf:rest rdf:nodeID="bac69e9dd1d606937" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b80d9fb98716ffdca">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8804099b267bb411">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b80d9fb98716ffdca" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9571cc21488e45ee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy" />
+    <owl:someValuesFrom rdf:nodeID="b3c92e0ab6b9094af" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b98fe62a123b8bf77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/uniqueText" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba8a6cca558e91197">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b74ed59d2cf21998a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baba434ac7595a240">
+    <rdf:first rdf:nodeID="b98fe62a123b8bf77" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bac69e9dd1d606937">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bd9d496e3c9894a63" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbb275e152d087393">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd9d496e3c9894a63">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be402bad8d5db9cb1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b4eea3c4fb8ba40d2" />
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,17 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:hasUnitGroup a owl:ObjectProperty ;
+    rdfs:label "has unit group"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates an aspect to a unit group. The aspect can be measured using any of the members of the unit group."^^xsd:string,
+        "EXAMPLE: The aspect distance can have a unit group that includes the units meter, inch, foot, etc."^^xsd:string ;
+    rdfs:domain gist:Aspect ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range gist:UnitGroup ;
+    skos:definition "Relates an aspect to a unit group. The aspect can be measured using any of the members of the unit group."^^xsd:string ;
+    skos:example "The aspect distance can have a unit group that includes the units meter, inch, foot, etc."^^xsd:string ;
+    skos:prefLabel "has unit group"^^xsd:string .
+

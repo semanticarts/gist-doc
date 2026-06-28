@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ContingentEvent">
+    <owl:equivalentClass rdf:nodeID="bd3bf3ee8b68dc53d" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ContingentObligation">
+    <owl:equivalentClass rdf:nodeID="bdaf499a6078fa7c2" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isTriggeredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates a contingency, such as an event or obligation, to the event that gives rise to it.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Fire insurance is contingent on a particular building burning down; the death benefit payout on a life insurance policy is contingent on the death of the insured person.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: For obligations, this property describes what must happen to trigger the contingent obligation. Other uses include controls, processes, etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is triggered by</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a contingency, such as an event or obligation, to the event that gives rise to it.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fire insurance is contingent on a particular building burning down; the death benefit payout on a life insurance policy is contingent on the death of the insured person.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is triggered by</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For obligations, this property describes what must happen to trigger the contingent obligation. Other uses include controls, processes, etc.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b00358e7d995601da">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isTriggeredBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b01efdf379babea4b">
+    <rdf:first rdf:nodeID="b2d5a934e883c23b6" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1239fbc77a0f9885">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <rdf:rest rdf:nodeID="b600c81385a53e541" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b19558c89e8202340">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_probability" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2d5a934e883c23b6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isTriggeredBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4aee32c91ecb07e6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b19558c89e8202340" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b600c81385a53e541">
+    <rdf:first rdf:nodeID="b4aee32c91ecb07e6" />
+    <rdf:rest rdf:nodeID="bd223079cdcfb86bb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8b8e2eee731a9a98">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bc55a7bc03394206e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba9d3b351ad17b163">
+    <rdf:first rdf:nodeID="bff1d43022a436ddf" />
+    <rdf:rest rdf:nodeID="b01efdf379babea4b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb58742f28eebed76">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Commitment" />
+    <rdf:rest rdf:nodeID="ba9d3b351ad17b163" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc55a7bc03394206e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd223079cdcfb86bb">
+    <rdf:first rdf:nodeID="b00358e7d995601da" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd3bf3ee8b68dc53d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b1239fbc77a0f9885" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdaf499a6078fa7c2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bb58742f28eebed76" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be24fede66c77830a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b8b8e2eee731a9a98" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bff1d43022a436ddf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGiver" />
+    <owl:someValuesFrom rdf:nodeID="be24fede66c77830a" />
+  </rdf:Description>
+</rdf:RDF>

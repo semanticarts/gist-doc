@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ScheduledEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An event with a planned start datetime.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: If the event already started, but has not yet ended, it is a contemporary event with an actual start datetime. If the event is over, it is a historical event having an actual end datetime. The event always retains its planned start datetime, and thus continues to be a scheduled event.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scheduled Event</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <owl:equivalentClass rdf:nodeID="b4c92b55a69ad15f5" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An event with a planned start datetime.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scheduled Event</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If the event already started, but has not yet ended, it is a contemporary event with an actual start datetime. If the event is over, it is a historical event having an actual end datetime. The event always retains its planned start datetime, and thus continues to be a scheduled event.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ScheduledTask">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ScheduledEvent" />
+    <owl:equivalentClass rdf:nodeID="bac7eccbf1b8bfba3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b177b5cddcdb0c2ba">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Task" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b27be7ad024cf5507">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ScheduledEvent" />
+    <rdf:rest rdf:nodeID="b177b5cddcdb0c2ba" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4c92b55a69ad15f5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b693e79ea917bfc2d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b693e79ea917bfc2d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <rdf:rest rdf:nodeID="b743401dbe12a2501" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b743401dbe12a2501">
+    <rdf:first rdf:nodeID="b976b3842ce635d94" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b976b3842ce635d94">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bac7eccbf1b8bfba3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b27be7ad024cf5507" />
+  </rdf:Description>
+</rdf:RDF>

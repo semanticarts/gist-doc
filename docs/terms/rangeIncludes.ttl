@@ -1,0 +1,20 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:rangeIncludes a owl:AnnotationProperty ;
+    rdfs:label "range includes"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a property to a class that is an expected type of its values."^^xsd:string,
+        "EXAMPLE: The range of the property gist:isCategorizedBy includes gist:Category."^^xsd:string,
+        "NOTE: There may be multiple rangeIncludes assertions on a single property."^^xsd:string,
+        "NOTE: This property is used to guide the ontology user; like all annotation properties, it does not play a role in inference."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subPropertyOf skos:scopeNote ;
+    skos:definition "Relates a property to a class that is an expected type of its values."^^xsd:string ;
+    skos:example "The range of the property gist:isCategorizedBy includes gist:Category."^^xsd:string ;
+    skos:prefLabel "range includes"^^xsd:string ;
+    skos:scopeNote "There may be multiple rangeIncludes assertions on a single property."^^xsd:string,
+        "This property is used to guide the ontology user; like all annotation properties, it does not play a role in inference."^^xsd:string .
+

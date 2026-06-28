@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ControlledVocabulary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A collection of terms approved and managed by some organization or person.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: A controlled vocabulary is similar to a skos:ConceptScheme, but it could also be used for things that are not concepts, such as organizations, US presidents, geographic regions, etc. Hierarchical relationships between instances of the controlled vocabulary are possible.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Controlled Vocabulary</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <owl:equivalentClass rdf:nodeID="b79dc7b85023cdd06" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection of terms approved and managed by some organization or person.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Controlled Vocabulary</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A controlled vocabulary is similar to a skos:ConceptScheme, but it could also be used for things that are not concepts, such as organizations, US presidents, geographic regions, etc. Hierarchical relationships between instances of the controlled vocabulary are possible.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05fcb54653fbafc3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:nodeID="bb1bcb0bffa2220c9" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3bcf63b0f8b7df1c">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b79e0458bb7dc008a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3ede9c5f78ef534f">
+    <rdf:first rdf:nodeID="b05fcb54653fbafc3" />
+    <rdf:rest rdf:nodeID="ba142110340af05e5" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5affd6eb8b5b6fb2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <rdf:rest rdf:nodeID="b3ede9c5f78ef534f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79dc7b85023cdd06">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b5affd6eb8b5b6fb2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79e0458bb7dc008a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b89041ae1f87719f9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="ba648df02e87029bc" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba142110340af05e5">
+    <rdf:first rdf:nodeID="b89041ae1f87719f9" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba648df02e87029bc">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb1bcb0bffa2220c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b3bcf63b0f8b7df1c" />
+  </rdf:Description>
+</rdf:RDF>

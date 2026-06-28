@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Tag">
+    <rdfs:subClassOf rdf:nodeID="b7402b11aa3ef1f75" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Text">
+    <owl:equivalentClass rdf:nodeID="b93f1948f4bfd8258" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/containedText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates an entity containing textual information to the string constituting that textual information.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: The string associated with a tag or with text content.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: If there are multiple strings associated with an entity, it is an implementation decision whether to combine them into a single contained text value or to use multiple contained text assertions.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contained text</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an entity containing textual information to the string constituting that textual information.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The string associated with a tag or with text content.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contained text</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If there are multiple strings associated with an entity, it is an implementation decision whether to combine them into a single contained text value or to use multiple contained text assertions.</skos:scopeNote>
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Content" />
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContentExpression" />
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Tag" />
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Text" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/encryptedText">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/containedText" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/uniqueText">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/containedText" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b29b06a79924baae3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/containedText" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b58f3b864e3796042">
+    <rdf:first rdf:nodeID="b29b06a79924baae3" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6a857246dfac7e53">
+    <rdf:first rdf:nodeID="b9f7daef9bbb5ea5f" />
+    <rdf:rest rdf:nodeID="b58f3b864e3796042" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b72b50366155895d1">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContentExpression" />
+    <rdf:rest rdf:nodeID="b6a857246dfac7e53" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7402b11aa3ef1f75">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/containedText" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b93f1948f4bfd8258">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b72b50366155895d1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9f7daef9bbb5ea5f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isExpressedIn" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Language" />
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,54 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Content owl:disjointWith gist:GeoPoint .
+
+gist:GeoRoute owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:OrderedCollection [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+                        owl:someValuesFrom gist:GeoPoint ] ) ] .
+
+gist:GeoVolume owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GeoLocation [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_volume ;
+                                owl:onProperty gist:hasAspect ] ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isGeoContainedIn ] ;
+                        owl:someValuesFrom gist:GeoPoint ] ) ] .
+
+gist:latitude rdfs:domain gist:GeoPoint .
+
+gist:longitude rdfs:domain gist:GeoPoint .
+
+gist:GeoPoint a owl:Class ;
+    rdfs:label "Geographic Point"^^xsd:string ;
+    rdfs:comment "DEFINITION: An individual point on or above the Earth's surface, identified by latitude, longitude and altitude. Altitude is the distance measured from sea level. If altitude is missing, the point is assumed to be at the Earth's surface. These points are described using decimal latitude/longitude."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:GeoLocation ;
+    owl:disjointWith gist:IntellectualProperty,
+        gist:Intention,
+        gist:Language,
+        gist:Magnitude,
+        gist:Organization,
+        gist:PhysicalIdentifiableItem,
+        gist:PhysicalSubstance,
+        gist:UnitOfMeasure ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_altitude ;
+                                owl:onProperty gist:hasAspect ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:latitude ;
+                        owl:someValuesFrom xsd:double ] [ a owl:Restriction ;
+                        owl:onProperty gist:longitude ;
+                        owl:someValuesFrom xsd:double ] ) ] ;
+    skos:definition "An individual point on or above the Earth's surface, identified by latitude, longitude and altitude. Altitude is the distance measured from sea level. If altitude is missing, the point is assumed to be at the Earth's surface. These points are described using decimal latitude/longitude."^^xsd:string ;
+    skos:prefLabel "Geographic Point"^^xsd:string .
+

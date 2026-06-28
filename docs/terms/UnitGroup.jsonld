@@ -1,0 +1,440 @@
+[
+  {
+    "@id": "_:b08759d885fe93280",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b0f59ae5b1e8784a0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b16861dd9e2d7869a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b298c1caf1a4f5380",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b3bb3ee1b49eea327",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b40bc5396184d9fb1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b482663fdc6d31753",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b4880407a3913c407",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b9e892082a9327322",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bad8f248f4d203942",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:baecf4d4300b39516",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:be1b8df21ee656d49",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bee053dac94d643b7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bf4fdfe356d7ce7d9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bf7d1c6fd241f12c9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:baecf4d4300b39516"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: A collection of units of measure that can all be used to measure the same aspects."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: The units of measure bit, byte, kilobit, kilobyte, etc. are all in the same unit group because they can all be used to measure an amount of data."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: Typically there is one unit group per aspect. An example of an aspect with two unit groups is vehicle efficiency, which can be measured by miles per gallon (distance per volume) or by liters per 100 kilometers (volume per distance). These two units of measure need to be in different unit groups because they have different values of exponents. When adding a unit of measure to a unit group, make sure it has the same exponents as the other members of the unit group."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Unit Group"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:bf7d1c6fd241f12c9"
+      },
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Collection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "A collection of units of measure that can all be used to measure the same aspects."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The units of measure bit, byte, kilobit, kilobyte, etc. are all in the same unit group because they can all be used to measure an amount of data."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Unit Group"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Typically there is one unit group per aspect. An example of an aspect with two unit groups is vehicle efficiency, which can be measured by miles per gallon (distance per volume) or by liters per 100 kilometers (volume per distance). These two units of measure need to be in different unit groups because they have different values of exponents. When adding a unit of measure to a unit group, make sure it has the same exponents as the other members of the unit group."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfAmpere",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b40bc5396184d9fb1"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfBit",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b0f59ae5b1e8784a0"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfCandela",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b08759d885fe93280"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfKelvin",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b3bb3ee1b49eea327"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfKilogram",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b16861dd9e2d7869a"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfMeter",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b298c1caf1a4f5380"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfMole",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:bf4fdfe356d7ce7d9"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfNumber",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:bee053dac94d643b7"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfOther",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b482663fdc6d31753"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfRadian",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b4880407a3913c407"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSecond",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:bad8f248f4d203942"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSteradian",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b9e892082a9327322"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfUSDollar",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:be1b8df21ee656d49"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/hasUnitGroup",
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+      }
+    ]
+  }
+]

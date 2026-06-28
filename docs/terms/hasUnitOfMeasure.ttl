@@ -1,0 +1,27 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Magnitude owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty gist:hasAspect ;
+                        owl:someValuesFrom gist:Aspect ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasUnitOfMeasure ;
+                        owl:someValuesFrom gist:UnitOfMeasure ] [ a owl:Restriction ;
+                        owl:onProperty gist:numericValue ;
+                        owl:someValuesFrom rdfs:Literal ] ) ] .
+
+gist:hasUnitOfMeasure a owl:ObjectProperty ;
+    rdfs:label "has unit of measure"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a magnitude to its unit of measure."^^xsd:string,
+        "EXAMPLE: The magnitude 87 inches of height has unit of measure inches."^^xsd:string ;
+    rdfs:domain gist:Magnitude ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range gist:UnitOfMeasure ;
+    skos:definition "Relates a magnitude to its unit of measure."^^xsd:string ;
+    skos:example "The magnitude 87 inches of height has unit of measure inches."^^xsd:string ;
+    skos:prefLabel "has unit of measure"^^xsd:string .
+

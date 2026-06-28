@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/atDateTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The date and time at which something did or will occur, with variants for precision, start and end, and actual vs. planned.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This is the top level property for asserting time, and is not expected to be asserted directly.&#13;
+&#13;
+The subproperties allow the ontologist to do three things:&#13;
+1) Distinguish start and end times.&#13;
+2) Indicate whether a time is planned or actual. This is useful for everything from project management to calendar appointments and the like. It is also useful for date effectivities; i.e., something valid up to a planned date).&#13;
+3) Distinguish varying levels of precision; sort of a simple version of the Allen functions.&#13;
+&#13;
+All datetimes are of the same format: '2021-06-01T08:03:27.12324-6:00'^^xsd:dateTime. This is compatible with and a subset of ISO 8601.&#13;
+&#13;
+Time zone offset, such as -6:00 (of which there are a few dozen) is recognized in the date itself, as shown. The actual time zone standard (of which there are 131) may optionally be attached to the event or other object itself.&#13;
+&#13;
+There will be many historical dates that do not have a time zone offset (e.g., Lincoln's birthday, as well as about 75% of all legacy systems), and in that case the offset can be omitted.&#13;
+&#13;
+The conventions for precision that are repeated in each property name are as follows:&#13;
+	- *DateTime is an abstraction over the various precisions of its subproperties.&#13;
+	- *Date refers to a calendar date (e.g., birthdays and invoice dates) and is assumed to have precision of one day. Time zone offset is allowed.&#13;
+	- *Minute refers to clock time; e.g., a meeting will start at 9:15 with a timezone offset. Precision is assumed to have precision of one minute.&#13;
+	- *Microsecond refers to system time, and it will be as precise as the system can supply; typically at least milliseconds, sometime microseconds.&#13;
+</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at date time</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The date and time at which something did or will occur, with variants for precision, start and end, and actual vs. planned.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at date time</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the top level property for asserting time, and is not expected to be asserted directly.&#13;
+&#13;
+The subproperties allow the ontologist to do three things:&#13;
+1) Distinguish start and end times.&#13;
+2) Indicate whether a time is planned or actual. This is useful for everything from project management to calendar appointments and the like. It is also useful for date effectivities; i.e., something valid up to a planned date).&#13;
+3) Distinguish varying levels of precision; sort of a simple version of the Allen functions.&#13;
+&#13;
+All datetimes are of the same format: '2021-06-01T08:03:27.12324-6:00'^^xsd:dateTime. This is compatible with and a subset of ISO 8601.&#13;
+&#13;
+Time zone offset, such as -6:00 (of which there are a few dozen) is recognized in the date itself, as shown. The actual time zone standard (of which there are 131) may optionally be attached to the event or other object itself.&#13;
+&#13;
+There will be many historical dates that do not have a time zone offset (e.g., Lincoln's birthday, as well as about 75% of all legacy systems), and in that case the offset can be omitted.&#13;
+&#13;
+The conventions for precision that are repeated in each property name are as follows:&#13;
+	- *DateTime is an abstraction over the various precisions of its subproperties.&#13;
+	- *Date refers to a calendar date (e.g., birthdays and invoice dates) and is assumed to have precision of one day. Time zone offset is allowed.&#13;
+	- *Minute refers to clock time; e.g., a meeting will start at 9:15 with a timezone offset. Precision is assumed to have precision of one minute.&#13;
+	- *Microsecond refers to system time, and it will be as precise as the system can supply; typically at least milliseconds, sometime microseconds.&#13;
+</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/endDateTime">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/atDateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isRecordedAt">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/atDateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/startDateTime">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/atDateTime" />
+  </rdf:Description>
+</rdf:RDF>

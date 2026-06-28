@@ -1,0 +1,42 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:linksFrom gist:rangeIncludes gist:NetworkNode .
+
+gist:linksTo gist:rangeIncludes gist:NetworkNode .
+
+gist:NetworkLink rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom gist:NetworkNode ;
+            owl:onProperty gist:links ] ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Component [ a owl:Restriction ;
+                        owl:onProperty gist:isMemberOf ;
+                        owl:someValuesFrom gist:Network ] [ a owl:Restriction ;
+                        owl:onProperty gist:links ;
+                        owl:someValuesFrom gist:NetworkNode ] ) ] .
+
+gist:Network owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Composite [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:NetworkLink gist:NetworkNode ) ] ] ) ] .
+
+gist:links gist:rangeIncludes gist:NetworkNode .
+
+gist:NetworkNode a owl:Class ;
+    rdfs:label "Network Node"^^xsd:string ;
+    rdfs:comment "DEFINITION: A node in a network."^^xsd:string,
+        "EXAMPLE: A person's account is a node in a social network; a valve is a node in a network of pipes."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:isMemberOf ;
+            owl:someValuesFrom gist:Network ],
+        gist:Component ;
+    skos:definition "A node in a network."^^xsd:string ;
+    skos:example "A person's account is a node in a social network; a valve is a node in a network of pipes."^^xsd:string ;
+    skos:prefLabel "Network Node"^^xsd:string .
+

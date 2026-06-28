@@ -1,0 +1,57 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Component owl:disjointWith gist:PhysicalSubstance .
+
+gist:Content owl:disjointWith gist:PhysicalSubstance .
+
+gist:GeoPoint owl:disjointWith gist:PhysicalSubstance .
+
+gist:GeoRegion owl:disjointWith gist:PhysicalSubstance .
+
+gist:IntellectualProperty owl:disjointWith gist:PhysicalSubstance .
+
+gist:Intention owl:disjointWith gist:PhysicalSubstance .
+
+gist:Language owl:disjointWith gist:PhysicalSubstance .
+
+gist:Magnitude owl:disjointWith gist:PhysicalSubstance .
+
+gist:Organization owl:disjointWith gist:PhysicalSubstance .
+
+gist:PhysicalIdentifiableItem rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:isMadeUpOf ;
+            owl:someValuesFrom gist:PhysicalSubstance ] .
+
+gist:isMadeUpOf rdfs:range gist:PhysicalSubstance .
+
+gist:PhysicalSubstance a owl:Class ;
+    rdfs:label "Physical Substance"^^xsd:string ;
+    rdfs:comment "DEFINITION: An undifferentiated amount of physical material which, when subdivided, results in each part being indistinguishable in nature from the whole and from every other part."^^xsd:string,
+        "EXAMPLE: An amount of water, penicillin, sand, or gold."^^xsd:string,
+        "EXAMPLE: Negative example: the concept of gold."^^xsd:string,
+        "NOTE: An instance of this class has weight and takes up space. We mean the physical gold in a ring, not the concept of gold that shows up in the periodic table. The latter would be an instance of gist:KnowledgeConcept."^^xsd:string,
+        "NOTE: This concept generally corresponds to mass nouns in English. By contrast, instances of gist:PhysicalIdentifiableItem, such as a computer, book, or car, are count nouns. Physical identifiable items are made up of physical substances; e.g., a cake is made up of butter, flour, and sugar; a ring is made of gold. If you divide a physical substance such as an amount of water into parts, you have different amounts of water otherwise indistinguishable from one another; if you divide a physical identifiable item such as a computer into parts, each part will be distinguishable from the original whole."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:hasMagnitude ;
+            owl:someValuesFrom [ a owl:Restriction ;
+                    owl:hasValue gistd:_Aspect_mass ;
+                    owl:onProperty gist:hasAspect ] ],
+        [ a owl:Restriction ;
+            owl:onProperty gist:hasMagnitude ;
+            owl:someValuesFrom [ a owl:Restriction ;
+                    owl:hasValue gistd:_Aspect_volume ;
+                    owl:onProperty gist:hasAspect ] ] ;
+    owl:disjointWith gist:UnitOfMeasure ;
+    skos:definition "An undifferentiated amount of physical material which, when subdivided, results in each part being indistinguishable in nature from the whole and from every other part."^^xsd:string ;
+    skos:example "An amount of water, penicillin, sand, or gold."^^xsd:string,
+        "Negative example: the concept of gold."^^xsd:string ;
+    skos:prefLabel "Physical Substance"^^xsd:string ;
+    skos:scopeNote "An instance of this class has weight and takes up space. We mean the physical gold in a ring, not the concept of gold that shows up in the periodic table. The latter would be an instance of gist:KnowledgeConcept."^^xsd:string,
+        "This concept generally corresponds to mass nouns in English. By contrast, instances of gist:PhysicalIdentifiableItem, such as a computer, book, or car, are count nouns. Physical identifiable items are made up of physical substances; e.g., a cake is made up of butter, flour, and sugar; a ring is made of gold. If you divide a physical substance such as an amount of water into parts, you have different amounts of water otherwise indistinguishable from one another; if you divide a physical identifiable item such as a computer into parts, each part will be distinguishable from the original whole."^^xsd:string .
+

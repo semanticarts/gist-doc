@@ -1,0 +1,34 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Assignment owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:TemporalRelation [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:isAssignmentOf ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:isAssignmentTo ;
+                        owl:someValuesFrom owl:Thing ] ) ] .
+
+gist:isAssignmentOf a owl:ObjectProperty ;
+    rdfs:label "is assignment of"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates an assignment to the resource it assigns."^^xsd:string,
+        "EXAMPLE: Assignment of a person to a project."^^xsd:string,
+        "NOTE: People, organizations, monetary amounts, equipment can all be assigned."^^xsd:string,
+        "NOTE: While typically this predicate will be used with assignment subjects, there may be other use cases, and therefore a domain is not specified."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates an assignment to the resource it assigns."^^xsd:string ;
+    skos:example "Assignment of a person to a project."^^xsd:string ;
+    skos:prefLabel "is assignment of"^^xsd:string ;
+    skos:scopeNote "People, organizations, monetary amounts, equipment can all be assigned."^^xsd:string,
+        "While typically this predicate will be used with assignment subjects, there may be other use cases, and therefore a domain is not specified."^^xsd:string ;
+    gist:domainIncludes gist:Assignment ;
+    gist:rangeIncludes gist:Equipment,
+        gist:IntellectualProperty,
+        gist:Organization,
+        gist:Person .
+

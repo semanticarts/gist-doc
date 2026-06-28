@@ -1,0 +1,25 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ScheduledTask rdfs:subClassOf gist:ScheduledEvent ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ScheduledEvent gist:Task ) ] .
+
+gist:ScheduledEvent a owl:Class ;
+    rdfs:label "Scheduled Event"^^xsd:string ;
+    rdfs:comment "DEFINITION: An event with a planned start datetime."^^xsd:string,
+        "NOTE: If the event already started, but has not yet ended, it is a contemporary event with an actual start datetime. If the event is over, it is a historical event having an actual end datetime. The event always retains its planned start datetime, and thus continues to be a scheduled event."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Event ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:plannedStartDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] ) ] ;
+    skos:definition "An event with a planned start datetime."^^xsd:string ;
+    skos:prefLabel "Scheduled Event"^^xsd:string ;
+    skos:scopeNote "If the event already started, but has not yet ended, it is a contemporary event with an actual start datetime. If the event is over, it is a historical event having an actual end datetime. The event always retains its planned start datetime, and thus continues to be a scheduled event."^^xsd:string .
+

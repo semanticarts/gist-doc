@@ -1,0 +1,20 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Equipment owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:PhysicalIdentifiableItem [ a owl:Restriction ;
+                        owl:onProperty gist:isCategorizedBy ;
+                        owl:someValuesFrom gist:EquipmentType ] ) ] .
+
+gist:EquipmentType a owl:Class ;
+    rdfs:label "Equipment Type"^^xsd:string ;
+    rdfs:comment "DEFINITION: A category of equipment."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Category ;
+    skos:definition "A category of equipment."^^xsd:string ;
+    skos:prefLabel "Equipment Type"^^xsd:string .
+

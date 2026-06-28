@@ -1,0 +1,114 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Agreement owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:hasParty ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:Commitment ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ] ) ] .
+
+gist:ControlledVocabulary owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Collection [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+                        owl:someValuesFrom gist:Category ] ) ] .
+
+gist:ID owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Content [ a owl:Restriction ;
+                        owl:onProperty gist:isAllocatedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:uniqueText ;
+                        owl:someValuesFrom xsd:string ] ) ] .
+
+gist:Message owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:comesFromAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:goesToAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] ) ] .
+
+gist:Offer owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContingentObligation [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:offersToProvide ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:offersToReceive ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:plannedEndDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] [ a owl:Restriction ;
+                        owl:onProperty gist:plannedStartDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] ) ] .
+
+gist:isAssignmentOf gist:rangeIncludes gist:Person .
+
+gist:isRecognizedBy rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:owns rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:Category rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:isAllocatedBy ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] .
+
+gist:ContingentObligation owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Commitment [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isTriggeredBy ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:comesFromAgent rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:goesToAgent rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:hasParty rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] .
+
+gist:Commitment owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Class ;
+                        owl:unionOf ( gist:Requirement gist:Restriction ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isCategorizedBy ;
+                        owl:someValuesFrom gist:DegreeOfCommitment ] ) ] .
+
+gist:isAllocatedBy rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] .
+
+gist:Person a owl:Class ;
+    rdfs:label "Person"^^xsd:string ;
+    rdfs:comment "DEFINITION: A human being who was or is alive."^^xsd:string,
+        "EXAMPLE: Negative example: fictional characters."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom gist:Person ;
+            owl:onProperty gist:hasBiologicalParent ],
+        gist:LivingThing ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:LivingThing [ a owl:Restriction ;
+                        owl:onProperty gist:hasBiologicalParent ;
+                        owl:someValuesFrom gist:Person ] ) ] ;
+    skos:definition "A human being who was or is alive."^^xsd:string ;
+    skos:example "Negative example: fictional characters."^^xsd:string ;
+    skos:prefLabel "Person"^^xsd:string .
+

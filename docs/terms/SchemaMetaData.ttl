@@ -1,0 +1,23 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Organization owl:disjointWith gist:SchemaMetaData .
+
+gist:PhysicalIdentifiableItem owl:disjointWith gist:SchemaMetaData .
+
+gist:SchemaMetaData a owl:Class ;
+    rdfs:label "Schema Meta Data"^^xsd:string ;
+    rdfs:comment "DEFINITION: Superclass for all types of metadata."^^xsd:string,
+        "EXAMPLE: Relational concepts, such as tables and columns; tool inputs, such as queries and R2RML maps."^^xsd:string,
+        "NOTE: The definition of this class needs additional work."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:deprecated true ;
+    owl:disjointWith gist:UnitOfMeasure ;
+    skos:definition "Superclass for all types of metadata."^^xsd:string ;
+    skos:example "Relational concepts, such as tables and columns; tool inputs, such as queries and R2RML maps."^^xsd:string ;
+    skos:prefLabel "Schema Meta Data"^^xsd:string ;
+    skos:scopeNote "The definition of this class needs additional work."^^xsd:string .
+

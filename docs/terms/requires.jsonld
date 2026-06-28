@@ -1,0 +1,57 @@
+[
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/requires",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: The subject needs the object or makes it necessary, mandatory, or compulsory."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: Humans require air; solar power requires sunshine."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: This predicate is defined generally enough to encompass a few different meanings of the English word 'requires':\r\n\r\n\t\t1. To need something or to make something necessary.\r\n\t\t2. To order or demand something, or to order someone to do something, especially because of a rule or law.\r\n\t\t3. To make it officially necessary for someone to do something.\r\n\r\n\tImplementations requiring a more specific meaning should define subproperties."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "requires"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The subject needs the object or makes it necessary, mandatory, or compulsory."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Humans require air; solar power requires sunshine."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "requires"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "This predicate is defined generally enough to encompass a few different meanings of the English word 'requires':\r\n\r\n\t\t1. To need something or to make something necessary.\r\n\t\t2. To order or demand something, or to order someone to do something, especially because of a rule or law.\r\n\t\t3. To make it officially necessary for someone to do something.\r\n\r\n\tImplementations requiring a more specific meaning should define subproperties."
+      }
+    ]
+  }
+]

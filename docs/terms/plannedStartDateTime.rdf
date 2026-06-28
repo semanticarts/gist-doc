@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Offer">
+    <owl:equivalentClass rdf:nodeID="baaaee87223b641f9" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ScheduledEvent">
+    <owl:equivalentClass rdf:nodeID="b4c92b55a69ad15f5" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDate">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The date and time that something is or was planned to start, with no implied precision.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This is an abstraction over the various precisions of planned start time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This property, unlike gist:actualStartDateTime, does not have a subproperty for microsecond precision, because planned times typically are not expressed at that level of granularity. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">planned start date time</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/startDateTime" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The date and time that something is or was planned to start, with no implied precision.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">planned start date time</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is an abstraction over the various precisions of planned start time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property, unlike gist:actualStartDateTime, does not have a subproperty for microsecond precision, because planned times typically are not expressed at that level of granularity. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartMinute">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartYear">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b31e77e158cd7bffd">
+    <rdf:first rdf:nodeID="b80b089d5a3cdb322" />
+    <rdf:rest rdf:nodeID="b4955a8582cd59bf0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3b75fc456539e458">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b422839965f0f40a4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4955a8582cd59bf0">
+    <rdf:first rdf:nodeID="b720b77a2ed10fcff" />
+    <rdf:rest rdf:nodeID="bbb4e17aab640ca20" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4c92b55a69ad15f5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b693e79ea917bfc2d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4fb81b71207084d0">
+    <rdf:first rdf:nodeID="ba4b74e671f84d7ce" />
+    <rdf:rest rdf:nodeID="b31e77e158cd7bffd" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b693e79ea917bfc2d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <rdf:rest rdf:nodeID="b743401dbe12a2501" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b720b77a2ed10fcff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedEndDateTime" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b743401dbe12a2501">
+    <rdf:first rdf:nodeID="b976b3842ce635d94" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b80b089d5a3cdb322">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/offersToReceive" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b849e4117f2819d2f">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b3b75fc456539e458" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b855cb865f7af7251">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGiver" />
+    <owl:someValuesFrom rdf:nodeID="bb06688dd379d7822" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b976b3842ce635d94">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba4b74e671f84d7ce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/offersToProvide" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baaaee87223b641f9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bf345be5821292440" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb06688dd379d7822">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b849e4117f2819d2f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbb4e17aab640ca20">
+    <rdf:first rdf:nodeID="b422839965f0f40a4" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be4541b72de22cf70">
+    <rdf:first rdf:nodeID="b855cb865f7af7251" />
+    <rdf:rest rdf:nodeID="b4fb81b71207084d0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf345be5821292440">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContingentObligation" />
+    <rdf:rest rdf:nodeID="be4541b72de22cf70" />
+  </rdf:Description>
+</rdf:RDF>

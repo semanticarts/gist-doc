@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Offer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A contingent commitment to buy, sell, swap or provide one or more described or identified goods or services in exchange for another (or others).</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: An offer to sell a book for a given price; an offer to purchase real estate for a particular price; an offer to swap a sea kayak for a mountain bike; currency exchange. A donation may be modeled as an offer to receive money typically in exchange for $0.00, but sometimes for items of value such as coffee mugs or T-shirts.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Dates on an offer represent the time period the offer is valid for, as in '25% off through October 25, 2025.'</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Offer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContingentObligation" />
+    <owl:equivalentClass rdf:nodeID="baaaee87223b641f9" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A contingent commitment to buy, sell, swap or provide one or more described or identified goods or services in exchange for another (or others).</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An offer to sell a book for a given price; an offer to purchase real estate for a particular price; an offer to swap a sea kayak for a mountain bike; currency exchange. A donation may be modeled as an offer to receive money typically in exchange for $0.00, but sometimes for items of value such as coffee mugs or T-shirts.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Offer</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dates on an offer represent the time period the offer is valid for, as in '25% off through October 25, 2025.'</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/offersToProvide">
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Offer" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/offersToReceive">
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Offer" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b31e77e158cd7bffd">
+    <rdf:first rdf:nodeID="b80b089d5a3cdb322" />
+    <rdf:rest rdf:nodeID="b4955a8582cd59bf0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3b75fc456539e458">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b422839965f0f40a4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4955a8582cd59bf0">
+    <rdf:first rdf:nodeID="b720b77a2ed10fcff" />
+    <rdf:rest rdf:nodeID="bbb4e17aab640ca20" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4fb81b71207084d0">
+    <rdf:first rdf:nodeID="ba4b74e671f84d7ce" />
+    <rdf:rest rdf:nodeID="b31e77e158cd7bffd" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b720b77a2ed10fcff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedEndDateTime" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b80b089d5a3cdb322">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/offersToReceive" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b849e4117f2819d2f">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b3b75fc456539e458" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b855cb865f7af7251">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGiver" />
+    <owl:someValuesFrom rdf:nodeID="bb06688dd379d7822" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba4b74e671f84d7ce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/offersToProvide" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baaaee87223b641f9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bf345be5821292440" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb06688dd379d7822">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b849e4117f2819d2f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbb4e17aab640ca20">
+    <rdf:first rdf:nodeID="b422839965f0f40a4" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be4541b72de22cf70">
+    <rdf:first rdf:nodeID="b855cb865f7af7251" />
+    <rdf:rest rdf:nodeID="b4fb81b71207084d0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf345be5821292440">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContingentObligation" />
+    <rdf:rest rdf:nodeID="be4541b72de22cf70" />
+  </rdf:Description>
+</rdf:RDF>

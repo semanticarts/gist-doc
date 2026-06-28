@@ -1,0 +1,512 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Agreement">
+    <owl:equivalentClass rdf:nodeID="bc87a3bb4e2743695" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Category">
+    <rdfs:subClassOf rdf:nodeID="b4831f81f9bb4ce2e" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Commitment">
+    <owl:equivalentClass rdf:nodeID="b108a966cc0049561" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ContingentObligation">
+    <owl:equivalentClass rdf:nodeID="bdaf499a6078fa7c2" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ControlledVocabulary">
+    <owl:equivalentClass rdf:nodeID="b79dc7b85023cdd06" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ID">
+    <owl:equivalentClass rdf:nodeID="be402bad8d5db9cb1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Message">
+    <owl:equivalentClass rdf:nodeID="b3c0cb7484d3ce8fc" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Offer">
+    <owl:equivalentClass rdf:nodeID="baaaee87223b641f9" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A human being who was or is alive.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Negative example: fictional characters.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="bae7fc5866f59ae21" />
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/LivingThing" />
+    <owl:equivalentClass rdf:nodeID="bb7e7f37dd569890d" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A human being who was or is alive.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Negative example: fictional characters.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/comesFromAgent">
+    <rdfs:range rdf:nodeID="b361f2efdaf78f493" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/goesToAgent">
+    <rdfs:range rdf:nodeID="b6f63e2cc4ade6fc9" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasParty">
+    <rdfs:range rdf:nodeID="b6a42d942f3ebaa83" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy">
+    <rdfs:range rdf:nodeID="ba8a6cca558e91197" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isAssignmentOf">
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isRecognizedBy">
+    <rdfs:range rdf:nodeID="b22527e86943800ab" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/owns">
+    <rdfs:domain rdf:nodeID="b7b292f100a7847f4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b01efdf379babea4b">
+    <rdf:first rdf:nodeID="b2d5a934e883c23b6" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b02eaba9045378278">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b70671d83ceda9a17" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05a38c4d4e5bfbfb">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContentExpression" />
+    <rdf:rest rdf:nodeID="b6c0563e763b2451d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05f6469187a2ddff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b37e5c10c83c0c81e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05fcb54653fbafc3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:nodeID="bb1bcb0bffa2220c9" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b108a966cc0049561">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bed193e11769d915d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1413d528cf117d20">
+    <rdf:first rdf:nodeID="be3b4ec7734717147" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b154191024a11bfa6">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <rdf:rest rdf:nodeID="b1d42d855a2f9f706" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1d42d855a2f9f706">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bbb275e152d087393" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b22527e86943800ab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bebc6b9b4484537e7" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b290dbeebb7b2c26a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b71171f609f591b68" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b29e54af47b7dbcee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b68874948f765e17b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2d5a934e883c23b6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isTriggeredBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2edf861e30d30f00">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="bad122ca9246ac3de" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b31e77e158cd7bffd">
+    <rdf:first rdf:nodeID="b80b089d5a3cdb322" />
+    <rdf:rest rdf:nodeID="b4955a8582cd59bf0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b33918bf70b902fc3">
+    <rdf:first rdf:nodeID="b75c5d23185ff6309" />
+    <rdf:rest rdf:nodeID="b74258a3d9b578f17" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3488f9485f3ff871">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Restriction" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b361f2efdaf78f493">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b42dcc17b385581bc" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b37e5c10c83c0c81e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b5ccb593b7442c27f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b38b12625c9bb2c0b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasParty" />
+    <owl:someValuesFrom rdf:nodeID="b4c2cb0e848064f79" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3b75fc456539e458">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3bcf63b0f8b7df1c">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b79e0458bb7dc008a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3c0cb7484d3ce8fc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b05a38c4d4e5bfbfb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3c92e0ab6b9094af">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b154191024a11bfa6" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3e26d577abb318c3">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b438d1908ce7e113e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3ede9c5f78ef534f">
+    <rdf:first rdf:nodeID="b05fcb54653fbafc3" />
+    <rdf:rest rdf:nodeID="ba142110340af05e5" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b422839965f0f40a4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedStartDateTime" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b42dcc17b385581bc">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="ba5289177a00cc875" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b438d1908ce7e113e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b471e1b91860aab62">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4831f81f9bb4ce2e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy" />
+    <owl:someValuesFrom rdf:nodeID="b29e54af47b7dbcee" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4955a8582cd59bf0">
+    <rdf:first rdf:nodeID="b720b77a2ed10fcff" />
+    <rdf:rest rdf:nodeID="bbb4e17aab640ca20" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b49640940babe956f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasBiologicalParent" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4c2cb0e848064f79">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bf60e5bee837132ca" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4eea3c4fb8ba40d2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Content" />
+    <rdf:rest rdf:nodeID="b63f56e3ce7cfd639" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4f1bc98bb55fba78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/DegreeOfCommitment" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4fb81b71207084d0">
+    <rdf:first rdf:nodeID="ba4b74e671f84d7ce" />
+    <rdf:rest rdf:nodeID="b31e77e158cd7bffd" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5affd6eb8b5b6fb2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <rdf:rest rdf:nodeID="b3ede9c5f78ef534f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5ccb593b7442c27f">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b60083746247d0e78">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b603782b90e8e59da">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b9b28421baa413bbf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6373d05251060201">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/goesToAgent" />
+    <owl:someValuesFrom rdf:nodeID="ba898f6b69a04bf2a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b63f56e3ce7cfd639">
+    <rdf:first rdf:nodeID="b9571cc21488e45ee" />
+    <rdf:rest rdf:nodeID="baba434ac7595a240" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b68874948f765e17b">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <rdf:rest rdf:nodeID="b8804099b267bb411" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6a42d942f3ebaa83">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b3e26d577abb318c3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6c0563e763b2451d">
+    <rdf:first rdf:nodeID="bf68813be13cfa7a3" />
+    <rdf:rest rdf:nodeID="b9d8f515abebb8aae" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6f63e2cc4ade6fc9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bffcb7dc8ddb30224" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b70671d83ceda9a17">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bf5126f45dd3e3220" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b71171f609f591b68">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Requirement" />
+    <rdf:rest rdf:nodeID="b3488f9485f3ff871" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b720b77a2ed10fcff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/plannedEndDateTime" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b73877665f7f9ed04">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b60083746247d0e78" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b74258a3d9b578f17">
+    <rdf:first rdf:nodeID="b4f1bc98bb55fba78" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b74ed59d2cf21998a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <rdf:rest rdf:nodeID="bac69e9dd1d606937" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b75c5d23185ff6309">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGiver" />
+    <owl:someValuesFrom rdf:nodeID="b02eaba9045378278" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79dc7b85023cdd06">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b5affd6eb8b5b6fb2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79e0458bb7dc008a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7b292f100a7847f4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b73877665f7f9ed04" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b80b089d5a3cdb322">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/offersToReceive" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b80d9fb98716ffdca">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b849e4117f2819d2f">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b3b75fc456539e458" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b855cb865f7af7251">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGiver" />
+    <owl:someValuesFrom rdf:nodeID="bb06688dd379d7822" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8804099b267bb411">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b80d9fb98716ffdca" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b89041ae1f87719f9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="ba648df02e87029bc" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8b8e2eee731a9a98">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bc55a7bc03394206e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9571cc21488e45ee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy" />
+    <owl:someValuesFrom rdf:nodeID="b3c92e0ab6b9094af" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b98fe62a123b8bf77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/uniqueText" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9b28421baa413bbf">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9d8f515abebb8aae">
+    <rdf:first rdf:nodeID="b6373d05251060201" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba142110340af05e5">
+    <rdf:first rdf:nodeID="b89041ae1f87719f9" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba4b74e671f84d7ce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/offersToProvide" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba5289177a00cc875">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba648df02e87029bc">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba898f6b69a04bf2a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b603782b90e8e59da" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba8a6cca558e91197">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b74ed59d2cf21998a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba9d3b351ad17b163">
+    <rdf:first rdf:nodeID="bff1d43022a436ddf" />
+    <rdf:rest rdf:nodeID="b01efdf379babea4b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baaaee87223b641f9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bf345be5821292440" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baba434ac7595a240">
+    <rdf:first rdf:nodeID="b98fe62a123b8bf77" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bac69e9dd1d606937">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bd9d496e3c9894a63" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bad122ca9246ac3de">
+    <rdf:first rdf:nodeID="b38b12625c9bb2c0b" />
+    <rdf:rest rdf:nodeID="b1413d528cf117d20" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bae7fc5866f59ae21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasBiologicalParent" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb06688dd379d7822">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b849e4117f2819d2f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb1bcb0bffa2220c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b3bcf63b0f8b7df1c" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb210ee0c3af91326">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb58742f28eebed76">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Commitment" />
+    <rdf:rest rdf:nodeID="ba9d3b351ad17b163" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb7e7f37dd569890d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="be633b347457024c9" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb91f38f3b50c62c4">
+    <rdf:first rdf:nodeID="b49640940babe956f" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbb275e152d087393">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbb4e17aab640ca20">
+    <rdf:first rdf:nodeID="b422839965f0f40a4" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbf1eef84bc643eba">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc55a7bc03394206e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc638b7f9b28d7a51">
+    <rdf:first rdf:nodeID="b290dbeebb7b2c26a" />
+    <rdf:rest rdf:nodeID="b33918bf70b902fc3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc66f0d41bbfa902d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc87a3bb4e2743695">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b2edf861e30d30f00" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd9d496e3c9894a63">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdaf499a6078fa7c2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bb58742f28eebed76" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be24fede66c77830a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b8b8e2eee731a9a98" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be3b4ec7734717147">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    <owl:onClass rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Commitment" />
+    <owl:onProperty rdf:nodeID="bbf1eef84bc643eba" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be402bad8d5db9cb1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b4eea3c4fb8ba40d2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be4541b72de22cf70">
+    <rdf:first rdf:nodeID="b855cb865f7af7251" />
+    <rdf:rest rdf:nodeID="b4fb81b71207084d0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be633b347457024c9">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/LivingThing" />
+    <rdf:rest rdf:nodeID="bb91f38f3b50c62c4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bebc6b9b4484537e7">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bb210ee0c3af91326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bed193e11769d915d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="bc638b7f9b28d7a51" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf345be5821292440">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContingentObligation" />
+    <rdf:rest rdf:nodeID="be4541b72de22cf70" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf5126f45dd3e3220">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf60e5bee837132ca">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b471e1b91860aab62" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf68813be13cfa7a3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/comesFromAgent" />
+    <owl:someValuesFrom rdf:nodeID="b05f6469187a2ddff" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bff1d43022a436ddf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGiver" />
+    <owl:someValuesFrom rdf:nodeID="be24fede66c77830a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bffcb7dc8ddb30224">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bc66f0d41bbfa902d" />
+  </rdf:Description>
+</rdf:RDF>

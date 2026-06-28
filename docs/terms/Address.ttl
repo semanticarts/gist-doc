@@ -1,0 +1,33 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ElectronicAddress rdfs:subClassOf gist:Address .
+
+gist:PhysicalAddress rdfs:subClassOf gist:Address ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Address [ a owl:Restriction ;
+                        owl:onProperty gist:refersTo ;
+                        owl:someValuesFrom gist:GeoLocation ] ) ] .
+
+gist:comesFromPlace rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Address gist:GeoLocation ) ] .
+
+gist:goesToPlace rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Address gist:GeoLocation ) ] .
+
+gist:hasAddress rdfs:range gist:Address .
+
+gist:Address a owl:Class ;
+    rdfs:label "Address"^^xsd:string ;
+    rdfs:comment "DEFINITION: A reference to a place (real or virtual) that can be located by some routing algorithm and where messages or things can be sent or received."^^xsd:string,
+        "EXAMPLE: A PO Box, a URL to a PDF file."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Content ;
+    skos:definition "A reference to a place (real or virtual) that can be located by some routing algorithm and where messages or things can be sent or received."^^xsd:string ;
+    skos:example "A PO Box, a URL to a PDF file."^^xsd:string ;
+    skos:prefLabel "Address"^^xsd:string .
+

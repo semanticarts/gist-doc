@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An event that can be said to have occurred at some place in space.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A meeting, a car accident.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Negative examples: Excludes events that have no meaningful location, such as financial events or project milestones.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical Event</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <owl:equivalentClass rdf:nodeID="ba88107d87cd98b93" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An event that can be said to have occurred at some place in space.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A meeting, a car accident.</skos:example>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Negative examples: Excludes events that have no meaningful location, such as financial events or project milestones.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical Event</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b039445769bce83a5">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <rdf:rest rdf:nodeID="b73460baa1eee0447" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4fc6c6841eb381ba">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/occursIn" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b73460baa1eee0447">
+    <rdf:first rdf:nodeID="b4fc6c6841eb381ba" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba88107d87cd98b93">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b039445769bce83a5" />
+  </rdf:Description>
+</rdf:RDF>

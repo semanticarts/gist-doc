@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/AddressUsageType">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Behavior">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Category">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A concept or label used to categorize other instances without specifying any formal semantics.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Tags used in folksonomies; formal definitions from other systems.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Often a type can be modeled either as an owl:Class or as a gist:Category. Use the latter if you don't care much about the formal structure of the different types, or if there is a whole hierarchy of types that are going to be managed by a group separate from the ontology developers. The formal structure may be defined elsewhere and linked to, if necessary.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Category</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="b4831f81f9bb4ce2e" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A concept or label used to categorize other instances without specifying any formal semantics.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tags used in folksonomies; formal definitions from other systems.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Category</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Often a type can be modeled either as an owl:Class or as a gist:Category. Use the latter if you don't care much about the formal structure of the different types, or if there is a whole hierarchy of types that are going to be managed by a group separate from the ontology developers. The formal structure may be defined elsewhere and linked to, if necessary.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ControlledVocabulary">
+    <owl:equivalentClass rdf:nodeID="b79dc7b85023cdd06" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/DegreeOfCommitment">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Discipline">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ElectronicAddressType">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/EquipmentType">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeneralMediaType">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/MediaType">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Medium">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalActionType">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalAddressType">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ProductCategory">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Tag">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy">
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy">
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05fcb54653fbafc3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:nodeID="bb1bcb0bffa2220c9" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b29e54af47b7dbcee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b68874948f765e17b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3bcf63b0f8b7df1c">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b79e0458bb7dc008a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3ede9c5f78ef534f">
+    <rdf:first rdf:nodeID="b05fcb54653fbafc3" />
+    <rdf:rest rdf:nodeID="ba142110340af05e5" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4831f81f9bb4ce2e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy" />
+    <owl:someValuesFrom rdf:nodeID="b29e54af47b7dbcee" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5affd6eb8b5b6fb2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <rdf:rest rdf:nodeID="b3ede9c5f78ef534f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b68874948f765e17b">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <rdf:rest rdf:nodeID="b8804099b267bb411" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79dc7b85023cdd06">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b5affd6eb8b5b6fb2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79e0458bb7dc008a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b80d9fb98716ffdca">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8804099b267bb411">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b80d9fb98716ffdca" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b89041ae1f87719f9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="ba648df02e87029bc" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba142110340af05e5">
+    <rdf:first rdf:nodeID="b89041ae1f87719f9" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba648df02e87029bc">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb1bcb0bffa2220c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b3bcf63b0f8b7df1c" />
+  </rdf:Description>
+</rdf:RDF>

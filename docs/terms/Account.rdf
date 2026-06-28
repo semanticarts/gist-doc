@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Account">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An agreement having a balance.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A bank account, a credit card account, an accounts receivable account.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Account</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Agreement" />
+    <owl:equivalentClass rdf:nodeID="b5d62d42267569117" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An agreement having a balance.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A bank account, a credit card account, an accounts receivable account.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Account</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1578bc5535a22be2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Agreement" />
+    <rdf:rest rdf:nodeID="b98105321b292af36" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4d5eabf1c6a633db">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_financial_balance" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5d62d42267569117">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b1578bc5535a22be2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b98105321b292af36">
+    <rdf:first rdf:nodeID="bcca877ccfadd5a31" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bcca877ccfadd5a31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b4d5eabf1c6a633db" />
+  </rdf:Description>
+</rdf:RDF>

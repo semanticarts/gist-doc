@@ -1,0 +1,20 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:hasGiver owl:propertyDisjointWith gist:hasRecipient .
+
+gist:hasRecipient a owl:ObjectProperty ;
+    rdfs:label "has recipient"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to the participant that receives or is intended to receive it."^^xsd:string,
+        "EXAMPLE: An offer is made to a recipient; an obligation has a recipient to whom another person is obligated; a gift is bestowed upon a recipient."^^xsd:string,
+        "NOTE: This property is used in abstract contexts such as agreements, obligations, contracts, etc., whereas gist:goesToAgent is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another. However, there are contexts in which either may be appropriate, such as the giving of a gift."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subPropertyOf gist:hasParticipant ;
+    skos:definition "Relates something to the participant that receives or is intended to receive it."^^xsd:string ;
+    skos:example "An offer is made to a recipient; an obligation has a recipient to whom another person is obligated; a gift is bestowed upon a recipient."^^xsd:string ;
+    skos:prefLabel "has recipient"^^xsd:string ;
+    skos:scopeNote "This property is used in abstract contexts such as agreements, obligations, contracts, etc., whereas gist:goesToAgent is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another. However, there are contexts in which either may be appropriate, such as the giving of a gift."^^xsd:string .
+

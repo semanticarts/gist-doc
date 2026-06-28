@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Agreement">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <owl:equivalentClass rdf:nodeID="bc87a3bb4e2743695" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Commitment">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <owl:equivalentClass rdf:nodeID="b108a966cc0049561" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Function">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Intention">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A goal, desire, or aspiration.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: The 'teleological' aspect of a system that indicates things are done with a purpose.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intention</rdfs:label>
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Magnitude" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A goal, desire, or aspiration.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intention</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 'teleological' aspect of a system that indicates things are done with a purpose.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Permission">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <owl:equivalentClass rdf:nodeID="bd5916288eed1de2a" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Requirement">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Restriction">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <owl:equivalentClass rdf:nodeID="bf5b3c6cb2948af63" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Specification">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Task">
+    <owl:equivalentClass rdf:nodeID="b0647983115a73113" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/TaskTemplate">
+    <owl:equivalentClass rdf:nodeID="bd24d260c1ca7f037" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/conformsTo">
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/prevents">
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/prohibits">
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b02eaba9045378278">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b70671d83ceda9a17" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0647983115a73113">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bdd7c40350c063d21" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0ba48f7bebece0b5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/allows" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Behavior" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b108a966cc0049561">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bed193e11769d915d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1413d528cf117d20">
+    <rdf:first rdf:nodeID="be3b4ec7734717147" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b290dbeebb7b2c26a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b71171f609f591b68" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2edf861e30d30f00">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="bad122ca9246ac3de" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b33918bf70b902fc3">
+    <rdf:first rdf:nodeID="b75c5d23185ff6309" />
+    <rdf:rest rdf:nodeID="b74258a3d9b578f17" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3488f9485f3ff871">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Restriction" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b38b12625c9bb2c0b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasParty" />
+    <owl:someValuesFrom rdf:nodeID="b4c2cb0e848064f79" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b471e1b91860aab62">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4c2cb0e848064f79">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bf60e5bee837132ca" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4f1bc98bb55fba78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/DegreeOfCommitment" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b50e59bddfb066fa0">
+    <rdf:first rdf:nodeID="bd663212b7f866c52" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b661cf8a8349c529e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGoal" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b70671d83ceda9a17">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bf5126f45dd3e3220" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b71171f609f591b68">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Requirement" />
+    <rdf:rest rdf:nodeID="b3488f9485f3ff871" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b74258a3d9b578f17">
+    <rdf:first rdf:nodeID="b4f1bc98bb55fba78" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b75c5d23185ff6309">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGiver" />
+    <owl:someValuesFrom rdf:nodeID="b02eaba9045378278" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7e64218060f4dc39">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="b50e59bddfb066fa0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9df83bd26a32623b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGoal" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9e4431acfcf935f9">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="bf1697f5a5deef1ef" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba47128fc53e09115">
+    <rdf:first rdf:nodeID="b9df83bd26a32623b" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba91e7d7eec475f7c">
+    <rdf:first rdf:nodeID="b661cf8a8349c529e" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bad122ca9246ac3de">
+    <rdf:first rdf:nodeID="b38b12625c9bb2c0b" />
+    <rdf:rest rdf:nodeID="b1413d528cf117d20" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbf1eef84bc643eba">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc638b7f9b28d7a51">
+    <rdf:first rdf:nodeID="b290dbeebb7b2c26a" />
+    <rdf:rest rdf:nodeID="b33918bf70b902fc3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc87a3bb4e2743695">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b2edf861e30d30f00" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd24d260c1ca7f037">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bf9a7707ea72a61e3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd5916288eed1de2a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b9e4431acfcf935f9" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd663212b7f866c52">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/prevents" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Behavior" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdd7c40350c063d21">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <rdf:rest rdf:nodeID="ba47128fc53e09115" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be3b4ec7734717147">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    <owl:onClass rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Commitment" />
+    <owl:onProperty rdf:nodeID="bbf1eef84bc643eba" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bed193e11769d915d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="bc638b7f9b28d7a51" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf1697f5a5deef1ef">
+    <rdf:first rdf:nodeID="b0ba48f7bebece0b5" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf5126f45dd3e3220">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf5b3c6cb2948af63">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b7e64218060f4dc39" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf60e5bee837132ca">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b471e1b91860aab62" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf9a7707ea72a61e3">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Template" />
+    <rdf:rest rdf:nodeID="ba91e7d7eec475f7c" />
+  </rdf:Description>
+</rdf:RDF>

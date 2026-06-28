@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Content">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Equipment">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <owl:equivalentClass rdf:nodeID="bf7f29bf9af92e654" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Intention">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Landmark">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Language">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/LivingThing">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <owl:equivalentClass rdf:nodeID="bc046eafb0ad0124a" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Magnitude">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Organization">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A discrete physical object which, if subdivided, will result in parts that are distinguishable in nature from the whole and in general also from the other parts.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A laptop, a physical book, a car, a building, a landmark (such as a tree stump with an etched marking to denote a campsite).</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This concept generally corresponds to count nouns in English. By contrast, physical substances, such as an amount of water, flour, or sand, are mass nouns. Physical identifiable items are made up of physical substances; e.g., a cake is made up of butter, flour, and sugar; a statue is made of bronze. If you divide a physical substance such as an amount of water into parts, you have two amounts of water otherwise indistinguishable from one another; if you divide a physical identifiable item such as a computer into parts, each part is different from the whole.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical Identifiable Item</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="b480432e46498c936" />
+    <rdfs:subClassOf rdf:nodeID="b7d3bc31688b1dd6e" />
+    <rdfs:subClassOf rdf:nodeID="bd8f8b8e8bef19f1a" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/SchemaMetaData" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A discrete physical object which, if subdivided, will result in parts that are distinguishable in nature from the whole and in general also from the other parts.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A laptop, a physical book, a car, a building, a landmark (such as a tree stump with an etched marking to denote a campsite).</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical Identifiable Item</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This concept generally corresponds to count nouns in English. By contrast, physical substances, such as an amount of water, flour, or sand, are mass nouns. Physical identifiable items are made up of physical substances; e.g., a cake is made up of butter, flour, and sugar; a statue is made of bronze. If you divide a physical substance such as an amount of water into parts, you have two amounts of water otherwise indistinguishable from one another; if you divide a physical identifiable item such as a computer into parts, each part is different from the whole.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1f22ef5348d5a331">
+    <rdf:first rdf:nodeID="b8571926f3ff7a3d8" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2740e19abc244b05">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <rdf:rest rdf:nodeID="b7e8fe8fe23928758" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b480432e46498c936">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b79d1c19de29fc343" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79d1c19de29fc343">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_volume" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7d3bc31688b1dd6e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMadeUpOf" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7e8fe8fe23928758">
+    <rdf:first rdf:nodeID="bab887d4ffbacb893" />
+    <rdf:rest rdf:nodeID="b1f22ef5348d5a331" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8571926f3ff7a3d8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/birthDate" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9b867fd078c253fe">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <rdf:rest rdf:nodeID="bd9adf1e6ab8173e3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bab887d4ffbacb893">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasBiologicalParent" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/LivingThing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc046eafb0ad0124a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b2740e19abc244b05" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc7e6b68086c96ad8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_mass" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd8f8b8e8bef19f1a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="bc7e6b68086c96ad8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd9adf1e6ab8173e3">
+    <rdf:first rdf:nodeID="bff480e71fcb1187f" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf7f29bf9af92e654">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b9b867fd078c253fe" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bff480e71fcb1187f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/EquipmentType" />
+  </rdf:Description>
+</rdf:RDF>

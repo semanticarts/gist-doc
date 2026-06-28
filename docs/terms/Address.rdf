@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A reference to a place (real or virtual) that can be located by some routing algorithm and where messages or things can be sent or received.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A PO Box, a URL to a PDF file.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Content" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reference to a place (real or virtual) that can be located by some routing algorithm and where messages or things can be sent or received.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A PO Box, a URL to a PDF file.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ElectronicAddress">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalAddress">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address" />
+    <owl:equivalentClass rdf:nodeID="b5a799c69d0a98952" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/comesFromPlace">
+    <rdfs:range rdf:nodeID="b8a993e834f5560f2" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/goesToPlace">
+    <rdfs:range rdf:nodeID="b541c02a3037d8d8b" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasAddress">
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3b3d65c86e9ce206">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3fc1de1e70b9fdfe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/refersTo" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b541c02a3037d8d8b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bef311fbf2f602bde" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5a799c69d0a98952">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bde91e2e58983c460" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7f9dcd57abcc51f4">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address" />
+    <rdf:rest rdf:nodeID="bae91fe7ff7a29af1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8a993e834f5560f2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b7f9dcd57abcc51f4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bae91fe7ff7a29af1">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc15abbd58a76cc5a">
+    <rdf:first rdf:nodeID="b3fc1de1e70b9fdfe" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bde91e2e58983c460">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address" />
+    <rdf:rest rdf:nodeID="bc15abbd58a76cc5a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bef311fbf2f602bde">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Address" />
+    <rdf:rest rdf:nodeID="b3b3d65c86e9ce206" />
+  </rdf:Description>
+</rdf:RDF>

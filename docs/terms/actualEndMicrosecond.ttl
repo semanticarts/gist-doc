@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:actualEndMicrosecond a owl:DatatypeProperty ;
+    rdfs:label "actual end microsecond"^^xsd:string ;
+    rdfs:comment "DEFINITION: The actual time that something ended, expressed as a system time used for timestamps."^^xsd:string,
+        "EXAMPLE: '2021-06-01T08:03:27.12324-6:00'^^xsd:dateTime"^^xsd:string,
+        "NOTE: A system time will be as precise as the system can supply, typically at least milliseconds, sometimes microseconds. The convention for timestamps, such as recording a transaction, is to specify just the end point; the start time is rarely needed."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf gist:actualEndDateTime ;
+    skos:definition "The actual time that something ended, expressed as a system time used for timestamps."^^xsd:string ;
+    skos:example "'2021-06-01T08:03:27.12324-6:00'^^xsd:dateTime"^^xsd:string ;
+    skos:prefLabel "actual end microsecond"^^xsd:string ;
+    skos:scopeNote "A system time will be as precise as the system can supply, typically at least milliseconds, sometimes microseconds. The convention for timestamps, such as recording a transaction, is to specify just the end point; the start time is rarely needed."^^xsd:string .
+

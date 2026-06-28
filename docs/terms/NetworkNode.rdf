@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Network">
+    <owl:equivalentClass rdf:nodeID="b6b80ca8add28e254" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/NetworkLink">
+    <rdfs:subClassOf rdf:nodeID="bc0e1e8fdb708a14c" />
+    <owl:equivalentClass rdf:nodeID="b59650526cc8a09be" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A node in a network.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A person's account is a node in a social network; a valve is a node in a network of pipes.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network Node</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="b7c33e211d5bf35d5" />
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A node in a network.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person's account is a node in a social network; a valve is a node in a network of pipes.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network Node</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/links">
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/linksFrom">
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/linksTo">
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b047ad06f96317ed4">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05db39374d52bcab">
+    <rdf:first rdf:nodeID="b7c214c046e890f5b" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2a39fd0c8c6789fe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bc130ccc86abf42ec" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b532f9c58f2035cc4">
+    <rdf:first rdf:nodeID="b8676b0a23c218223" />
+    <rdf:rest rdf:nodeID="b96534aed2bb6eebb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b59650526cc8a09be">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="baa50c2156b4b2b6e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6b80ca8add28e254">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bedd9905d308d5a17" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7c214c046e890f5b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bb6d39ac28ee4d353" />
+    <owl:someValuesFrom rdf:nodeID="b2a39fd0c8c6789fe" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7c33e211d5bf35d5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Network" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8676b0a23c218223">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Network" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b96534aed2bb6eebb">
+    <rdf:first rdf:nodeID="bb53438dc4884d2e8" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baa50c2156b4b2b6e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <rdf:rest rdf:nodeID="b532f9c58f2035cc4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb53438dc4884d2e8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/links" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb6d39ac28ee4d353">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc0e1e8fdb708a14c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/links" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc130ccc86abf42ec">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkLink" />
+    <rdf:rest rdf:nodeID="b047ad06f96317ed4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bedd9905d308d5a17">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <rdf:rest rdf:nodeID="b05db39374d52bcab" />
+  </rdf:Description>
+</rdf:RDF>

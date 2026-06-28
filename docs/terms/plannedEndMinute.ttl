@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:plannedEndMinute a owl:DatatypeProperty ;
+    rdfs:label "planned end minute"^^xsd:string ;
+    rdfs:comment "DEFINITION: The date and time that something is or was planned to end, with precision of one minute."^^xsd:string,
+        "EXAMPLE: '2021-06-01T08:32:00-06:00'^^xsd:dateTime"^^xsd:string,
+        "NOTE: Used for things like meetings and time card entries, where the hour and minute are important. Recommended usage is to zero out the seconds and microseconds to avoid spurious precision.Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf gist:plannedEndDateTime ;
+    skos:definition "The date and time that something is or was planned to end, with precision of one minute."^^xsd:string ;
+    skos:example "'2021-06-01T08:32:00-06:00'^^xsd:dateTime"^^xsd:string ;
+    skos:prefLabel "planned end minute"^^xsd:string ;
+    skos:scopeNote "Used for things like meetings and time card entries, where the hour and minute are important. Recommended usage is to zero out the seconds and microseconds to avoid spurious precision.Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual."^^xsd:string .
+

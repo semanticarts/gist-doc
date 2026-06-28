@@ -1,0 +1,33 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:linksFrom rdfs:subPropertyOf gist:links .
+
+gist:linksTo rdfs:subPropertyOf gist:links .
+
+gist:NetworkLink rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onProperty gist:links ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom gist:NetworkNode ;
+            owl:onProperty gist:links ] ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Component [ a owl:Restriction ;
+                        owl:onProperty gist:isMemberOf ;
+                        owl:someValuesFrom gist:Network ] [ a owl:Restriction ;
+                        owl:onProperty gist:links ;
+                        owl:someValuesFrom gist:NetworkNode ] ) ] .
+
+gist:links a owl:ObjectProperty ;
+    rdfs:label "links"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a network link to a network node that it connects to another node. Used when the connection is undirected or the direction is not known."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates a network link to a network node that it connects to another node. Used when the connection is undirected or the direction is not known."^^xsd:string ;
+    skos:prefLabel "links"^^xsd:string ;
+    gist:domainIncludes gist:NetworkLink ;
+    gist:rangeIncludes gist:NetworkNode .
+

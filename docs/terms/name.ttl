@@ -1,0 +1,13 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:name a owl:DatatypeProperty ;
+    rdfs:label "name"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates an individual to (one of) its name(s)."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates an individual to (one of) its name(s)."^^xsd:string ;
+    skos:prefLabel "name"^^xsd:string .
+

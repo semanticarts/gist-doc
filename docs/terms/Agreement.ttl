@@ -1,0 +1,42 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Account rdfs:subClassOf gist:Agreement ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Agreement [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_financial_balance ;
+                                owl:onProperty gist:hasAspect ] ] ) ] .
+
+gist:Contract rdfs:subClassOf gist:Agreement ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Agreement [ a owl:Restriction ;
+                        owl:onProperty gist:isUnderJurisdictionOf ;
+                        owl:someValuesFrom gist:GovernmentOrganization ] ) ] .
+
+gist:Agreement a owl:Class ;
+    rdfs:label "Agreement"^^xsd:string ;
+    rdfs:comment "DEFINITION: A mutually understood arrangement in which two or more parties make commitments to one another."^^xsd:string,
+        "EXAMPLE: A gym membership is an agreement in which the member commits to paying the gym a certain price and the gym commits to allowing access to their facilities."^^xsd:string,
+        "NOTE: While an agreement has two or more parties, and contains commitments which bind those parties, it will not always be necessary to instantiate each individual commitment."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Intention ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:hasParty ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:Commitment ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ] ) ] ;
+    skos:definition "A mutually understood arrangement in which two or more parties make commitments to one another."^^xsd:string ;
+    skos:example "A gym membership is an agreement in which the member commits to paying the gym a certain price and the gym commits to allowing access to their facilities."^^xsd:string ;
+    skos:prefLabel "Agreement"^^xsd:string ;
+    skos:scopeNote "While an agreement has two or more parties, and contains commitments which bind those parties, it will not always be necessary to instantiate each individual commitment."^^xsd:string .
+

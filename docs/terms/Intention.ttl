@@ -1,0 +1,79 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Agreement rdfs:subClassOf gist:Intention ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:hasParty ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:Commitment ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ] ) ] .
+
+gist:Function rdfs:subClassOf gist:Intention .
+
+gist:GeoPoint owl:disjointWith gist:Intention .
+
+gist:GeoRegion owl:disjointWith gist:Intention .
+
+gist:Permission rdfs:subClassOf gist:Intention ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:allows ;
+                        owl:someValuesFrom gist:Behavior ] ) ] .
+
+gist:Specification rdfs:subClassOf gist:Intention .
+
+gist:Task owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:hasGoal ;
+                        owl:someValuesFrom gist:Intention ] ) ] .
+
+gist:TaskTemplate owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Template [ a owl:Restriction ;
+                        owl:onProperty gist:hasGoal ;
+                        owl:someValuesFrom gist:Intention ] ) ] .
+
+gist:conformsTo gist:rangeIncludes gist:Intention .
+
+gist:prohibits rdfs:domain gist:Intention .
+
+gist:Commitment rdfs:subClassOf gist:Intention ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Class ;
+                        owl:unionOf ( gist:Requirement gist:Restriction ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isCategorizedBy ;
+                        owl:someValuesFrom gist:DegreeOfCommitment ] ) ] .
+
+gist:Requirement rdfs:subClassOf gist:Intention .
+
+gist:Restriction rdfs:subClassOf gist:Intention ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:prevents ;
+                        owl:someValuesFrom gist:Behavior ] ) ] .
+
+gist:prevents rdfs:domain gist:Intention .
+
+gist:Intention a owl:Class ;
+    rdfs:label "Intention"^^xsd:string ;
+    rdfs:comment "DEFINITION: A goal, desire, or aspiration."^^xsd:string,
+        "NOTE: The 'teleological' aspect of a system that indicates things are done with a purpose."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:disjointWith gist:Magnitude,
+        gist:Organization,
+        gist:PhysicalIdentifiableItem,
+        gist:PhysicalSubstance,
+        gist:UnitOfMeasure ;
+    skos:definition "A goal, desire, or aspiration."^^xsd:string ;
+    skos:prefLabel "Intention"^^xsd:string ;
+    skos:scopeNote "The 'teleological' aspect of a system that indicates things are done with a purpose."^^xsd:string .
+

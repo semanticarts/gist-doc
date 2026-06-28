@@ -1,0 +1,25 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Message a owl:Class ;
+    rdfs:label "Message"^^xsd:string ;
+    rdfs:comment "DEFINITION: A specific instance of content sent from a sender to at least one other recipient."^^xsd:string,
+        "EXAMPLE: An email, voice, or web service message; a phone call."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:ContentExpression ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:comesFromAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:goesToAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] ) ] ;
+    skos:definition "A specific instance of content sent from a sender to at least one other recipient."^^xsd:string ;
+    skos:example "An email, voice, or web service message; a phone call."^^xsd:string ;
+    skos:prefLabel "Message"^^xsd:string .
+

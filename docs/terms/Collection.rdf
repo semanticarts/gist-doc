@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Collection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A grouping of things.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A jury is a group of people; a financial ledger is a collection of transaction entries; a route is an (ordered) collection of segments.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Individuals are placed in the collection using the gist:isMemberOf property. Collections typically are created because the members are functionally connected in some way. This definition allows a collection to have zero members.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collection</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grouping of things.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A jury is a group of people; a financial ledger is a collection of transaction entries; a route is an (ordered) collection of segments.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collection</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Individuals are placed in the collection using the gist:isMemberOf property. Collections typically are created because the members are functionally connected in some way. This definition allows a collection to have zero members.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ControlledVocabulary">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <owl:equivalentClass rdf:nodeID="b79dc7b85023cdd06" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <owl:equivalentClass rdf:nodeID="bdfbca4925c6b2dba" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf">
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b025ddfacc571f5ea">
+    <rdf:first rdf:nodeID="b6cb15c50905a4558" />
+    <rdf:rest rdf:nodeID="b847afb2749620a0d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05fcb54653fbafc3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:nodeID="bb1bcb0bffa2220c9" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0bc7531ca75169a0">
+    <rdf:first rdf:nodeID="bab33998947813e77" />
+    <rdf:rest rdf:nodeID="b1d950877e4ae6b74" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0ee1dfc1060dc5f3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+    <owl:onProperty rdf:nodeID="b12eb1c9508503ec4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b12eb1c9508503ec4">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1d950877e4ae6b74">
+    <rdf:first rdf:nodeID="b5efd9d0a06aefdc6" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3bcf63b0f8b7df1c">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b79e0458bb7dc008a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3ede9c5f78ef534f">
+    <rdf:first rdf:nodeID="b05fcb54653fbafc3" />
+    <rdf:rest rdf:nodeID="ba142110340af05e5" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4e36de3b7133758d">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5affd6eb8b5b6fb2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <rdf:rest rdf:nodeID="b3ede9c5f78ef534f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5efd9d0a06aefdc6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+    <owl:onProperty rdf:nodeID="b4e36de3b7133758d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6cb15c50905a4558">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bbcc995f63c17c239" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79dc7b85023cdd06">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b5affd6eb8b5b6fb2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79e0458bb7dc008a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b847afb2749620a0d">
+    <rdf:first rdf:nodeID="b0ee1dfc1060dc5f3" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b89041ae1f87719f9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="ba648df02e87029bc" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba142110340af05e5">
+    <rdf:first rdf:nodeID="b89041ae1f87719f9" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba648df02e87029bc">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bab33998947813e77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b025ddfacc571f5ea" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bac1fc2f26ef68446">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <rdf:rest rdf:nodeID="b0bc7531ca75169a0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb1bcb0bffa2220c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b3bcf63b0f8b7df1c" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbcc995f63c17c239">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isFirstMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdfbca4925c6b2dba">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bac1fc2f26ef68446" />
+  </rdf:Description>
+</rdf:RDF>

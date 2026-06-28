@@ -1,0 +1,16 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:conformsTo a owl:ObjectProperty ;
+    rdfs:label "conforms to"^^xsd:string ;
+    rdfs:comment "DEFINITION: The subject is consistent with or satisfies the requirements, rules, or expectations established by the object."^^xsd:string,
+        "EXAMPLE: Meet an obligation; adhere to a specification or standard; meet terms and conditions of an offer; comply with a regulation."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "The subject is consistent with or satisfies the requirements, rules, or expectations established by the object."^^xsd:string ;
+    skos:example "Meet an obligation; adhere to a specification or standard; meet terms and conditions of an offer; comply with a regulation."^^xsd:string ;
+    skos:prefLabel "conforms to"^^xsd:string ;
+    gist:rangeIncludes gist:Intention .
+

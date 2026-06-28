@@ -1,0 +1,17 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:isIdentifiedBy a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "is identified by"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to a content object that uniquely identifies it."^^xsd:string,
+        "NOTE: This is like a URI: a thing can have more than one ID, but each ID can refer to only one thing. Note that it is possible to have two IDs with the same text that refer to different things."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range gist:ID ;
+    skos:definition "Relates something to a content object that uniquely identifies it."^^xsd:string ;
+    skos:prefLabel "is identified by"^^xsd:string ;
+    skos:scopeNote "This is like a URI: a thing can have more than one ID, but each ID can refer to only one thing. Note that it is possible to have two IDs with the same text that refer to different things."^^xsd:string .
+

@@ -1,0 +1,21 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:plannedEndYear a owl:DatatypeProperty ;
+    rdfs:label "planned end year"^^xsd:string ;
+    rdfs:comment "DEFINITION: The date that something is or was planned to end, with precision of one year."^^xsd:string,
+        "EXAMPLE: '2021-01-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string,
+        "EXAMPLE: The automobile manufacturer announced that it will stop producing gas-powered vehicles in 2035."^^xsd:string,
+        "NOTE: Used for anything with a planned end date where precision of one year is sufficient. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf gist:plannedEndDateTime ;
+    skos:definition "The date that something is or was planned to end, with precision of one year."^^xsd:string ;
+    skos:example "'2021-01-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string,
+        "The automobile manufacturer announced that it will stop producing gas-powered vehicles in 2035."^^xsd:string ;
+    skos:prefLabel "planned end year"^^xsd:string ;
+    skos:scopeNote "Used for anything with a planned end date where precision of one year is sufficient. Typically a planned date is in the future when first captured, but when tasks run late, we leave the plan where it was and compare it to the actual. Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Note that it is not valid to zero out months and days, so arbitrary values must be included."^^xsd:string .
+

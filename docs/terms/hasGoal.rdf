@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Task">
+    <owl:equivalentClass rdf:nodeID="b0647983115a73113" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/TaskTemplate">
+    <owl:equivalentClass rdf:nodeID="bd24d260c1ca7f037" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasGoal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates something to the end towards which it directs effort.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: The sales division of a company has the goal of acquiring new customers and contracts.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has goal</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates something to the end towards which it directs effort.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The sales division of a company has the goal of acquiring new customers and contracts.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has goal</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0647983115a73113">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bdd7c40350c063d21" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b661cf8a8349c529e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGoal" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9df83bd26a32623b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGoal" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba47128fc53e09115">
+    <rdf:first rdf:nodeID="b9df83bd26a32623b" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba91e7d7eec475f7c">
+    <rdf:first rdf:nodeID="b661cf8a8349c529e" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd24d260c1ca7f037">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bf9a7707ea72a61e3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdd7c40350c063d21">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <rdf:rest rdf:nodeID="ba47128fc53e09115" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf9a7707ea72a61e3">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Template" />
+    <rdf:rest rdf:nodeID="ba91e7d7eec475f7c" />
+  </rdf:Description>
+</rdf:RDF>

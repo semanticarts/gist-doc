@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/conversionFactor">
+    <rdfs:seeAlso rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/conversionOffset" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/conversionOffset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: &#13;
+		A value used along with a conversion factor to relate a unit to its corresponding unit in the International System of Units. In the equation below, the conversion offset is 459.669607 and the conversion factor is 5/9.&#13;
+&#13;
+		y degrees Fahrenheit = (y + 459.669607) x 5/9 degrees Kelvin&#13;
+&#13;
+		To convert from Fahrenheit to Kelvin, first add the offset and then multiply by the conversion factor.&#13;
+&#13;
+		To convert from Kelvin to Fahrenheit, reverse the steps: first divide by the conversion factor and then subtract the offset.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conversion offset</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&#13;
+		A value used along with a conversion factor to relate a unit to its corresponding unit in the International System of Units. In the equation below, the conversion offset is 459.669607 and the conversion factor is 5/9.&#13;
+&#13;
+		y degrees Fahrenheit = (y + 459.669607) x 5/9 degrees Kelvin&#13;
+&#13;
+		To convert from Fahrenheit to Kelvin, first add the offset and then multiply by the conversion factor.&#13;
+&#13;
+		To convert from Kelvin to Fahrenheit, reverse the steps: first divide by the conversion factor and then subtract the offset.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conversion offset</skos:prefLabel>
+  </rdf:Description>
+</rdf:RDF>

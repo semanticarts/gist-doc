@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Content">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An individual point on or above the Earth's surface, identified by latitude, longitude and altitude. Altitude is the distance measured from sea level. If altitude is missing, the point is assumed to be at the Earth's surface. These points are described using decimal latitude/longitude.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Point</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Language" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Magnitude" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <owl:equivalentClass rdf:nodeID="be3fe5313a648eeb4" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An individual point on or above the Earth's surface, identified by latitude, longitude and altitude. Altitude is the distance measured from sea level. If altitude is missing, the point is assumed to be at the Earth's surface. These points are described using decimal latitude/longitude.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Point</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoRoute">
+    <owl:equivalentClass rdf:nodeID="b2d8fbee3104245bc" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoVolume">
+    <owl:equivalentClass rdf:nodeID="be6bf2c496928a016" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/latitude">
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/longitude">
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b092f335559ad1e4a">
+    <rdf:first rdf:nodeID="bf2a24884fbd95fbb" />
+    <rdf:rest rdf:nodeID="b85a72d8fde5295d8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b16c81028575a2fe7">
+    <rdf:first rdf:nodeID="bd96d302c8bae2ff1" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b27e7c5d5cb11c53a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection" />
+    <rdf:rest rdf:nodeID="b586c8c2390732ea1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2d8fbee3104245bc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b27e7c5d5cb11c53a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b48916493ce10f2d5">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4d3635ef1b081209">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+    <rdf:rest rdf:nodeID="b72013181ce26d877" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b586c8c2390732ea1">
+    <rdf:first rdf:nodeID="be342643d12082b37" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5cdf3a7d563e4536">
+    <rdf:first rdf:nodeID="bb1f76b90369a530a" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b72013181ce26d877">
+    <rdf:first rdf:nodeID="bbb65005887ff2c4f" />
+    <rdf:rest rdf:nodeID="b16c81028575a2fe7" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b85a72d8fde5295d8">
+    <rdf:first rdf:nodeID="bc25c9fa9b259765b" />
+    <rdf:rest rdf:nodeID="b5cdf3a7d563e4536" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb1f76b90369a530a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/longitude" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb61e96d203eda57d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_volume" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbb65005887ff2c4f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="bb61e96d203eda57d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc25c9fa9b259765b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/latitude" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd1bdabfdd4e31d77">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd96d302c8bae2ff1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="b48916493ce10f2d5" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be342643d12082b37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bd1bdabfdd4e31d77" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be3fe5313a648eeb4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b092f335559ad1e4a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be6bf2c496928a016">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b4d3635ef1b081209" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf2a24884fbd95fbb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="bf5bb2d484c68896b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf5bb2d484c68896b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_altitude" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+</rdf:RDF>

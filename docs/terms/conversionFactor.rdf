@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/conversionFactor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A value that relates a unit of measure to units of the International System of Units.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: In the equation 1 inch = 0.0254 meters, the value 0.0254 is the conversion factor of inch.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: To convert a numeric value from one unit of measure to another, multiply by the conversion factor of the first unit and then divide by the conversion factor of the second unit.&#13;
+&#13;
+	For example, to convert 27 feet to yards:&#13;
+&#13;
+		the conversion factor of foot is 0.3048&#13;
+		the conversion factor of yard is 0.9144&#13;
+&#13;
+		so&#13;
+&#13;
+		27 feet = (27 x 0.3048) / 0.9144 = 9 yards</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conversion factor</rdfs:label>
+    <rdfs:range rdf:nodeID="b1f334ccba5bac877" />
+    <rdfs:seeAlso rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/conversionOffset" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A value that relates a unit of measure to units of the International System of Units.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the equation 1 inch = 0.0254 meters, the value 0.0254 is the conversion factor of inch.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conversion factor</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To convert a numeric value from one unit of measure to another, multiply by the conversion factor of the first unit and then divide by the conversion factor of the second unit.&#13;
+&#13;
+	For example, to convert 27 feet to yards:&#13;
+&#13;
+		the conversion factor of foot is 0.3048&#13;
+		the conversion factor of yard is 0.9144&#13;
+&#13;
+		so&#13;
+&#13;
+		27 feet = (27 x 0.3048) / 0.9144 = 9 yards</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b09347ea02ba71529">
+    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <rdf:rest rdf:nodeID="b4ffcbac46a40f688" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1f334ccba5bac877">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype" />
+    <owl:unionOf rdf:nodeID="b09347ea02ba71529" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4ffcbac46a40f688">
+    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#double" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

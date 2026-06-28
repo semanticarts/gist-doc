@@ -1,0 +1,24 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Account a owl:Class ;
+    rdfs:label "Account"^^xsd:string ;
+    rdfs:comment "DEFINITION: An agreement having a balance."^^xsd:string,
+        "EXAMPLE: A bank account, a credit card account, an accounts receivable account."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Agreement ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Agreement [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_financial_balance ;
+                                owl:onProperty gist:hasAspect ] ] ) ] ;
+    skos:definition "An agreement having a balance."^^xsd:string ;
+    skos:example "A bank account, a credit card account, an accounts receivable account."^^xsd:string ;
+    skos:prefLabel "Account"^^xsd:string .
+

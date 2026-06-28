@@ -1,0 +1,29 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:requires a owl:ObjectProperty ;
+    rdfs:label "requires"^^xsd:string ;
+    rdfs:comment "DEFINITION: The subject needs the object or makes it necessary, mandatory, or compulsory."^^xsd:string,
+        "EXAMPLE: Humans require air; solar power requires sunshine."^^xsd:string,
+        """NOTE: This predicate is defined generally enough to encompass a few different meanings of the English word 'requires':\r
+\r
+		1. To need something or to make something necessary.\r
+		2. To order or demand something, or to order someone to do something, especially because of a rule or law.\r
+		3. To make it officially necessary for someone to do something.\r
+\r
+	Implementations requiring a more specific meaning should define subproperties."""^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "The subject needs the object or makes it necessary, mandatory, or compulsory."^^xsd:string ;
+    skos:example "Humans require air; solar power requires sunshine."^^xsd:string ;
+    skos:prefLabel "requires"^^xsd:string ;
+    skos:scopeNote """This predicate is defined generally enough to encompass a few different meanings of the English word 'requires':\r
+\r
+		1. To need something or to make something necessary.\r
+		2. To order or demand something, or to order someone to do something, especially because of a rule or law.\r
+		3. To make it officially necessary for someone to do something.\r
+\r
+	Implementations requiring a more specific meaning should define subproperties."""^^xsd:string .
+

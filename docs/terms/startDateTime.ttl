@@ -1,0 +1,33 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:TemporalRelation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gist:startDateTime ] .
+
+gist:TimeInterval rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gist:startDateTime ] .
+
+gist:actualStartDateTime rdfs:subPropertyOf gist:startDateTime .
+
+gist:birthDate rdfs:subPropertyOf gist:startDateTime .
+
+gist:plannedStartDateTime rdfs:subPropertyOf gist:startDateTime .
+
+gist:startDateTime a owl:DatatypeProperty ;
+    rdfs:label "start date time"^^xsd:string ;
+    rdfs:comment "DEFINITION: The date and time that something starts."^^xsd:string,
+        "NOTE: This property is neutral along two dimensions: precision (e.g., day, second, millisecond) and actual vs. planned. As such, it will generally not be asserted directly except in special cases (e.g., for time intervals)."^^xsd:string,
+        "NOTE: Values of predicates with different precisions can be compared since they are all formally xsd:datetimes."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf gist:atDateTime ;
+    skos:definition "The date and time that something starts."^^xsd:string ;
+    skos:prefLabel "start date time"^^xsd:string ;
+    skos:scopeNote "This property is neutral along two dimensions: precision (e.g., day, second, millisecond) and actual vs. planned. As such, it will generally not be asserted directly except in special cases (e.g., for time intervals)."^^xsd:string,
+        "Values of predicates with different precisions can be compared since they are all formally xsd:datetimes."^^xsd:string .
+

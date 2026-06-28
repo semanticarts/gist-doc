@@ -1,0 +1,25 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:TaskTemplate a owl:Class ;
+    rdfs:label "Task Template"^^xsd:string ;
+    rdfs:comment "DEFINITION: An outline of a task of a particular type, which is the basis for executing such tasks."^^xsd:string,
+        "EXAMPLE: A business process for onboarding new employees."^^xsd:string,
+        "NOTE: A task template may define a single activity or a series of activities; the level of granularity can be varied according to use case. For example, in a new employee onboarding process, signing up for benefits might be one activity, or it might be broken down into signing up for health insurance, signing up for dental insurance, etc."^^xsd:string,
+        "NOTE: Use the property isBasedOn to link the Task back to the TaskTemplate."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Template ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Template [ a owl:Restriction ;
+                        owl:onProperty gist:hasGoal ;
+                        owl:someValuesFrom gist:Intention ] ) ] ;
+    skos:definition "An outline of a task of a particular type, which is the basis for executing such tasks."^^xsd:string ;
+    skos:example "A business process for onboarding new employees."^^xsd:string ;
+    skos:prefLabel "Task Template"^^xsd:string ;
+    skos:scopeNote "A task template may define a single activity or a series of activities; the level of granularity can be varied according to use case. For example, in a new employee onboarding process, signing up for benefits might be one activity, or it might be broken down into signing up for health insurance, signing up for dental insurance, etc."^^xsd:string,
+        "Use the property isBasedOn to link the Task back to the TaskTemplate."^^xsd:string .
+

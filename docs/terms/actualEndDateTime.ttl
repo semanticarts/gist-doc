@@ -1,0 +1,38 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ContemporaryEvent owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:actualStartDateTime ] [ a owl:Restriction ;
+                        owl:maxCardinality "0"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:actualEndDateTime ] ) ] .
+
+gist:HistoricalEvent owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:actualEndDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] ) ] .
+
+gist:actualEndDate rdfs:subPropertyOf gist:actualEndDateTime .
+
+gist:actualEndMicrosecond rdfs:subPropertyOf gist:actualEndDateTime .
+
+gist:actualEndMinute rdfs:subPropertyOf gist:actualEndDateTime .
+
+gist:actualEndYear rdfs:subPropertyOf gist:actualEndDateTime .
+
+gist:actualEndDateTime a owl:DatatypeProperty ;
+    rdfs:label "actual end date time"^^xsd:string ;
+    rdfs:comment "DEFINITION: The actual date and time that something ended, with no implied precision."^^xsd:string,
+        "NOTE: This is an abstraction over the various precisions of actual end time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf gist:endDateTime ;
+    skos:definition "The actual date and time that something ended, with no implied precision."^^xsd:string ;
+    skos:prefLabel "actual end date time"^^xsd:string ;
+    skos:scopeNote "This is an abstraction over the various precisions of actual end time, and is not expected to be asserted directly. Values of predicates with different precisions can be compared since they are all formally xsd:datetimes."^^xsd:string .
+
