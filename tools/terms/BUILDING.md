@@ -50,13 +50,7 @@ python tools/terms/build.py \
 
 ## Content Negotiation (.htaccess)
 
-`tools/terms/semanticarts.htaccess` contains the proposed `w3id.org` Apache rewrite rules for content negotiation. Before deploying, update the base URL in that file if the published site is not:
-
-```text
-https://semanticarts.github.io/gist-doc
-```
-
-The rules cover:
+The `w3id.org` Apache rewrite rules are managed separately and not committed to this repo. The rules cover:
 
 - `https://w3id.org/semanticarts/ns/ontology/gist/` — redirects to the Semantic Arts landing page
 - `https://w3id.org/semanticarts/ns/ontology/gist/{Term}` — content negotiation to per-term RDF files or WIDOCO HTML
