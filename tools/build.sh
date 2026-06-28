@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Test the full WIDOCO build + hash patch for a gist release.
-# Run from the repo root: bash tools/test-build.sh <version>
-# Example: bash tools/test-build.sh 14.1
+# Build WIDOCO documentation and apply the hash-navigation patch for a gist release.
+# Run from the repo root: bash tools/build.sh <version>
+# Example: bash tools/build.sh 14.1
 set -euo pipefail
 
 VERSION="${1:-}"
 if [[ -z "$VERSION" ]]; then
-  echo "usage: bash tools/test-build.sh <version>  (e.g. 14.1)" >&2
+  echo "usage: bash tools/build.sh <version>  (e.g. 14.1)" >&2
   exit 1
 fi
 
@@ -28,4 +28,4 @@ python3 tools/patch_widoco_hash.py "${RELEASE_DIR}/widoco-documentation/index-en
 echo ""
 echo "Build complete. To smoke-test, run:"
 echo "  python -m http.server 8000 --directory ${RELEASE_DIR}/widoco-documentation"
-echo "Then open: http://127.0.0.1:8000/index-en.html#Address"
+echo "Then open: http://localhost:8000/index-en.html#Address"

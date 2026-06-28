@@ -40,10 +40,10 @@ Output lands in `docs/gist-<version>/widoco-documentation/`. To smoke-test it lo
 
 then open http://127.0.0.1:8000/index-en.html.
 
-Alternatively, `tools/test-build.sh` runs all three steps (fetch jar, run WIDOCO, apply patch) in one go from the repo root:
+Alternatively, `tools/build.sh` runs all three steps (fetch jar, run WIDOCO, apply patch) in one go from the repo root:
 
 ```bash
-bash tools/test-build.sh <version>   # e.g. bash tools/test-build.sh 14.1
+bash tools/build.sh <version>   # e.g. bash tools/build.sh 14.1
 ```
 
 ## Starting a new release
