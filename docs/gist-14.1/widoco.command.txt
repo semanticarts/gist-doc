@@ -1,1 +1,1 @@
-java -jar ../tools/widoco-1.4.25-jar-with-dependencies_JDK-17.jar -ontURI https://w3id.org/semanticarts/ontology/gistCore14.1.0 -outFolder ./widoco-documentation -confFile ./widoco_config.txt -oops -webVowl -licensius -excludeIntroduction
+java -jar ../../tools/widoco-1.4.25-jar-with-dependencies_JDK-17.jar -ontURI https://w3id.org/semanticarts/ontology/gistCore14.1.0 -outFolder ./widoco-documentation -confFile ./widoco_config.txt -oops -webVowl -licensius -excludeIntroduction
