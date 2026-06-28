@@ -24,6 +24,14 @@ cd docs/gist-<version>
 bash widoco.command.txt
 ```
 
+Then apply the hash-navigation patch (from the repo root):
+
+```bash
+python3 tools/patch_widoco_hash.py docs/gist-<version>/widoco-documentation/index-en.html
+```
+
+This patches `loadHash()` so that bare local-name fragments (e.g. `#Address`) resolve correctly. The script is idempotent and exits non-zero if the expected stock function is not found.
+
 Output lands in `docs/gist-<version>/widoco-documentation/`. To smoke-test it locally:
 
 ```bash
@@ -31,6 +39,12 @@ Output lands in `docs/gist-<version>/widoco-documentation/`. To smoke-test it lo
 ```
 
 then open http://127.0.0.1:8000/index-en.html.
+
+Alternatively, `tools/test-build.sh` runs all three steps (fetch jar, run WIDOCO, apply patch) in one go from the repo root:
+
+```bash
+bash tools/test-build.sh <version>   # e.g. bash tools/test-build.sh 14.1
+```
 
 ## Starting a new release
 
