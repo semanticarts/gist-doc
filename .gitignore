@@ -5,3 +5,6 @@ __pycache__/
 *.pyc
 .claude/settings.local.json
 _gist-deref-repo/
+__pycache__/
+*.pyc
+.pytest_cache/
