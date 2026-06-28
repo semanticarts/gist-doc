@@ -4,3 +4,4 @@ tools/**/*.jar
 __pycache__/
 *.pyc
 .claude/settings.local.json
+_gist-deref-repo/
