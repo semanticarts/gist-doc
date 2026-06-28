@@ -29,29 +29,24 @@ python -m pytest tools/terms/tests/
 
 ## Rebuilding the Term Files
 
-Place the gist web download bundle inside the repository root (it is gitignored):
+`tools/terms/build.sh` fetches the ontology modules directly from their published URLs and generates the per-term files. Run from the repo root:
 
-```text
-gist14.1.0_webDownload/
-  ontologies/
-    turtle/
-      gistCore14.1.0.ttl
-      gistRdfsAnnotations14.1.0.ttl
-      gistSubClassAssertions14.1.0.ttl
+```bash
+bash tools/terms/build.sh <version>   # e.g. bash tools/terms/build.sh 14.1.0
 ```
 
-Then run from the repo root:
+Output lands in `docs/terms/` — one `.ttl`, `.rdf`, and `.jsonld` file per term.
+
+To run manually or with local files instead:
 
 ```bash
 python tools/terms/build.py \
-  gist14.1.0_webDownload/ontologies/turtle/gistCore14.1.0.ttl \
-  gist14.1.0_webDownload/ontologies/turtle/gistRdfsAnnotations14.1.0.ttl \
-  gist14.1.0_webDownload/ontologies/turtle/gistSubClassAssertions14.1.0.ttl \
+  https://w3id.org/semanticarts/ontology/gistCore14.1.0.ttl \
+  https://w3id.org/semanticarts/ontology/gistRdfsAnnotations14.1.0.ttl \
+  https://w3id.org/semanticarts/ontology/gistSubClassAssertions14.1.0.ttl \
   docs/terms \
   --namespace https://w3id.org/semanticarts/ns/ontology/gist/
 ```
-
-Output lands in `docs/terms/` — 216 terms × 3 serializations (`.ttl`, `.rdf`, `.jsonld`).
 
 ## Content Negotiation (.htaccess)
 
