@@ -1,4 +1,6 @@
 *-Schema.ttl
 *.ppt*
-tools/*.jar
+tools/**/*.jar
+__pycache__/
+*.pyc
 .claude/settings.local.json

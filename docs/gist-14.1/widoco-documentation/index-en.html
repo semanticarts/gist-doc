@@ -24,10 +24,15 @@
     <script> 
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
-	var hash = location.hash;
-	if($(hash).offset()!=null){
-	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
-}
+	var hash = decodeURIComponent(location.hash.slice(1));
+	var target = hash && (
+	  document.getElementById(hash) ||
+	  document.getElementById("https://w3id.org/semanticarts/ns/ontology/gist/" + hash) ||
+	  document.getElementById("https://w3id.org/semanticarts/ns/data/gist/" + hash)
+	);
+	if(target){
+	  $('html, body').animate({scrollTop: $(target).offset().top}, 0);
+	}
 	loadTOC();
 }
 function loadTOC(){
