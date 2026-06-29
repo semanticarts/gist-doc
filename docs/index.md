@@ -37,4 +37,4 @@ Documentation of the [Semantic Arts gist minimalist upper ontology](https://gith
 
 ### gist Terms History
 
-- [**An interactive tool**](gist_history.html) for exploring the changes to gist over time.
+- [**An interactive tool**](./gist_history.html) for exploring the changes to gist over time.
