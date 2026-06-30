@@ -6,7 +6,7 @@ Published at [semanticarts.github.io/gist-doc](https://semanticarts.github.io/gi
 
 ## Repository Structure
 
-- `docs/` — published content (GitHub Pages source): WIDOCO-style HTML documentation, eBooks, examples, and gist terms history
+- `docs/` — published content (GitHub Pages source): WIDOCO-style HTML documentation, eBooks, examples, gist terms history, and per-term RDF dereferencing files
 - `tools/widoco/` — scripts for building WIDOCO documentation
 - `tools/terms/` — scripts for generating per-term RDF dereferencing files
 
