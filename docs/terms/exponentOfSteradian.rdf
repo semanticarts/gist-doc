@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSteradian">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The exponent of steradian in a product of powers of base units.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: In the equation '1 watt per square meter steradian = 1 x kilogram per secondCubed steradian'&#13;
+&#13;
+		the conversion factor for watt per square meter steradian is 1&#13;
+		the exponent of kilogram is 1&#13;
+		the exponent of second is -3&#13;
+		the exponent of steradian is -1&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing watt per square meter steradian must a multiple of kilogram per secondCubed steradian.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Steradian is a measure of solid angle.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b9e892082a9327322" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of steradian</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The exponent of steradian in a product of powers of base units.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the equation '1 watt per square meter steradian = 1 x kilogram per secondCubed steradian'&#13;
+&#13;
+		the conversion factor for watt per square meter steradian is 1&#13;
+		the exponent of kilogram is 1&#13;
+		the exponent of second is -3&#13;
+		the exponent of steradian is -1&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing watt per square meter steradian must a multiple of kilogram per secondCubed steradian.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of steradian</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steradian is a measure of solid angle.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8643c39a7e099790">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9e892082a9327322">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bf6116018932625bd" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf6116018932625bd">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="b8643c39a7e099790" />
+  </rdf:Description>
+</rdf:RDF>

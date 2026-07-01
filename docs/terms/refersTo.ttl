@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:PhysicalAddress owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Address [ a owl:Restriction ;
+                        owl:onProperty gist:refersTo ;
+                        owl:someValuesFrom gist:GeoLocation ] ) ] .
+
+gist:refersTo a owl:ObjectProperty ;
+    rdfs:label "refers to"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to another resource that it points to, indicates, or references."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates something to another resource that it points to, indicates, or references."^^xsd:string ;
+    skos:prefLabel "refers to"^^xsd:string .
+

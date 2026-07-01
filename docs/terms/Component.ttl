@@ -1,0 +1,57 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:NetworkLink rdfs:subClassOf gist:Component ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Component [ a owl:Restriction ;
+                        owl:onProperty gist:isMemberOf ;
+                        owl:someValuesFrom gist:Network ] [ a owl:Restriction ;
+                        owl:onProperty gist:links ;
+                        owl:someValuesFrom gist:NetworkNode ] ) ] .
+
+gist:System owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Composite [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ;
+                        owl:someValuesFrom gist:Component ] ) ] .
+
+gist:NetworkNode rdfs:subClassOf gist:Component .
+
+gist:OrderedMember rdfs:subClassOf gist:Component ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Component [ a owl:Class ;
+                        owl:unionOf ( [ a owl:Restriction ;
+                                    owl:onProperty gist:precedesDirectly ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gist:precedesDirectly ] ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:onProperty gist:sequence ;
+                                    owl:someValuesFrom xsd:integer ] ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:providesOrderFor ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:allValuesFrom gist:OrderedCollection ;
+                        owl:onProperty gist:isMemberOf ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:isMemberOf ] ) ] .
+
+gist:Component a owl:Class ;
+    rdfs:label "Component"^^xsd:string ;
+    rdfs:comment "DEFINITION: Something that, while having an independent existence, is inherently part of or designed to be part of a larger entity, such as a system or network."^^xsd:string,
+        "NOTE: A component may be designed or intended as part of a whole without actually being so; e.g., a car steering wheel that is not installed in any car."^^xsd:string,
+        "NOTE: Many things are in a trivial sense a part of a larger thing, but are not considered components because they are not inherently part of that larger thing. For example, while a book may be part of a library (a collection of books), it is not inherently so, and thus is not a component. A playing card, on the other hand, could be considered a component in (member of) a deck of cards. This may be use case-dependent; e.g., car parts might be modeled as components in an automobile manufacturing context but not in a retail auto parts store."^^xsd:string,
+        "NOTE: Physical substances, such as ingredients in a cake batter, do not meet the independent existence criterion, so are not components."^^xsd:string,
+        "NOTE: This class is not disjoint with gist:Composite, because a component may itself break down into smaller components."^^xsd:string,
+        "NOTE: This is an abstract class that is not directly instantiated. Users will define subclasses that are meaningful to their domain of interest."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:disjointWith gist:PhysicalSubstance ;
+    skos:definition "Something that, while having an independent existence, is inherently part of or designed to be part of a larger entity, such as a system or network."^^xsd:string ;
+    skos:prefLabel "Component"^^xsd:string ;
+    skos:scopeNote "A component may be designed or intended as part of a whole without actually being so; e.g., a car steering wheel that is not installed in any car."^^xsd:string,
+        "Many things are in a trivial sense a part of a larger thing, but are not considered components because they are not inherently part of that larger thing. For example, while a book may be part of a library (a collection of books), it is not inherently so, and thus is not a component. A playing card, on the other hand, could be considered a component in (member of) a deck of cards. This may be use case-dependent; e.g., car parts might be modeled as components in an automobile manufacturing context but not in a retail auto parts store."^^xsd:string,
+        "Physical substances, such as ingredients in a cake batter, do not meet the independent existence criterion, so are not components."^^xsd:string,
+        "This class is not disjoint with gist:Composite, because a component may itself break down into smaller components."^^xsd:string,
+        "This is an abstract class that is not directly instantiated. Users will define subclasses that are meaningful to their domain of interest."^^xsd:string .
+

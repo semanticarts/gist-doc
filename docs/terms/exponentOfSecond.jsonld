@@ -1,0 +1,75 @@
+[
+  {
+    "@id": "_:bad8f248f4d203942",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSecond",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: The exponent of second in a product of powers of base units."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: In the equation '1 watt-hour = 3600 x kilogram meterSquared per secondSquared'\r\n\r\n\t\tthe conversion factor for watt-hour is 3600\r\n\t\tthe exponent of kilogram is 1\r\n\t\tthe exponent of meter is 2\r\n\t\tthe exponent of second is -2\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing watt-hour must be a multiple of kilogram meterSquared per secondSquared."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:bad8f248f4d203942"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "exponent of second"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The exponent of second in a product of powers of base units."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "In the equation '1 watt-hour = 3600 x kilogram meterSquared per secondSquared'\r\n\r\n\t\tthe conversion factor for watt-hour is 3600\r\n\t\tthe exponent of kilogram is 1\r\n\t\tthe exponent of meter is 2\r\n\t\tthe exponent of second is -2\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing watt-hour must be a multiple of kilogram meterSquared per secondSquared."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "exponent of second"
+      }
+    ]
+  }
+]

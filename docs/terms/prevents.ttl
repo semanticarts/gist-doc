@@ -1,0 +1,27 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Restriction owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:prevents ;
+                        owl:someValuesFrom gist:Behavior ] ) ] .
+
+gist:prevents a owl:ObjectProperty ;
+    rdfs:label "prevents"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates an intention to behavior that it prohibits."^^xsd:string,
+        "EXAMPLE: A city ordinance prohibits jaywalking."^^xsd:string ;
+    rdfs:domain gist:Intention ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range gist:Behavior ;
+    owl:deprecated true ;
+    owl:equivalentProperty gist:prohibits ;
+    skos:definition "Relates an intention to behavior that it prohibits."^^xsd:string ;
+    skos:editorialNote "See guidance on removing this term in the next major release at https://github.com/semanticarts/gist/issues/1380#issuecomment-3617257248"^^xsd:string ;
+    skos:example "A city ordinance prohibits jaywalking."^^xsd:string ;
+    skos:prefLabel "prevents"^^xsd:string ;
+    gist:isSupersededBy gist:prohibits .
+

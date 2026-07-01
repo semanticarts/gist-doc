@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion" />
+    <owl:equivalentClass rdf:nodeID="b2317ba1819c251cc" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A geographic region governed by at least one government organization.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Geographic regions do not need not be physically contiguous in order to constitute a governed geographic region; e.g., Alaska and Hawaii are part of the region governed by the United States.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Governed Geographic Region</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion" />
+    <owl:equivalentClass rdf:nodeID="b846eff38e5dba8f5" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A geographic region governed by at least one government organization.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Governed Geographic Region</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic regions do not need not be physically contiguous in order to constitute a governed geographic region; e.g., Alaska and Hawaii are part of the region governed by the United States.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b17481296bd9532f3">
+    <rdf:first rdf:nodeID="bc4cfe618feb1515c" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1f3868b883594651">
+    <rdf:first rdf:nodeID="bb2820711de4dbe94" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2317ba1819c251cc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bea98f9217773f36d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b846eff38e5dba8f5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="ba525f85bdd28cf6e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba525f85bdd28cf6e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion" />
+    <rdf:rest rdf:nodeID="b17481296bd9532f3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb2820711de4dbe94">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc4cfe618feb1515c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bea98f9217773f36d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion" />
+    <rdf:rest rdf:nodeID="b1f3868b883594651" />
+  </rdf:Description>
+</rdf:RDF>

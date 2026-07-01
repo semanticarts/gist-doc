@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ElectronicAddress a owl:Class ;
+    rdfs:label "Electronic Address"^^xsd:string ;
+    rdfs:comment "ALT: Virtual Address"^^xsd:string,
+        "DEFINITION: An address referring to a locatable virtual place that does not physically exist but is made by software or electronics to appear to do so."^^xsd:string,
+        "EXAMPLE: A file system path, website URL, IP address, email address, mobile or landline telephone number."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Address ;
+    owl:disjointWith gist:PhysicalAddress ;
+    skos:altLabel "Virtual Address"^^xsd:string ;
+    skos:definition "An address referring to a locatable virtual place that does not physically exist but is made by software or electronics to appear to do so."^^xsd:string ;
+    skos:example "A file system path, website URL, IP address, email address, mobile or landline telephone number."^^xsd:string ;
+    skos:prefLabel "Electronic Address"^^xsd:string .
+

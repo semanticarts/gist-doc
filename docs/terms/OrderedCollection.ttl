@@ -1,0 +1,50 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:GeoRoute rdfs:subClassOf gist:OrderedCollection ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:OrderedCollection [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+                        owl:someValuesFrom gist:GeoPoint ] ) ] .
+
+gist:isFirstMemberOf rdfs:range gist:OrderedCollection .
+
+gist:OrderedCollection a owl:Class ;
+    rdfs:label "Ordered Collection"^^xsd:string ;
+    rdfs:comment "DEFINITION: A collection whose members are ordered in some way."^^xsd:string,
+        "NOTE: Includes partially ordered collections as well as collections in which members occupy the same position in a 'tie.' All members of an ordered collection are ordered members."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Collection ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Collection [ a owl:Class ;
+                        owl:unionOf ( [ a owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gist:isFirstMemberOf ] ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:cardinality "0"^^xsd:nonNegativeInteger ;
+                                    owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) ] [ a owl:Restriction ;
+                        owl:allValuesFrom gist:OrderedMember ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) ] ;
+    skos:definition "A collection whose members are ordered in some way."^^xsd:string ;
+    skos:prefLabel "Ordered Collection"^^xsd:string ;
+    skos:scopeNote "Includes partially ordered collections as well as collections in which members occupy the same position in a 'tie.' All members of an ordered collection are ordered members."^^xsd:string .
+
+gist:OrderedMember owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Component [ a owl:Class ;
+                        owl:unionOf ( [ a owl:Restriction ;
+                                    owl:onProperty gist:precedesDirectly ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gist:precedesDirectly ] ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:onProperty gist:sequence ;
+                                    owl:someValuesFrom xsd:integer ] ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:providesOrderFor ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:allValuesFrom gist:OrderedCollection ;
+                        owl:onProperty gist:isMemberOf ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:isMemberOf ] ) ] .
+

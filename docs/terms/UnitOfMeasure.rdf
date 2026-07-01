@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Content">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Event">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Intention">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Language">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Magnitude">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <owl:equivalentClass rdf:nodeID="b4ccebf50d2cc4f58" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Organization">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/SchemaMetaData">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Template">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup">
+    <rdfs:subClassOf rdf:nodeID="bf7d1c6fd241f12c9" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A standard amount used to measure or specify things.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: An acre is a unit for measuring area.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit of Measure</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A standard amount used to measure or specify things.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An acre is a unit for measuring area.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit of Measure</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/conversionFactor">
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/conversionOffset">
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfAmpere">
+    <rdfs:domain rdf:nodeID="b40bc5396184d9fb1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfBit">
+    <rdfs:domain rdf:nodeID="b0f59ae5b1e8784a0" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfCandela">
+    <rdfs:domain rdf:nodeID="b08759d885fe93280" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfKelvin">
+    <rdfs:domain rdf:nodeID="b3bb3ee1b49eea327" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfKilogram">
+    <rdfs:domain rdf:nodeID="b16861dd9e2d7869a" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfMeter">
+    <rdfs:domain rdf:nodeID="b298c1caf1a4f5380" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfMole">
+    <rdfs:domain rdf:nodeID="bf4fdfe356d7ce7d9" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfNumber">
+    <rdfs:domain rdf:nodeID="bee053dac94d643b7" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfOther">
+    <rdfs:domain rdf:nodeID="b482663fdc6d31753" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfRadian">
+    <rdfs:domain rdf:nodeID="b4880407a3913c407" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSecond">
+    <rdfs:domain rdf:nodeID="bad8f248f4d203942" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSteradian">
+    <rdfs:domain rdf:nodeID="b9e892082a9327322" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfUSDollar">
+    <rdfs:domain rdf:nodeID="be1b8df21ee656d49" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasUnitOfMeasure">
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/symbol">
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b042cf1333da387ce">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="bff577452a466064b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b086ce164ededc6dc">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="bad03fdf5e3b18857" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b08759d885fe93280">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b042cf1333da387ce" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0f59ae5b1e8784a0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bd99cbcfdee2c7fe8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b141eb7f8e6ed84d3">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="be83cbb8d4bc4ae1b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b16861dd9e2d7869a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b141eb7f8e6ed84d3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1b7a79d10cb72c6f">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="be304eb8b03db6715" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1ffc2a6c9993edbd">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b298c1caf1a4f5380">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b086ce164ededc6dc" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2bf38256d45916e7">
+    <rdf:first rdf:nodeID="b3fbca0dac4ac4030" />
+    <rdf:rest rdf:nodeID="b3a507616f0ef6ee6" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b336969cdc72c0609">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="b741270bf1226038d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b388a5c80f7b168be">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="bda181dcd0d040cca" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3a507616f0ef6ee6">
+    <rdf:first rdf:nodeID="bc661874a01d7ae0f" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3bb3ee1b49eea327">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b44cdf2d083a02181" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3fbca0dac4ac4030">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasUnitOfMeasure" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b40bc5396184d9fb1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b4284db7eaf0d4efb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4284db7eaf0d4efb">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="bfc7454655b306978" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b44cdf2d083a02181">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="bfbf649916b8042cd" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4519c11752938289">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b482663fdc6d31753">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b388a5c80f7b168be" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4880407a3913c407">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b66aab277a04eca44" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4ccebf50d2cc4f58">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b63655a82a0d0a327" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5366e160f35d54b4">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="bde3bf022bfa362ff" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6334a3c508db3d28">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="b4519c11752938289" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b63655a82a0d0a327">
+    <rdf:first rdf:nodeID="b7fe784175fde9fc9" />
+    <rdf:rest rdf:nodeID="b2bf38256d45916e7" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b66aab277a04eca44">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="b1ffc2a6c9993edbd" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b741270bf1226038d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b74e501038e5c4d35">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7fe784175fde9fc9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8643c39a7e099790">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9e892082a9327322">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bf6116018932625bd" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bad03fdf5e3b18857">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bad8f248f4d203942">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b5366e160f35d54b4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baecf4d4300b39516">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc661874a01d7ae0f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/numericValue" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd99cbcfdee2c7fe8">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="b74e501038e5c4d35" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bda181dcd0d040cca">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bde3bf022bfa362ff">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be1b8df21ee656d49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b336969cdc72c0609" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be304eb8b03db6715">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be83cbb8d4bc4ae1b">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bee053dac94d643b7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b1b7a79d10cb72c6f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf4fdfe356d7ce7d9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b6334a3c508db3d28" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf6116018932625bd">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="b8643c39a7e099790" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf7d1c6fd241f12c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="baecf4d4300b39516" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bfbf649916b8042cd">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bfc7454655b306978">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bff577452a466064b">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

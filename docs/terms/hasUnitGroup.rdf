@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasUnitGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates an aspect to a unit group. The aspect can be measured using any of the members of the unit group.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: The aspect distance can have a unit group that includes the units meter, inch, foot, etc.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Aspect" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has unit group</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates an aspect to a unit group. The aspect can be measured using any of the members of the unit group.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aspect distance can have a unit group that includes the units meter, inch, foot, etc.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has unit group</skos:prefLabel>
+  </rdf:Description>
+</rdf:RDF>

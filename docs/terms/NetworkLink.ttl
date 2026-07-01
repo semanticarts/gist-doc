@@ -1,0 +1,43 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:linksFrom gist:domainIncludes gist:NetworkLink .
+
+gist:linksTo gist:domainIncludes gist:NetworkLink .
+
+gist:Network owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Composite [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:NetworkLink gist:NetworkNode ) ] ] ) ] .
+
+gist:links gist:domainIncludes gist:NetworkLink .
+
+gist:NetworkLink a owl:Class ;
+    rdfs:label "Network Link"^^xsd:string ;
+    rdfs:comment "DEFINITION: An abstract representation of the connection between two or more nodes in a network."^^xsd:string,
+        "EXAMPLE: A network link may be physical, such as pipes, wired or wireless networks, but may also be a link in a non-physical network, such as organizational structures or social networks."^^xsd:string,
+        "NOTE: Each network link is connected to a network node via the property gist:links or one of its subproperties."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onProperty gist:links ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom gist:NetworkNode ;
+            owl:onProperty gist:links ],
+        gist:Component ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Component [ a owl:Restriction ;
+                        owl:onProperty gist:isMemberOf ;
+                        owl:someValuesFrom gist:Network ] [ a owl:Restriction ;
+                        owl:onProperty gist:links ;
+                        owl:someValuesFrom gist:NetworkNode ] ) ] ;
+    skos:definition "An abstract representation of the connection between two or more nodes in a network."^^xsd:string ;
+    skos:example "A network link may be physical, such as pipes, wired or wireless networks, but may also be a link in a non-physical network, such as organizational structures or social networks."^^xsd:string ;
+    skos:prefLabel "Network Link"^^xsd:string ;
+    skos:scopeNote "Each network link is connected to a network node via the property gist:links or one of its subproperties."^^xsd:string .
+

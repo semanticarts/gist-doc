@@ -1,0 +1,23 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:RenderedContent a owl:Class ;
+    rdfs:label "Rendered Content"^^xsd:string ;
+    rdfs:comment "DEFINITION: Content expressed via some physical medium."^^xsd:string,
+        "EXAMPLE: Words printed on paper; audio played on speakers; an image displayed on a monitor; an original painting."^^xsd:string,
+        "NOTE: Renderings of the same file on two different monitors are separate instances of rendered content."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:FormattedContent ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:FormattedContent [ a owl:Restriction ;
+                        owl:onProperty gist:isRenderedOn ;
+                        owl:someValuesFrom gist:Medium ] ) ] ;
+    skos:definition "Content expressed via some physical medium."^^xsd:string ;
+    skos:example "Words printed on paper; audio played on speakers; an image displayed on a monitor; an original painting."^^xsd:string ;
+    skos:prefLabel "Rendered Content"^^xsd:string ;
+    skos:scopeNote "Renderings of the same file on two different monitors are separate instances of rendered content."^^xsd:string .
+

@@ -1,0 +1,16 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:PhysicalActionType a owl:Class ;
+    rdfs:label "Physical Action Type"^^xsd:string ;
+    rdfs:comment "DEFINITION: A category indicating the type of an action based on its effect in the physical world."^^xsd:string,
+        "EXAMPLE: Lifting a garage door, turning off a valve, dropping cadmium rods."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Category ;
+    skos:definition "A category indicating the type of an action based on its effect in the physical world."^^xsd:string ;
+    skos:example "Lifting a garage door, turning off a valve, dropping cadmium rods."^^xsd:string ;
+    skos:prefLabel "Physical Action Type"^^xsd:string .
+

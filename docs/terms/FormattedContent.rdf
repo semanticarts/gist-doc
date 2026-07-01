@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/FormattedContent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Content encoded in a specific format, but existing as data independent of any particular physical medium.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A document in PDF format; an image in JPEG format.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Each instance of formatted content is a distinct formatting of some Content. Thus, a PDF-formatted version and an HTML-formatted version of the same content are separate instances of formatted content.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formatted Content</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContentExpression" />
+    <owl:equivalentClass rdf:nodeID="b50cb639bc04ed09d" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content encoded in a specific format, but existing as data independent of any particular physical medium.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A document in PDF format; an image in JPEG format.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formatted Content</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Each instance of formatted content is a distinct formatting of some Content. Thus, a PDF-formatted version and an HTML-formatted version of the same content are separate instances of formatted content.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/RenderedContent">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/FormattedContent" />
+    <owl:equivalentClass rdf:nodeID="b2b4069aa958b43b2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b03e9f6311d6e7be5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isRenderedOn" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Medium" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1b4540f5ed5ab1d0">
+    <rdf:first rdf:nodeID="b03e9f6311d6e7be5" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2b4069aa958b43b2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b30a1c6d200c15284" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b30a1c6d200c15284">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/FormattedContent" />
+    <rdf:rest rdf:nodeID="b1b4540f5ed5ab1d0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b50cb639bc04ed09d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b798637fed85540e2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b798637fed85540e2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ContentExpression" />
+    <rdf:rest rdf:nodeID="b9cb6695f10898f5b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9cb6695f10898f5b">
+    <rdf:first rdf:nodeID="bd4e489ba8d410033" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd4e489ba8d410033">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isExpressedIn" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/MediaType" />
+  </rdf:Description>
+</rdf:RDF>

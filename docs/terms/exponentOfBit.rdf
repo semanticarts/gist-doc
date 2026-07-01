@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfBit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The exponent of bit in a product of powers of base units.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: In the equation '1 megabit per second = 1000000 x bit per second'&#13;
+&#13;
+		the conversion factor for megabit per second is 1000000&#13;
+		the exponent of bit is 1&#13;
+		the exponent of second is -1&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing megabit per second must be a multiple of bit per second.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b0f59ae5b1e8784a0" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of bit</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The exponent of bit in a product of powers of base units.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the equation '1 megabit per second = 1000000 x bit per second'&#13;
+&#13;
+		the conversion factor for megabit per second is 1000000&#13;
+		the exponent of bit is 1&#13;
+		the exponent of second is -1&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing megabit per second must be a multiple of bit per second.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of bit</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0f59ae5b1e8784a0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bd99cbcfdee2c7fe8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b74e501038e5c4d35">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd99cbcfdee2c7fe8">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="b74e501038e5c4d35" />
+  </rdf:Description>
+</rdf:RDF>

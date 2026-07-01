@@ -1,0 +1,85 @@
+[
+  {
+    "@id": "_:b9e892082a9327322",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSteradian",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: The exponent of steradian in a product of powers of base units."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: In the equation '1 watt per square meter steradian = 1 x kilogram per secondCubed steradian'\r\n\r\n\t\tthe conversion factor for watt per square meter steradian is 1\r\n\t\tthe exponent of kilogram is 1\r\n\t\tthe exponent of second is -3\r\n\t\tthe exponent of steradian is -1\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing watt per square meter steradian must a multiple of kilogram per secondCubed steradian."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: Steradian is a measure of solid angle."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b9e892082a9327322"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "exponent of steradian"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The exponent of steradian in a product of powers of base units."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "In the equation '1 watt per square meter steradian = 1 x kilogram per secondCubed steradian'\r\n\r\n\t\tthe conversion factor for watt per square meter steradian is 1\r\n\t\tthe exponent of kilogram is 1\r\n\t\tthe exponent of second is -3\r\n\t\tthe exponent of steradian is -1\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing watt per square meter steradian must a multiple of kilogram per secondCubed steradian."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "exponent of steradian"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Steradian is a measure of solid angle."
+      }
+    ]
+  }
+]

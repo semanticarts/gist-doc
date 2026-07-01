@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint">
+    <owl:equivalentClass rdf:nodeID="be3fe5313a648eeb4" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/longitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Degrees from the prime meridian.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">longitude</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degrees from the prime meridian.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">longitude</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b092f335559ad1e4a">
+    <rdf:first rdf:nodeID="bf2a24884fbd95fbb" />
+    <rdf:rest rdf:nodeID="b85a72d8fde5295d8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5cdf3a7d563e4536">
+    <rdf:first rdf:nodeID="bb1f76b90369a530a" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b85a72d8fde5295d8">
+    <rdf:first rdf:nodeID="bc25c9fa9b259765b" />
+    <rdf:rest rdf:nodeID="b5cdf3a7d563e4536" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb1f76b90369a530a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/longitude" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc25c9fa9b259765b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/latitude" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be3fe5313a648eeb4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b092f335559ad1e4a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf2a24884fbd95fbb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="bf5bb2d484c68896b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf5bb2d484c68896b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_altitude" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,49 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Category rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:isAllocatedBy ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] .
+
+gist:GeoPoint owl:disjointWith gist:IntellectualProperty .
+
+gist:GeoRegion owl:disjointWith gist:IntellectualProperty .
+
+gist:ID owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Content [ a owl:Restriction ;
+                        owl:onProperty gist:isAllocatedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:uniqueText ;
+                        owl:someValuesFrom xsd:string ] ) ] .
+
+gist:KnowledgeConcept rdfs:subClassOf gist:IntellectualProperty .
+
+gist:isAssignmentOf gist:rangeIncludes gist:IntellectualProperty .
+
+gist:isAllocatedBy rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] .
+
+gist:IntellectualProperty a owl:Class ;
+    rdfs:label "Intellectual Property"^^xsd:string ;
+    rdfs:comment "DEFINITION: An intangible work, invention, or concept, independent of its being expressed in text, audio, video, image, or live performance. IP can also be tacit knowledge, know-how, or skill."^^xsd:string,
+        "EXAMPLE: The Old Man and The Sea; the Page Rank algorithm; the brand Coca Cola."^^xsd:string,
+        "NOTE: For literature this could be called the 'Work,' except that 'work' is a highly overloaded term (expenditure of energy, resource consumption, art). Often the first expression precedes our recognition of the IP, but subsequent expressions are known to be derivatives of the IP, even if they are expression-to-expression translations (or copies)."^^xsd:string,
+        "NOTE: This concept includes works that are out of copyright or were never formally registered; the defining feature is not that it is legally protected but that it is an intangible creation of the human mind."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:disjointWith gist:Magnitude,
+        gist:Organization,
+        gist:PhysicalIdentifiableItem,
+        gist:PhysicalSubstance,
+        gist:UnitOfMeasure ;
+    skos:definition "An intangible work, invention, or concept, independent of its being expressed in text, audio, video, image, or live performance. IP can also be tacit knowledge, know-how, or skill."^^xsd:string ;
+    skos:example "The Old Man and The Sea; the Page Rank algorithm; the brand Coca Cola."^^xsd:string ;
+    skos:prefLabel "Intellectual Property"^^xsd:string ;
+    skos:scopeNote "For literature this could be called the 'Work,' except that 'work' is a highly overloaded term (expenditure of energy, resource consumption, art). Often the first expression precedes our recognition of the IP, but subsequent expressions are known to be derivatives of the IP, even if they are expression-to-expression translations (or copies)."^^xsd:string,
+        "This concept includes works that are out of copyright or were never formally registered; the defining feature is not that it is legally protected but that it is an intangible creation of the human mind."^^xsd:string .
+

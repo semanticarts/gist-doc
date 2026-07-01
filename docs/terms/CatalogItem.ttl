@@ -1,0 +1,35 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:BundledCatalogItem rdfs:subClassOf gist:CatalogItem ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:CatalogItem [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ;
+                        owl:someValuesFrom gist:CatalogItem ] ) ] .
+
+gist:ProductSpecification rdfs:subClassOf gist:CatalogItem ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:CatalogItem [ a owl:Restriction ;
+                        owl:onProperty gist:isCategorizedBy ;
+                        owl:someValuesFrom gist:ProductCategory ] ) ] .
+
+gist:ServiceSpecification rdfs:subClassOf gist:CatalogItem ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:CatalogItem [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isBasedOn ] ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:CatalogItem a owl:Class ;
+    rdfs:label "Catalog Item"^^xsd:string ;
+    rdfs:comment "DEFINITION: A description of a product or service to be delivered, given in a sufficient level of detail that a receiver could determine whether delivery constituted discharge of the obligation to deliver."^^xsd:string,
+        "NOTE: In short, an unambiguous characterization of what it is that a potential buyer is paying for."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Specification ;
+    skos:definition "A description of a product or service to be delivered, given in a sufficient level of detail that a receiver could determine whether delivery constituted discharge of the obligation to deliver."^^xsd:string ;
+    skos:prefLabel "Catalog Item"^^xsd:string ;
+    skos:scopeNote "In short, an unambiguous characterization of what it is that a potential buyer is paying for."^^xsd:string .
+

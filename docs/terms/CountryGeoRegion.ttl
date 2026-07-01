@@ -1,0 +1,31 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:CountryGovernment rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass gist:CountryGeoRegion ;
+            owl:onProperty [ owl:inverseOf gist:isGovernedBy ] ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernmentOrganization [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isGovernedBy ] ;
+                        owl:someValuesFrom gist:CountryGeoRegion ] ) ] .
+
+gist:CountryGeoRegion a owl:Class ;
+    rdfs:label "Country Geographic Region"^^xsd:string ;
+    rdfs:comment "DEFINITION: A geographic region governed by exactly one country government."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gist:isGovernedBy ],
+        gist:GovernedGeoRegion ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernedGeoRegion [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:CountryGovernment ] ) ] ;
+    skos:definition "A geographic region governed by exactly one country government."^^xsd:string ;
+    skos:prefLabel "Country Geographic Region"^^xsd:string .
+

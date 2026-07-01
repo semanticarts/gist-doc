@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Project">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A task, usually of longer duration, made up of other tasks.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: Designing an insurance product; adding a new feature to a software application; assessing the level of risk for a mortgage application.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Task" />
+    <owl:equivalentClass rdf:nodeID="bc91e1a0a89c5afca" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A task, usually of longer duration, made up of other tasks.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Designing an insurance product; adding a new feature to a software application; assessing the level of risk for a mortgage application.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b28adaf23fe360710">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Task" />
+    <rdf:rest rdf:nodeID="b799a8902a72a7640" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5325dd1bce636fcc">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b799a8902a72a7640">
+    <rdf:first rdf:nodeID="b856eafd41512d94c" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b856eafd41512d94c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="b5325dd1bce636fcc" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Task" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc91e1a0a89c5afca">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b28adaf23fe360710" />
+  </rdf:Description>
+</rdf:RDF>

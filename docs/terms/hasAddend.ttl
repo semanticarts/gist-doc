@@ -1,0 +1,17 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:hasAddend a owl:ObjectProperty ;
+    rdfs:label "has addend"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates an aspect to another aspect that is an additive component of it."^^xsd:string,
+        "EXAMPLE: In the equation 'profit = revenue - expenses', revenue is an addend and expenses is a subtrahend."^^xsd:string,
+        "NOTE: Commonly used with financial metrics."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates an aspect to another aspect that is an additive component of it."^^xsd:string ;
+    skos:example "In the equation 'profit = revenue - expenses', revenue is an addend and expenses is a subtrahend."^^xsd:string ;
+    skos:prefLabel "has addend"^^xsd:string ;
+    skos:scopeNote "Commonly used with financial metrics."^^xsd:string .
+

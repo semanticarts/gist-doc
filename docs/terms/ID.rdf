@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Content that is used to uniquely identify something or someone.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: SSN for a person; serial number for a product; employee ID for a person.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Used in conjunction with gist:isIdentifiedBy.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ID</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Content" />
+    <owl:equivalentClass rdf:nodeID="be402bad8d5db9cb1" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content that is used to uniquely identify something or someone.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SSN for a person; serial number for a product; employee ID for a person.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ID</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Used in conjunction with gist:isIdentifiedBy.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy">
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ID" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isIdentifiedBy">
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ID" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/uniqueText">
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ID" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b154191024a11bfa6">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <rdf:rest rdf:nodeID="b1d42d855a2f9f706" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1d42d855a2f9f706">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bbb275e152d087393" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3c92e0ab6b9094af">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b154191024a11bfa6" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4eea3c4fb8ba40d2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Content" />
+    <rdf:rest rdf:nodeID="b63f56e3ce7cfd639" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b63f56e3ce7cfd639">
+    <rdf:first rdf:nodeID="b9571cc21488e45ee" />
+    <rdf:rest rdf:nodeID="baba434ac7595a240" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9571cc21488e45ee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isAllocatedBy" />
+    <owl:someValuesFrom rdf:nodeID="b3c92e0ab6b9094af" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b98fe62a123b8bf77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/uniqueText" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baba434ac7595a240">
+    <rdf:first rdf:nodeID="b98fe62a123b8bf77" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbb275e152d087393">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be402bad8d5db9cb1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b4eea3c4fb8ba40d2" />
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/BundledCatalogItem">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem" />
+    <owl:equivalentClass rdf:nodeID="b2307675a39884a8a" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A description of a product or service to be delivered, given in a sufficient level of detail that a receiver could determine whether delivery constituted discharge of the obligation to deliver.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: In short, an unambiguous characterization of what it is that a potential buyer is paying for.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalog Item</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Specification" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A description of a product or service to be delivered, given in a sufficient level of detail that a receiver could determine whether delivery constituted discharge of the obligation to deliver.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalog Item</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In short, an unambiguous characterization of what it is that a potential buyer is paying for.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ProductSpecification">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem" />
+    <owl:equivalentClass rdf:nodeID="b19b72d91786082fc" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ServiceSpecification">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem" />
+    <owl:equivalentClass rdf:nodeID="b25fd69fe3c6e5cc4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b19b72d91786082fc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b6ec97a88d6c846b0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2307675a39884a8a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b55b073f8c3847f6d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b25fd69fe3c6e5cc4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="ba091809bb8f125fb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4671858bcc8351a1">
+    <rdf:first rdf:nodeID="b8e3b713fa0d4a3dc" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b477eb59262412bca">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isCategorizedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ProductCategory" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b55b073f8c3847f6d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem" />
+    <rdf:rest rdf:nodeID="b831c90fd307cb82d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6ec97a88d6c846b0">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem" />
+    <rdf:rest rdf:nodeID="bf467c9c9d2ccb20e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7ab198e9bda55cfc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bcc3521570b336cf9" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b831c90fd307cb82d">
+    <rdf:first rdf:nodeID="b7ab198e9bda55cfc" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8e3b713fa0d4a3dc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bd2732b70d6064ec7" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba091809bb8f125fb">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem" />
+    <rdf:rest rdf:nodeID="b4671858bcc8351a1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bcc3521570b336cf9">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd2732b70d6064ec7">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isBasedOn" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf467c9c9d2ccb20e">
+    <rdf:first rdf:nodeID="b477eb59262412bca" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

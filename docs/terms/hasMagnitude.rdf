@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Account">
+    <owl:equivalentClass rdf:nodeID="b5d62d42267569117" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ContingentEvent">
+    <owl:equivalentClass rdf:nodeID="bd3bf3ee8b68dc53d" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint">
+    <owl:equivalentClass rdf:nodeID="be3fe5313a648eeb4" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion">
+    <rdfs:subClassOf rdf:nodeID="b24d3c8ed1e94e099" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoVolume">
+    <owl:equivalentClass rdf:nodeID="be6bf2c496928a016" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem">
+    <rdfs:subClassOf rdf:nodeID="b480432e46498c936" />
+    <rdfs:subClassOf rdf:nodeID="bd8f8b8e8bef19f1a" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance">
+    <rdfs:subClassOf rdf:nodeID="bb32169dd887e97f5" />
+    <rdfs:subClassOf rdf:nodeID="be571fe013408ae0d" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/TimeInterval">
+    <rdfs:subClassOf rdf:nodeID="b4a3d004452a6ba04" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates a thing to a magnitude.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A car or model of car has magnitudes for length, width, weight, average miles per gallon, etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has magnitude</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Magnitude" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a thing to a magnitude.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A car or model of car has magnitudes for length, width, weight, average miles per gallon, etc.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has magnitude</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b00358e7d995601da">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isTriggeredBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b092f335559ad1e4a">
+    <rdf:first rdf:nodeID="bf2a24884fbd95fbb" />
+    <rdf:rest rdf:nodeID="b85a72d8fde5295d8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1239fbc77a0f9885">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <rdf:rest rdf:nodeID="b600c81385a53e541" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1578bc5535a22be2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Agreement" />
+    <rdf:rest rdf:nodeID="b98105321b292af36" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b16c81028575a2fe7">
+    <rdf:first rdf:nodeID="bd96d302c8bae2ff1" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b19558c89e8202340">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_probability" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b24d3c8ed1e94e099">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b36b8c9db7ca56bbc" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b34fe31f544fd2f6a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b44b2da891e570b0d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b36b8c9db7ca56bbc">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+    <rdf:rest rdf:nodeID="bdf48b623ee4a6f36" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3ef537deed40b1a3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_volume" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b44b2da891e570b0d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_area" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b480432e46498c936">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b79d1c19de29fc343" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b48916493ce10f2d5">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGeoContainedIn" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4a3d004452a6ba04">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:nodeID="ba5a6f1db3c5bcce7" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4aee32c91ecb07e6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b19558c89e8202340" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4d3635ef1b081209">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+    <rdf:rest rdf:nodeID="b72013181ce26d877" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4d5eabf1c6a633db">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_financial_balance" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5cdf3a7d563e4536">
+    <rdf:first rdf:nodeID="bb1f76b90369a530a" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5d62d42267569117">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b1578bc5535a22be2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b600c81385a53e541">
+    <rdf:first rdf:nodeID="b4aee32c91ecb07e6" />
+    <rdf:rest rdf:nodeID="bd223079cdcfb86bb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b72013181ce26d877">
+    <rdf:first rdf:nodeID="bbb65005887ff2c4f" />
+    <rdf:rest rdf:nodeID="b16c81028575a2fe7" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79d1c19de29fc343">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_volume" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b85a72d8fde5295d8">
+    <rdf:first rdf:nodeID="bc25c9fa9b259765b" />
+    <rdf:rest rdf:nodeID="b5cdf3a7d563e4536" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b98105321b292af36">
+    <rdf:first rdf:nodeID="bcca877ccfadd5a31" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9dc1908791722902">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_mass" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba5a6f1db3c5bcce7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_duration" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb1f76b90369a530a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/longitude" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb32169dd887e97f5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b9dc1908791722902" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb61e96d203eda57d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_volume" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbb65005887ff2c4f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="bb61e96d203eda57d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc25c9fa9b259765b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/latitude" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc7e6b68086c96ad8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_mass" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bcca877ccfadd5a31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b4d5eabf1c6a633db" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd223079cdcfb86bb">
+    <rdf:first rdf:nodeID="b00358e7d995601da" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd3bf3ee8b68dc53d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b1239fbc77a0f9885" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd8f8b8e8bef19f1a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="bc7e6b68086c96ad8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd96d302c8bae2ff1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="b48916493ce10f2d5" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdf48b623ee4a6f36">
+    <rdf:first rdf:nodeID="b34fe31f544fd2f6a" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be3fe5313a648eeb4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b092f335559ad1e4a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be571fe013408ae0d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b3ef537deed40b1a3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be6bf2c496928a016">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b4d3635ef1b081209" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf2a24884fbd95fbb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="bf5bb2d484c68896b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf5bb2d484c68896b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_altitude" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+</rdf:RDF>

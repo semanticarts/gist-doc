@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Content">
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A bounded region (or set of regions) on the surface of the Earth.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: The bounded shape that defines the region occupied by Crater Lake; the bounded area known as the contiguous USA.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: A geographic region could be non-contiguous; e.g., the region governed by the US federal government is the contiguous area of the lower 48 states plus Alaska, Hawaii, and overseas territories. Child classes in lower ontologies can make this distinction.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Region</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="b24d3c8ed1e94e099" />
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Language" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Magnitude" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Template" />
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A bounded region (or set of regions) on the surface of the Earth.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The bounded shape that defines the region occupied by Crater Lake; the bounded area known as the contiguous USA.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Region</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A geographic region could be non-contiguous; e.g., the region governed by the US federal government is the contiguous area of the lower 48 states plus Alaska, Hawaii, and overseas territories. Child classes in lower ontologies can make this distinction.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion" />
+    <owl:equivalentClass rdf:nodeID="b846eff38e5dba8f5" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Landmark">
+    <rdfs:subClassOf rdf:nodeID="baac7eba307a3ddfe" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/SubCountryGovernment">
+    <owl:equivalentClass rdf:nodeID="b300fe1a7b9bd7cbc" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b17481296bd9532f3">
+    <rdf:first rdf:nodeID="bc4cfe618feb1515c" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b24d3c8ed1e94e099">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b36b8c9db7ca56bbc" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2b19e3d005275d14">
+    <rdf:first rdf:nodeID="b32ec6c5c2a689588" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b300fe1a7b9bd7cbc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bb832927f3abfcd68" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b32ec6c5c2a689588">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="ba62aeb6a3de270f2" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b34fe31f544fd2f6a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b44b2da891e570b0d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b36b8c9db7ca56bbc">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoLocation" />
+    <rdf:rest rdf:nodeID="bdf48b623ee4a6f36" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b44b2da891e570b0d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_area" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5e86dc3ec2f4ef7a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6a771a60999ef60c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b6f3c482ab9e13dcb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6f3c482ab9e13dcb">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion" />
+    <rdf:rest rdf:nodeID="bc399e91b0f19caac" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7e5a2b7d711a6d4d">
+    <rdf:first rdf:nodeID="b5e86dc3ec2f4ef7a" />
+    <rdf:rest rdf:nodeID="b2b19e3d005275d14" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b846eff38e5dba8f5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="ba525f85bdd28cf6e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba525f85bdd28cf6e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion" />
+    <rdf:rest rdf:nodeID="b17481296bd9532f3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba62aeb6a3de270f2">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baac7eba307a3ddfe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasPhysicalLocation" />
+    <owl:someValuesFrom rdf:nodeID="b6a771a60999ef60c" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb832927f3abfcd68">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization" />
+    <rdf:rest rdf:nodeID="b7e5a2b7d711a6d4d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc399e91b0f19caac">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoVolume" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc4cfe618feb1515c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdf48b623ee4a6f36">
+    <rdf:first rdf:nodeID="b34fe31f544fd2f6a" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

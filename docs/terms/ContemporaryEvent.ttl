@@ -1,0 +1,23 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ContemporaryEvent a owl:Class ;
+    rdfs:label "Contemporary Event"^^xsd:string ;
+    rdfs:comment "DEFINITION: An event that has started but has not yet ended."^^xsd:string,
+        "NOTE: When the event actually ends, it will cease being contemporary."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Event ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:actualStartDateTime ] [ a owl:Restriction ;
+                        owl:maxCardinality "0"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:actualEndDateTime ] ) ] ;
+    skos:definition "An event that has started but has not yet ended."^^xsd:string ;
+    skos:prefLabel "Contemporary Event"^^xsd:string ;
+    skos:scopeNote "When the event actually ends, it will cease being contemporary."^^xsd:string .
+

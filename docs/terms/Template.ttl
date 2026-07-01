@@ -1,0 +1,27 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:GeoRegion owl:disjointWith gist:Template .
+
+gist:TaskTemplate rdfs:subClassOf gist:Template ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Template [ a owl:Restriction ;
+                        owl:onProperty gist:hasGoal ;
+                        owl:someValuesFrom gist:Intention ] ) ] .
+
+gist:Template a owl:Class ;
+    rdfs:label "Template"^^xsd:string ;
+    rdfs:comment "DEFINITION: Something used to make objects in its own image."^^xsd:string,
+        "EXAMPLE: A die in manufacturing is used to make stamped parts; a form provides a structure and fields to be filled in; a cookie cutter is a template for cookies."^^xsd:string,
+        "NOTE: Use gist:isBasedOn to link the object made from the template back to the template."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:disjointWith gist:UnitOfMeasure ;
+    skos:definition "Something used to make objects in its own image."^^xsd:string ;
+    skos:example "A die in manufacturing is used to make stamped parts; a form provides a structure and fields to be filled in; a cookie cutter is a template for cookies."^^xsd:string ;
+    skos:prefLabel "Template"^^xsd:string ;
+    skos:scopeNote "Use gist:isBasedOn to link the object made from the template back to the template."^^xsd:string .
+

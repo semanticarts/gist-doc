@@ -1,0 +1,43 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Address rdfs:subClassOf gist:Content .
+
+gist:ContentExpression rdfs:subClassOf gist:Content .
+
+gist:ID rdfs:subClassOf gist:Content ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Content [ a owl:Restriction ;
+                        owl:onProperty gist:isAllocatedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:uniqueText ;
+                        owl:someValuesFrom xsd:string ] ) ] .
+
+gist:containedText gist:domainIncludes gist:Content .
+
+gist:isAbout rdfs:domain gist:Content .
+
+gist:Content a owl:Class ;
+    rdfs:label "Content"^^xsd:string ;
+    rdfs:comment "DEFINITION: Information available in some medium."^^xsd:string,
+        "EXAMPLE: The literary work 'The Adventures of Huckleberry Finn' by Mark Twain, independent of any particular edition."^^xsd:string,
+        "NOTE: Categories are not content until they are written down."^^xsd:string,
+        "NOTE: This class includes both abstract content and its expression, but it must have at least one expression in order to be content. For example, the idea a writer has for a book is not content until it is expressed in some form, but a single content object may have multiple expressions - e.g., the particular print and audio editions."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:disjointWith gist:GeoPoint,
+        gist:GeoRegion,
+        gist:Organization,
+        gist:PhysicalIdentifiableItem,
+        gist:PhysicalSubstance,
+        gist:UnitOfMeasure ;
+    skos:definition "Information available in some medium."^^xsd:string ;
+    skos:example "The literary work 'The Adventures of Huckleberry Finn' by Mark Twain, independent of any particular edition."^^xsd:string ;
+    skos:prefLabel "Content"^^xsd:string ;
+    skos:scopeNote "Categories are not content until they are written down."^^xsd:string,
+        "This class includes both abstract content and its expression, but it must have at least one expression in order to be content. For example, the idea a writer has for a book is not content until it is expressed in some form, but a single content object may have multiple expressions - e.g., the particular print and audio editions."^^xsd:string .
+

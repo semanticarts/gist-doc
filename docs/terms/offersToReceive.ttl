@@ -1,0 +1,33 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Offer owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContingentObligation [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:offersToProvide ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:offersToReceive ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:plannedEndDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] [ a owl:Restriction ;
+                        owl:onProperty gist:plannedStartDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] ) ] .
+
+gist:offersToReceive a owl:ObjectProperty ;
+    rdfs:label "offers to receive"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates an offer to the thing expected in return for the offered item."^^xsd:string,
+        "EXAMPLE: A vendor makes an offer to receive a particular amount of money in exchange for the offered product; an offer to receive a home in exchange for an amount of money."^^xsd:string,
+        "NOTE: This will most often be an amount of money, but could be anything of value, as in swaps."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates an offer to the thing expected in return for the offered item."^^xsd:string ;
+    skos:example "A vendor makes an offer to receive a particular amount of money in exchange for the offered product; an offer to receive a home in exchange for an amount of money."^^xsd:string ;
+    skos:prefLabel "offers to receive"^^xsd:string ;
+    skos:scopeNote "This will most often be an amount of money, but could be anything of value, as in swaps."^^xsd:string ;
+    gist:domainIncludes gist:Offer .
+

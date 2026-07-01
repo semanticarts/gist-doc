@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A geographic region governed by exactly one country government.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Country Geographic Region</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="b190a539afbdb9dd6" />
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion" />
+    <owl:equivalentClass rdf:nodeID="b2317ba1819c251cc" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A geographic region governed by exactly one country government.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Country Geographic Region</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment">
+    <rdfs:subClassOf rdf:nodeID="b0fc7f7eec47048af" />
+    <owl:equivalentClass rdf:nodeID="b5fa7d0f646b24b48" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b071507a603372a3e">
+    <rdf:first rdf:nodeID="b269e9da9531ca0e6" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0fc7f7eec47048af">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onClass rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion" />
+    <owl:onProperty rdf:nodeID="bc252c9fe86b976fc" />
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b190a539afbdb9dd6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1f3868b883594651">
+    <rdf:first rdf:nodeID="bb2820711de4dbe94" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2317ba1819c251cc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bea98f9217773f36d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b269e9da9531ca0e6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bce861ebca3a30b4f" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CountryGeoRegion" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5fa7d0f646b24b48">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b6b024beb13680030" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6b024beb13680030">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization" />
+    <rdf:rest rdf:nodeID="b071507a603372a3e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb2820711de4dbe94">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CountryGovernment" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc252c9fe86b976fc">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bce861ebca3a30b4f">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bea98f9217773f36d">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernedGeoRegion" />
+    <rdf:rest rdf:nodeID="b1f3868b883594651" />
+  </rdf:Description>
+</rdf:RDF>

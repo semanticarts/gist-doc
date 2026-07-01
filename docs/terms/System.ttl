@@ -1,0 +1,23 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:System a owl:Class ;
+    rdfs:label "System"^^xsd:string ;
+    rdfs:comment "DEFINITION: A composite made up of interacting or interdependent components that together operate as a whole."^^xsd:string,
+        "EXAMPLE: A manufacturing system, a storm system."^^xsd:string,
+        "NOTE: May be used to refer to either man-made or natural systems."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Composite ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Composite [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ;
+                        owl:someValuesFrom gist:Component ] ) ] ;
+    skos:definition "A composite made up of interacting or interdependent components that together operate as a whole."^^xsd:string ;
+    skos:example "A manufacturing system, a storm system."^^xsd:string ;
+    skos:prefLabel "System"^^xsd:string ;
+    skos:scopeNote "May be used to refer to either man-made or natural systems."^^xsd:string .
+

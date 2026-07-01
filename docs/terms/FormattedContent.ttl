@@ -1,0 +1,29 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:RenderedContent rdfs:subClassOf gist:FormattedContent ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:FormattedContent [ a owl:Restriction ;
+                        owl:onProperty gist:isRenderedOn ;
+                        owl:someValuesFrom gist:Medium ] ) ] .
+
+gist:FormattedContent a owl:Class ;
+    rdfs:label "Formatted Content"^^xsd:string ;
+    rdfs:comment "DEFINITION: Content encoded in a specific format, but existing as data independent of any particular physical medium."^^xsd:string,
+        "EXAMPLE: A document in PDF format; an image in JPEG format."^^xsd:string,
+        "NOTE: Each instance of formatted content is a distinct formatting of some Content. Thus, a PDF-formatted version and an HTML-formatted version of the same content are separate instances of formatted content."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:ContentExpression ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:isExpressedIn ;
+                        owl:someValuesFrom gist:MediaType ] ) ] ;
+    skos:definition "Content encoded in a specific format, but existing as data independent of any particular physical medium."^^xsd:string ;
+    skos:example "A document in PDF format; an image in JPEG format."^^xsd:string ;
+    skos:prefLabel "Formatted Content"^^xsd:string ;
+    skos:scopeNote "Each instance of formatted content is a distinct formatting of some Content. Thus, a PDF-formatted version and an HTML-formatted version of the same content are separate instances of formatted content."^^xsd:string .
+

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember">
+    <owl:equivalentClass rdf:nodeID="bbfa4b622a9d889bf" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/providesOrderFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Links a member of an ordered collection to the real-world item it represents in that collection.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">provides order for</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Links a member of an ordered collection to the real-world item it represents in that collection.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">provides order for</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b21a280538899cdab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bee27628b211b8481" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b326531ee090233e0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bbf56f3283a1b3715" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b40155130bf9610fc">
+    <rdf:first rdf:nodeID="b65670e9134603c79" />
+    <rdf:rest rdf:nodeID="b4adb52eb3d29a114" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b43490954f237428b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b471417ba735bdb90">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4adb52eb3d29a114">
+    <rdf:first rdf:nodeID="b471417ba735bdb90" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5c41b4349edf80f0">
+    <rdf:first rdf:nodeID="b21a280538899cdab" />
+    <rdf:rest rdf:nodeID="bfda58b6d0ab77984" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b65670e9134603c79">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9708e6d4c760f115">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/sequence" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="babd9fc593b53cdd8">
+    <rdf:first rdf:nodeID="bc297dc93cb807fd4" />
+    <rdf:rest rdf:nodeID="b40155130bf9610fc" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbf56f3283a1b3715">
+    <rdf:first rdf:nodeID="b43490954f237428b" />
+    <rdf:rest rdf:nodeID="b5c41b4349edf80f0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbfa4b622a9d889bf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bc919f9a9892e8b7e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc297dc93cb807fd4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/providesOrderFor" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc919f9a9892e8b7e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <rdf:rest rdf:nodeID="bda4093276de08813" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bda4093276de08813">
+    <rdf:first rdf:nodeID="b326531ee090233e0" />
+    <rdf:rest rdf:nodeID="babd9fc593b53cdd8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bee27628b211b8481">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bfda58b6d0ab77984">
+    <rdf:first rdf:nodeID="b9708e6d4c760f115" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

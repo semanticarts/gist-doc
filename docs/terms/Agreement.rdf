@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Account">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Agreement" />
+    <owl:equivalentClass rdf:nodeID="b5d62d42267569117" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Agreement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A mutually understood arrangement in which two or more parties make commitments to one another.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A gym membership is an agreement in which the member commits to paying the gym a certain price and the gym commits to allowing access to their facilities.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: While an agreement has two or more parties, and contains commitments which bind those parties, it will not always be necessary to instantiate each individual commitment.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agreement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <owl:equivalentClass rdf:nodeID="bc87a3bb4e2743695" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mutually understood arrangement in which two or more parties make commitments to one another.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gym membership is an agreement in which the member commits to paying the gym a certain price and the gym commits to allowing access to their facilities.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agreement</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While an agreement has two or more parties, and contains commitments which bind those parties, it will not always be necessary to instantiate each individual commitment.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Contract">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Agreement" />
+    <owl:equivalentClass rdf:nodeID="bf2d5ddd5dc13a38b" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1413d528cf117d20">
+    <rdf:first rdf:nodeID="be3b4ec7734717147" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1578bc5535a22be2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Agreement" />
+    <rdf:rest rdf:nodeID="b98105321b292af36" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2edf861e30d30f00">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+    <rdf:rest rdf:nodeID="bad122ca9246ac3de" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b38b12625c9bb2c0b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasParty" />
+    <owl:someValuesFrom rdf:nodeID="b4c2cb0e848064f79" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b471e1b91860aab62">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4c2cb0e848064f79">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bf60e5bee837132ca" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4d5eabf1c6a633db">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:hasValue rdf:resource="https://w3id.org/semanticarts/ns/data/gist/_Aspect_financial_balance" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasAspect" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b555ea25fedca99aa">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Agreement" />
+    <rdf:rest rdf:nodeID="be5cee22c75af1e74" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5d62d42267569117">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b1578bc5535a22be2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b98105321b292af36">
+    <rdf:first rdf:nodeID="bcca877ccfadd5a31" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bad122ca9246ac3de">
+    <rdf:first rdf:nodeID="b38b12625c9bb2c0b" />
+    <rdf:rest rdf:nodeID="b1413d528cf117d20" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbf1eef84bc643eba">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc87a3bb4e2743695">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b2edf861e30d30f00" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bcca877ccfadd5a31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasMagnitude" />
+    <owl:someValuesFrom rdf:nodeID="b4d5eabf1c6a633db" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be3b4ec7734717147">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    <owl:onClass rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Commitment" />
+    <owl:onProperty rdf:nodeID="bbf1eef84bc643eba" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be5cee22c75af1e74">
+    <rdf:first rdf:nodeID="bfcdbf76e5436294b" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf2d5ddd5dc13a38b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b555ea25fedca99aa" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf60e5bee837132ca">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b471e1b91860aab62" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bfcdbf76e5436294b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isUnderJurisdictionOf" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization" />
+  </rdf:Description>
+</rdf:RDF>

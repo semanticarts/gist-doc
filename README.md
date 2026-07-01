@@ -6,12 +6,14 @@ Published at [semanticarts.github.io/gist-doc](https://semanticarts.github.io/gi
 
 ## Repository Structure
 
-- `docs/` — published content (GitHub Pages source): WIDOCO-style HTML documentation, eBooks, examples, and gist terms history
-- `tools/` — scripts and the WIDOCO jar for building documentation
+- `docs/` — published content (GitHub Pages source): WIDOCO-style HTML documentation, eBooks, examples, gist terms history, and per-term RDF dereferencing files
+- `tools/widoco/` — scripts for building WIDOCO documentation
+- `tools/terms/` — scripts for generating per-term RDF dereferencing files
 
 ## Building Documentation
 
-See [tools/BUILDING.md](tools/BUILDING.md) for instructions on regenerating WIDOCO documentation for a gist release or starting a new one.
+- [tools/widoco/BUILDING.md](tools/widoco/BUILDING.md) — regenerating WIDOCO documentation for a gist release
+- [tools/terms/BUILDING.md](tools/terms/BUILDING.md) — generating per-term RDF files for IRI dereferencing
 
 ## More Information
 

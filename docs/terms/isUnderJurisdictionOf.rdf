@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Contract">
+    <owl:equivalentClass rdf:nodeID="bf2d5ddd5dc13a38b" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isUnderJurisdictionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates a law, contract, etc., to the system of law or government which has the power, right, or authority to interpret and apply it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is under jurisdiction of</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a law, contract, etc., to the system of law or government which has the power, right, or authority to interpret and apply it.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is under jurisdiction of</skos:prefLabel>
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b555ea25fedca99aa">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Agreement" />
+    <rdf:rest rdf:nodeID="be5cee22c75af1e74" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be5cee22c75af1e74">
+    <rdf:first rdf:nodeID="bfcdbf76e5436294b" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf2d5ddd5dc13a38b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b555ea25fedca99aa" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bfcdbf76e5436294b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isUnderJurisdictionOf" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization" />
+  </rdf:Description>
+</rdf:RDF>

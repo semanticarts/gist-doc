@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ControlledVocabulary">
+    <owl:equivalentClass rdf:nodeID="b79dc7b85023cdd06" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoRoute">
+    <owl:equivalentClass rdf:nodeID="b2d8fbee3104245bc" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/IntergovernmentalOrganization">
+    <owl:equivalentClass rdf:nodeID="bad46c8ef3dbd4ba1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Network">
+    <owl:equivalentClass rdf:nodeID="b6b80ca8add28e254" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/NetworkLink">
+    <owl:equivalentClass rdf:nodeID="b59650526cc8a09be" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode">
+    <rdfs:subClassOf rdf:nodeID="b7c33e211d5bf35d5" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection">
+    <owl:equivalentClass rdf:nodeID="bdfbca4925c6b2dba" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember">
+    <owl:equivalentClass rdf:nodeID="bbfa4b622a9d889bf" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup">
+    <rdfs:subClassOf rdf:nodeID="bf7d1c6fd241f12c9" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isFirstMemberOf">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates a member individual to the thing, such as a collection or organization, that it is a member of.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is member of</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a member individual to the thing, such as a collection or organization, that it is a member of.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is member of</skos:prefLabel>
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b025ddfacc571f5ea">
+    <rdf:first rdf:nodeID="b6cb15c50905a4558" />
+    <rdf:rest rdf:nodeID="b847afb2749620a0d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b047ad06f96317ed4">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05db39374d52bcab">
+    <rdf:first rdf:nodeID="b7c214c046e890f5b" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05fcb54653fbafc3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isGovernedBy" />
+    <owl:someValuesFrom rdf:nodeID="bb1bcb0bffa2220c9" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0bc7531ca75169a0">
+    <rdf:first rdf:nodeID="bab33998947813e77" />
+    <rdf:rest rdf:nodeID="b1d950877e4ae6b74" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0ee1dfc1060dc5f3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+    <owl:onProperty rdf:nodeID="b12eb1c9508503ec4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b12eb1c9508503ec4">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1d950877e4ae6b74">
+    <rdf:first rdf:nodeID="b5efd9d0a06aefdc6" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b21a280538899cdab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bee27628b211b8481" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b27e7c5d5cb11c53a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection" />
+    <rdf:rest rdf:nodeID="b586c8c2390732ea1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2a39fd0c8c6789fe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bc130ccc86abf42ec" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2d8fbee3104245bc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b27e7c5d5cb11c53a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b326531ee090233e0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bbf56f3283a1b3715" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3bcf63b0f8b7df1c">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="b79e0458bb7dc008a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3ede9c5f78ef534f">
+    <rdf:first rdf:nodeID="b05fcb54653fbafc3" />
+    <rdf:rest rdf:nodeID="ba142110340af05e5" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b40155130bf9610fc">
+    <rdf:first rdf:nodeID="b65670e9134603c79" />
+    <rdf:rest rdf:nodeID="b4adb52eb3d29a114" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b43490954f237428b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b471417ba735bdb90">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4adb52eb3d29a114">
+    <rdf:first rdf:nodeID="b471417ba735bdb90" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4e36de3b7133758d">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b532f9c58f2035cc4">
+    <rdf:first rdf:nodeID="b8676b0a23c218223" />
+    <rdf:rest rdf:nodeID="b96534aed2bb6eebb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b586c8c2390732ea1">
+    <rdf:first rdf:nodeID="be342643d12082b37" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b59650526cc8a09be">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="baa50c2156b4b2b6e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5affd6eb8b5b6fb2">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <rdf:rest rdf:nodeID="b3ede9c5f78ef534f" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5b281a42a0cfcab3">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Organization" />
+    <rdf:rest rdf:nodeID="bc68a0ce6f30ba056" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5c41b4349edf80f0">
+    <rdf:first rdf:nodeID="b21a280538899cdab" />
+    <rdf:rest rdf:nodeID="bfda58b6d0ab77984" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5efd9d0a06aefdc6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+    <owl:onProperty rdf:nodeID="b4e36de3b7133758d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b65670e9134603c79">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6b80ca8add28e254">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bedd9905d308d5a17" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6cb15c50905a4558">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bbcc995f63c17c239" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79dc7b85023cdd06">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b5affd6eb8b5b6fb2" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b79e0458bb7dc008a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7c214c046e890f5b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bb6d39ac28ee4d353" />
+    <owl:someValuesFrom rdf:nodeID="b2a39fd0c8c6789fe" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7c33e211d5bf35d5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Network" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b847afb2749620a0d">
+    <rdf:first rdf:nodeID="b0ee1dfc1060dc5f3" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8676b0a23c218223">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Network" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b89041ae1f87719f9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="ba648df02e87029bc" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Category" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b96534aed2bb6eebb">
+    <rdf:first rdf:nodeID="bb53438dc4884d2e8" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9708e6d4c760f115">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/sequence" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba142110340af05e5">
+    <rdf:first rdf:nodeID="b89041ae1f87719f9" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba648df02e87029bc">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baa50c2156b4b2b6e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <rdf:rest rdf:nodeID="b532f9c58f2035cc4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bab33998947813e77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b025ddfacc571f5ea" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="babd9fc593b53cdd8">
+    <rdf:first rdf:nodeID="bc297dc93cb807fd4" />
+    <rdf:rest rdf:nodeID="b40155130bf9610fc" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bac1fc2f26ef68446">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <rdf:rest rdf:nodeID="b0bc7531ca75169a0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bad46c8ef3dbd4ba1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b5b281a42a0cfcab3" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baecf4d4300b39516">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb1bcb0bffa2220c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b3bcf63b0f8b7df1c" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb53438dc4884d2e8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/links" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb6d39ac28ee4d353">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbcc995f63c17c239">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isFirstMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbf56f3283a1b3715">
+    <rdf:first rdf:nodeID="b43490954f237428b" />
+    <rdf:rest rdf:nodeID="b5c41b4349edf80f0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbfa4b622a9d889bf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bc919f9a9892e8b7e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc130ccc86abf42ec">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkLink" />
+    <rdf:rest rdf:nodeID="b047ad06f96317ed4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc297dc93cb807fd4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/providesOrderFor" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc68a0ce6f30ba056">
+    <rdf:first rdf:nodeID="be33fa7b5df5b2c70" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc919f9a9892e8b7e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <rdf:rest rdf:nodeID="bda4093276de08813" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc9c08cb3533dd075">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd1bdabfdd4e31d77">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bda4093276de08813">
+    <rdf:first rdf:nodeID="b326531ee090233e0" />
+    <rdf:rest rdf:nodeID="babd9fc593b53cdd8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdfbca4925c6b2dba">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bac1fc2f26ef68446" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be33fa7b5df5b2c70">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+    <owl:onClass rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GovernmentOrganization" />
+    <owl:onProperty rdf:nodeID="bc9c08cb3533dd075" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be342643d12082b37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bd1bdabfdd4e31d77" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bedd9905d308d5a17">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <rdf:rest rdf:nodeID="b05db39374d52bcab" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bee27628b211b8481">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf7d1c6fd241f12c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="baecf4d4300b39516" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bfda58b6d0ab77984">
+    <rdf:first rdf:nodeID="b9708e6d4c760f115" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

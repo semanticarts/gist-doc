@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Project">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Task" />
+    <owl:equivalentClass rdf:nodeID="bc91e1a0a89c5afca" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ScheduledTask">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Task" />
+    <owl:equivalentClass rdf:nodeID="bac7eccbf1b8bfba3" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Task">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An activity or piece of work that is either proposed, planned, scheduled, underway, or completed.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task template.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This term is broader than the English word 'task,' which implies assignment, responsibility, or duty. In ordinary English going to a concert has a goal but is (generally) done for pleasure rather than out of obligation, and would not be considered a task, while according to the gist definition it is a task. The expansion of meaning is deliberate, so that anything that has a goal and can be specified by a task template is a task.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Use the property gist:isBasedOn to link a task back to the task template.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <owl:equivalentClass rdf:nodeID="b0647983115a73113" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An activity or piece of work that is either proposed, planned, scheduled, underway, or completed.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task template.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term is broader than the English word 'task,' which implies assignment, responsibility, or duty. In ordinary English going to a concert has a goal but is (generally) done for pleasure rather than out of obligation, and would not be considered a task, while according to the gist definition it is a task. The expansion of meaning is deliberate, so that anything that has a goal and can be specified by a task template is a task.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use the property gist:isBasedOn to link a task back to the task template.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0647983115a73113">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bdd7c40350c063d21" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b177b5cddcdb0c2ba">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Task" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b27be7ad024cf5507">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/ScheduledEvent" />
+    <rdf:rest rdf:nodeID="b177b5cddcdb0c2ba" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b28adaf23fe360710">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Task" />
+    <rdf:rest rdf:nodeID="b799a8902a72a7640" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5325dd1bce636fcc">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b799a8902a72a7640">
+    <rdf:first rdf:nodeID="b856eafd41512d94c" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b856eafd41512d94c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="b5325dd1bce636fcc" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Task" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9df83bd26a32623b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasGoal" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Intention" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba47128fc53e09115">
+    <rdf:first rdf:nodeID="b9df83bd26a32623b" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bac7eccbf1b8bfba3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b27be7ad024cf5507" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc91e1a0a89c5afca">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b28adaf23fe360710" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdd7c40350c063d21">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <rdf:rest rdf:nodeID="ba47128fc53e09115" />
+  </rdf:Description>
+</rdf:RDF>

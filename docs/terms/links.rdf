@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:gist="https://w3id.org/semanticarts/ns/ontology/gist/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/NetworkLink">
+    <rdfs:subClassOf rdf:nodeID="b419791605f3bbfb5" />
+    <rdfs:subClassOf rdf:nodeID="b9962d8ba57c5d603" />
+    <owl:equivalentClass rdf:nodeID="b59650526cc8a09be" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/links">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates a network link to a network node that it connects to another node. Used when the connection is undirected or the direction is not known.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">links</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a network link to a network node that it connects to another node. Used when the connection is undirected or the direction is not known.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">links</skos:prefLabel>
+    <gist:domainIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkLink" />
+    <gist:rangeIncludes rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/linksFrom">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/links" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/linksTo">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/links" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b419791605f3bbfb5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/links" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b532f9c58f2035cc4">
+    <rdf:first rdf:nodeID="b8676b0a23c218223" />
+    <rdf:rest rdf:nodeID="b96534aed2bb6eebb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b59650526cc8a09be">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="baa50c2156b4b2b6e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8676b0a23c218223">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Network" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b96534aed2bb6eebb">
+    <rdf:first rdf:nodeID="bb53438dc4884d2e8" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9962d8ba57c5d603">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/links" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baa50c2156b4b2b6e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <rdf:rest rdf:nodeID="b532f9c58f2035cc4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb53438dc4884d2e8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/links" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,37 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Event owl:disjointWith gist:Language .
+
+gist:GeoPoint owl:disjointWith gist:Language .
+
+gist:GeoRegion owl:disjointWith gist:Language .
+
+gist:Text owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:isExpressedIn ;
+                        owl:someValuesFrom gist:Language ] [ a owl:Restriction ;
+                        owl:onProperty gist:containedText ;
+                        owl:someValuesFrom xsd:string ] ) ] .
+
+gist:isExpressedIn gist:rangeIncludes gist:Language .
+
+gist:Language a owl:Class ;
+    rdfs:label "Language"^^xsd:string ;
+    rdfs:comment "DEFINITION: A recognized, organized set of symbols and grammar."^^xsd:string,
+        "EXAMPLE: Natural languages such as English and Spanish; computer languages such as OWL, Python, and XML."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:deprecated true ;
+    owl:disjointWith gist:Magnitude,
+        gist:Organization,
+        gist:PhysicalIdentifiableItem,
+        gist:PhysicalSubstance,
+        gist:UnitOfMeasure ;
+    skos:definition "A recognized, organized set of symbols and grammar."^^xsd:string ;
+    skos:example "Natural languages such as English and Spanish; computer languages such as OWL, Python, and XML."^^xsd:string ;
+    skos:prefLabel "Language"^^xsd:string .
+

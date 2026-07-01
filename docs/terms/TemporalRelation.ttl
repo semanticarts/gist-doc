@@ -1,0 +1,34 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Assignment rdfs:subClassOf gist:TemporalRelation ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:TemporalRelation [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:isAssignmentOf ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:isAssignmentTo ;
+                        owl:someValuesFrom owl:Thing ] ) ] .
+
+gist:TemporalRelation a owl:Class ;
+    rdfs:label "Temporal Relation"^^xsd:string ;
+    rdfs:comment "DEFINITION: A relationship existing for a period of time."^^xsd:string,
+        "EXAMPLE: The relationship between a person and their employer; the relationship between a person or business and an address."^^xsd:string,
+        "NOTE: A temporal relation must have a minimum of two participants. For example, both the employer and the employee are participants in a temporal relation representing a period of employment. Note that 'participant' does not imply agency; a non-sentient being can participate in a temporal relation. For example, both a person and a house could be participants in a hypothetical relation 'lives at.'"^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gist:startDateTime ],
+        [ a owl:Restriction ;
+            owl:minCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onProperty gist:hasParticipant ] ;
+    skos:definition "A relationship existing for a period of time."^^xsd:string ;
+    skos:example "The relationship between a person and their employer; the relationship between a person or business and an address."^^xsd:string ;
+    skos:prefLabel "Temporal Relation"^^xsd:string ;
+    skos:scopeNote "A temporal relation must have a minimum of two participants. For example, both the employer and the employee are participants in a temporal relation representing a period of employment. Note that 'participant' does not imply agency; a non-sentient being can participate in a temporal relation. For example, both a person and a house could be participants in a hypothetical relation 'lives at.'"^^xsd:string .
+

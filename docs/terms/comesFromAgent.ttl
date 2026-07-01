@@ -1,0 +1,32 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Message owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:comesFromAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:goesToAgent ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] ) ] .
+
+gist:comesFromAgent a owl:ObjectProperty ;
+    rdfs:label "comes from agent"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to the originating agent."^^xsd:string,
+        "EXAMPLE: A package is shipped by a person; a purchase order is emailed to a vendor by an organization."^^xsd:string,
+        "NOTE: This is not the inverse of gist:goesToAgent, as both properties have the message or shipment as the subject."^^xsd:string,
+        "NOTE: This property is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another, whereas gist:hasGiver is typically used in more abstract contexts such as agreements, obligations, contracts, etc. However, there are contexts in which either may be appropriate, such as the giving of a gift."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] ;
+    rdfs:subPropertyOf gist:hasParticipant ;
+    skos:definition "Relates something to the originating agent."^^xsd:string ;
+    skos:example "A package is shipped by a person; a purchase order is emailed to a vendor by an organization."^^xsd:string ;
+    skos:prefLabel "comes from agent"^^xsd:string ;
+    skos:scopeNote "This is not the inverse of gist:goesToAgent, as both properties have the message or shipment as the subject."^^xsd:string,
+        "This property is intended to describe the physical or electronic transfer of something, such as a package or email, from one agent to another, whereas gist:hasGiver is typically used in more abstract contexts such as agreements, obligations, contracts, etc. However, there are contexts in which either may be appropriate, such as the giving of a gift."^^xsd:string .
+

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/GeoRoute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An ordered set of geographic points that defines a path from a starting point to an ending point.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: A geographic route could describe a bus route by identifying the points where the bus stops. A geographic route could describe the boundary of a polygonal geographic region (it does not have to be a traveled route).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Route</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection" />
+    <owl:equivalentClass rdf:nodeID="b2d8fbee3104245bc" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ordered set of geographic points that defines a path from a starting point to an ending point.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Route</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A geographic route could describe a bus route by identifying the points where the bus stops. A geographic route could describe the boundary of a polygonal geographic region (it does not have to be a traveled route).</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b27e7c5d5cb11c53a">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection" />
+    <rdf:rest rdf:nodeID="b586c8c2390732ea1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2d8fbee3104245bc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b27e7c5d5cb11c53a" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b586c8c2390732ea1">
+    <rdf:first rdf:nodeID="be342643d12082b37" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd1bdabfdd4e31d77">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be342643d12082b37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bd1bdabfdd4e31d77" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint" />
+  </rdf:Description>
+</rdf:RDF>

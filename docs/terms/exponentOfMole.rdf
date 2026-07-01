@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfMole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The exponent of mole in a product of powers of base units.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: In the equation '1 katal = 1 x mole per second'&#13;
+&#13;
+		the conversion factor for katal is 1&#13;
+		the exponent of mole is 1&#13;
+		the exponent of second is -1&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing katal must be a multiple of mole per second.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="bf4fdfe356d7ce7d9" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of mole</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The exponent of mole in a product of powers of base units.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the equation '1 katal = 1 x mole per second'&#13;
+&#13;
+		the conversion factor for katal is 1&#13;
+		the exponent of mole is 1&#13;
+		the exponent of second is -1&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing katal must be a multiple of mole per second.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of mole</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4519c11752938289">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6334a3c508db3d28">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="b4519c11752938289" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bf4fdfe356d7ce7d9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b6334a3c508db3d28" />
+  </rdf:Description>
+</rdf:RDF>

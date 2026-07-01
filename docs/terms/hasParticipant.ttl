@@ -1,0 +1,33 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:TemporalRelation rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onProperty gist:hasParticipant ] .
+
+gist:comesFromAgent rdfs:subPropertyOf gist:hasParticipant .
+
+gist:goesToAgent rdfs:subPropertyOf gist:hasParticipant .
+
+gist:hasGiver rdfs:subPropertyOf gist:hasParticipant .
+
+gist:hasParty rdfs:subPropertyOf gist:hasParticipant .
+
+gist:hasRecipient rdfs:subPropertyOf gist:hasParticipant .
+
+gist:hasParticipant a owl:ObjectProperty ;
+    rdfs:label "has participant"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something (e.g. an agreement) to things that play a role, or take part or are otherwise involved in some way."^^xsd:string,
+        "EXAMPLE: An event of transferring money has a participating account that receives the money."^^xsd:string,
+        "NOTE: The thing with participants will often be an agreement, event or obligation. Participation does not imply agency."^^xsd:string,
+        "NOTE: This will most often be used as an abstract property. Use subproperties that indicate the nature of the participation (e.g. hasBorrower, hasVenue)."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates something (e.g. an agreement) to things that play a role, or take part or are otherwise involved in some way."^^xsd:string ;
+    skos:example "An event of transferring money has a participating account that receives the money."^^xsd:string ;
+    skos:prefLabel "has participant"^^xsd:string ;
+    skos:scopeNote "The thing with participants will often be an agreement, event or obligation. Participation does not imply agency."^^xsd:string,
+        "This will most often be used as an abstract property. Use subproperties that indicate the nature of the participation (e.g. hasBorrower, hasVenue)."^^xsd:string .
+

@@ -1,0 +1,31 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:exponentOfCandela a owl:DatatypeProperty ;
+    rdfs:label "exponent of candela"^^xsd:string ;
+    rdfs:comment "DEFINITION: The exponent of candela in a product of powers of base units."^^xsd:string,
+        """EXAMPLE: In the equation '1 candlepower = 1 x candela'\r
+\r
+		the conversion factor for candlepower is 1\r
+		the exponent of candela is 1\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing candlepower must be a multiple of candela."""^^xsd:string ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:decimal ;
+    skos:definition "The exponent of candela in a product of powers of base units."^^xsd:string ;
+    skos:example """In the equation '1 candlepower = 1 x candela'\r
+\r
+		the conversion factor for candlepower is 1\r
+		the exponent of candela is 1\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing candlepower must be a multiple of candela."""^^xsd:string ;
+    skos:prefLabel "exponent of candela"^^xsd:string .
+

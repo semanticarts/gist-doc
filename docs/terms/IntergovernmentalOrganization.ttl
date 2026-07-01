@@ -1,0 +1,24 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:GovernmentOrganization owl:disjointWith gist:IntergovernmentalOrganization .
+
+gist:IntergovernmentalOrganization a owl:Class ;
+    rdfs:label "Intergovernmental Organization"^^xsd:string ;
+    rdfs:comment "DEFINITION: An organization whose members are government organizations. This can comprise regional, municipal, state/province, or national level entities."^^xsd:string,
+        "EXAMPLE: The United Nations, the European Union, the Metropolitan Transit Authority."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Organization ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Organization [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:GovernmentOrganization ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) ] ;
+    skos:definition "An organization whose members are government organizations. This can comprise regional, municipal, state/province, or national level entities."^^xsd:string ;
+    skos:example "The United Nations, the European Union, the Metropolitan Transit Authority."^^xsd:string ;
+    skos:prefLabel "Intergovernmental Organization"^^xsd:string .
+

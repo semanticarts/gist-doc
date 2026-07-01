@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ContemporaryEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: An event that has started but has not yet ended.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: When the event actually ends, it will cease being contemporary.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contemporary Event</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <owl:equivalentClass rdf:nodeID="beb3d19eead884c1e" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An event that has started but has not yet ended.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contemporary Event</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When the event actually ends, it will cease being contemporary.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1bc543db63ab700d">
+    <rdf:first rdf:nodeID="b33dc8af5bc73013b" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b237fff6b13338f35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/actualStartDateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b33dc8af5bc73013b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/actualEndDateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6c58af56a3cfb3c9">
+    <rdf:first rdf:nodeID="b237fff6b13338f35" />
+    <rdf:rest rdf:nodeID="b1bc543db63ab700d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b83269a8bb42577c6">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+    <rdf:rest rdf:nodeID="b6c58af56a3cfb3c9" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="beb3d19eead884c1e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b83269a8bb42577c6" />
+  </rdf:Description>
+</rdf:RDF>

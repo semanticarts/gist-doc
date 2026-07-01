@@ -1,0 +1,27 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:LivingThing owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:PhysicalIdentifiableItem [ a owl:Restriction ;
+                        owl:onProperty gist:hasBiologicalParent ;
+                        owl:someValuesFrom gist:LivingThing ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:birthDate ] ) ] .
+
+gist:birthDate a owl:DatatypeProperty ;
+    rdfs:label "birth date"^^xsd:string ;
+    rdfs:comment "DEFINITION: The date some living thing was or will be born, with precision of one day."^^xsd:string,
+        "EXAMPLE: '2021-06-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string,
+        "NOTE: This is a subproperty of gist:startDateTime rather than gist:actualStartDate because some living things have yet to be born. This property refers to a calendar date and is assumed to precision of one day (time zone offset is allowed). It is recommended to zero out the hours through microseconds to avoid spurious precision. Implementations requiring a birthdate to the minute can define a subproperty."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf gist:startDateTime ;
+    skos:definition "The date some living thing was or will be born, with precision of one day."^^xsd:string ;
+    skos:example "'2021-06-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string ;
+    skos:prefLabel "birth date"^^xsd:string ;
+    skos:scopeNote "This is a subproperty of gist:startDateTime rather than gist:actualStartDate because some living things have yet to be born. This property refers to a calendar date and is assumed to precision of one day (time zone offset is allowed). It is recommended to zero out the hours through microseconds to avoid spurious precision. Implementations requiring a birthdate to the minute can define a subproperty."^^xsd:string .
+

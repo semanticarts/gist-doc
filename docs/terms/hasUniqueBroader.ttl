@@ -1,0 +1,15 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:hasUniqueBroader a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has unique broader"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a thing to a unique other thing with a broader meaning."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subPropertyOf gist:hasBroader ;
+    skos:definition "Relates a thing to a unique other thing with a broader meaning."^^xsd:string ;
+    skos:prefLabel "has unique broader"^^xsd:string .
+

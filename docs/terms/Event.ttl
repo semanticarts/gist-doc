@@ -1,0 +1,88 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Aspect owl:disjointWith gist:Event .
+
+gist:Category owl:disjointWith gist:Event .
+
+gist:ContemporaryEvent rdfs:subClassOf gist:Event ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:actualStartDateTime ] [ a owl:Restriction ;
+                        owl:maxCardinality "0"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:actualEndDateTime ] ) ] .
+
+gist:ContingentEvent rdfs:subClassOf gist:Event ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_probability ;
+                                owl:onProperty gist:hasAspect ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isTriggeredBy ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:ContingentObligation owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Commitment [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:isTriggeredBy ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:Determination rdfs:subClassOf gist:Event .
+
+gist:HistoricalEvent rdfs:subClassOf gist:Event ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:actualEndDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] ) ] .
+
+gist:PhysicalEvent rdfs:subClassOf gist:Event ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:occursIn ;
+                        owl:someValuesFrom gist:GeoLocation ] ) ] .
+
+gist:ScheduledEvent rdfs:subClassOf gist:Event ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:plannedStartDateTime ;
+                        owl:someValuesFrom xsd:dateTime ] ) ] .
+
+gist:ServiceSpecification owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:CatalogItem [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isBasedOn ] ;
+                        owl:someValuesFrom gist:Event ] ) ] .
+
+gist:Task rdfs:subClassOf gist:Event ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Event [ a owl:Restriction ;
+                        owl:onProperty gist:hasGoal ;
+                        owl:someValuesFrom gist:Intention ] ) ] .
+
+gist:Transaction rdfs:subClassOf gist:Event .
+
+gist:Event a owl:Class ;
+    rdfs:label "Event"^^xsd:string ;
+    rdfs:comment "DEFINITION: Something that occurs over a period of time, often characterized as an activity being carried out by some person, organization, or software application or brought about by natural forces."^^xsd:string,
+        "EXAMPLE: A transaction, conference, baseball game, earthquake."^^xsd:string,
+        "NOTE: An event does not necessarily have either planned or actual start or end datetimes. For example, a conference can be in the planning phase without any dates selected, but is nevertheless an (unscheduled) event. The subclasses of gist:Event state particular restrictions on planned and actual start and end dates."^^xsd:string,
+        "NOTE: An event occurs during a time interval, which is distinct from the event."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:disjointWith gist:Language,
+        gist:Magnitude,
+        gist:TimeInterval,
+        gist:UnitOfMeasure ;
+    skos:definition "Something that occurs over a period of time, often characterized as an activity being carried out by some person, organization, or software application or brought about by natural forces."^^xsd:string ;
+    skos:example "A transaction, conference, baseball game, earthquake."^^xsd:string ;
+    skos:prefLabel "Event"^^xsd:string ;
+    skos:scopeNote "An event does not necessarily have either planned or actual start or end datetimes. For example, a conference can be in the planning phase without any dates selected, but is nevertheless an (unscheduled) event. The subclasses of gist:Event state particular restrictions on planned and actual start and end dates."^^xsd:string,
+        "An event occurs during a time interval, which is distinct from the event."^^xsd:string .
+

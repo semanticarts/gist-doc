@@ -1,0 +1,632 @@
+[
+  {
+    "@id": "_:b08759d885fe93280",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b0f59ae5b1e8784a0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b16861dd9e2d7869a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b298c1caf1a4f5380",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b3bb3ee1b49eea327",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b3fbca0dac4ac4030",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/hasUnitOfMeasure"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "_:b40bc5396184d9fb1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b482663fdc6d31753",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b4880407a3913c407",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b4ccebf50d2cc4f58",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:b7fe784175fde9fc9"
+          },
+          {
+            "@id": "_:b3fbca0dac4ac4030"
+          },
+          {
+            "@id": "_:bc661874a01d7ae0f"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:b7fe784175fde9fc9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/hasAspect"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Aspect"
+      }
+    ]
+  },
+  {
+    "@id": "_:b9e892082a9327322",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bad8f248f4d203942",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:baecf4d4300b39516",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:bc661874a01d7ae0f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/numericValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "_:be1b8df21ee656d49",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bee053dac94d643b7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bf4fdfe356d7ce7d9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:bf7d1c6fd241f12c9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:baecf4d4300b39516"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Content",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Event",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GeoPoint",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/GeoRegion",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/IntellectualProperty",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Intention",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Language",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Magnitude",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:b4ccebf50d2cc4f58"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Organization",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/SchemaMetaData",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/Template",
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:bf7d1c6fd241f12c9"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: A standard amount used to measure or specify things."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: An acre is a unit for measuring area."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Unit of Measure"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "A standard amount used to measure or specify things."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "An acre is a unit for measuring area."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Unit of Measure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/conversionFactor",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/conversionOffset",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfAmpere",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b40bc5396184d9fb1"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfBit",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b0f59ae5b1e8784a0"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfCandela",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b08759d885fe93280"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfKelvin",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b3bb3ee1b49eea327"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfKilogram",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b16861dd9e2d7869a"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfMeter",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b298c1caf1a4f5380"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfMole",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:bf4fdfe356d7ce7d9"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfNumber",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:bee053dac94d643b7"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfOther",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b482663fdc6d31753"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfRadian",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b4880407a3913c407"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSecond",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:bad8f248f4d203942"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfSteradian",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:b9e892082a9327322"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfUSDollar",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:be1b8df21ee656d49"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/hasUnitOfMeasure",
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/symbol",
+    "https://w3id.org/semanticarts/ns/ontology/gist/domainIncludes": [
+      {
+        "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+      }
+    ]
+  }
+]

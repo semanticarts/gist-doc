@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:actualStartDate a owl:DatatypeProperty ;
+    rdfs:label "actual start date"^^xsd:string ;
+    rdfs:comment "DEFINITION: The actual date that something started, with precision of one day."^^xsd:string,
+        "EXAMPLE: '2021-06-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string,
+        "NOTE: Used for things where the precision of a date is sufficient, such as most projects, tasks, and the like. Recommended usage is to zero out the hours through microseconds to avoid spurious precision."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf gist:actualStartDateTime ;
+    skos:definition "The actual date that something started, with precision of one day."^^xsd:string ;
+    skos:example "'2021-06-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string ;
+    skos:prefLabel "actual start date"^^xsd:string ;
+    skos:scopeNote "Used for things where the precision of a date is sufficient, such as most projects, tasks, and the like. Recommended usage is to zero out the hours through microseconds to avoid spurious precision."^^xsd:string .
+

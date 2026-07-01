@@ -1,0 +1,30 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:FormattedContent owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:isExpressedIn ;
+                        owl:someValuesFrom gist:MediaType ] ) ] .
+
+gist:uniqueText gist:domainIncludes gist:MediaType .
+
+gist:MediaType a owl:Class ;
+    rdfs:label "Media Type"^^xsd:string ;
+    rdfs:comment "DEFINITION: A digitized type that computer applications can recognize."^^xsd:string,
+        "EXAMPLE: application/sparql-results+xml"^^xsd:string,
+        "NOTE: The unique text for an IANA media type is the concatenation of the 'Type name', a slash '/', and the 'Subtype name' as provided on the page displayed when you resolve the URI of the media type."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:seeAlso <https://www.iana.org/assignments/media-types/media-types.xhtml> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:uniqueText ;
+            owl:someValuesFrom xsd:string ],
+        gist:Category ;
+    skos:definition "A digitized type that computer applications can recognize."^^xsd:string ;
+    skos:example "application/sparql-results+xml"^^xsd:string ;
+    skos:prefLabel "Media Type"^^xsd:string ;
+    skos:scopeNote "The unique text for an IANA media type is the concatenation of the 'Type name', a slash '/', and the 'Subtype name' as provided on the page displayed when you resolve the URI of the media type."^^xsd:string .
+

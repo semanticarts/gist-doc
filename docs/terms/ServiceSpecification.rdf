@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/ServiceSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A description of something that can be done for a person or organization (which produces some form of an act).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service Specification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem" />
+    <owl:equivalentClass rdf:nodeID="b25fd69fe3c6e5cc4" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A description of something that can be done for a person or organization (which produces some form of an act).</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service Specification</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b25fd69fe3c6e5cc4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="ba091809bb8f125fb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4671858bcc8351a1">
+    <rdf:first rdf:nodeID="b8e3b713fa0d4a3dc" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8e3b713fa0d4a3dc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bd2732b70d6064ec7" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Event" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba091809bb8f125fb">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/CatalogItem" />
+    <rdf:rest rdf:nodeID="b4671858bcc8351a1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bd2732b70d6064ec7">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isBasedOn" />
+  </rdf:Description>
+</rdf:RDF>

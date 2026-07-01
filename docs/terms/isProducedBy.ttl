@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:isProducedBy a owl:ObjectProperty ;
+    rdfs:label "is produced by"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to the thing that created, composed, or brought it into existence."^^xsd:string,
+        "EXAMPLE: A deliverable is produces by a task."^^xsd:string,
+        "EXAMPLE: A measurement is produced by a sensor."^^xsd:string,
+        "EXAMPLE: A painting is produced by a person."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates something to the thing that created, composed, or brought it into existence."^^xsd:string ;
+    skos:example "A deliverable is produces by a task."^^xsd:string,
+        "A measurement is produced by a sensor."^^xsd:string,
+        "A painting is produced by a person."^^xsd:string ;
+    skos:prefLabel "is produced by"^^xsd:string .
+

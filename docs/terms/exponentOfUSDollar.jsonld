@@ -1,0 +1,85 @@
+[
+  {
+    "@id": "_:be1b8df21ee656d49",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup"
+          },
+          {
+            "@id": "https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/semanticarts/ns/ontology/gist/exponentOfUSDollar",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "DEFINITION: The exponent of US Dollar in a product of powers of base units."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "EXAMPLE: In the equation '1 million dollars per week = 1.65344 x dollar per second'\r\n\r\n\t\tthe conversion factor for million dollars per week is 1.65344\r\n\t\tthe exponent of US Dollar is 1\r\n\t\tthe exponent of second is -1\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing million dollars per week must be a multiple of dollar per second."
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "NOTE: The factors for converting from one currency to another change constantly."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:be1b8df21ee656d49"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/semanticarts/ontology/gistCore14.1.0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "exponent of US dollar"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The exponent of US Dollar in a product of powers of base units."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "In the equation '1 million dollars per week = 1.65344 x dollar per second'\r\n\r\n\t\tthe conversion factor for million dollars per week is 1.65344\r\n\t\tthe exponent of US Dollar is 1\r\n\t\tthe exponent of second is -1\r\n\t\tall other exponents are zero\r\n\r\n\t\tEvery member of a unit group containing million dollars per week must be a multiple of dollar per second."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "exponent of US dollar"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The factors for converting from one currency to another change constantly."
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:exponentOfRadian a owl:DatatypeProperty ;
+    rdfs:label "exponent of radian"^^xsd:string ;
+    rdfs:comment "DEFINITION: The exponent of radian in a product of powers of base units."^^xsd:string,
+        """EXAMPLE: In the equation '1 revolution = 6.283 x radian'\r
+\r
+		the conversion factor for revolution is 6.283\r
+		the exponent of radian is 1\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing revolution must be a multiple of radian."""^^xsd:string ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:decimal ;
+    skos:definition "The exponent of radian in a product of powers of base units."^^xsd:string ;
+    skos:example """In the equation '1 revolution = 6.283 x radian'\r
+\r
+		the conversion factor for revolution is 6.283\r
+		the exponent of radian is 1\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing revolution must be a multiple of radian."""^^xsd:string ;
+    skos:prefLabel "exponent of radian"^^xsd:string .
+

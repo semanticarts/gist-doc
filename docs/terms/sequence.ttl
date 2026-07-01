@@ -1,0 +1,32 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:sequence a owl:DatatypeProperty ;
+    rdfs:label "sequence"^^xsd:string ;
+    rdfs:comment "DEFINITION: A number that specifies the position of an element within a series."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:integer ;
+    skos:definition "A number that specifies the position of an element within a series."^^xsd:string ;
+    skos:prefLabel "sequence"^^xsd:string ;
+    gist:domainIncludes gist:OrderedMember .
+
+gist:OrderedMember owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Component [ a owl:Class ;
+                        owl:unionOf ( [ a owl:Restriction ;
+                                    owl:onProperty gist:precedesDirectly ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gist:precedesDirectly ] ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:onProperty gist:sequence ;
+                                    owl:someValuesFrom xsd:integer ] ) ] [ a owl:Restriction ;
+                        owl:onProperty gist:providesOrderFor ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:allValuesFrom gist:OrderedCollection ;
+                        owl:onProperty gist:isMemberOf ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:isMemberOf ] ) ] .
+

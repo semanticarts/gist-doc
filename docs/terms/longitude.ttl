@@ -1,0 +1,28 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:GeoPoint owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty gist:hasMagnitude ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:hasValue gistd:_Aspect_altitude ;
+                                owl:onProperty gist:hasAspect ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:latitude ;
+                        owl:someValuesFrom xsd:double ] [ a owl:Restriction ;
+                        owl:onProperty gist:longitude ;
+                        owl:someValuesFrom xsd:double ] ) ] .
+
+gist:longitude a owl:DatatypeProperty ;
+    rdfs:label "longitude"^^xsd:string ;
+    rdfs:comment "DEFINITION: Degrees from the prime meridian."^^xsd:string ;
+    rdfs:domain gist:GeoPoint ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:double ;
+    skos:definition "Degrees from the prime meridian."^^xsd:string ;
+    skos:prefLabel "longitude"^^xsd:string .
+

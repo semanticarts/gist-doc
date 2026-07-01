@@ -1,0 +1,22 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:precedesDirectly rdfs:subPropertyOf gist:precedes .
+
+gist:precedes a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "precedes"^^xsd:string ;
+    rdfs:comment "DEFINITION: A generic ordering relation indicating that the subject comes before the object."^^xsd:string,
+        "NOTE: The less-than symbol is often used to represent this relation."^^xsd:string,
+        "NOTE: This is the transitive version of gist:precedesDirectly."^^xsd:string,
+        "NOTE: Typically this predicate would be used asymmetrically and irreflexively, but the ontology does not formalize this."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "A generic ordering relation indicating that the subject comes before the object."^^xsd:string ;
+    skos:prefLabel "precedes"^^xsd:string ;
+    skos:scopeNote "The less-than symbol is often used to represent this relation."^^xsd:string,
+        "This is the transitive version of gist:precedesDirectly."^^xsd:string,
+        "Typically this predicate would be used asymmetrically and irreflexively, but the ontology does not formalize this."^^xsd:string .
+

@@ -1,0 +1,19 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:deathDate a owl:DatatypeProperty ;
+    rdfs:label "death date"^^xsd:string ;
+    rdfs:comment "DEFINITION: The date some living thing died."^^xsd:string,
+        "EXAMPLE: '2021-06-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string,
+        "NOTE: Refers to a calendar date and is assumed to have precision of one day (time zone offset is allowed). Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Implementations requiring a death date to the minute can define a subproperty."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf gist:actualEndDate ;
+    skos:definition "The date some living thing died."^^xsd:string ;
+    skos:example "'2021-06-01T00:00:00-06:00'^^xsd:dateTime"^^xsd:string ;
+    skos:prefLabel "death date"^^xsd:string ;
+    skos:scopeNote "Refers to a calendar date and is assumed to have precision of one day (time zone offset is allowed). Recommended usage is to zero out the hours through microseconds to avoid spurious precision. Implementations requiring a death date to the minute can define a subproperty."^^xsd:string .
+

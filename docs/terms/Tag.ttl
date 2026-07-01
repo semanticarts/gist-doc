@@ -1,0 +1,23 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:uniqueText gist:domainIncludes gist:Tag .
+
+gist:containedText gist:domainIncludes gist:Tag .
+
+gist:Tag a owl:Class ;
+    rdfs:label "Tag"^^xsd:string ;
+    rdfs:comment "DEFINITION: A term in a folksonomy used to categorize things. Tags can be made up on the fly by users."^^xsd:string,
+        "NOTE: Whether to use gist:containedText or gist:uniqueText on tags is an implementation decision. Since the latter is a subproperty of the former, the restriction remains valid either way."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:containedText ;
+            owl:someValuesFrom xsd:string ],
+        gist:Category ;
+    skos:definition "A term in a folksonomy used to categorize things. Tags can be made up on the fly by users."^^xsd:string ;
+    skos:prefLabel "Tag"^^xsd:string ;
+    skos:scopeNote "Whether to use gist:containedText or gist:uniqueText on tags is an implementation decision. Since the latter is a subproperty of the former, the restriction remains valid either way."^^xsd:string .
+

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/exponentOfKelvin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: The exponent of Kelvin in a product of powers of base units.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: In the equation 'y degrees Fahrenheit = (y + 459.6669607) x 5/9 degrees Kelvin'&#13;
+&#13;
+		the conversion offset for degree Fahrenheit is 459.6669607&#13;
+		the conversion factor for degree Fahrenheit is 5/9&#13;
+		the exponent of Kelvin is 1&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing degree Fahrenheit will have a similar equation, with different offset or conversion factor (or both).</rdfs:comment>
+    <rdfs:domain rdf:nodeID="b3bb3ee1b49eea327" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of Kelvin</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The exponent of Kelvin in a product of powers of base units.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the equation 'y degrees Fahrenheit = (y + 459.6669607) x 5/9 degrees Kelvin'&#13;
+&#13;
+		the conversion offset for degree Fahrenheit is 459.6669607&#13;
+		the conversion factor for degree Fahrenheit is 5/9&#13;
+		the exponent of Kelvin is 1&#13;
+		all other exponents are zero&#13;
+&#13;
+		Every member of a unit group containing degree Fahrenheit will have a similar equation, with different offset or conversion factor (or both).</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exponent of Kelvin</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3bb3ee1b49eea327">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b44cdf2d083a02181" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b44cdf2d083a02181">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitGroup" />
+    <rdf:rest rdf:nodeID="bfbf649916b8042cd" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bfbf649916b8042cd">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/UnitOfMeasure" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

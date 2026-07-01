@@ -1,0 +1,52 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Event owl:disjointWith gist:Magnitude .
+
+gist:GeoPoint owl:disjointWith gist:Magnitude .
+
+gist:GeoRegion owl:disjointWith gist:Magnitude .
+
+gist:IntellectualProperty owl:disjointWith gist:Magnitude .
+
+gist:Intention owl:disjointWith gist:Magnitude .
+
+gist:Language owl:disjointWith gist:Magnitude .
+
+gist:ReferenceValue rdfs:subClassOf gist:Magnitude .
+
+gist:hasMagnitude rdfs:range gist:Magnitude .
+
+gist:hasAccuracy rdfs:range gist:Magnitude ;
+    gist:domainIncludes gist:Magnitude .
+
+gist:hasUnitOfMeasure rdfs:domain gist:Magnitude .
+
+gist:Magnitude a owl:Class ;
+    rdfs:label "Magnitude"^^xsd:string ;
+    rdfs:comment "DEFINITION: The amount of a measurable characteristic (aspect)."^^xsd:string,
+        "EXAMPLE: A model of car could have a wheelbase of 113.2 inches. In this example, the aspect is wheelbase, the unit of measure is inch, and the numeric value is 113.2."^^xsd:string,
+        "NOTE: An accuracy can be assigned to a magnitude using the property has accuracy."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:seeAlso gist:hasAccuracy ;
+    owl:disjointWith gist:Organization,
+        gist:PhysicalIdentifiableItem,
+        gist:PhysicalSubstance,
+        gist:UnitOfMeasure ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty gist:hasAspect ;
+                        owl:someValuesFrom gist:Aspect ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasUnitOfMeasure ;
+                        owl:someValuesFrom gist:UnitOfMeasure ] [ a owl:Restriction ;
+                        owl:onProperty gist:numericValue ;
+                        owl:someValuesFrom rdfs:Literal ] ) ] ;
+    skos:definition "The amount of a measurable characteristic (aspect)."^^xsd:string ;
+    skos:example "A model of car could have a wheelbase of 113.2 inches. In this example, the aspect is wheelbase, the unit of measure is inch, and the numeric value is 113.2."^^xsd:string ;
+    skos:prefLabel "Magnitude"^^xsd:string ;
+    skos:scopeNote "An accuracy can be assigned to a magnitude using the property has accuracy."^^xsd:string .
+

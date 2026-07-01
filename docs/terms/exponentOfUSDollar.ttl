@@ -1,0 +1,35 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:exponentOfUSDollar a owl:DatatypeProperty ;
+    rdfs:label "exponent of US dollar"^^xsd:string ;
+    rdfs:comment "DEFINITION: The exponent of US Dollar in a product of powers of base units."^^xsd:string,
+        """EXAMPLE: In the equation '1 million dollars per week = 1.65344 x dollar per second'\r
+\r
+		the conversion factor for million dollars per week is 1.65344\r
+		the exponent of US Dollar is 1\r
+		the exponent of second is -1\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing million dollars per week must be a multiple of dollar per second."""^^xsd:string,
+        "NOTE: The factors for converting from one currency to another change constantly."^^xsd:string ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:decimal ;
+    skos:definition "The exponent of US Dollar in a product of powers of base units."^^xsd:string ;
+    skos:example """In the equation '1 million dollars per week = 1.65344 x dollar per second'\r
+\r
+		the conversion factor for million dollars per week is 1.65344\r
+		the exponent of US Dollar is 1\r
+		the exponent of second is -1\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing million dollars per week must be a multiple of dollar per second."""^^xsd:string ;
+    skos:prefLabel "exponent of US dollar"^^xsd:string ;
+    skos:scopeNote "The factors for converting from one currency to another change constantly."^^xsd:string .
+

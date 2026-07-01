@@ -1,0 +1,57 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:ControlledVocabulary owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Collection [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ;
+                        owl:someValuesFrom gist:Category ] ) ] .
+
+gist:SubCountryGovernment owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernmentOrganization [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:CountryGovernment ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isGovernedBy ] ;
+                        owl:someValuesFrom gist:GeoRegion ] ) ] .
+
+gist:GovernedGeoRegion owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GeoRegion [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:GovernmentOrganization ] ) ] .
+
+gist:CountryGeoRegion rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gist:isGovernedBy ] ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernedGeoRegion [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:CountryGovernment ] ) ] .
+
+gist:CountryGovernment rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onClass gist:GovernmentOrganization ;
+            owl:onProperty gist:isGovernedBy ],
+        [ a owl:Restriction ;
+            owl:onClass gist:CountryGeoRegion ;
+            owl:onProperty [ owl:inverseOf gist:isGovernedBy ] ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernmentOrganization [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isGovernedBy ] ;
+                        owl:someValuesFrom gist:CountryGeoRegion ] ) ] .
+
+gist:isGovernedBy a owl:ObjectProperty ;
+    rdfs:label "is governed by"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates an entity to another entity that controls, directs, determines or has a guiding influence or authority over it."^^xsd:string,
+        "EXAMPLE: A country geographic region is governed by a country government; the installation and use of software is governed by a license."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates an entity to another entity that controls, directs, determines or has a guiding influence or authority over it."^^xsd:string ;
+    skos:example "A country geographic region is governed by a country government; the installation and use of software is governed by a license."^^xsd:string ;
+    skos:prefLabel "is governed by"^^xsd:string .
+

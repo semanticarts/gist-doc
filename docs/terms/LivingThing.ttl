@@ -1,0 +1,36 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Person rdfs:subClassOf gist:LivingThing ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:LivingThing [ a owl:Restriction ;
+                        owl:onProperty gist:hasBiologicalParent ;
+                        owl:someValuesFrom gist:Person ] ) ] .
+
+gist:hasBiologicalParent rdfs:domain gist:LivingThing ;
+    rdfs:range gist:LivingThing .
+
+gist:LivingThing a owl:Class ;
+    rdfs:label "Living Thing"^^xsd:string ;
+    rdfs:comment "DEFINITION: Something that is currently, or at some point in time was, alive."^^xsd:string,
+        "EXAMPLE: A cat, a mushroom, a tree."^^xsd:string,
+        "EXAMPLE: Negative examples: fictional life forms such as unicorns or Mickey Mouse."^^xsd:string,
+        "NOTE: Not all life forms have exactly two parents, so the restriction only specifies a minimum of one."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:PhysicalIdentifiableItem ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:PhysicalIdentifiableItem [ a owl:Restriction ;
+                        owl:onProperty gist:hasBiologicalParent ;
+                        owl:someValuesFrom gist:LivingThing ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty gist:birthDate ] ) ] ;
+    skos:definition "Something that is currently, or at some point in time was, alive."^^xsd:string ;
+    skos:example "A cat, a mushroom, a tree."^^xsd:string,
+        "Negative examples: fictional life forms such as unicorns or Mickey Mouse."^^xsd:string ;
+    skos:prefLabel "Living Thing"^^xsd:string ;
+    skos:scopeNote "Not all life forms have exactly two parents, so the restriction only specifies a minimum of one."^^xsd:string .
+

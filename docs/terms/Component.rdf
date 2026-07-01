@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Component">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Something that, while having an independent existence, is inherently part of or designed to be part of a larger entity, such as a system or network.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: A component may be designed or intended as part of a whole without actually being so; e.g., a car steering wheel that is not installed in any car.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Many things are in a trivial sense a part of a larger thing, but are not considered components because they are not inherently part of that larger thing. For example, while a book may be part of a library (a collection of books), it is not inherently so, and thus is not a component. A playing card, on the other hand, could be considered a component in (member of) a deck of cards. This may be use case-dependent; e.g., car parts might be modeled as components in an automobile manufacturing context but not in a retail auto parts store.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Physical substances, such as ingredients in a cake batter, do not meet the independent existence criterion, so are not components.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This class is not disjoint with gist:Composite, because a component may itself break down into smaller components.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This is an abstract class that is not directly instantiated. Users will define subclasses that are meaningful to their domain of interest.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Component</rdfs:label>
+    <owl:disjointWith rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalSubstance" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Something that, while having an independent existence, is inherently part of or designed to be part of a larger entity, such as a system or network.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Component</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A component may be designed or intended as part of a whole without actually being so; e.g., a car steering wheel that is not installed in any car.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Many things are in a trivial sense a part of a larger thing, but are not considered components because they are not inherently part of that larger thing. For example, while a book may be part of a library (a collection of books), it is not inherently so, and thus is not a component. A playing card, on the other hand, could be considered a component in (member of) a deck of cards. This may be use case-dependent; e.g., car parts might be modeled as components in an automobile manufacturing context but not in a retail auto parts store.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical substances, such as ingredients in a cake batter, do not meet the independent existence criterion, so are not components.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class is not disjoint with gist:Composite, because a component may itself break down into smaller components.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is an abstract class that is not directly instantiated. Users will define subclasses that are meaningful to their domain of interest.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/NetworkLink">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <owl:equivalentClass rdf:nodeID="b59650526cc8a09be" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <owl:equivalentClass rdf:nodeID="bbfa4b622a9d889bf" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/System">
+    <owl:equivalentClass rdf:nodeID="b37a8519f2b5c6387" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b060ef8522e2a8ebb">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <rdf:rest rdf:nodeID="b9a443468ffae78b4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b21a280538899cdab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bee27628b211b8481" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b326531ee090233e0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bbf56f3283a1b3715" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3736498fcd1283ea">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b37a8519f2b5c6387">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b060ef8522e2a8ebb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b40155130bf9610fc">
+    <rdf:first rdf:nodeID="b65670e9134603c79" />
+    <rdf:rest rdf:nodeID="b4adb52eb3d29a114" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b43490954f237428b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b471417ba735bdb90">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4adb52eb3d29a114">
+    <rdf:first rdf:nodeID="b471417ba735bdb90" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b532f9c58f2035cc4">
+    <rdf:first rdf:nodeID="b8676b0a23c218223" />
+    <rdf:rest rdf:nodeID="b96534aed2bb6eebb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b59650526cc8a09be">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="baa50c2156b4b2b6e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5c41b4349edf80f0">
+    <rdf:first rdf:nodeID="b21a280538899cdab" />
+    <rdf:rest rdf:nodeID="bfda58b6d0ab77984" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b65670e9134603c79">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8676b0a23c218223">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Network" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b96534aed2bb6eebb">
+    <rdf:first rdf:nodeID="bb53438dc4884d2e8" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9708e6d4c760f115">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/sequence" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9a443468ffae78b4">
+    <rdf:first rdf:nodeID="ba182ea0ddd58674a" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba182ea0ddd58674a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="b3736498fcd1283ea" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="baa50c2156b4b2b6e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <rdf:rest rdf:nodeID="b532f9c58f2035cc4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="babd9fc593b53cdd8">
+    <rdf:first rdf:nodeID="bc297dc93cb807fd4" />
+    <rdf:rest rdf:nodeID="b40155130bf9610fc" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb53438dc4884d2e8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/links" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbf56f3283a1b3715">
+    <rdf:first rdf:nodeID="b43490954f237428b" />
+    <rdf:rest rdf:nodeID="b5c41b4349edf80f0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbfa4b622a9d889bf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bc919f9a9892e8b7e" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc297dc93cb807fd4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/providesOrderFor" />
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc919f9a9892e8b7e">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+    <rdf:rest rdf:nodeID="bda4093276de08813" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bda4093276de08813">
+    <rdf:first rdf:nodeID="b326531ee090233e0" />
+    <rdf:rest rdf:nodeID="babd9fc593b53cdd8" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bee27628b211b8481">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/precedesDirectly" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bfda58b6d0ab77984">
+    <rdf:first rdf:nodeID="b9708e6d4c760f115" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+</rdf:RDF>

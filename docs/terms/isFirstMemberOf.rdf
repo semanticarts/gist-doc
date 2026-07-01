@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection">
+    <owl:equivalentClass rdf:nodeID="bdfbca4925c6b2dba" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/isFirstMemberOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates the first member of an ordered collection to the collection.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Given the Open World Assumption, the absence of a predecessor does not entail that an ordered member is the first member of an ordered collection. This property is used to explicitly indicate the first member. Since ordered collections need not be strictly ordered, there can be more than one first member.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is first member of</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedCollection" />
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates the first member of an ordered collection to the collection.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is first member of</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Given the Open World Assumption, the absence of a predecessor does not entail that an ordered member is the first member of an ordered collection. This property is used to explicitly indicate the first member. Since ordered collections need not be strictly ordered, there can be more than one first member.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b025ddfacc571f5ea">
+    <rdf:first rdf:nodeID="b6cb15c50905a4558" />
+    <rdf:rest rdf:nodeID="b847afb2749620a0d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0bc7531ca75169a0">
+    <rdf:first rdf:nodeID="bab33998947813e77" />
+    <rdf:rest rdf:nodeID="b1d950877e4ae6b74" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b0ee1dfc1060dc5f3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+    <owl:onProperty rdf:nodeID="b12eb1c9508503ec4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b12eb1c9508503ec4">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1d950877e4ae6b74">
+    <rdf:first rdf:nodeID="b5efd9d0a06aefdc6" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b4e36de3b7133758d">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b5efd9d0a06aefdc6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+    <owl:onProperty rdf:nodeID="b4e36de3b7133758d" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6cb15c50905a4558">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bbcc995f63c17c239" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/OrderedMember" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b847afb2749620a0d">
+    <rdf:first rdf:nodeID="b0ee1dfc1060dc5f3" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bab33998947813e77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="b025ddfacc571f5ea" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bac1fc2f26ef68446">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Collection" />
+    <rdf:rest rdf:nodeID="b0bc7531ca75169a0" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bbcc995f63c17c239">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isFirstMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bdfbca4925c6b2dba">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bac1fc2f26ef68446" />
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,38 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Agreement owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:hasParty ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:Commitment ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ] ) ] .
+
+gist:BundledCatalogItem owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:CatalogItem [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ;
+                        owl:someValuesFrom gist:CatalogItem ] ) ] .
+
+gist:System owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Composite [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ;
+                        owl:someValuesFrom gist:Component ] ) ] .
+
+gist:isDirectPartOf a owl:ObjectProperty ;
+    rdfs:label "is direct part of"^^xsd:string ;
+    rdfs:comment "DEFINITION: The relationship between a part and a whole where the part has independent existence and there are no other parts in between."^^xsd:string,
+        "NOTE: Because the part has independent existence, there is no cascading delete."^^xsd:string,
+        "NOTE: It is safest to use this property when semantic directness is inherent in the relationship, rather than simply expressing a chosen granularity. For example, a spark plug is a direct part of an engine block; there cannot be any intermediate parts. Otherwise, there is a risk of making an isDirectPartOf assertion and then later inserting an intermediate part; this will result in making an asserted triple false even though there was no change in the world. When in doubt, use the transitive version gist:isPartOf."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subPropertyOf gist:isPartOf ;
+    skos:definition "The relationship between a part and a whole where the part has independent existence and there are no other parts in between."^^xsd:string ;
+    skos:prefLabel "is direct part of"^^xsd:string ;
+    skos:scopeNote "Because the part has independent existence, there is no cascading delete."^^xsd:string,
+        "It is safest to use this property when semantic directness is inherent in the relationship, rather than simply expressing a chosen granularity. For example, a spark plug is a direct part of an engine block; there cannot be any intermediate parts. Otherwise, there is a risk of making an isDirectPartOf assertion and then later inserting an intermediate part; this will result in making an asserted triple false even though there was no change in the world. When in doubt, use the transitive version gist:isPartOf."^^xsd:string .
+

@@ -1,0 +1,35 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:exponentOfSecond a owl:DatatypeProperty ;
+    rdfs:label "exponent of second"^^xsd:string ;
+    rdfs:comment "DEFINITION: The exponent of second in a product of powers of base units."^^xsd:string,
+        """EXAMPLE: In the equation '1 watt-hour = 3600 x kilogram meterSquared per secondSquared'\r
+\r
+		the conversion factor for watt-hour is 3600\r
+		the exponent of kilogram is 1\r
+		the exponent of meter is 2\r
+		the exponent of second is -2\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing watt-hour must be a multiple of kilogram meterSquared per secondSquared."""^^xsd:string ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( gist:UnitGroup gist:UnitOfMeasure ) ] ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range xsd:decimal ;
+    skos:definition "The exponent of second in a product of powers of base units."^^xsd:string ;
+    skos:example """In the equation '1 watt-hour = 3600 x kilogram meterSquared per secondSquared'\r
+\r
+		the conversion factor for watt-hour is 3600\r
+		the exponent of kilogram is 1\r
+		the exponent of meter is 2\r
+		the exponent of second is -2\r
+		all other exponents are zero\r
+\r
+		Every member of a unit group containing watt-hour must be a multiple of kilogram meterSquared per secondSquared."""^^xsd:string ;
+    skos:prefLabel "exponent of second"^^xsd:string .
+

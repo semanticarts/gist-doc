@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Collection">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Composite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Something which is made up of various parts or elements that are independently identifiable.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A library (collection of books); a network of pipes and valves; a computer network of routers and computers.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: Some composites, like systems, networks, and ordered collections, have internal organization, while others, such as unordered collections, typically do not.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This class is not disjoint with gist:Component, because a composite can itself be a component of a larger composite.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: This is an abstract class that will not be directly instantiated.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Composite</rdfs:label>
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Something which is made up of various parts or elements that are independently identifiable.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A library (collection of books); a network of pipes and valves; a computer network of routers and computers.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Composite</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Some composites, like systems, networks, and ordered collections, have internal organization, while others, such as unordered collections, typically do not.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class is not disjoint with gist:Component, because a composite can itself be a component of a larger composite.</skos:scopeNote>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is an abstract class that will not be directly instantiated.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Network">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <owl:equivalentClass rdf:nodeID="b6b80ca8add28e254" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/System">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <owl:equivalentClass rdf:nodeID="b37a8519f2b5c6387" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b047ad06f96317ed4">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkNode" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b05db39374d52bcab">
+    <rdf:first rdf:nodeID="b7c214c046e890f5b" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b060ef8522e2a8ebb">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <rdf:rest rdf:nodeID="b9a443468ffae78b4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2a39fd0c8c6789fe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="bc130ccc86abf42ec" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3736498fcd1283ea">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b37a8519f2b5c6387">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b060ef8522e2a8ebb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b6b80ca8add28e254">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="bedd9905d308d5a17" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7c214c046e890f5b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="bb6d39ac28ee4d353" />
+    <owl:someValuesFrom rdf:nodeID="b2a39fd0c8c6789fe" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9a443468ffae78b4">
+    <rdf:first rdf:nodeID="ba182ea0ddd58674a" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba182ea0ddd58674a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="b3736498fcd1283ea" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb6d39ac28ee4d353">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isMemberOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc130ccc86abf42ec">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/NetworkLink" />
+    <rdf:rest rdf:nodeID="b047ad06f96317ed4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bedd9905d308d5a17">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <rdf:rest rdf:nodeID="b05db39374d52bcab" />
+  </rdf:Description>
+</rdf:RDF>

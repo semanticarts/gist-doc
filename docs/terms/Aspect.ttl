@@ -1,0 +1,51 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix gistd: <https://w3id.org/semanticarts/ns/data/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gistd:_Aspect_altitude a gist:Aspect .
+
+gistd:_Aspect_area a gist:Aspect .
+
+gistd:_Aspect_duration a gist:Aspect .
+
+gistd:_Aspect_financial_balance a gist:Aspect .
+
+gistd:_Aspect_mass a gist:Aspect .
+
+gistd:_Aspect_monetary_value a gist:Aspect .
+
+gistd:_Aspect_probability a gist:Aspect .
+
+gistd:_Aspect_volume a gist:Aspect .
+
+gist:Magnitude owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty gist:hasAspect ;
+                        owl:someValuesFrom gist:Aspect ] [ a owl:Restriction ;
+                        owl:onProperty gist:hasUnitOfMeasure ;
+                        owl:someValuesFrom gist:UnitOfMeasure ] [ a owl:Restriction ;
+                        owl:onProperty gist:numericValue ;
+                        owl:someValuesFrom rdfs:Literal ] ) ] .
+
+gist:hasUnitGroup rdfs:domain gist:Aspect .
+
+gist:hasAspect rdfs:range gist:Aspect .
+
+gist:Aspect a owl:Class ;
+    rdfs:label "Aspect"^^xsd:string ;
+    rdfs:comment "DEFINITION: A measurable characteristic."^^xsd:string,
+        "EXAMPLE: Length, weight, cost, cycle time, defect rate, wheelbase, billing rate."^^xsd:string,
+        "NOTE: Depending on implementation, every aspect should be related to a unit group either directly or through a broader aspect. For example, angle of incidence could be related to the broader concept of angle, which in turn is related to a unit group, or it could be related directly to the unit group without the hierarchical relationship."^^xsd:string,
+        "NOTE: Rule of thumb: use the least specific aspect that serves the intended purpose, increasing specificity only when required (e.g., to distinguish between two magnitudes attached to the same object)."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    owl:disjointWith gist:Event ;
+    skos:definition "A measurable characteristic."^^xsd:string ;
+    skos:example "Length, weight, cost, cycle time, defect rate, wheelbase, billing rate."^^xsd:string ;
+    skos:prefLabel "Aspect"^^xsd:string ;
+    skos:scopeNote "Depending on implementation, every aspect should be related to a unit group either directly or through a broader aspect. For example, angle of incidence could be related to the broader concept of angle, which in turn is related to a unit group, or it could be related directly to the unit group without the hierarchical relationship."^^xsd:string,
+        "Rule of thumb: use the least specific aspect that serves the intended purpose, increasing specificity only when required (e.g., to distinguish between two magnitudes attached to the same object)."^^xsd:string .
+

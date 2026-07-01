@@ -1,0 +1,30 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Agreement owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:hasParty ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass gist:Commitment ;
+                        owl:onProperty [ owl:inverseOf gist:isDirectPartOf ] ] ) ] .
+
+gist:hasParty a owl:ObjectProperty ;
+    rdfs:label "has party"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates an event, agreement, or obligation to a participating person or organization."^^xsd:string,
+        "EXAMPLE: Loan agreements have lender and borrower parties."^^xsd:string,
+        "NOTE: Subproperties may be defined to describe specific parties, such as hasLender and hasBorrower for a loan."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] ;
+    rdfs:subPropertyOf gist:hasParticipant ;
+    skos:definition "Relates an event, agreement, or obligation to a participating person or organization."^^xsd:string ;
+    skos:example "Loan agreements have lender and borrower parties."^^xsd:string ;
+    skos:prefLabel "has party"^^xsd:string ;
+    skos:scopeNote "Subproperties may be defined to describe specific parties, such as hasLender and hasBorrower for a loan."^^xsd:string .
+

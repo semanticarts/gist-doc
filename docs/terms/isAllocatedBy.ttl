@@ -1,0 +1,35 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Category rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty gist:isAllocatedBy ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] .
+
+gist:ID owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Content [ a owl:Restriction ;
+                        owl:onProperty gist:isAllocatedBy ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ] [ a owl:Restriction ;
+                        owl:onProperty gist:uniqueText ;
+                        owl:someValuesFrom xsd:string ] ) ] .
+
+gist:isAllocatedBy a owl:ObjectProperty ;
+    rdfs:label "is allocated by"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to whomever or whatever assigns or distributes it."^^xsd:string,
+        "EXAMPLE: A U.S. Social Security number is allocated by the U.S. Social Security Administration; the media type https://www.iana.org/assignments/media-types/text/csv is allocated by the Internet Assigned Numbers Authority (IANA)."^^xsd:string,
+        "NOTE: The allocator may be a person, organization, or automated process."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:IntellectualProperty gist:Organization gist:Person ) ] ;
+    skos:definition "Relates something to whomever or whatever assigns or distributes it."^^xsd:string ;
+    skos:example "A U.S. Social Security number is allocated by the U.S. Social Security Administration; the media type https://www.iana.org/assignments/media-types/text/csv is allocated by the Internet Assigned Numbers Authority (IANA)."^^xsd:string ;
+    skos:prefLabel "is allocated by"^^xsd:string ;
+    skos:scopeNote "The allocator may be a person, organization, or automated process."^^xsd:string ;
+    gist:domainIncludes gist:Category,
+        gist:ID .
+

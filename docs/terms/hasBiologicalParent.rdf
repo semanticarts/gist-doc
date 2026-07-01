@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/LivingThing">
+    <owl:equivalentClass rdf:nodeID="bc046eafb0ad0124a" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/Person">
+    <rdfs:subClassOf rdf:nodeID="bae7fc5866f59ae21" />
+    <owl:equivalentClass rdf:nodeID="bb7e7f37dd569890d" />
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/hasBiologicalParent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: Relates a living thing to its biological parent.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/LivingThing" />
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has biological parent</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/LivingThing" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates a living thing to its biological parent.</skos:definition>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has biological parent</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b1f22ef5348d5a331">
+    <rdf:first rdf:nodeID="b8571926f3ff7a3d8" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b2740e19abc244b05">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/PhysicalIdentifiableItem" />
+    <rdf:rest rdf:nodeID="b7e8fe8fe23928758" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b49640940babe956f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasBiologicalParent" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b7e8fe8fe23928758">
+    <rdf:first rdf:nodeID="bab887d4ffbacb893" />
+    <rdf:rest rdf:nodeID="b1f22ef5348d5a331" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b8571926f3ff7a3d8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/birthDate" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bab887d4ffbacb893">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasBiologicalParent" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/LivingThing" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bae7fc5866f59ae21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:allValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Person" />
+    <owl:onProperty rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/hasBiologicalParent" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb7e7f37dd569890d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="be633b347457024c9" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bb91f38f3b50c62c4">
+    <rdf:first rdf:nodeID="b49640940babe956f" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="bc046eafb0ad0124a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b2740e19abc244b05" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="be633b347457024c9">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/LivingThing" />
+    <rdf:rest rdf:nodeID="bb91f38f3b50c62c4" />
+  </rdf:Description>
+</rdf:RDF>

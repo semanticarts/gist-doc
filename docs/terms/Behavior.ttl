@@ -1,0 +1,31 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:Permission owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:allows ;
+                        owl:someValuesFrom gist:Behavior ] ) ] .
+
+gist:Restriction owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Intention [ a owl:Restriction ;
+                        owl:onProperty gist:prevents ;
+                        owl:someValuesFrom gist:Behavior ] ) ] .
+
+gist:prohibits rdfs:range gist:Behavior .
+
+gist:prevents rdfs:range gist:Behavior .
+
+gist:Behavior a owl:Class ;
+    rdfs:label "Behavior"^^xsd:string ;
+    rdfs:comment "DEFINITION: A category indicating the nature of an activity."^^xsd:string,
+        "EXAMPLE: Drilling and cutting are two different kinds of manufacturing event."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:Category ;
+    skos:definition "A category indicating the nature of an activity."^^xsd:string ;
+    skos:example "Drilling and cutting are two different kinds of manufacturing event."^^xsd:string ;
+    skos:prefLabel "Behavior"^^xsd:string .
+

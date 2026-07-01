@@ -1,0 +1,29 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:CountryGovernment owl:disjointWith gist:SubCountryGovernment .
+
+gist:SubCountryGovernment a owl:Class ;
+    rdfs:label "Sub-Country Government"^^xsd:string ;
+    rdfs:comment "DEFINITION: The government of a governed geographic region other than a country which is under the direct or indirect control of a country government."^^xsd:string,
+        "NOTE: Note that the predicate gist:isGovernedBy is used both for the relationship a governed geographic region has to its government and for the relationship a sub-region government has to the government of the larger region."^^xsd:string,
+        "NOTE: There are many types of sub-regions of a country and the governments thereof (as well as different terms, like 'province' and 'state,' which refer to essentially the same type of thing). We should not automatically assume 'state,' 'county,' and 'city.' Subclasses or categories can be defined if greater specificity is needed."^^xsd:string,
+        "NOTE: This class applies only to organizations governing geographic regions. Regulatory and bureaucratic organizations are members of the more generic gist:GovernmentOrganization class."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:GovernmentOrganization ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:GovernmentOrganization [ a owl:Restriction ;
+                        owl:onProperty gist:isGovernedBy ;
+                        owl:someValuesFrom gist:CountryGovernment ] [ a owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gist:isGovernedBy ] ;
+                        owl:someValuesFrom gist:GeoRegion ] ) ] ;
+    skos:definition "The government of a governed geographic region other than a country which is under the direct or indirect control of a country government."^^xsd:string ;
+    skos:prefLabel "Sub-Country Government"^^xsd:string ;
+    skos:scopeNote "Note that the predicate gist:isGovernedBy is used both for the relationship a governed geographic region has to its government and for the relationship a sub-region government has to the government of the larger region."^^xsd:string,
+        "There are many types of sub-regions of a country and the governments thereof (as well as different terms, like 'province' and 'state,' which refer to essentially the same type of thing). We should not automatically assume 'state,' 'county,' and 'city.' Subclasses or categories can be defined if greater specificity is needed."^^xsd:string,
+        "This class applies only to organizations governing geographic regions. Regulatory and bureaucratic organizations are members of the more generic gist:GovernmentOrganization class."^^xsd:string .
+

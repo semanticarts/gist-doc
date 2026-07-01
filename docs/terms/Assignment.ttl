@@ -1,0 +1,33 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:isAssignmentOf gist:domainIncludes gist:Assignment .
+
+gist:isAssignmentTo gist:domainIncludes gist:Assignment .
+
+gist:Assignment a owl:Class ;
+    rdfs:label "Assignment"^^xsd:string ;
+    rdfs:comment "DEFINITION: A temporal relationship between an assignee, the thing assigned, and the resource that made the assignment."^^xsd:string,
+        "EXAMPLE: An employee is assigned to a task by a supervisor. A person is assigned to a position."^^xsd:string,
+        "NOTE: Based on the Open World Assumption, the assigner may not be asserted or known."^^xsd:string,
+        "NOTE: For some assignments, such as the assignment of a person to a task, it may seem equally correct in ordinary speech to say it is an assignment of a task to a person. Since gist:isAssignmentTo and gist:isAssignmentOf have no formal domains or ranges, the choice of which predicate to use for which is left as an implementation decision. Consistency is a key consideration."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subClassOf gist:TemporalRelation ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:TemporalRelation [ a owl:Restriction ;
+                        owl:onProperty gist:hasGiver ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:isAssignmentOf ;
+                        owl:someValuesFrom owl:Thing ] [ a owl:Restriction ;
+                        owl:onProperty gist:isAssignmentTo ;
+                        owl:someValuesFrom owl:Thing ] ) ] ;
+    skos:definition "A temporal relationship between an assignee, the thing assigned, and the resource that made the assignment."^^xsd:string ;
+    skos:example "An employee is assigned to a task by a supervisor. A person is assigned to a position."^^xsd:string ;
+    skos:prefLabel "Assignment"^^xsd:string ;
+    skos:scopeNote "Based on the Open World Assumption, the assigner may not be asserted or known."^^xsd:string,
+        "For some assignments, such as the assignment of a person to a task, it may seem equally correct in ordinary speech to say it is an assignment of a task to a person. Since gist:isAssignmentTo and gist:isAssignmentOf have no formal domains or ranges, the choice of which predicate to use for which is left as an implementation decision. Consistency is a key consideration."^^xsd:string .
+

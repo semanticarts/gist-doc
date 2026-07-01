@@ -1,0 +1,28 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:FormattedContent owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:isExpressedIn ;
+                        owl:someValuesFrom gist:MediaType ] ) ] .
+
+gist:Text owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:ContentExpression [ a owl:Restriction ;
+                        owl:onProperty gist:isExpressedIn ;
+                        owl:someValuesFrom gist:Language ] [ a owl:Restriction ;
+                        owl:onProperty gist:containedText ;
+                        owl:someValuesFrom xsd:string ] ) ] .
+
+gist:isExpressedIn a owl:ObjectProperty ;
+    rdfs:label "is expressed in"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to the language it is expressed in."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates something to the language it is expressed in."^^xsd:string ;
+    skos:prefLabel "is expressed in"^^xsd:string ;
+    gist:domainIncludes gist:Text ;
+    gist:rangeIncludes gist:Language .
+

@@ -1,0 +1,30 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:OrderedCollection owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gist:Collection [ a owl:Class ;
+                        owl:unionOf ( [ a owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gist:isFirstMemberOf ] ;
+                                    owl:someValuesFrom gist:OrderedMember ] [ a owl:Restriction ;
+                                    owl:cardinality "0"^^xsd:nonNegativeInteger ;
+                                    owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) ] [ a owl:Restriction ;
+                        owl:allValuesFrom gist:OrderedMember ;
+                        owl:onProperty [ owl:inverseOf gist:isMemberOf ] ] ) ] .
+
+gist:isFirstMemberOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "is first member of"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates the first member of an ordered collection to the collection."^^xsd:string,
+        "NOTE: Given the Open World Assumption, the absence of a predecessor does not entail that an ordered member is the first member of an ordered collection. This property is used to explicitly indicate the first member. Since ordered collections need not be strictly ordered, there can be more than one first member."^^xsd:string ;
+    rdfs:domain gist:OrderedMember ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range gist:OrderedCollection ;
+    rdfs:subPropertyOf gist:isMemberOf ;
+    skos:definition "Relates the first member of an ordered collection to the collection."^^xsd:string ;
+    skos:prefLabel "is first member of"^^xsd:string ;
+    skos:scopeNote "Given the Open World Assumption, the absence of a predecessor does not entail that an ordered member is the first member of an ordered collection. This property is used to explicitly indicate the first member. Since ordered collections need not be strictly ordered, there can be more than one first member."^^xsd:string .
+

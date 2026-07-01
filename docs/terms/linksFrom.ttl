@@ -1,0 +1,16 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:linksFrom a owl:ObjectProperty ;
+    rdfs:label "links from"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a network link to its origin network node. Unlike the superproperty, this represents a directed connection."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:subPropertyOf gist:links ;
+    skos:definition "Relates a network link to its origin network node. Unlike the superproperty, this represents a directed connection."^^xsd:string ;
+    skos:prefLabel "links from"^^xsd:string ;
+    gist:domainIncludes gist:NetworkLink ;
+    gist:rangeIncludes gist:NetworkNode .
+

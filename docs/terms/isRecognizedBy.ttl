@@ -1,0 +1,18 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:isRecognizedBy a owl:ObjectProperty ;
+    rdfs:label "is recognized by"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates something to a party that formally acknowledges its existence, validity, or legality."^^xsd:string,
+        "EXAMPLE: The existence of a particular company is recognized by the state."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( gist:Organization gist:Person ) ] ;
+    skos:definition "Relates something to a party that formally acknowledges its existence, validity, or legality."^^xsd:string ;
+    skos:example "The existence of a particular company is recognized by the state."^^xsd:string ;
+    skos:prefLabel "is recognized by"^^xsd:string .
+

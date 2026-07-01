@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="https://w3id.org/semanticarts/ns/ontology/gist/System">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION: A composite made up of interacting or interdependent components that together operate as a whole.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAMPLE: A manufacturing system, a storm system.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOTE: May be used to refer to either man-made or natural systems.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/semanticarts/ontology/gistCore14.1.0" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <owl:equivalentClass rdf:nodeID="b37a8519f2b5c6387" />
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A composite made up of interacting or interdependent components that together operate as a whole.</skos:definition>
+    <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A manufacturing system, a storm system.</skos:example>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May be used to refer to either man-made or natural systems.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b060ef8522e2a8ebb">
+    <rdf:first rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Composite" />
+    <rdf:rest rdf:nodeID="b9a443468ffae78b4" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b3736498fcd1283ea">
+    <owl:inverseOf rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/isDirectPartOf" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b37a8519f2b5c6387">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:intersectionOf rdf:nodeID="b060ef8522e2a8ebb" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b9a443468ffae78b4">
+    <rdf:first rdf:nodeID="ba182ea0ddd58674a" />
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ba182ea0ddd58674a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+    <owl:onProperty rdf:nodeID="b3736498fcd1283ea" />
+    <owl:someValuesFrom rdf:resource="https://w3id.org/semanticarts/ns/ontology/gist/Component" />
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,15 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gist:isSupersededBy a owl:AnnotationProperty ;
+    rdfs:label "is superseded by"^^xsd:string ;
+    rdfs:comment "DEFINITION: Relates a deprecated term to a term that replaces it, which is either an exact (in the case of simple renaming) or approximate (in the case of renaming and some semantic change) semantic match."^^xsd:string,
+        "EXAMPLE: gist:connectedTo was superseded by gist:isConnectedTo (renaming with no semantic change)."^^xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/semanticarts/ontology/gistCore14.1.0> ;
+    skos:definition "Relates a deprecated term to a term that replaces it, which is either an exact (in the case of simple renaming) or approximate (in the case of renaming and some semantic change) semantic match."^^xsd:string ;
+    skos:example "gist:connectedTo was superseded by gist:isConnectedTo (renaming with no semantic change)."^^xsd:string ;
+    skos:prefLabel "is superseded by"^^xsd:string .
+
