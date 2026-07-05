@@ -10,10 +10,11 @@ Published at [semanticarts.github.io/gist-doc](https://semanticarts.github.io/gi
 - `tools/widoco/` — scripts for building WIDOCO documentation
 - `tools/terms/` — scripts for generating per-term RDF dereferencing files
 
-## Building Documentation
+## Building the Documentation
 
 - [tools/widoco/BUILDING.md](tools/widoco/BUILDING.md) — regenerating WIDOCO documentation for a gist release
 - [tools/terms/BUILDING.md](tools/terms/BUILDING.md) — generating per-term RDF files for IRI dereferencing
+- [tools/terms/README.md](tools/terms/README.md) — background and design notes on the per-term RDF dereferencing files
 
 ## More Information
 
