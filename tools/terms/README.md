@@ -53,7 +53,25 @@ Because gist makes extensive use of axioms, a lot of the semantics of a given te
 each named term in the target namespace writes a per-term fragment to
 `docs/terms/{LocalName}.{ttl,rdf,jsonld}`.
 
-The source modules are:
+### Source ontology files
+
+The ontology itself is not stored in this repo; the build fetches the published
+gist release modules from `w3id.org` and merges them into one graph before
+extraction (see [BUILDING.md](BUILDING.md) for the exact URLs, versioning, and
+the option to build from local files). Three modules are merged:
+
+- `gistCore` — the core ontology: class and property declarations and their axioms.
+- `gistRdfsAnnotations` — RDFS annotations (labels, comments, and other
+  human-readable metadata) for the terms.
+- `gistSubClassAssertions` — the pre-computed `rdfs:subClassOf` assertions.
+
+Because each per-term fragment is the SCBD computed against the *merged* graph,
+a term's annotations and subclass assertions are folded into its fragment even
+though they originate in separate source files.
+
+### Python scripts
+
+The Python scripts that implement the generation are:
 
 - `scbd_no_orphans.py` — core extraction function; implements the SCBD variant
   described below (SCBD with orphan blank-node fragments filtered out).

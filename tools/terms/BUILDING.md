@@ -4,12 +4,7 @@ Generates one small RDF fragment per named `gist:` term so authoritative IRIs su
 
 ## Background
 
-Each fragment is the Symmetric Concise Bounded Description (SCBD) of the term, as defined in the W3C Member Submission [*CBD - Concise Bounded Description*](https://www.w3.org/submissions/CBD/), with orphan blank-node fragments filtered out. Output is byte-stable across rebuilds via deterministic blank-node relabeling and sorted serialization.
-
-See the source modules for implementation details:
-- `scbd_no_orphans.py` — SCBD extraction with orphan filtering
-- `relabel.py` — deterministic blank-node relabeling
-- `canonicalize.py` — stable serialization for JSON-LD and RDF/XML
+Each fragment is the Symmetric Concise Bounded Description (SCBD) of the term, with orphan blank-node fragments filtered out, and is byte-stable across rebuilds. See [README.md](README.md) for the design rationale, the SCBD variant, and per-module implementation details.
 
 ## Requirements
 
