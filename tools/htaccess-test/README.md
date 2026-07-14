@@ -23,9 +23,10 @@ header** without following the redirect:
 - A realistic browser `Accept` header routes to the WIDOCO HTML.
 - Namespace IRI (`/ns/ontology/gist` with and without a trailing slash) → 302.
 - Whole-ontology IRIs (`/ontology/gistCore14.1.0`, plus the explicit-extension
-  pass-through) → Semantic Arts server / WIDOCO.
-- The catch-all (anything else, e.g. the `ns/data/gist/` namespace) → 302
-  pass-through to the Semantic Arts server.
+  pass-through) → Semantic Arts server / WIDOCO. The redirect target preserves
+  the full request path, including the leading `ontology/` segment.
+- The catch-all (anything else, e.g. the `ns/data/gist/` namespace) → 303 to a
+  Turtle file on the Semantic Arts server, preserving the request path.
 
 ## Requirements
 

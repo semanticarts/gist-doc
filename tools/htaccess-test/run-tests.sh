@@ -157,17 +157,22 @@ assert_redirect "trailing slash -> Namespace.html"  "ns/ontology/gist/" "*/*" 30
 
 echo
 echo "== Whole-ontology IRI: /ontology/gistCore14.1.0 =="
-assert_redirect "explicit .ttl -> server (pass-through)" "ontology/gistCore14.1.0.ttl" "text/turtle" 303 "${O}/gistCore14.1.0.ttl"
-assert_redirect "turtle  -> server .ttl"            "ontology/gistCore14.1.0" "text/turtle"          303 "${O}/gistCore14.1.0.ttl"
-assert_redirect "rdf+xml -> server .rdf"            "ontology/gistCore14.1.0" "application/rdf+xml"   303 "${O}/gistCore14.1.0.rdf"
-assert_redirect "ld+json -> server .jsonld"         "ontology/gistCore14.1.0" "application/ld+json"   303 "${O}/gistCore14.1.0.jsonld"
+# The rewrite target preserves the full request path, including the leading
+# 'ontology/' segment (…/ontology/gistCore14.1.0.ttl, not …/gistCore14.1.0.ttl).
+assert_redirect "explicit .ttl -> server (pass-through)" "ontology/gistCore14.1.0.ttl" "text/turtle" 303 "${O}/ontology/gistCore14.1.0.ttl"
+assert_redirect "turtle  -> server .ttl"            "ontology/gistCore14.1.0" "text/turtle"          303 "${O}/ontology/gistCore14.1.0.ttl"
+assert_redirect "rdf+xml -> server .rdf"            "ontology/gistCore14.1.0" "application/rdf+xml"   303 "${O}/ontology/gistCore14.1.0.rdf"
+assert_redirect "ld+json -> server .jsonld"         "ontology/gistCore14.1.0" "application/ld+json"   303 "${O}/ontology/gistCore14.1.0.jsonld"
 assert_redirect "html    -> widoco docs"            "ontology/gistCore14.1.0" "${BROWSER_ACCEPT}"     303 "${P}/latest/widoco-documentation/index-en.html"
-assert_redirect "*/*     -> server .ttl (default)"  "ontology/gistCore14.1.0" "*/*"                   303 "${O}/gistCore14.1.0.ttl"
+assert_redirect "*/*     -> server .ttl (default)"  "ontology/gistCore14.1.0" "*/*"                   303 "${O}/ontology/gistCore14.1.0.ttl"
 
 echo
-echo "== Catch-all pass-through: everything else -> Semantic Arts server (302) =="
-assert_redirect "bare gistCore             -> server" "gistCore"            "*/*" 302 "${O}/gistCore"
-assert_redirect "ns/data/gist/Foo (data ns) -> server" "ns/data/gist/Foo"   "*/*" 302 "${O}/ns/data/gist/Foo"
+echo "== Catch-all: everything else -> Semantic Arts server as Turtle (303) =="
+# The greedy conneg rules (^(.+)$) now match any path, and the old 302
+# pass-through is disabled — so unmatched IRIs 303 to a .ttl on the SA server,
+# preserving the request path verbatim.
+assert_redirect "bare gistCore             -> server .ttl" "gistCore"          "*/*" 303 "${O}/gistCore.ttl"
+assert_redirect "ns/data/gist/Foo (data ns) -> server .ttl" "ns/data/gist/Foo" "*/*" 303 "${O}/ns/data/gist/Foo.ttl"
 
 echo
 echo "------------------------------------------------------------"
