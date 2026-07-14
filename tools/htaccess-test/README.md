@@ -36,26 +36,40 @@ The first run pulls the `httpd:2.4` image (needs internet once). After that the
 routing tests run fully offline — they assert the **redirect targets**, not that
 those targets resolve.
 
+### Windows / Git Bash
+
+`run-tests.sh` runs on Windows under Git Bash (MSYS/MINGW). It handles the MSYS
+quirk where the shell rewrites Unix-style arguments into Windows paths — left
+unhandled, that mangles the container-side bind-mount target
+(`/usr/local/apache2/htdocs/.htaccess`) and Apache never loads the rules, so
+every request 404s. The script disables that conversion (`MSYS_NO_PATHCONV=1`)
+and translates the host path with `cygpath` for the `docker` calls, so no manual
+setup is needed. Docker Desktop must be running on the host (not inside a dev
+container).
+
 ## Run
 
 `semanticarts.htaccess` is intentionally **not** stored in this repo — it lives
-in the [w3id.org](https://github.com/perma-id/w3id.org) repo. Point the harness
-at your working copy with `HTACCESS`:
+in the [w3id.org](https://github.com/perma-id/w3id.org) repo's
+`semanticarts/.htaccess`. Point the harness at your working copy with
+`HTACCESS`. Relative or absolute paths both work (the script resolves it to an
+absolute path before mounting it into the container):
 
 ```bash
-# Routing logic only:
-HTACCESS=/path/to/semanticarts.htaccess tools/htaccess-test/run-tests.sh
+# Routing logic only (path is relative to your current directory):
+HTACCESS=../w3id.org/semanticarts/.htaccess tools/htaccess-test/run-tests.sh
 
 # Also confirm the live gist-doc Pages targets resolve with 200
 # (only meaningful AFTER the deref branch is merged and Pages has redeployed):
-HTACCESS=/path/to/semanticarts.htaccess CHECK_TARGETS=1 tools/htaccess-test/run-tests.sh
+HTACCESS=../w3id.org/semanticarts/.htaccess CHECK_TARGETS=1 tools/htaccess-test/run-tests.sh
 ```
 
 Exit code is `0` only when every check passes, so it works in CI too.
 
 ### Useful overrides
 
-- `HTACCESS` (**required**) — path to the `semanticarts.htaccess` under test.
+- `HTACCESS` (**required**) — path to the `semanticarts.htaccess` under test
+  (relative or absolute; typically `../w3id.org/semanticarts/.htaccess`).
 - `PORT` (default `8080`) — host port for the test Apache.
 - `PAGES_BASE` (default `https://semanticarts.github.io/gist-doc`) — expected redirect base / target host.
 - `CHECK_TARGETS` (default `0`) — `1` = also verify the live Pages files resolve (200).

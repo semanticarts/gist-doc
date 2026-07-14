@@ -14,9 +14,10 @@
 #   - curl
 #
 # semanticarts.htaccess is intentionally NOT stored in this repo (it is deployed
-# to the w3id.org repo), so point the harness at your working copy:
+# to the w3id.org repo), so point the harness at your working copy. Relative or
+# absolute paths both work (the path is resolved to absolute before mounting):
 #
-#   HTACCESS=/path/to/semanticarts.htaccess tools/htaccess-test/run-tests.sh
+#   HTACCESS=../w3id.org/semanticarts/.htaccess tools/htaccess-test/run-tests.sh
 #
 # Usage:
 #   HTACCESS=... tools/htaccess-test/run-tests.sh                  # routing tests (no internet needed*)
@@ -46,19 +47,40 @@ BROWSER_ACCEPT='text/html,application/xhtml+xml,application/xml;q=0.9,image/avif
 red() { printf '\033[31m%s\033[0m' "$1"; }
 grn() { printf '\033[32m%s\033[0m' "$1"; }
 
+# Docker bind mounts require an ABSOLUTE path. A relative one (e.g.
+# ../w3id.org/semanticarts/.htaccess) silently mounts as an empty directory, so
+# Apache loads no rewrite rules and every request 404s. Resolve it up front.
+if [[ -f "${HTACCESS}" ]]; then
+  HTACCESS="$(cd "$(dirname "${HTACCESS}")" && pwd)/$(basename "${HTACCESS}")"
+fi
+
 if [[ ! -f "${HTACCESS}" ]]; then
   cat >&2 <<EOF
 ERROR: semanticarts.htaccess not found at:
   ${HTACCESS}
 
 This file is intentionally not stored in the gist-doc repo (it is deployed to
-the w3id.org repo). Point the harness at your working copy with HTACCESS:
+the w3id.org repo's semanticarts/.htaccess). Point the harness at your working
+copy with HTACCESS (relative or absolute path both work):
 
-  HTACCESS=/path/to/semanticarts.htaccess ${0}
+  HTACCESS=../w3id.org/semanticarts/.htaccess ${0}
 EOF
   exit 2
 fi
 command -v docker >/dev/null || { echo "ERROR: docker not found" >&2; exit 2; }
+
+# On Git Bash / MSYS (Windows), the shell rewrites Unix-style command arguments
+# into Windows paths. That mangles the container-side bind-mount target
+# (/usr/local/apache2/htdocs/.htaccess -> C:\Program Files\Git\usr\local\...),
+# so the file lands nowhere Apache looks and every request 404s. Disable that
+# conversion for the docker calls and hand Docker a Windows-form host path.
+DOCKER_HTACCESS="${HTACCESS}"
+case "$(uname -s)" in
+  MINGW*|MSYS*|CYGWIN*)
+    export MSYS_NO_PATHCONV=1
+    command -v cygpath >/dev/null 2>&1 && DOCKER_HTACCESS="$(cygpath -m "${HTACCESS}")"
+    ;;
+esac
 
 cleanup() { docker rm -f "${CONTAINER}" >/dev/null 2>&1 || true; }
 trap cleanup EXIT
@@ -66,7 +88,7 @@ trap cleanup EXIT
 echo "==> Starting Apache (httpd:2.4) with semanticarts.htaccess at the doc root..."
 cleanup
 docker run -d --name "${CONTAINER}" -p "${PORT}:80" \
-  -v "${HTACCESS}:/usr/local/apache2/htdocs/.htaccess:ro" \
+  -v "${DOCKER_HTACCESS}:/usr/local/apache2/htdocs/.htaccess:ro" \
   httpd:2.4 \
   bash -c "
     sed -i 's|^#LoadModule rewrite_module|LoadModule rewrite_module|' conf/httpd.conf
