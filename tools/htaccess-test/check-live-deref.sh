@@ -32,7 +32,9 @@
 #   NAMES="gistCore gistMediaTypes" ./check-live-deref.sh         # multiple modules
 #   VERSION=14.1.0 NAMES=gistCore ./check-live-deref.sh
 #
-# Env overrides: NAMES, VERSION, IRI_BASE, TIMEOUT
+# Env overrides: NAMES, VERSION, IRI_BASE, TIMEOUT, PYTHON (path/name of a
+# Python interpreter that has rdflib — useful when several Pythons coexist and
+# the one on PATH lacks it, e.g. MSYS2 python vs a native C:\Python install).
 #
 # Exit codes: 0 = all checks passed; 1 = a real failure (final 404, wrong
 # content, or the alias-missing signature); 2 = could not run (e.g. w3id.org
@@ -57,12 +59,23 @@ ylw()  { printf '\033[33m%s\033[0m' "$1"; }
 
 command -v curl >/dev/null || { echo "ERROR: curl not found" >&2; exit 2; }
 
-# Body validators (optional). Detect once. Prefer python3, fall back to python
-# (Windows/Git Bash usually ships the interpreter as `python`, not `python3`).
-PYTHON=""
-for p in python3 python; do command -v "$p" >/dev/null 2>&1 && { PYTHON="$p"; break; }; done
+# Body validators (optional). Pick a Python that actually has rdflib — not just
+# the first `python` on PATH. On Windows/Git Bash several interpreters commonly
+# coexist (MSYS2's /mingw64/bin/python, the Windows `py` launcher, a native
+# C:\Python\... install) and only one may have rdflib installed. Honor an
+# explicit PYTHON override, else probe candidates and keep the first that can
+# `import rdflib`. `py` is the Windows launcher, usually pointing at the native
+# install where `pip install rdflib` lands.
 HAVE_RDFLIB=0
-[[ -n "${PYTHON}" ]] && "${PYTHON}" -c 'import rdflib' >/dev/null 2>&1 && HAVE_RDFLIB=1
+if [[ -n "${PYTHON:-}" ]]; then
+  "${PYTHON}" -c 'import rdflib' >/dev/null 2>&1 && HAVE_RDFLIB=1
+else
+  PYTHON=""
+  for p in python3 python py; do
+    command -v "$p" >/dev/null 2>&1 || continue
+    if "$p" -c 'import rdflib' >/dev/null 2>&1; then PYTHON="$p"; HAVE_RDFLIB=1; break; fi
+  done
+fi
 HAVE_JQ=0
 command -v jq >/dev/null 2>&1 && HAVE_JQ=1
 

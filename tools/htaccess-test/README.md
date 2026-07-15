@@ -59,11 +59,14 @@ VERSION=14.1.0 NAMES=gistCore    tools/htaccess-test/check-live-deref.sh
 - Needs **internet**, not Docker or the `HTACCESS` file — it tests the *deployed*
   rules, so run it after a w3id.org change lands. Good as a CI/cron canary.
 - Env: `NAMES` (space-separated modules, default `gistCore`), `VERSION` (default
-  `14.1.0`), `IRI_BASE`, `TIMEOUT`.
-- Body validators are **optional**: `rdflib` under `python3`/`python`
-  (Turtle/RDF-XML/JSON-LD, `pip install rdflib`) or `jq` (JSON-LD only). Missing
-  validators downgrade a body check to `PASS*`/`WARN`, never a FAIL. On
-  Windows/Git Bash the interpreter is usually `python`, which is detected too.
+  `14.1.0`), `IRI_BASE`, `TIMEOUT`, `PYTHON` (interpreter with rdflib; see below).
+- Body validators are **optional**: `rdflib` (Turtle/RDF-XML/JSON-LD,
+  `pip install rdflib`) or `jq` (JSON-LD only). Missing validators downgrade a
+  body check to `PASS*`/`WARN`, never a FAIL. The script probes `python3`,
+  `python`, then the Windows `py` launcher and keeps the first that can
+  `import rdflib`. When several Pythons coexist and the one on PATH lacks rdflib
+  (e.g. MSYS2's `python` vs a native `C:\Python` install), point `PYTHON` at the
+  right one: `PYTHON=/c/Python/Python313/python.exe ...check-live-deref.sh`.
 - Exit codes: `0` all passed · `1` a real failure (final 404, bad body, or the
   signature) · `2` could not run (w3id.org itself unreachable). Cases that are
   **network-unreachable** (e.g. a firewalled runner with no route to GitHub
