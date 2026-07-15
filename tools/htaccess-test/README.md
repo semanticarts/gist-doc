@@ -1,12 +1,30 @@
 # Testing `semanticarts.htaccess`
 
-These tests let you validate `semanticarts.htaccess` on your own machine
-**before** copying it into the [w3id.org](https://github.com/perma-id/w3id.org)
-repo's `semanticarts/` folder. w3id.org runs Apache, so the only faithful way to
-test the rewrite logic is to run Apache against the file — which `run-tests.sh`
-does inside a throwaway container.
+Two complementary harnesses validate `semanticarts.htaccess` — the rewrite file
+deployed to the [w3id.org](https://github.com/perma-id/w3id.org) repo's
+`semanticarts/` folder:
 
-## What it checks
+- **`run-tests.sh`** — run it **before** deploying. It checks the **routing
+  logic offline**: the status code and `Location` each content-negotiation
+  branch produces (the first redirect hop only). w3id.org runs Apache, so the
+  only faithful way to test the rewrite logic is to run Apache against the file
+  — this stands up a throwaway `httpd:2.4` container and drives the real rules
+  with `curl`. No internet needed after the image is pulled once.
+- **`check-live-deref.sh`** — run it **after** deploying. It checks that the
+  live IRIs actually **resolve end to end**: it follows every redirect to a
+  final `200` whose body parses in the negotiated format. This catches breakage
+  the offline test structurally cannot — a correct redirect pointing at a
+  destination that doesn't exist.
+
+Use both: `run-tests.sh` proves the rules are written correctly; then, once the
+`.htaccess` is live on w3id.org, `check-live-deref.sh` proves the things they
+point at are actually published.
+
+---
+
+## `run-tests.sh` — offline routing checks (pre-deploy)
+
+### What it checks
 
 `run-tests.sh` starts `httpd:2.4` with the htaccess loaded as a per-directory
 `.htaccess` at the document root — the same context it has under w3id.org's
@@ -28,59 +46,16 @@ header** without following the redirect:
 - The catch-all (anything else, e.g. the `ns/data/gist/` namespace) → 303 to a
   Turtle file on the Semantic Arts server, preserving the request path.
 
-## Live deref regression test (`check-live-deref.sh`)
+It asserts the **redirect targets**, not that those targets resolve — that is
+what `check-live-deref.sh` is for.
 
-`run-tests.sh` checks only the **first redirect hop**, offline, against a local
-Apache. That cannot catch the `/gistCore.rdf` incident: the `.htaccess` redirect
-fired correctly (a valid 303/302 `Location`, so `run-tests.sh` passed), but the
-**final destination** on `ontologies.semanticarts.com` 404'd because the
-unversioned "latest" alias file was never published there. Checking only the hop
-— or only the per-term files on GitHub Pages — misses it.
+### Requirements
 
-`check-live-deref.sh` closes that gap. It hits the **real** IRIs on w3id.org,
-**follows every redirect to completion**, and asserts a final **200 whose body
-actually parses** in the negotiated format (via `rdflib`/`jq` when available). It
-targets the **unversioned** alias (`…/ontology/gistCore`) — the resource that
-went missing — and pairs each with the **versioned** pass-through
-(`gistCore14.1.0.{ttl,rdf,jsonld}`) as a control.
-
-If an unversioned case 404s at the final hop **while its versioned control still
-resolves**, that is the exact incident signature and is flagged as
-`SIGNATURE  unversioned latest alias missing on ontologies.semanticarts.com:
-<name>` — distinct from a generic redirect-rule break (which would fail the
-versioned case too).
-
-```bash
-tools/htaccess-test/check-live-deref.sh                        # gistCore, v14.1.0
-NAMES="gistCore gistMediaTypes" tools/htaccess-test/check-live-deref.sh
-VERSION=14.1.0 NAMES=gistCore    tools/htaccess-test/check-live-deref.sh
-```
-
-- Needs **internet**, not Docker or the `HTACCESS` file — it tests the *deployed*
-  rules, so run it after a w3id.org change lands. Good as a CI/cron canary.
-- Env: `NAMES` (space-separated modules, default `gistCore`), `VERSION` (default
-  `14.1.0`), `IRI_BASE`, `TIMEOUT`, `PYTHON` (interpreter with rdflib; see below).
-- Body validators are **optional**: `rdflib` (Turtle/RDF-XML/JSON-LD,
-  `pip install rdflib`) or `jq` (JSON-LD only). Missing validators downgrade a
-  body check to `PASS*`/`WARN`, never a FAIL. The script probes `python3`,
-  `python`, then the Windows `py` launcher and keeps the first that can
-  `import rdflib`. When several Pythons coexist and the one on PATH lacks rdflib
-  (e.g. MSYS2's `python` vs a native `C:\Python` install), point `PYTHON` at the
-  right one: `PYTHON=/c/Python/Python313/python.exe ...check-live-deref.sh`.
-- Exit codes: `0` all passed · `1` a real failure (final 404, bad body, or the
-  signature) · `2` could not run (w3id.org itself unreachable). Cases that are
-  **network-unreachable** (e.g. a firewalled runner with no route to GitHub
-  Pages, which the HTML branch redirects to) are reported as **WARN**, not FAIL,
-  so they don't cause spurious failures.
-
-## Requirements
-
-- Docker (running) — for `run-tests.sh` only
+- Docker (running)
 - `curl`
 
 The first run pulls the `httpd:2.4` image (needs internet once). After that the
-routing tests run fully offline — they assert the **redirect targets**, not that
-those targets resolve.
+routing tests run fully offline.
 
 ### Windows / Git Bash
 
@@ -93,7 +68,7 @@ and translates the host path with `cygpath` for the `docker` calls, so no manual
 setup is needed. Docker Desktop must be running on the host (not inside a dev
 container).
 
-## Run
+### Run
 
 `semanticarts.htaccess` is intentionally **not** stored in this repo — it lives
 in the [w3id.org](https://github.com/perma-id/w3id.org) repo's
@@ -112,7 +87,7 @@ HTACCESS=../w3id.org/semanticarts/.htaccess CHECK_TARGETS=1 tools/htaccess-test/
 
 Exit code is `0` only when every check passes, so it works in CI too.
 
-### Useful overrides
+#### Useful overrides
 
 - `HTACCESS` (**required**) — path to the `semanticarts.htaccess` under test
   (relative or absolute; typically `../w3id.org/semanticarts/.htaccess`).
@@ -120,7 +95,7 @@ Exit code is `0` only when every check passes, so it works in CI too.
 - `PAGES_BASE` (default `https://semanticarts.github.io/gist-doc`) — expected redirect base / target host.
 - `CHECK_TARGETS` (default `0`) — `1` = also verify the live Pages files resolve (200).
 
-## No Docker? Two fallbacks
+### No Docker? Two fallbacks
 
 1. **Direct Pages reachability only** — skips the rewrite logic but confirms the
    files the rules point at are actually published:
@@ -137,13 +112,93 @@ Exit code is `0` only when every check passes, so it works in CI too.
    `AllowOverride All` and `mod_rewrite` enabled, then run the same `curl`
    assertions from `run-tests.sh` against it.
 
-## After it passes
+---
 
-Copy `semanticarts.htaccess` into the w3id.org repo's `semanticarts/.htaccess`,
-open the PR there, and once merged re-run the conneg checks against the real
-IRIs:
+## `check-live-deref.sh` — live resolution checks (post-deploy)
+
+### Why it exists
+
+The offline `run-tests.sh` asserts the redirect **target** (`Location`), not
+that the target resolves. The `/gistCore.rdf` incident slipped through exactly
+there: the `.htaccess` redirect fired correctly (a valid 303/302 `Location`, so
+`run-tests.sh` passed), but the **final destination** on
+`ontologies.semanticarts.com` 404'd because the unversioned "latest" alias file
+was never published. Checking only the hop — or only the per-term files on
+GitHub Pages — misses it.
+
+### What it checks
+
+`check-live-deref.sh` hits the **real** IRIs on w3id.org, **follows every
+redirect to completion**, and asserts a final **200 whose body actually parses**
+in the negotiated format (via `rdflib`/`jq` when available). It targets the
+**unversioned** alias (`…/ontology/gistCore`) — the resource that went missing —
+and pairs each with the **versioned** pass-through
+(`gistCore14.1.0.{ttl,rdf,jsonld}`) as a control.
+
+If an unversioned case 404s at the final hop **while its versioned control still
+resolves**, that is the exact incident signature and is flagged as
+`SIGNATURE  unversioned latest alias missing on ontologies.semanticarts.com:
+<name>` — distinct from a generic redirect-rule break (which would fail the
+versioned case too).
+
+### Requirements
+
+- `curl`
+- Internet access to w3id.org, `ontologies.semanticarts.com`, and (for the
+  HTML/WIDOCO branch) `semanticarts.github.io`.
+- **Optional** body validators — `rdflib` (Turtle/RDF-XML/JSON-LD,
+  `pip install rdflib`) or `jq` (JSON-LD only). Missing validators downgrade a
+  body check to `PASS*`/`WARN`, never a FAIL. The script probes `python3`,
+  `python`, then the Windows `py` launcher and keeps the first that can
+  `import rdflib`. When several Pythons coexist and the one on PATH lacks rdflib
+  (e.g. MSYS2's `python` vs a native `C:\Python` install), point `PYTHON` at the
+  right one: `PYTHON=/c/Python/Python313/python.exe ...check-live-deref.sh`.
+
+It needs neither Docker nor the `HTACCESS` file — it tests the *deployed* rules,
+so run it after a w3id.org change lands. Good as a CI/cron canary.
+
+### Run
 
 ```bash
+tools/htaccess-test/check-live-deref.sh                        # gistCore, v14.1.0
+NAMES="gistCore gistMediaTypes" tools/htaccess-test/check-live-deref.sh
+VERSION=14.1.0 NAMES=gistCore    tools/htaccess-test/check-live-deref.sh
+```
+
+#### Useful overrides
+
+- `NAMES` (default `gistCore`) — space-separated ontology modules to check, so
+  the same alias-gap test covers any module, not just `gistCore`.
+- `VERSION` (default `14.1.0`) — release version for the versioned control cases.
+- `IRI_BASE` (default `https://w3id.org/semanticarts/ontology`).
+- `TIMEOUT` (default `20`) — per-request curl timeout, seconds.
+- `PYTHON` — path/name of a Python interpreter that has `rdflib` (see
+  Requirements).
+
+#### Exit codes
+
+- `0` — all checks passed.
+- `1` — a real failure (final 404, body did not parse, or the alias-missing
+  signature).
+- `2` — could not run (w3id.org itself unreachable).
+
+Cases that are **network-unreachable** (e.g. a firewalled runner with no route
+to GitHub Pages, which the HTML branch redirects to) are reported as **WARN**,
+not FAIL, so they don't cause spurious failures.
+
+---
+
+## Deploying to w3id.org
+
+Once `run-tests.sh` passes, copy `semanticarts.htaccess` into the w3id.org repo's
+`semanticarts/.htaccess` and open the PR there. After it merges and GitHub Pages
+has redeployed, confirm the live IRIs resolve end to end:
+
+```bash
+# Whole-ontology aliases (unversioned + versioned), following redirects to 200:
+tools/htaccess-test/check-live-deref.sh
+
+# Spot-check a single per-term IRI by hand (not covered by the script above):
 curl -sI -H 'Accept: text/turtle' \
   https://w3id.org/semanticarts/ns/ontology/gist/Account
 # expect: 303 + Location: https://semanticarts.github.io/gist-doc/terms/Account.ttl
