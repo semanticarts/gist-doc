@@ -28,9 +28,51 @@ header** without following the redirect:
 - The catch-all (anything else, e.g. the `ns/data/gist/` namespace) → 303 to a
   Turtle file on the Semantic Arts server, preserving the request path.
 
+## Live deref regression test (`check-live-deref.sh`)
+
+`run-tests.sh` checks only the **first redirect hop**, offline, against a local
+Apache. That cannot catch the `/gistCore.rdf` incident: the `.htaccess` redirect
+fired correctly (a valid 303/302 `Location`, so `run-tests.sh` passed), but the
+**final destination** on `ontologies.semanticarts.com` 404'd because the
+unversioned "latest" alias file was never published there. Checking only the hop
+— or only the per-term files on GitHub Pages — misses it.
+
+`check-live-deref.sh` closes that gap. It hits the **real** IRIs on w3id.org,
+**follows every redirect to completion**, and asserts a final **200 whose body
+actually parses** in the negotiated format (via `rdflib`/`jq` when available). It
+targets the **unversioned** alias (`…/ontology/gistCore`) — the resource that
+went missing — and pairs each with the **versioned** pass-through
+(`gistCore14.1.0.{ttl,rdf,jsonld}`) as a control.
+
+If an unversioned case 404s at the final hop **while its versioned control still
+resolves**, that is the exact incident signature and is flagged as
+`SIGNATURE  unversioned latest alias missing on ontologies.semanticarts.com:
+<name>` — distinct from a generic redirect-rule break (which would fail the
+versioned case too).
+
+```bash
+tools/htaccess-test/check-live-deref.sh                        # gistCore, v14.1.0
+NAMES="gistCore gistMediaTypes" tools/htaccess-test/check-live-deref.sh
+VERSION=14.1.0 NAMES=gistCore    tools/htaccess-test/check-live-deref.sh
+```
+
+- Needs **internet**, not Docker or the `HTACCESS` file — it tests the *deployed*
+  rules, so run it after a w3id.org change lands. Good as a CI/cron canary.
+- Env: `NAMES` (space-separated modules, default `gistCore`), `VERSION` (default
+  `14.1.0`), `IRI_BASE`, `TIMEOUT`.
+- Body validators are **optional**: `rdflib` under `python3`/`python`
+  (Turtle/RDF-XML/JSON-LD, `pip install rdflib`) or `jq` (JSON-LD only). Missing
+  validators downgrade a body check to `PASS*`/`WARN`, never a FAIL. On
+  Windows/Git Bash the interpreter is usually `python`, which is detected too.
+- Exit codes: `0` all passed · `1` a real failure (final 404, bad body, or the
+  signature) · `2` could not run (w3id.org itself unreachable). Cases that are
+  **network-unreachable** (e.g. a firewalled runner with no route to GitHub
+  Pages, which the HTML branch redirects to) are reported as **WARN**, not FAIL,
+  so they don't cause spurious failures.
+
 ## Requirements
 
-- Docker (running)
+- Docker (running) — for `run-tests.sh` only
 - `curl`
 
 The first run pulls the `httpd:2.4` image (needs internet once). After that the
