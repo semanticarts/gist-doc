@@ -10,15 +10,22 @@ deployed to the [w3id.org](https://github.com/perma-id/w3id.org) repo's
   only faithful way to test the rewrite logic is to run Apache against the file
   — this stands up a throwaway `httpd:2.4` container and drives the real rules
   with `curl`. No internet needed after the image is pulled once.
-- **`check-live-deref.sh`** — run it **after** deploying. It checks that the
-  live IRIs actually **resolve end to end**: it follows every redirect to a
-  final `200` whose body parses in the negotiated format. This catches breakage
-  the offline test structurally cannot — a correct redirect pointing at a
-  destination that doesn't exist.
+- **`check-live-deref.sh`** — verifies the whole-ontology files the rules point
+  at actually **exist and resolve**, in two modes:
+  - **`MODE=targets`** (**before** deploying) — hits the origin files directly
+    on `ontologies.semanticarts.com` (`gistCore.rdf`, `.ttl`, `.jsonld`, the
+    versioned files, the WIDOCO docs) and confirms each exists and parses. This
+    answers *"do the destinations the new rules will point at exist yet?"* —
+    which you cannot ask through w3id.org, because the new rules aren't live.
+  - **`MODE=deref`** (default, **after** deploying) — hits the real w3id.org
+    IRIs, follows every redirect to a final `200`, and validates the body. This
+    catches breakage the offline routing test structurally cannot — a correct
+    redirect pointing at a destination that doesn't exist.
 
-Use both: `run-tests.sh` proves the rules are written correctly; then, once the
-`.htaccess` is live on w3id.org, `check-live-deref.sh` proves the things they
-point at are actually published.
+Use all three checks across the deploy: `run-tests.sh` proves the rules are
+written correctly and `check-live-deref.sh MODE=targets` proves their
+destinations exist — **both before deploying**; then, once the `.htaccess` is
+live on w3id.org, `check-live-deref.sh` (deref) proves the full chain resolves.
 
 ---
 
@@ -114,7 +121,7 @@ Exit code is `0` only when every check passes, so it works in CI too.
 
 ---
 
-## `check-live-deref.sh` — live resolution checks (post-deploy)
+## `check-live-deref.sh` — whole-ontology resolution checks
 
 ### Why it exists
 
@@ -128,24 +135,31 @@ GitHub Pages — misses it.
 
 ### What it checks
 
-`check-live-deref.sh` hits the **real** IRIs on w3id.org, **follows every
-redirect to completion**, and asserts a final **200 whose body actually parses**
-in the negotiated format (via `rdflib`/`jq` when available). It targets the
-**unversioned** alias (`…/ontology/gistCore`) — the resource that went missing —
-and pairs each with the **versioned** pass-through
-(`gistCore14.1.0.{ttl,rdf,jsonld}`) as a control.
+It verifies the whole-ontology files — the **unversioned** alias (`gistCore.*`),
+the resource that went missing, paired with the **versioned** file
+(`gistCore14.1.0.*`) as a control — in two modes:
 
-If an unversioned case 404s at the final hop **while its versioned control still
-resolves**, that is the exact incident signature and is flagged as
+- **`MODE=targets`** (pre-deploy) — requests each origin file **directly** on
+  `ontologies.semanticarts.com` (`gistCore.rdf`, `.ttl`, `.jsonld`, the versioned
+  files, and the WIDOCO docs) and asserts a `200` whose body parses. Run it
+  *before* deploying to confirm the destinations the new rules will point at
+  actually exist.
+- **`MODE=deref`** (default, post-deploy) — hits the **real** IRIs on w3id.org,
+  **follows every redirect to completion**, and asserts a final `200` whose body
+  parses in the negotiated format. Run it *after* deploying to confirm the rule
+  and its destination resolve together.
+
+In either mode, if an unversioned file is missing (404) **while its versioned
+control still resolves**, that is the exact incident signature and is flagged as
 `SIGNATURE  unversioned latest alias missing on ontologies.semanticarts.com:
 <name>` — distinct from a generic redirect-rule break (which would fail the
-versioned case too).
+versioned case too). Body parsing uses `rdflib`/`jq` when available.
 
 ### Requirements
 
 - `curl`
-- Internet access to w3id.org, `ontologies.semanticarts.com`, and (for the
-  HTML/WIDOCO branch) `semanticarts.github.io`.
+- Internet access to `ontologies.semanticarts.com` and `semanticarts.github.io`
+  (targets mode), plus w3id.org (deref mode).
 - **Optional** body validators — `rdflib` (Turtle/RDF-XML/JSON-LD,
   `pip install rdflib`) or `jq` (JSON-LD only). Missing validators downgrade a
   body check to `PASS*`/`WARN`, never a FAIL. The script probes `python3`,
@@ -154,23 +168,31 @@ versioned case too).
   (e.g. MSYS2's `python` vs a native `C:\Python` install), point `PYTHON` at the
   right one: `PYTHON=/c/Python/Python313/python.exe ...check-live-deref.sh`.
 
-It needs neither Docker nor the `HTACCESS` file — it tests the *deployed* rules,
-so run it after a w3id.org change lands. Good as a CI/cron canary.
+It needs neither Docker nor the `HTACCESS` file. Good as a CI/cron canary.
 
 ### Run
 
 ```bash
+# Pre-deploy: do the origin files the new rules will point at exist?
+MODE=targets tools/htaccess-test/check-live-deref.sh
+MODE=targets NAMES="gistCore gistMediaTypes" tools/htaccess-test/check-live-deref.sh
+
+# Post-deploy: does the live w3id.org chain resolve end to end?
 tools/htaccess-test/check-live-deref.sh                        # gistCore, v14.1.0
-NAMES="gistCore gistMediaTypes" tools/htaccess-test/check-live-deref.sh
-VERSION=14.1.0 NAMES=gistCore    tools/htaccess-test/check-live-deref.sh
+VERSION=14.1.0 NAMES=gistCore tools/htaccess-test/check-live-deref.sh
 ```
 
 #### Useful overrides
 
+- `MODE` (default `deref`) — `targets` = pre-deploy direct origin check;
+  `deref` = post-deploy w3id.org resolution.
 - `NAMES` (default `gistCore`) — space-separated ontology modules to check, so
   the same alias-gap test covers any module, not just `gistCore`.
 - `VERSION` (default `14.1.0`) — release version for the versioned control cases.
-- `IRI_BASE` (default `https://w3id.org/semanticarts/ontology`).
+- `IRI_BASE` (default `https://w3id.org/semanticarts/ontology`) — deref base.
+- `TARGET_BASE` (default `https://ontologies.semanticarts.com/ontology`) — origin
+  whole-ontology directory checked in targets mode.
+- `HTML_TARGET` — the WIDOCO docs URL the HTML branch resolves to.
 - `TIMEOUT` (default `20`) — per-request curl timeout, seconds.
 - `PYTHON` — path/name of a Python interpreter that has `rdflib` (see
   Requirements).
@@ -178,28 +200,39 @@ VERSION=14.1.0 NAMES=gistCore    tools/htaccess-test/check-live-deref.sh
 #### Exit codes
 
 - `0` — all checks passed.
-- `1` — a real failure (final 404, body did not parse, or the alias-missing
-  signature).
-- `2` — could not run (w3id.org itself unreachable).
+- `1` — a real failure (404, body did not parse, or the alias-missing signature).
+- `2` — could not run (base host unreachable).
 
 Cases that are **network-unreachable** (e.g. a firewalled runner with no route
-to GitHub Pages, which the HTML branch redirects to) are reported as **WARN**,
+to GitHub Pages, which the HTML branch resolves to) are reported as **WARN**,
 not FAIL, so they don't cause spurious failures.
 
 ---
 
 ## Deploying to w3id.org
 
-Once `run-tests.sh` passes, copy `semanticarts.htaccess` into the w3id.org repo's
-`semanticarts/.htaccess` and open the PR there. After it merges and GitHub Pages
-has redeployed, confirm the live IRIs resolve end to end:
+1. **Validate the rules offline** — `run-tests.sh` passes (routing is correct).
+2. **Confirm the destinations exist** — before deploying, check that the origin
+   files the new rules will point at are actually published:
 
-```bash
-# Whole-ontology aliases (unversioned + versioned), following redirects to 200:
-tools/htaccess-test/check-live-deref.sh
+   ```bash
+   MODE=targets tools/htaccess-test/check-live-deref.sh
+   ```
 
-# Spot-check a single per-term IRI by hand (not covered by the script above):
-curl -sI -H 'Accept: text/turtle' \
-  https://w3id.org/semanticarts/ns/ontology/gist/Account
-# expect: 303 + Location: https://semanticarts.github.io/gist-doc/terms/Account.ttl
-```
+   If this flags the alias-missing `SIGNATURE`, publish the missing
+   whole-ontology file(s) on `ontologies.semanticarts.com` **before** deploying —
+   otherwise you ship a rule that resolves to a 404 (the `/gistCore.rdf`
+   incident).
+3. **Deploy** — copy `semanticarts.htaccess` into the w3id.org repo's
+   `semanticarts/.htaccess` and open the PR there.
+4. **Confirm the live chain** — after it merges and GitHub Pages has redeployed:
+
+   ```bash
+   # Whole-ontology aliases (unversioned + versioned), following redirects to 200:
+   tools/htaccess-test/check-live-deref.sh
+
+   # Spot-check a single per-term IRI by hand (not covered by the script above):
+   curl -sI -H 'Accept: text/turtle' \
+     https://w3id.org/semanticarts/ns/ontology/gist/Account
+   # expect: 303 + Location: https://semanticarts.github.io/gist-doc/terms/Account.ttl
+   ```

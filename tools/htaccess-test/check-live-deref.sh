@@ -1,53 +1,80 @@
 #!/usr/bin/env bash
 #
-# LIVE end-to-end regression test for the deployed semanticarts.htaccess rules.
+# LIVE resolution check for the whole-ontology semanticarts.htaccess targets.
 #
-# Unlike run-tests.sh (which stands up a local Apache and checks only the FIRST
-# redirect hop, offline), this script hits the real IRIs on w3id.org, FOLLOWS
-# every redirect to completion, and asserts a final 200 whose body actually
-# parses in the negotiated format.
+# Two modes verify the SAME whole-ontology files at the two moments that matter:
+#
+#   MODE=targets (PRE-deploy)  — hit the origin files DIRECTLY on
+#     ontologies.semanticarts.com (…/ontology/gistCore.rdf, .ttl, .jsonld, plus
+#     the versioned files and the WIDOCO docs). This answers "do the files the
+#     new .htaccess will point at actually exist yet?" BEFORE you deploy the
+#     rules — you cannot go through w3id.org yet because the new rules aren't
+#     live. This is the check that would have caught the /gistCore.rdf incident
+#     up front.
+#
+#   MODE=deref (POST-deploy, default) — hit the real IRIs on w3id.org, FOLLOW
+#     every redirect to completion, and assert a final 200 whose body parses.
+#     This verifies the deployed rule AND its destination together. Unlike
+#     run-tests.sh (local Apache, FIRST redirect hop only, offline), it follows
+#     the w3id.org -> SA-server chain through to the real 200.
 #
 # Why this exists: the /gistCore.rdf incident. The .htaccess redirect fired
 # correctly (303/302 with a good Location), so run-tests.sh passed — but the
 # final destination on ontologies.semanticarts.com 404'd because the unversioned
 # "latest" alias file wasn't published there. Checking only the redirect hop, or
-# only the per-term files on GitHub Pages, cannot catch that. This test follows
-# the w3id.org -> SA-server chain through to the real 200.
+# only the per-term files on GitHub Pages, cannot catch that.
 #
-# It targets the UNVERSIONED alias (…/ontology/gistCore) — the resource that
-# went missing — and pairs it with the VERSIONED pass-through (gistCore14.1.0.*)
-# as a control. If the unversioned cases 404 at the final hop while the versioned
-# ones succeed, that is the exact incident signature and is flagged as such.
+# Both modes target the UNVERSIONED alias (gistCore.*) — the resource that went
+# missing — and pair it with the VERSIONED file (gistCore14.1.0.*) as a control.
+# If the unversioned cases 404 while the versioned ones succeed, that is the
+# exact incident signature and is flagged as such.
 #
 # Requirements:
 #   - curl
-#   - internet access to w3id.org, ontologies.semanticarts.com, and (for the
-#     HTML/WIDOCO branch) semanticarts.github.io
-#   - OPTIONAL body validators: python3 + rdflib (Turtle/RDF-XML/JSON-LD),
+#   - internet access to ontologies.semanticarts.com and semanticarts.github.io
+#     (targets mode), plus w3id.org (deref mode)
+#   - OPTIONAL body validators: python3/python + rdflib (Turtle/RDF-XML/JSON-LD),
 #     or jq (well-formed JSON-LD). Missing validators downgrade a body check to
 #     a WARN, never a FAIL.
 #
 # Usage:
-#   tools/htaccess-test/check-live-deref.sh                       # gistCore, v14.1.0
-#   NAMES="gistCore gistMediaTypes" ./check-live-deref.sh         # multiple modules
+#   # PRE-deploy: do the target files exist on the origin?
+#   MODE=targets tools/htaccess-test/check-live-deref.sh
+#   MODE=targets NAMES="gistCore gistMediaTypes" ./check-live-deref.sh
+#
+#   # POST-deploy: does the live w3id.org chain resolve end to end?
+#   tools/htaccess-test/check-live-deref.sh
 #   VERSION=14.1.0 NAMES=gistCore ./check-live-deref.sh
 #
-# Env overrides: NAMES, VERSION, IRI_BASE, TIMEOUT, PYTHON (path/name of a
-# Python interpreter that has rdflib — useful when several Pythons coexist and
-# the one on PATH lacks it, e.g. MSYS2 python vs a native C:\Python install).
+# Env overrides: MODE (targets|deref, default deref), NAMES, VERSION, IRI_BASE
+# (deref base), TARGET_BASE (origin whole-ontology dir, targets mode),
+# HTML_TARGET (WIDOCO docs URL), TIMEOUT, PYTHON (path/name of a Python
+# interpreter that has rdflib — useful when several Pythons coexist and the one
+# on PATH lacks it, e.g. MSYS2 python vs a native C:\Python install).
 #
-# Exit codes: 0 = all checks passed; 1 = a real failure (final 404, wrong
-# content, or the alias-missing signature); 2 = could not run (e.g. w3id.org
-# itself unreachable). Cases that are UNREACHABLE due to the network — as
-# opposed to a real 404 from the server — are reported as WARN, not FAIL, so a
-# firewalled runner (e.g. a container with no route to GitHub Pages) does not
-# produce false failures.
+# Exit codes: 0 = all checks passed; 1 = a real failure (404, wrong content, or
+# the alias-missing signature); 2 = could not run (base host unreachable). Cases
+# that are UNREACHABLE due to the network — as opposed to a real 404 from the
+# server — are reported as WARN, not FAIL, so a firewalled runner (e.g. a
+# container with no route to GitHub Pages) does not produce false failures.
 set -uo pipefail
 
+MODE="${MODE:-deref}"                 # targets = pre-deploy origin check; deref = post-deploy
 NAMES="${NAMES:-gistCore}"
 VERSION="${VERSION:-14.1.0}"
 IRI_BASE="${IRI_BASE:-https://w3id.org/semanticarts/ontology}"
+# Where the whole-ontology files actually live — what the .htaccess redirects
+# to. Checked directly in targets (pre-deploy) mode.
+TARGET_BASE="${TARGET_BASE:-https://ontologies.semanticarts.com/ontology}"
+# The WIDOCO docs the HTML branch resolves to (the "latest" docs, shared across
+# modules under the current rules).
+HTML_TARGET="${HTML_TARGET:-https://semanticarts.github.io/gist-doc/latest/widoco-documentation/index-en.html}"
 TIMEOUT="${TIMEOUT:-20}"
+
+case "${MODE}" in
+  targets|deref) ;;
+  *) echo "ERROR: MODE must be 'targets' or 'deref', got '${MODE}'" >&2; exit 2 ;;
+esac
 
 # Browser-style Accept header (what Chrome/Firefox send). Contains
 # application/xml and */* but must still route to HTML, so keep it verbatim.
@@ -136,7 +163,9 @@ PY
 
 # check <desc> <url> <accept> <want_format> <bucket> <name>
 #   want_format: turtle|rdfxml|jsonld|html
-#   bucket:      "unversioned" | "versioned" (for the signature assertion)
+#   bucket:      "unversioned" | "versioned" | "none" — feeds the alias-missing
+#                signature. Use "none" for the HTML/WIDOCO case: it is not one of
+#                the SA-server alias files, so it must not trip the signature.
 check() {
   local desc="$1" url="$2" accept="$3" fmt="$4" bucket="$5" name="$6"
   local res code ct rc
@@ -180,32 +209,58 @@ check() {
   rm -f "${BODY_FILE}"
 }
 
-echo "==> Live deref regression test"
-echo "    base=${IRI_BASE}  names='${NAMES}'  version=${VERSION}"
+if [[ "${MODE}" == "targets" ]]; then
+  echo "==> Pre-deploy origin target check (do the whole-ontology files exist?)"
+  echo "    base=${TARGET_BASE}  names='${NAMES}'  version=${VERSION}"
+  GUARD_URL="${TARGET_BASE}/${NAMES%% *}.ttl"; GUARD_HOST="${TARGET_BASE}"
+else
+  echo "==> Post-deploy live deref check (does the w3id.org chain resolve?)"
+  echo "    base=${IRI_BASE}  names='${NAMES}'  version=${VERSION}"
+  GUARD_URL="${IRI_BASE}/${NAMES%% *}"; GUARD_HOST="${IRI_BASE}"
+fi
 
-# Guard: if w3id.org itself is unreachable, we cannot run at all.
-gc="$(curl -sL -m "${TIMEOUT}" -o /dev/null -w '%{http_code}' "${IRI_BASE}/${NAMES%% *}" 2>/dev/null || echo 000)"
+# Guard: if the base host itself is unreachable (http 000), we cannot run at all
+# — distinct from a real 404, which is a legitimate finding.
+gc="$(curl -sL -m "${TIMEOUT}" -o /dev/null -w '%{http_code}' "${GUARD_URL}" 2>/dev/null || echo 000)"
 if [[ "${gc}" == "000" ]]; then
-  echo "ERROR: cannot reach ${IRI_BASE} (http 000). Check network. Aborting." >&2
+  echo "ERROR: cannot reach ${GUARD_HOST} (http 000). Check network. Aborting." >&2
   exit 2
 fi
 
 for name in ${NAMES}; do
-  U="${IRI_BASE}/${name}"
-  echo
-  echo "== Unversioned alias: ${U} =="
-  check "rdf+xml -> 200 valid RDF/XML"          "${U}" "application/rdf+xml" rdfxml unversioned "${name}"
-  check "turtle  -> 200 valid Turtle"           "${U}" "text/turtle"         turtle unversioned "${name}"
-  check "ld+json -> 200 valid JSON-LD"          "${U}" "application/ld+json" jsonld unversioned "${name}"
-  check "browser -> 200 WIDOCO HTML"            "${U}" "${BROWSER_ACCEPT}"   html   unversioned "${name}"
-  check "*/*     -> 200 Turtle (default)"       "${U}" "*/*"                 turtle unversioned "${name}"
-  check "no Accept -> 200 Turtle (default)"     "${U}" "-"                   turtle unversioned "${name}"
+  if [[ "${MODE}" == "targets" ]]; then
+    T="${TARGET_BASE}/${name}"
+    echo
+    echo "== Unversioned origin files (direct): ${T}.{rdf,ttl,jsonld} =="
+    # Requested by explicit extension; no content negotiation happens here — we
+    # are asking the origin whether each concrete file exists and is valid.
+    check "rdf+xml file exists + valid RDF/XML"  "${T}.rdf"    "*/*" rdfxml unversioned "${name}"
+    check "turtle  file exists + valid Turtle"   "${T}.ttl"    "*/*" turtle unversioned "${name}"
+    check "ld+json file exists + valid JSON-LD"  "${T}.jsonld" "*/*" jsonld unversioned "${name}"
+    check "WIDOCO docs exist (HTML)"             "${HTML_TARGET}" "*/*" html none "${name}"
 
-  echo
-  echo "== Versioned pass-through: ${U}${VERSION}.{ttl,rdf,jsonld} (control) =="
-  check "${VERSION}.ttl    -> 200 valid Turtle"   "${U}${VERSION}.ttl"    "*/*" turtle versioned "${name}"
-  check "${VERSION}.rdf    -> 200 valid RDF/XML"  "${U}${VERSION}.rdf"    "*/*" rdfxml versioned "${name}"
-  check "${VERSION}.jsonld -> 200 valid JSON-LD"  "${U}${VERSION}.jsonld" "*/*" jsonld versioned "${name}"
+    echo
+    echo "== Versioned origin files (control): ${T}${VERSION}.{ttl,rdf,jsonld} =="
+    check "${VERSION}.ttl    exists + valid Turtle"   "${T}${VERSION}.ttl"    "*/*" turtle versioned "${name}"
+    check "${VERSION}.rdf    exists + valid RDF/XML"  "${T}${VERSION}.rdf"    "*/*" rdfxml versioned "${name}"
+    check "${VERSION}.jsonld exists + valid JSON-LD"  "${T}${VERSION}.jsonld" "*/*" jsonld versioned "${name}"
+  else
+    U="${IRI_BASE}/${name}"
+    echo
+    echo "== Unversioned alias: ${U} =="
+    check "rdf+xml -> 200 valid RDF/XML"          "${U}" "application/rdf+xml" rdfxml unversioned "${name}"
+    check "turtle  -> 200 valid Turtle"           "${U}" "text/turtle"         turtle unversioned "${name}"
+    check "ld+json -> 200 valid JSON-LD"          "${U}" "application/ld+json" jsonld unversioned "${name}"
+    check "browser -> 200 WIDOCO HTML"            "${U}" "${BROWSER_ACCEPT}"   html   none        "${name}"
+    check "*/*     -> 200 Turtle (default)"       "${U}" "*/*"                 turtle unversioned "${name}"
+    check "no Accept -> 200 Turtle (default)"     "${U}" "-"                   turtle unversioned "${name}"
+
+    echo
+    echo "== Versioned pass-through: ${U}${VERSION}.{ttl,rdf,jsonld} (control) =="
+    check "${VERSION}.ttl    -> 200 valid Turtle"   "${U}${VERSION}.ttl"    "*/*" turtle versioned "${name}"
+    check "${VERSION}.rdf    -> 200 valid RDF/XML"  "${U}${VERSION}.rdf"    "*/*" rdfxml versioned "${name}"
+    check "${VERSION}.jsonld -> 200 valid JSON-LD"  "${U}${VERSION}.jsonld" "*/*" jsonld versioned "${name}"
+  fi
 done
 
 echo
@@ -218,15 +273,20 @@ sig=0
 for name in ${NAMES}; do
   if [[ "${UNVERSIONED_404[$name]:-0}" == "1" && "${VERSIONED_OK[$name]:-0}" == "1" ]]; then
     printf '  %s  unversioned latest alias missing on ontologies.semanticarts.com: %s\n' "$(red SIGNATURE)" "${name}"
-    printf '        (versioned %s%s.* resolves, but unversioned %s 404s at the final hop)\n' "${name}" "${VERSION}" "${name}"
+    if [[ "${MODE}" == "targets" ]]; then
+      printf '        (versioned %s%s.* exists on the origin, but unversioned %s.* does NOT — publish it BEFORE deploying)\n' "${name}" "${VERSION}" "${name}"
+    else
+      printf '        (versioned %s%s.* resolves, but unversioned %s 404s at the final hop)\n' "${name}" "${VERSION}" "${name}"
+    fi
     sig=1
   fi
 done
 
-printf 'Live deref: %s passed, %s failed, %s warnings\n' \
+label="Live deref"; [[ "${MODE}" == "targets" ]] && label="Origin targets"
+printf '%s: %s passed, %s failed, %s warnings\n' "${label}" \
   "$(grn ${pass})" "$([[ ${fail} -eq 0 ]] && grn 0 || red ${fail})" "$(ylw ${warn})"
 
 echo
-[[ ${fail} -eq 0 ]] && { echo "$(grn 'ALL LIVE CHECKS PASSED')"; exit 0; }
+[[ ${fail} -eq 0 ]] && { echo "$(grn 'ALL CHECKS PASSED')"; exit 0; }
 [[ ${sig} -eq 1 ]] && echo "$(red 'INCIDENT SIGNATURE DETECTED — see SIGNATURE lines above')"
-echo "$(red 'SOME LIVE CHECKS FAILED')"; exit 1
+echo "$(red 'SOME CHECKS FAILED')"; exit 1
